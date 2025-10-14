@@ -1,0 +1,22 @@
+# Ren'Py temporary and build files
+*.rpyc
+*.rpymc
+*.rpa
+*.bak
+*.log
+*.tmp
+*.swp
+*.pyc
+__pycache__/
+log.txt
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Build distributions
+/game/cache/
+game/saves/
+persistent
+renpy.sh
+renpy.exe
