@@ -47,7 +47,10 @@ label choose_pronouns:
     "Hello, [player_name]! You have chosen [player_pronouns] as your pronouns."
 
     # Proceed to prologue
-    jump prologue
+    #jump prologue
+
+    # Proceed to gacha screen
+    jump gacha_screen
 
     # This ends the game.
 

@@ -157,6 +157,9 @@ define config.window_icon = "gui/window_icon.png"
 ##
 ## This section controls how Ren'Py turns your project into distribution files.
 
+# Custom layer config (added extra layers)
+define config.layers = ['zero', 'master', 'transient', 'layer0', 'layer1', 'layer2',  'layer3', 'layer4', 'layer5','screens', 'overlay']
+
 init python:
 
     ## The following functions take file patterns. File patterns are case-

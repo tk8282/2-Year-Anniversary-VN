@@ -10,5 +10,9 @@ define G = Character("Gale", color="#e74c3c")           # Red
 define N = Character("Nayu")
 define MC = Character(player_name, color= "#FFFF00")     # Yellow
 
+# NPCs
+define Hostess = Character("Hostess")
+define Waiter = Character("Waiter")
+
 # TO DO: 1. Ask for specific colors for characters 2. Use of first person character colors/name
 #

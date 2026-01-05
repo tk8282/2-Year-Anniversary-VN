@@ -538,4 +538,5 @@ label prologue:
     # [Route choices start]
     "End of prologue"
 
-    return
+    # Selecting Route
+    jump choose_route   
