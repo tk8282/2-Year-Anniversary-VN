@@ -525,6 +525,14 @@ layeredimage phone texting:
 #----------------------------------------
 
 # --------------Zander--------------
+image ballers gate box = im.Scale("images/Zander/Assets/Baller_s_Gate_Box.png", 800,800)
+image custom dice = im.Scale("images/Zander/Assets/Custom_Dice.png", 800,800)
+image d20 and d6 = im.Scale("images/Zander/Assets/D20_and_D6.png", 800,800)
+image giant netherling plushie = im.Scale("images/Zander/Assets/Giant_Netherling_Plushie.png", 800,800)
+image mimic closed = im.Scale("images/Zander/Assets/Mimic_Closed.png", 800,800)
+image mimic open = im.Scale("images/Zander/Assets/Mimic_Open.png", 800,800)
+image protein powder = im.Scale("images/Zander/Assets/Protein_Powder.png", 800,800)
+image purple orchid = im.Scale("images/Zander/Assets/Purple_Orchid.png", 800,800)
 #----------------------------------------
 
 #------------Gacha Assets------------
