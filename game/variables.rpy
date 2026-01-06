@@ -174,25 +174,25 @@ transform nod:
     easeout .3 yoffset 0
     repeat 3
 
-# for when camerapanright2 pushes BG up, might have to make copy with adjustments!
 transform camerapanright:
-    yoffset -545
+    yoffset 0
     easein .2 xoffset -20
     easeout .2 xoffset 0
 
+# for when camerapanright pushes BG up, might have to make copy with adjustments!
 transform camerapanright2:
-    yoffset 0
-    easein .2 xoffset -20
-    easeout .2 xoffset 0
-
-# for when camerapanleft2 pushes BG up, might have to make copy with adjustments!
-transform camerapanleft:
     yoffset -545
     easein .2 xoffset -20
     easeout .2 xoffset 0
 
-transform camerapanleft2:
+transform camerapanleft:
     yoffset 0
+    easein .2 xoffset -20
+    easeout .2 xoffset 0
+
+# for when camerapanleft pushes BG up, might have to make copy with adjustments!
+transform camerapanleft2:
+    yoffset -545
     easein .2 xoffset -20
     easeout .2 xoffset 0
 

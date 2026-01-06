@@ -339,7 +339,7 @@ label cass_route_day1:
     C "That seems like a you problem."
 
     #Turning Head away from Cass n switch background to tools and equipment
-    show bg cass appliance store at camerapanright2
+    show bg cass appliance store at camerapanright
     hide Cassian smirking with easeoutleft
     
     "You turn away from him, looking at the display of tools and equipment in front of you."
@@ -348,7 +348,7 @@ label cass_route_day1:
     MC ".{w=0.3}.{w=0.3}.{w=0.3} Uh...{w=0.3} We needed a girdle greaser or something...{w=0.3} right?"
 
     # Change Cass Expression to C_Bruh
-    show bg cass appliance store at camerapanleft2
+    show bg cass appliance store at camerapanleft
     show Cassian at waist_up_center with easeinright
     show Cassian bruh at waist_up_center
     C "...{w=0.3} I thought {i}I{/i} was the ESL in this club."
