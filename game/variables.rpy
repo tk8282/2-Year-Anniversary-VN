@@ -242,6 +242,16 @@ transform waist_up_right_for_asset:
     xalign 1.4
     yoffset 100
 
+# character position for showing assets / Gale
+transform waist_up_right_for_asset2:
+    xoffset 1200
+    yoffset 80
+
+# character position for showing assets / Zanny
+transform waist_up_right_for_asset3:
+    xoffset 900
+    yoffset -80
+
 # ----fullbody versions/zoomed out character positions----
 transform fullbody_center:
     xalign 0.5
