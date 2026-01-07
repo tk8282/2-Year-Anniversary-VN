@@ -215,11 +215,11 @@ transform waist_up_center2:
     yoffset 80
 
 transform waist_up_left2:
-    xoffset 130
+    xalign 0
     yoffset 80
 
 transform waist_up_right2:
-    xoffset 1100
+    xalign 0.95
     yoffset 80
 #----------------------------------------
 
@@ -244,12 +244,12 @@ transform waist_up_right_for_asset:
 
 # character position for showing assets / Gale
 transform waist_up_right_for_asset2:
-    xoffset 1200
+    xalign 1.04
     yoffset 80
 
 # character position for showing assets / Zanny
 transform waist_up_right_for_asset3:
-    xoffset 900
+    xalign 2.15
     yoffset -80
 
 # ----fullbody versions/zoomed out character positions----
