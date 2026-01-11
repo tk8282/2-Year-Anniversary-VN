@@ -256,6 +256,8 @@ image Cassian bruh fullbody = im.Scale("images/Cassian/Sprites/cassian_Bruh_1.pn
 image Cassian laughing fullbody = im.Scale("images/Cassian/Sprites/cassian_Laughing_1.png", 850.5, 1203.3)
 
 image Lucien fullbody = im.Scale("sprites/Lucien.png", 911.25, 1620)
+image Zander fullbody = im.Scale("images/Zander/Sprites/Zanny_Default_1.png", 1059.83, 1500)
+image Zander flustered fullbody = im.Scale("images/Zander/Sprites/Zanny_Flustered_1.png", 1059.83, 1500)
 #----------------------------------------
 
 
@@ -322,10 +324,10 @@ image CG Gale 2 = im.Scale("images/Gale/CGs/gale_cg2.png", 1920, 1080)
 #----------------------------------------
 
 # --------------Zander--------------
-image CG Zanny 1 = im.Scale("images/Zanny/CGs/zanny_cg1.png", 1920, 1080)
-image CG Zanny 2 = im.Scale("images/Zanny/CGs/zanny_cg2.png", 1920, 1080)
-image CG Zanny 1 BG = im.Scale("images/Zanny/CGs/Zander_CG_1_BG.png", 1920, 1080)
-image CG Zanny 2 BG = im.Scale("images/Zanny/CGs/Zander_CG_2_BG", 1920, 1080)
+image CG Zanny 1 = im.Scale("images/Zander/CGs/zanny_cg1.png", 1920, 1080)
+image CG Zanny 2 = im.Scale("images/Zander/CGs/zanny_cg2.png", 1920, 1080)
+image CG Zanny 1 BG = im.Scale("images/Zander/CGs/Zander_CG_1_BG.png", 1920, 1080)
+image CG Zanny 2 BG = im.Scale("images/Zander/CGs/Zander_CG_2_BG", 1920, 1080)
 #----------------------------------------
 
 # Backgrounds
@@ -336,6 +338,7 @@ image bg stalls = im.Scale("backgrounds/Avallum BGS LN Festival.png", 1920, 1080
 image bg road daylight = im.Scale("backgrounds/Avallum BGS LN Road Daylight.png", 1920, 1080)
 image bg road sunset = im.Scale("backgrounds/Avallum BGS LN Road Sunset.png", 1920, 1080)
 image screentint = Solid("#000c")
+image black = "backgrounds/black-screen.png"
 
 layeredimage bg mc bedroom rosco:
     always:

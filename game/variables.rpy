@@ -110,6 +110,11 @@ transform trembling:
         linear .1 yoffset 0.0
         repeat
 
+transform pop:
+    yoffset 0
+    easein 0.1 yoffset -10
+    easeout 0.1 yoffset 0
+
 # single jump followed by smaller bounce
 transform singlejump:
     yoffset 0
@@ -143,8 +148,8 @@ transform restless:
 
 # used for BG
 transform screenshake:
-    yoffset -545
-    xoffset -5
+    ypos 0.5
+    xpos 0.5
     xanchor 0.5
     yanchor 0.5
     parallel:
@@ -155,10 +160,31 @@ transform screenshake:
         linear 0.22 xanchor 0.503 
         linear 0.22 xanchor 0.497 
         repeat 2
-    
+    ypos 0.5
+    xpos 0.5
+    xanchor 0.5
+    yanchor 0.5
+
+transform screenshake2:
+    ypos 0.5
+    xpos 0.5
+    xanchor 0.5
+    yanchor 0.5
+    parallel:
+        linear 0.3 yanchor 0.503 
+        linear 0.3 yanchor 0.497
+        repeat 2
+    parallel:
+        linear 0.32 xanchor 0.503 
+        linear 0.32 xanchor 0.497 
+        repeat 2
+    ypos 0.5
+    xpos 0.5
+    xanchor 0.5
+    yanchor 0.5
+
 # used for BG
 transform headshake:
-    yoffset 0
     easein .3 xoffset -20
     easeout .3 xoffset 0
     easein .3 xoffset 20
@@ -167,7 +193,6 @@ transform headshake:
 
 # used for BG
 transform nod:
-    yoffset 0
     easein .3 yoffset -20
     easeout .3 yoffset 0
     easein .3 yoffset 20
@@ -175,26 +200,12 @@ transform nod:
     repeat 3
 
 transform camerapanright:
-    yoffset 0
-    easein .2 xoffset -20
-    easeout .2 xoffset 0
-
-# for when camerapanright pushes BG up, might have to make copy with adjustments!
-transform camerapanright2:
-    yoffset -545
-    easein .2 xoffset -20
-    easeout .2 xoffset 0
+    ease .2 xoffset 20
+    ease .2 xoffset 0
 
 transform camerapanleft:
-    yoffset 0
-    easein .2 xoffset -20
-    easeout .2 xoffset 0
-
-# for when camerapanleft pushes BG up, might have to make copy with adjustments!
-transform camerapanleft2:
-    yoffset -545
-    easein .2 xoffset -20
-    easeout .2 xoffset 0
+    ease .2 xoffset -20
+    ease .2 xoffset 0
 
 # transforms.rpy
 transform waist_up_center:

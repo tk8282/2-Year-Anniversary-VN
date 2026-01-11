@@ -1,6 +1,8 @@
 # Start of Cass Route
 label cass_route:
+    
     scene bg clubroom
+
     MC "I'll go with Cass!"
 
     # change Cass Expression to neutral
@@ -72,7 +74,7 @@ label cass_route_day1:
     "You grin at him as you skip over, managing to dodge his attempt of bonking you on the head."
     
     # Change Cass Expression to C_Laughing
-    show Cassian laughing fullbody at fullbody_center2
+    show Cassian laughing fullbody at fullbody_center2, pop
     C "Shut the fuck up."
     # Change Cass Expression to C_Neutral
     show Cassian fullbody at fullbody_center2
@@ -97,7 +99,7 @@ label cass_route_day1:
         MC "It’s alright, I guess."
 
         # Change Cass Expression to C_Shocked
-        show Cassian shocked at waist_up_center
+        show Cassian shocked at waist_up_center, pop
         C "{i}Alright?!{/i}"
         C "What do you mean \"{i}alright{/i}!?\""
 
@@ -145,7 +147,7 @@ label cass_route_day1:
         MC "Look at you! You're green. And this place doesn't need flowers to look pretty, you're pretty enough to make up for it."
 
         #Change Expression to C_Laughing
-        show Cassian laughing pose2 at waist_up_center
+        show Cassian laughing pose2 at waist_up_center, pop
         C "Aww, thank you!"
 
 
@@ -162,7 +164,7 @@ label cass_route_day1:
         MC "I’ll look forward to it! Better keep your word~"
 
         #Change Expression to C_Laughing
-        show Cassian laughing at waist_up_center
+        show Cassian laughing at waist_up_center, pop
         C "Of course I will!"
 
         "He pulls out a piece of paper from his pocket with a bright smile on his face."
@@ -202,11 +204,11 @@ label cass_route_day1:
     show Cassian shocked at waist_up_center
 
     C "...{w=0.5} What?"
-    show bg cass garden without flowers at camerapanright
+    show bg cass garden without flowers at camerapanleft
     hide Cassian shocked with easeoutleft #maybe just hide without effect
     #MC move head away from Cass /scene move maybe?
     "You turn away from him purposefully to look at the ripples of water in the fountain. How pretty! Some of the water splatters onto the stone base, a little on the ground. You wonder just how fast the water is moving."
-    show bg cass garden without flowers at camerapanleft
+    show bg cass garden without flowers at camerapanright
     show Cassian shocked at waist_up_center with easeinleft
     #MC moves head back towards Cass /scene move maybe?
     "Your eyes return to his still stunned gaze when you realize he hasn't continued talking."
@@ -234,7 +236,7 @@ label cass_route_day1:
     pause 0.3
     show Cassian neutral at waist_up_center, trembling
     pause 0.5
-    show Cassian panic pose2 at waist_up_center
+    show Cassian panic pose2 at waist_up_center, pop
     "As you reach out to grab the paper—your fingertips barely grazing the side—the breeze gets stronger and blows the paper out of his hands."
     
     #change Expression to C_Panic
@@ -265,7 +267,7 @@ label cass_route_day1:
     MC "... Or at least pieces of it..."
 
     # Change Expression to C_Angry
-    show Cassian angry pose2 at waist_up_center
+    show Cassian angry pose2 at waist_up_center, pop
     C "Don't say that!"
 
     show Cassian angry at waist_up_center
@@ -327,7 +329,7 @@ label cass_route_day1:
     MC "Shut up! You literally didn't even help. Don't talk!"
 
     # Change Cass Expression to C_Laughing
-    show Cassian laughing pose2 at waist_up_center with dissolve
+    show Cassian laughing pose2 at waist_up_center, pop with dissolve
     
     C "What do you mean?? I held your hand and guided you through the store!"
 
@@ -339,7 +341,7 @@ label cass_route_day1:
     C "That seems like a you problem."
 
     #Turning Head away from Cass n switch background to tools and equipment
-    show bg cass appliance store at camerapanright
+    show bg cass appliance store at camerapanleft
     hide Cassian smirking with easeoutleft
     
     "You turn away from him, looking at the display of tools and equipment in front of you."
@@ -348,8 +350,8 @@ label cass_route_day1:
     MC ".{w=0.3}.{w=0.3}.{w=0.3} Uh...{w=0.3} We needed a girdle greaser or something...{w=0.3} right?"
 
     # Change Cass Expression to C_Bruh
-    show bg cass appliance store at camerapanleft
-    show Cassian at waist_up_center with easeinright
+    show bg cass appliance store at camerapanright
+    show Cassian at waist_up_center with easeinleft
     show Cassian bruh at waist_up_center
     C "...{w=0.3} I thought {i}I{/i} was the ESL in this club."
 
@@ -385,7 +387,7 @@ label cass_route_day1:
         "Cass looks over to where you're pointing, laughing at the cartoon face printed on the sides of the bowl and the mixer itself."
         
         # Change Cass Expression to C_Laughing
-        show Cassian laughing pose2 at waist_up_center with dissolve
+        show Cassian laughing pose2 at waist_up_center, pop with dissolve
         C "What the hell? Is it sticking its tongue out?"
 
         MC "It's feeling a little silly today, Cass."
@@ -414,7 +416,7 @@ label cass_route_day1:
         hide Crepe maker Dingding with dissolve
         show Cassian at waist_up_center with move
         # Change Cass Expression to C_Laughing
-        show Cassian laughing at waist_up_center
+        show Cassian laughing at waist_up_center, pop
         "You both giggle as you take pictures of the crepe maker. You absolutely have to show them to the rest of the guys! They'll want to buy it too, surely."
 
         C "You know, I bought a booster pack for myself after finishing some important projects."
@@ -434,7 +436,7 @@ label cass_route_day1:
         MC "Sure thing! And then I'll steal it~"
 
         #Change Cass Expression to C_Angry
-        show Cassian angry at waist_up_center
+        show Cassian angry at waist_up_center, pop
         C "Nuh uh. Don't you fucking dare—"
 
         MC "Cass, wait, don't look behind you but there's a starter Pipmon kettle right behind you and it's a water type."
@@ -713,10 +715,10 @@ label cass_route_day1:
     # Change Expression to C_Relieved
     show Cassian relieved at waist_up_center
     C "Pfft. Many many more memories."
-
+    show Cassian laughing at waist_up_center
     "You both share a laugh, the atmosphere much lighter and cheerier than earlier."
+    show Cassian relieved at waist_up_center
     "You're glad. It's definitely better to see Cass being happy and comfortable than being troubled and uncomfortable."
-    
     MC "Well then, let's continue unpacking for now and setting the equipment aside for the day of the festival. Hm... We can discuss the stuff needed for the game showcase tomorrow."
 
     "Cass nods, but you see a teasing smile slowly growing on his face."
@@ -865,7 +867,7 @@ label cass_route_day2:
 
     C "What do you mean? You're just so cute I can't help myself."
     # Change Cass Expression to C_Winking ### Finger Gun Winking Sprite
-    show Cassian winking fingergun at waist_up_center
+    show Cassian winking fingergun at waist_up_center, pop
     C "In fact, if you were a vegetable, you'd be a cute-cumber!"
    
     "Pointing finger guns your way, he waits for your response; but all you can give is a look of pure disgust."
@@ -875,7 +877,9 @@ label cass_route_day2:
 
     # Change Cass Expression to C_Thinking
     show Cassian thinking at waist_up_center
-    C "Okay, okay so no on that one,{w=0.3} uhhh{w=0.3}.{w=0.3}.{w=0.3}.{w=0.3} AHAH!"
+    C "Okay, okay so no on that one,{w=0.3} uhhh{w=0.3}.{w=0.3}.{w=0.3}.{w=0.3}{nw}"
+    show Cassian hopeful at waist_up_center, pop
+    extend " AHAH!"
 
     # Change Cass Expression to C_Smirking
     show Cassian smirking at waist_up_center
@@ -907,8 +911,12 @@ label cass_route_day2:
     "Just as the panicked male rushes back to his cards, you tighten your grip to bring attention back."
 
     MC "{i}{b}No.{/b}{/i}"
-
-    C "B-but I have a few more, like this one! Hey, did you fall from hea—"
+    show Cassian disappointed at waist_up_center
+    C "B-but{nw}"
+    show Cassian thinking at waist_up_center
+    extend " I have a few more, like this one!{w=0.3}{nw}"
+    show Cassian smirking at waist_up_center
+    extend " Hey, did you fall from hea—"
 
     MC "No more, Cassian. No more."
     # Change Cassian Expression to C_Dissapointed
@@ -1029,7 +1037,7 @@ label cass_route_day2:
         C "HAH?"
 
         "You can't help but burst out laughing at Cass' reaction. Gosh, he's looking at you as if you insulted his whole bloodline or something."
-
+        show Cassian bruh at waist_up_center
         C "I'll have you know \"Humble\" happens to be my middle name."
 
         "Cass turns away from you, arms crossed. You really can never be civil to him, can you?"
@@ -1115,7 +1123,7 @@ label cass_route_day2:
 
         MC "Call yourself whatever you want, just put your convenient height to use."
 
-        show Cassian laughing at waist_up_center
+        show Cassian laughing at waist_up_center, pop
         "At your words, Cass lets out a soft chuckle."
 
     elif player_choice == "deny-help":
@@ -1139,11 +1147,12 @@ label cass_route_day2:
         "Resigned, you cross your arms over your chest, closing your eyes and letting gravity take you."
         
         # Falling down shake
+        show black at truecenter onlayer zero
         play sound "audio/sfx/body-fall.ogg" volume 0.1
         with vpunch
 
         # Change Cassian Expression to C_Panic
-        show Cassian panic at waist_up_center
+        show Cassian panic at waist_up_center, pop
         C "Woah, I got you."
 
         "You let the warm embrace of death take you...{w=0.3} Waitwaitwait, warm?"
@@ -1171,7 +1180,7 @@ label cass_route_day2:
         MC "Yeah, yeah, whatever. Just get the dumb thing already."
 
         "As if you'd give Cass the satisfaction of being right. The embarrassment from the whole ordeal makes your cheeks hot and eyes flighty. To protect the last of your pride, you tilt your face down, away from Cass' gaze."
-        show Cassian laughing at waist_up_center
+        show Cassian laughing at waist_up_center, pop
         "Cass lets out a small snicker at your actions while moving behind you"
     # [End of Choice]
 
@@ -1234,6 +1243,7 @@ label cass_route_day2:
 
     "As Cass takes one step towards you, you take two back, not paying attention to your surroundings."
     "The controller wire wraps around your feet, tripping you backward. In a panic, you reach out to the objects in your peripheral— but wow, would you look at that?"
+    show Cassian panic at waist_up_center
     "It's just a stack of boxes... A stack of boxes you tipped over that are about to crash land onto you."
     
     # [Start of choice dependent dialog]
@@ -1251,7 +1261,7 @@ label cass_route_day2:
     scene black with fade
 
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_center with dissolve
+    show Cassian panic at waist_up_center, pop with dissolve
     
     C "[player_name]!"
     hide Cassian with dissolve
@@ -1322,7 +1332,7 @@ label cass_route_day2:
     "Shoe shuffling follows with a soft click at the door and complete darkness."
 
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_center
+    show Cassian panic at waist_up_center, pop
     C "Did he just..."
 
     MC "Um, I think so."
@@ -1337,7 +1347,7 @@ label cass_route_day2:
     MC "Sooooo, uh, what were you about to say, Cass?"
 
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_center
+    show Cassian panic at waist_up_center, pop
     C "Oh, uh, nothing. Don't worry about it."
 
     "You catch the weird twinge to Cass' words. The vulnerable and tender expression he wore doesn't leave your mind."
@@ -1385,7 +1395,7 @@ label cass_route_day2:
         MC "Nuh uh. I ask the questions. What were you gonna say earlier? It seemed really important?"
 
         # Change Cassian Expression to C_Panic
-        show Cassian panic at waist_up_center
+        show Cassian panic at waist_up_center, pop
         C "D-don't worry about it—"
 
         MC "Oh my god, shut up and tell me already!!"
@@ -1411,7 +1421,7 @@ label cass_route_day2:
         "You nod in compliance, accepting Cass' diversion."
         "If it was truly important, Cass would've said something. There's no point in obsessing about it when you're stuck in your school's storage room... Right?"
         "Doubt creeps in you, worrying over what is left unsaid between the two of you."
-        show Cassian disappointed at waist_up_center, zoom_away
+        show Cassian disappointed at waist_up_center,pop, zoom_away
         "Suddenly, Cass stands up, leaving you lost in your thoughts."
         
         show Cassian disappointed at waist_up_left with slow_move
@@ -1424,7 +1434,7 @@ label cass_route_day2:
         "You prop yourself up, moving towards Cass. At his side, you lift a hand to his shoulder in comfort."
         show Cassian disappointed at waist_up_center, singlejump
         show Cassian disappointed at waist_up_center, zoom_back
-        show bg cass storage at screenshake
+        show bg cass storage at screenshake2
         pause 1
         MC "{w=1.0}Cass, are you alright?"
 
@@ -1508,7 +1518,7 @@ label cass_route_day2:
     MC "Cass is being stupid, Gale locked us in the damn storage room, and {i}now{/i} I have to call your dumb ass as our last option!!"
 
     # Change Cassian Expression to C_Upset
-    show Cassian upset at waist_up_right with dissolve
+    show Cassian upset at waist_up_right,pop with dissolve
     C "Hey—"
     hide Cassian with dissolve
 
@@ -1518,7 +1528,7 @@ label cass_route_day2:
     R "{i}No way, bro! How'd you get yourselves locked in there?? Was it Cass' fault???{/i}"
 
     # Change Cassian Expression to C_Angry
-    show Cassian angry at waist_up_right with dissolve
+    show Cassian angry at waist_up_right, pop with dissolve
     C "It was not my fault!"
     hide Cassian with dissolve
 
@@ -1571,7 +1581,7 @@ label cass_route_day2:
     MC "Good, good. I'm not sure I'll have the self-control not to punch you in the face if you pull that shit again."
 
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_center
+    show Cassian panic at waist_up_center, pop
     C "You WHAT?"
 
     MC "Hey, I was {i}thinking{/i} about it, not like it happened or anything..."
@@ -1584,7 +1594,7 @@ label cass_route_day2:
     "Before you know it, you let out a small laugh, followed by Cass' louder, unfiltered fit."
 
     # Change Cassian Expression to C_Laughing
-    show Cassian laughing at waist_up_center
+    show Cassian laughing at waist_up_center, pop
     C "Always so mean to me, huh, [player_name]?"
     hide Cassian with dissolve
     "The storage room echoes with your laughter. The happy sounds bounce on the walls, shattering the previous memories of your little argument. At the end of the day, Cass is someone important to you, small arguments like those be damned."
@@ -1606,11 +1616,11 @@ label cass_route_day2:
     MC "AHHHHH, MY EYES!"
 
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_right with dissolve
+    show Cassian panic at waist_up_right, pop with dissolve
     C "UGH—I forgot how dark it is in there, geez. Give us a little warning, Rosco."
 
     # Change Rosco expression to R_Laughing
-    show Rosco laugh jacket at waist_up_left with dissolve
+    show Rosco laugh jacket at waist_up_left, pop with dissolve
     MC "I-I think you just caused permanent damage to my retinas...{w=0.5} STOP LAUGHING, YOU PINK SHIT!"
 
     "If you had working eyes, you'd shut his dumb ass up; but you don't, so you'll just beg for nature to smite him off the planet."
@@ -1679,7 +1689,7 @@ label cass_route_day2:
 
     R "Bro, what did you do?"
     # Change Cassian Expression to C_Panic
-    show Cassian panic at waist_up_right
+    show Cassian panic at waist_up_right, pop
     C "HAH—WHAT?! NOTHING??"
 
     hide Cassian with dissolve
