@@ -108,16 +108,20 @@ label zanny_route_day2:
     "You laugh as he begins to type away on his computer. In the meantime, you continue to look around his dorm, on the lookout for any details you missed before."
     "There's a lot of personalization that adds to the warm feeling of the room, details you haven’t taken the time to fully observe."
     "That's when you notice the other various additions to his dorm since you last visited. Added displays that fit neatly into his unique aesthetic. It's nice. Cozy. You want to know more."
-    
+
+label zanny_route_day1_roomcheck:
     # [Major Choice Start]
+    if (ask_figure and ask_box and ask_dice and ask_plushie) == True:
+        jump zanny_route_day1_continued
+
     menu:
-        "Ask about figure.":
+        "Ask about figure." if not ask_figure:
             $ major_choice = "ask-figure"
-        "Ask about A&R dice.":
+        "Ask about A&R dice." if not ask_dice:
             $ major_choice = "ask-dice"
-        "Ask about the mysterious box in the corner.":
+        "Ask about the mysterious box in the corner." if not ask_box:
             $ major_choice = "ask-box"
-        "Ask about the giant Netherling plushie on the chair.":
+        "Ask about the giant Netherling plushie on the chair." if not ask_plushie:
             $ major_choice = "ask-plushie"
 
     if major_choice == "ask-figure":
@@ -230,7 +234,7 @@ label zanny_route_day2:
         
         show Zander neutral pose2 at waist_up_right3 with move
         Z "Goodness, I sure do talk a lot. Anything else you’d like to ask about?"
-
+        $ ask_figure = True
         # [End Major Choice #1]
 
     elif major_choice == "ask-dice":
@@ -293,7 +297,7 @@ label zanny_route_day2:
         # Neutral
         show Zander neutral at waist_up_right3 with move
         Z "Notice anything else? I’ve added quite a lot since the last time you’ve visited."
-    
+        $ ask_dice = True
     # [End of Major Choice #2]
 
     elif major_choice == "ask-box":
@@ -370,7 +374,7 @@ label zanny_route_day2:
         # Neutral
         show Zander neutral at waist_up_right3
         Z "Anything else you’d like to chat about? I can answer questions all day."
-
+        $ ask_box = True
         # [End of Major Choice #3]
 
     elif major_choice == "ask-plushie":
@@ -413,9 +417,12 @@ label zanny_route_day2:
         # Neutral
         show Zander neutral pose2 at waist_up_right3 with move
         Z "Oh my days, I really went on-and-on there, didn’t I! Would you like to ask more?"
-    
+        $ ask_plushie = True
     # [End of Major Choice #4]
     # [Major Choice End]
+    jump zanny_route_day1_roomcheck
+
+label zanny_route_day1_continued:
 
     show Zander neutral at waist_up_right3
     MC "I think I’m finished. Plus, if we went on any longer, we probably wouldn’t have been able to get anything productive done."

@@ -26,6 +26,12 @@ init -1:
     default appliance_choice = "normal-appliances"
     default cassRomantic = False
 
+    # -- Choices for Zanny Route ---
+    default ask_figure = False
+    default ask_dice = False
+    default ask_box = False
+    default ask_plushie = False
+
     # -- Progress Flags --
     default chapter1_complete = False  
     default chapter2_complete = False  
