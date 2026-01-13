@@ -9,6 +9,7 @@ init -1:
     default player_possessive = "their"
     default player_possessive_obj = "theirs"
     default player_reflexive = "themself"
+    default player_romterm = "partner"
 
     # -- Choices --
     default collected_routes = []
@@ -18,19 +19,23 @@ init -1:
     default phone_acc = 1 # 1=bibble, 2=dingding, 3=gobblycook, 4=paddyraptor
 
     # -- Choices for Lucien Route --
-    default luciRomantic = False
-    default flowerPoppy = False
-    default flowerDaisy = False
+    default luciRomantic = False # affects ending
+    default flowerPoppy = False # affects ending
+    default flowerDaisy = False # affects ending
 
     # -- Choices for Cassian Route --
     default appliance_choice = "normal-appliances"
-    default cassRomantic = False
+    default cassRomantic = False # affects ending
 
     # -- Choices for Zanny Route ---
     default ask_figure = False
     default ask_dice = False
     default ask_box = False
     default ask_plushie = False
+    default convo_festival = False
+    default convo_school = False
+    default zanny_orchid = False # affects ending
+    default zanny_scare = False # affects ending
 
     # -- Progress Flags --
     default chapter1_complete = False  
@@ -41,6 +46,10 @@ init -1:
 define slow_move = MoveTransition(1.5)
 
 define slow_move2 = MoveTransition(2.0)
+
+transform ib_fade:
+    alpha 0.0
+    easein 1.0 alpha 1.0
 
 # asset appears from bottom (used for e.g. phone asset)
 transform move_up:
@@ -188,7 +197,7 @@ transform screenshake2:
     xpos 0.5
     xanchor 0.5
     yanchor 0.5
-
+    
 # used for BG
 transform headshake:
     easein .3 xoffset -20
@@ -203,7 +212,7 @@ transform nod:
     easeout .3 yoffset 0
     easein .3 yoffset 20
     easeout .3 yoffset 0
-    repeat 3
+    repeat 2
 
 transform camerapanright:
     ease .2 xoffset 20

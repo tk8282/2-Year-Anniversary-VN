@@ -2,7 +2,7 @@
 label cass_route:
     
     scene bg clubroom
-
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     MC "I'll go with Cass!"
 
     # change Cass Expression to neutral
@@ -14,7 +14,7 @@ label cass_route:
 
     C "Good. Make sure of that."
     hide Cassian with dissolve
-
+    stop music fadeout 1.0
     jump cass_route_day1
 
 label cass_route_day1:
@@ -26,17 +26,17 @@ label cass_route_day1:
     pause 1
     hide text
     with dissolve
-
+    
     "Despite having been a student at the university for quite a while already, you’re still constantly amazed by just how vast the entire campus is."   
     "You're helping Cass today, and he gave you exact directions towards a place you’ve never even thought to visit before."
     "When you finally arrive, you are struck speechless."
 
     MC "Holy shit..."
-
+    # Start music: G2 Chill
     # Change scene with Garden without flower
     scene bg cass garden without flowers with fade
     hide black
-
+    play music "audio/music/G2 - Chill.wav" loop
     "In front of you lies a garden, green covering every inch of the place. The shrubs are trimmed to perfection, highlighting the stone fountain sitting beautifully in the center."
     "The water rushes with vigour. It almost seems like it sensed a new visitor and got excited."
     "The garden is far enough away from everything else to appear peacefully silent, free of the chatter of people or rushing footsteps."
@@ -230,7 +230,7 @@ label cass_route_day1:
     "He turns the paper over to you and you start reading off the top of the list."
 
     MC "Hm... round griddle greaser... wooden spreader..."
-
+    stop music fadeout 1.0
     # Wind blows
     play sound "audio/sfx/wind-gust.ogg" volume 0.6
     pause 0.3
@@ -319,6 +319,8 @@ label cass_route_day1:
 
     # fade out to Background Appliance Store
     scene bg cass appliance store with fade
+    # Start music C1 (2)
+    play music "audio/music/C1 - Chill (2).wav"
 
     MC "...{w=0.5} I should go shopping more."
 
@@ -555,12 +557,13 @@ label cass_route_day1:
 
         "You end up buying the stuff you need that's only a little over budget. No big loss! Success!"
         "(You'll sneak in that strawberry stem remover somehow.)"
-
+    stop music fadeout 1.0
     # [Choice Ends]
 
     # Fade out into Clubroom
     scene bg clubroom with fade
     
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
 
     "You both return to the clubroom, boxes full of appliances ready to unload."
     "You set to work, giggling about the occurrences and jokes from earlier. You open up some of the boxes and pull out..."
@@ -605,9 +608,9 @@ label cass_route_day1:
     "But you want to understand him."
 
     C "... We were meant to buy a gas crepe maker."
-
+    stop music fadeout 1.0
     MC ".{w=0.3}.{w=0.3}.{w=0.3} Oh."
-
+    
     "From what you know, gas crepe makers are better for faster and more efficient ways of making crepes. It would make Luci's job so much easier on the day of the festival!"
     "And neither of you were able to get one, apparently..."
 
@@ -617,8 +620,9 @@ label cass_route_day1:
     show Cassian thinking pose2 at waist_up_center
     C "We {i}could{/i} have. If we kept the list safe."
     show Cassian thinking at waist_up_center
+    play music "audio/music/G4 - Sad.wav" fadein 1.0 loop
     "The sigh of frustration he lets out silences any other words you want to say. It seems the series of inconveniences throughout the day added a lot of weight on Cass' shoulders."
-
+    
     MC "I'm sorry, Cass, I—"
 
     # Change Cass Expression to C_Upset
@@ -717,6 +721,11 @@ label cass_route_day1:
     C "Pfft. Many many more memories."
     show Cassian laughing at waist_up_center
     "You both share a laugh, the atmosphere much lighter and cheerier than earlier."
+    stop music fadeout 1.0
+    # switch to C1???
+    pause 1.0
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
     show Cassian relieved at waist_up_center
     "You're glad. It's definitely better to see Cass being happy and comfortable than being troubled and uncomfortable."
     MC "Well then, let's continue unpacking for now and setting the equipment aside for the day of the festival. Hm... We can discuss the stuff needed for the game showcase tomorrow."
@@ -782,6 +791,7 @@ label cass_route_day1:
     "You take your stuff and step through the clubroom door. As you're leaving, you look over your shoulder and give Cass a small wave."
     hide Cassian with dissolve
     scene black with fade
+    stop music fadeout 1.0
     "The door slowly closes, but before it could fully shut, you hear a small whisper from him."
 
     C "...{w=0.5} Do I have to be more straightforward?"
@@ -808,7 +818,8 @@ label cass_route_day2:
     with dissolve
     hide screentint
     scene bg clubroom with fade
-
+    # start of music c1 (2)
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     "You arrive in front of the clubroom, refreshed and ready for another day. If you remember correctly, you'll be gathering supplies for the game showcase."
 
     MC "Alright! Let's do this!"
@@ -934,6 +945,7 @@ label cass_route_day2:
     C "Right...{w=0.3} all we need for today is in the storage room across the way."
 
     MC "Alright! Lead the way, Cass!"
+    stop music fadeout 1.0
 
     hide Cassian with dissolve
     show screentint with dissolve
@@ -949,7 +961,8 @@ label cass_route_day2:
 
     # Background: Dark Storage Room
     scene bg cass storage door pov with fade
-
+    # play music g1
+    play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     "Peering in, you can see the outline of shelves full of miscellaneous objects and stacks of boxes. A line of five plushes catches your eye, staring into your soul. The plushes range from a colorful parrot to a... wait." 
     "What {i}is{/i} that? A taxidermy rat? Um, cool, to each their own, you guess?"
     "At the entrance, you spot all kinds of familiar items decorating the space."
@@ -1085,7 +1098,7 @@ label cass_route_day2:
     MC "Man, you just {i}hate{/i} me, huh? Fine. Be that way."
 
     "Even on your tip toes, your hand can only brush over the hanging wire, unable to grasp it."
-
+    
     MC "What.{w=0.5} The.{w=0.5} FUCK."
 
     "Who makes shelves this tall anyway? They're horrible. They don't deserve the cold sides of pillows. May their ankles randomly give out."
@@ -1136,7 +1149,7 @@ label cass_route_day2:
         "You search for a steady foothold on the lowest shelf. Once you find it, you hold onto the sides of the shelf and push yourself upward, setting your plan into motion."
         "With the boost, you're nearly there. You can see it! The wire is right within your grasp! You quickly move both hands towards it, ensuring you get the wire this time."
         "Almost, almost{w=0.3}.{w=0.3}.{w=0.3}.{w=0.3} GOT I—wait a minute... WAIT A MINUTE! YOU'RE FALLING!"
-
+        stop music fadeout 1.0
         MC "OH SHI—"
 
         "Great thinking there, [player_name]! You let go of the shelf and just as that apple guy foretold in physics, GRAVITY HATES EVERYONE!"
@@ -1154,7 +1167,7 @@ label cass_route_day2:
         # Change Cassian Expression to C_Panic
         show Cassian panic at waist_up_center, pop
         C "Woah, I got you."
-
+        play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
         "You let the warm embrace of death take you...{w=0.3} Waitwaitwait, warm?"
         "Confused, you tilt your head upwards, opening your eyes to see familiar hazel staring back at you."
 
@@ -1256,7 +1269,7 @@ label cass_route_day2:
         "Damn, not once but TWICE! There you go, falling to your death once again because of some dusty-ass controller."
 
     # [End of Choicedependent dialog]
-
+    stop music fadeout 1.0
     "Instinctively, you close your eyes and curl into yourself."
     scene black with fade
 
@@ -1285,7 +1298,7 @@ label cass_route_day2:
     C "[player_name], are you okay?"
 
     "Cass tilts his head to the side, causing loose hair to fall down his shoulder and his earring to slightly shimmer."
-    
+    play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
     # Show CG 1
     scene CG Cass 1 with fade
     pause 1.0
@@ -1325,7 +1338,7 @@ label cass_route_day2:
     C "Hey, [player_name], there's something I have to tell yo—"
 
     "A sudden voice reaches your ears."
-
+    stop music fadeout 1.0
     G "Oh shit, guess we didn't close this up, huh. Well—there we go! Time to head out!"
 
     queue sound ["audio/sfx/shoe-shuffling.ogg", "audio/sfx/door-locking.ogg"] volume 0.3
@@ -1340,6 +1353,8 @@ label cass_route_day2:
     # Change Cassian Expression to C_Upset
     show Cassian upset at waist_up_center
     C "...{w=0.3} You have got to be kidding me."
+
+    # add music?
 
     "Gale fucking Galleon just locked you in the dark storage room with Cassian Floros right on top of you... What in the shoujo manga is this shit? Y'know, just what is your life at this point?"
     "The two of you stay in silence, trying to process your new situation along with the awkward tension from before still simmering."
@@ -1478,7 +1493,7 @@ label cass_route_day2:
         C "Oh! You found one, what is it?"
 
         "You wave the phone in Cass' direction as the call rings out."
-
+    play sound "audio/sfx/cell-phone-dial.ogg"
     # [End of Choice]
     MC "I'm calling Rosco."
 
@@ -1486,11 +1501,12 @@ label cass_route_day2:
     show Cassian disappointed at waist_up_center
     C "Oh..."
     hide Cassian with dissolve
-    play sound "audio/sfx/cell-phone-dial.ogg"
+    
     "His voice takes on a tone of dejectedness, sounding like the human embodiment of \"kicking rocks all alone.\""
     "You would feel bad if he wasn't such a stubborn prick."
     "Just as you start getting impatient, Rosco picks up the call, sounding slightly annoyed and almost like he just crawled out of bed."
     stop sound
+    # Add music comedic?
     R "{i}Yo? What's up.{/i}"
 
     "You put the phone on speaker as Cass physically whips his head over to the new voice."
@@ -1556,6 +1572,7 @@ label cass_route_day2:
     C "Um, [player_name]—"
 
     "At his voice, you whip your head to glare at Cass, stopping him from continuing his sentence."
+    play music "audio/music/G4 - Sad.wav" fadein 1.0
     "Cass averts his eyes down, choosing to watch his twiddling thumbs. Gaining his courage again, Cass lets out an exhale."
 
     C "I'm sorry, [player_name]. I shouldn't have acted like that towards you."
@@ -1589,7 +1606,9 @@ label cass_route_day2:
     # Change Cassian Expression to C_Bruh
     show Cassian bruh at waist_up_center
     C "{w=0.5}.{w=0.5}.{w=0.5}."
-
+    stop music fadeout 1.0
+    pause 1.0
+    play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     "The two of you look at each other for a moment but instead of the tense and awkward air from before, it's lighter, clearer."
     "Before you know it, you let out a small laugh, followed by Cass' louder, unfiltered fit."
 
@@ -1629,9 +1648,10 @@ label cass_route_day2:
     show screentint with dissolve
     "Your walk back to the clubroom consisted of Cass leading you back (blind leading the blind... you can guess how great that went) as giggles and various profanities that would have even Zanny staring at you in stunned and impressed silence leave your lips."
     "Somehow, though, you make it to the clubroom with all people alive and limbs attached."
-
+    stop music fadeout 1.0
     # Change scene to Clubroom
     scene bg clubroom with fade
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
 
     MC "Woo! Glad that's over."
 
@@ -1694,10 +1714,10 @@ label cass_route_day2:
 
     hide Cassian with dissolve
     hide Rosco with dissolve
-
+    stop music fadeout 1.0
     # Change scene to MC Dorm
-    scene bg clubroom with fade
-
+    scene bg mc bedroom cass with fade
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     "You let out a large sigh once you enter your room and belly flop on your bed. Everything that happened today comes crashing down on you. And by everything, it's {i}everything{/i}."
     "Your brain does that horrible memory slideshow, but instead of it showing that one public presentation you did where your nervousness was visibly through the roof or when you tripped over yourself in a crowded street, it was Cass... which is arguably worse."
     "Eyes like gleaming copper, an embrace warm and inviting as a winter hearth, that salty sea breeze lingering in his hair... what the shit."
@@ -1709,10 +1729,12 @@ label cass_route_day2:
 
     MC "Hmmm, now that's done, what's next?"
     if "C" not in collected_routes:
+        
         $ collected_routes.append("C")
 
     if len(collected_routes) == 5:
         scene black with fade
+        stop music fadeout 1.0
         "Thinking back, you realize you helped out all the boys with their parts of the stall. Must mean the festival is soon, huh. How time flies."
         "Laying down in bed, you can't help but feel excited as you think about the event. What kind of fun awaits you at this spring festival!"
         
@@ -1721,6 +1743,8 @@ label cass_route_day2:
 
     else:
         scene black with fade
+        stop music fadeout 1.0
         "You check your phone messages. Since you pretty much finished Cass' part of the stall, guess you'll start helping out one of the other boys." 
         "Your thumb dangles over the countless chats. Hmm, who's next?" 
+        
         jump choose_route

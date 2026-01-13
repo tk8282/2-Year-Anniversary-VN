@@ -1,5 +1,6 @@
 label zanny_route:
     scene bg clubroom
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     MC "I'll help Zanny!"
 
     # Zanny Expression neutral
@@ -12,9 +13,10 @@ label zanny_route:
     MC "Can’t wait!"
 
     hide Zander with dissolve
-    jump zanny_route_day2
+    stop music fadeout 1.0
+    jump zanny_route_day1
 
-label zanny_route_day2:
+label zanny_route_day1:
     scene black with fade 
     show text "{size=50}Zander Route: Day 1{/size}" at truecenter
     with dissolve
@@ -24,7 +26,8 @@ label zanny_route_day2:
 
     # Change BG to MC's Bedroom
     scene bg mc bedroom zanny with fade
-    # [Common Track Starts]
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+    
     MC "Classes are over for the day... but I’m supposed to help Zanny this afternoon!"
 
     "You check your calendar as you’re getting ready, only to find out that you still have another day until you help out with him."
@@ -409,8 +412,8 @@ label zanny_route_day1_roomcheck:
         MC "Oh? May I know more, then?"
         
         Z "Considering how you’re here, I’d say you already do. Nevertheless, the club is always open to welcoming newcomers. Say the word, and I’ll give you the whole spiel."
-
-        "Unsure exactly what he means, you nod excitedly, curious as to what ‘club’ he’s talking about. Not wanting to get too carried away, you mentally note to ask more later when the time is right."
+        
+        "Unsure exactly what he means, you nod excitedly, curious as to what \"club\" he’s talking about. Not wanting to get too carried away, you mentally note to ask more later when the time is right."
         "From how he talks about it, it appears to be something very much worth investing in."
 
         hide giant netherling plushie with dissolve
@@ -501,11 +504,11 @@ label zanny_route_day1_continued:
     show Zander excited at waist_up_right3, pop
     Z "Well, what are you waiting for? Let's go!"
     hide Zander with dissolve
-
+    stop music fadeout 1.0
     # Change Scene to BG Clubroom
     scene bg clubroom with fade
-
-    # Play common club room Track
+    
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     "After walking across campus, the two of you finally enter the clubroom. Usually, you work on projects or procrastinate by playing games with the other boys here."
     "This is your first time hanging out in the club room with him one-on-one. You're a bit nervous."
     "As soon as you two enter, Zanny walks over to the shelves with all the members' personal belongings. There are a few laminated pipmon cards, bags, and other various trinkets."
@@ -598,10 +601,11 @@ label zanny_route_day1_continued:
 
     hide custom dice with dissolve
     hide Zander with dissolve
-
+    stop music fadeout 1.0
     # [CG 1 Start]
     scene CG Zanny 1 with fade
     # [Fantasy Ambiance Track Start]
+    play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     pause 1.0
     Z "First order of business is character creation. Here is a printed sheet to get you started. You can either base the character on you or go crazy with it! It's all about the roleplay."
 
@@ -820,8 +824,9 @@ label zanny_route_day1_continued:
         Z "A group of bandits suddenly breaks through the door and charges through with daggers in hand! Since you two are alert, you’ve already prepared your weapons—there is no need to use an action to equip them."
 
         # [Choice End]
-        # [Fantasy Battle Track Start]
-    
+    stop music fadeout 1.0
+    # [Fantasy Battle Track Start]/suspicious sneaking?
+    #play music "audio/music/??.wav" fadein 1.0 loop
     show Zander neutral at waist_up_left3
     Z "We've entered combat now! Go ahead and roll for initiative."
 
@@ -973,7 +978,9 @@ label zanny_route_day1_continued:
     # [Choice End]
 
     # [End Fantasy Battle Track]
+    # stop music fadeout 1.0
     # [Fantasy Ambiance Track Start]
+    play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     show Zander neutral pose2 at waist_up_left3
     Z "Your final attack depletes their HP, and they fall to the ground. One of the attackers is still conscious off to the side, groaning on the floor with their hand clutching their shoulder. What would you like to do?"
 
@@ -1045,10 +1052,12 @@ label zanny_route_day1_continued:
 
     # [CG End]
     # [Fantasy Ambiance Track End]
+    stop music fadeout 1.0
     hide Zander with dissolve
 
     # [BACKGROUND—Club Room]
     scene bg clubroom with fade
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
 
     MC "That's it? We're finished?"
 
@@ -1117,5 +1126,773 @@ label zanny_route_day1_continued:
         # [Choice End]
         hide Zander with dissolve
         "Reluctantly, you turn back around, set on passing out as soon as you hit your bed. Tomorrow is going to be a long day of preparation."
+    
+    stop music fadeout 1.0
+    # [Day 1 End]
+    jump zanny_route_day2
 
-        # [Day 1 End]
+label zanny_route_day2:
+
+    # [Start of Zanny Day 2]
+    
+    scene black with fade
+    show screentint
+    show text "{size=50}Day 2{/size}" at truecenter
+    with dissolve
+    pause 1
+    hide text
+    with dissolve
+    hide screentint
+    play audio "audio/sfx/bedside-clock-alarm.ogg"
+    scene bg mc bedroom zanny with fade
+    pause 1.0
+    "The sound of a blaring alarm startles you awake from your intense dream."
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+    "This entire morning, you couldn't stop thinking about that one-shot Zanny did with you last night, remnants of excitement still plaguing your mind. As you napped, it was all you could think about."
+    "When you turn to look at your phone, your stomach drops upon noticing the time. Zanny is supposed to be picking you up to go ingredient shopping this afternoon—and you're still in bed!"
+
+    MC "Shit!"
+
+    "You throw on what you can find and pretend all is normal when a knock on the door finally sounds.{nw}"
+    play sound "audio/sfx/door-knocking.ogg"
+    extend " When you open it, you see Zanny standing with a calm smile, ready to go out for the day."
+        
+    # [Choice Start]
+    menu:
+        "Smile back.":
+            $ player_choice = "smile"
+        "Greet him with a hug":
+            $ player_choice = "hug"
+
+    show Zander neutral at waist_up_center3 with dissolve
+    if player_choice == "smile":
+        MC "Nice to see you again, Zanny!"
+
+        Z "Well, hello there, [player_name]. Nice to see you again as well. You ready to get some shopping done?"
+
+    elif player_choice == "hug":
+        show Zander flustered at waist_up_center3
+        Z "Oh? Since when have you become such a hugger?"
+
+        MC "Since getting to spend more time with you alone."
+
+        "His eyes widen at the sudden confidence, staring you down as you pull away."
+
+        Z "Oh, please—you flatter me. Now, would you like to stand here and continue chatting or get going with that shopping spree? Knowing me, we'll probably be there all damn day if we don't get a move on."
+
+    # [Choice End]
+
+    MC "Of course! Lead the way."
+    hide Zander with dissolve
+    show screentint with dissolve
+    show Zander neutral at waist_up_right3 with dissolve
+
+    "He talks as you walk down the dorm hall and to the destination. Instead of outside, like you originally thought, the two of you head down to the basement level of the building's parking garage."
+
+    Z "We can't really buy ingredients near campus since we need so much. I did some snooping around and found that there's a supermarket 10 minutes out of the city. I’m not sure if you’ve heard of the place, but it’s fairly cheap."
+
+    MC "Can't say I have."
+
+    Z "Bummer. I’m kinda surprised, actually; it's not that unheard of, and it's pretty big, even if it's only local."
+
+    MC "Cut me some slack! I've been busy with my studies."
+
+    show Zander smug at waist_up_right3
+    Z "You don’t say...{w=0.3} I’ll have to show you around more places then once summer break rolls around. If you’re up to it, of course. I’ve realized that there are lots of cool niche places around here that not many people know about. Which is for the better, honestly."
+    hide Zander with dissolve
+
+    # [Choice Start]
+    menu:
+        "Like a date?":
+            $ player_choice = "date"
+        "That sounds pretty fun!":
+            $ player_choice = "fun"
+    show Zander smug at waist_up_right3 with dissolve
+    if player_choice == "date":
+        show Zander flustered at waist_up_right3
+        Z "If that’s what you wanna call it, why not?"
+        
+    # [Choice End]
+
+    show Zanny neutral at waist_up_right3
+    Z "I’m sure it will be loads of fun, darling. I can already imagine the possibilities that the day could bring us; all the new places you’d see and people you’d meet. But that’s for another time! Goodness, I keep getting so distracted."
+
+    "Zanny approaches his car and opens the passenger side door for you. With an appreciative nod, you sit on the cozy leather seat and take in the new sight."
+    hide Zander with dissolve
+    scene bg zanny car dusk 
+    show screentint
+    with fade
+    "It's the first time you've been able to ride in his personal vehicle. Just like his dorm room, the entire interior reeks of Zanny. In a good way, of course. It almost feels like home."
+
+    MC "This is a nice car you got."
+
+    show Zander neutral at waist_up_left3 with dissolve
+    Z "Finally, someone who can appreciate the lack of boring mundanity. I enjoy personalizing my belongings a lot. It's fun, y'know? Expressing yourself and getting creative with your space."
+
+    MC "Oh, I bet. It's very... cozy!"
+
+    Z "That too is another thing. Being away at college, it's nice to make yourself feel right at home."
+
+    "You look around at the various trinkets and decorations. Warmth spreads at the welcoming feeling."
+
+    MC "It really is."
+
+    "The car starts, and a low tune begins playing on the radio. You pull out of the parking lot and begin your journey to the supermarket, where a long and tedious evening of shopping lies ahead."
+    hide screentint with dissolve
+
+    "At first, you two ride along in silence, soaking in the chill atmosphere that’s highlighted by wide buildings and bright nature. You turn and look at Zanny, who hums along to the radio’s tune as he drives."
+
+    hide Zander with dissolve
+
+    # [Major Choice Start]
+    menu:
+        "Close your eyes and finish the ride in silence.":
+            $ player_choice = "close-eyes"
+        "Start a conversation.":
+            $ player_choice = "convo"
+
+    if player_choice == "close-eyes":
+        scene black with fade
+        "You decide to turn your head to the side and lean it against the window. With the stress of school and festival preparations on your shoulders, you take the time to indulge in a short nap."
+        "The music slowly muffles out."
+        "Your muscles relax."
+        "The weight of the past few weeks gently nudges you into a short slumber."
+        "..."
+        "..."
+        "{w=0.3}.{w=0.3}.{w=0.3}."
+        scene bg zanny car dusk at fullyblurred with dissolve
+        pause 0.3
+        scene bg zanny car dusk at unblur with dissolve
+        "Without any proper cognizance of time, you’re surprised when a force pushes into your right shoulder.{nw}"
+        show Zander smug at waist_up_right3 with dissolve
+        extend " You open your eyes and see Zanny standing between the open passenger door."
+        
+        Z "Wake up, sleepy head~"
+        
+        "You groan and gather your bearings. The car is already parked in the lot of the supermarket."
+
+        MC "We’re here already?"
+
+        show Zander neutral at waist_up_right3
+        Z "Indeed, we are. You were knocked out like a light. I didn’t want to wake you up because you looked too adorable in your little bubble of peace."
+
+        hide Zander with dissolve
+
+        # [Choice A Start]
+        menu:
+            "Roll your eyes":
+                $ player_choice_a = "roll-eyes"
+            "Flirt back":
+                $ player_choice_a = "flirt"
+
+        show Zander smug at waist_up_right3 with dissolve
+        if player_choice_a == "roll-eyes":
+            "You roll your eyes at him."
+
+            MC "I doubt that. C’mon, let’s hurry."
+
+        elif player_choice_a == "flirt":
+            MC "I couldn’t possibly be more adorable than {i}you{/i}."
+
+            show Zander flustered at waist_up_right3
+            Z "I’m afraid I’ll have to fight you on that one. You’re much cuter than you think, darling."
+
+            "Instead of retorting, words get caught in your throat. You were not prepared for his response, your cheeks slightly heating up."
+
+            MC "Let’s just get to shopping!"
+        # [Choice A End]
+
+    # [Major Choice 1 End]
+    elif player_choice == "convo":
+        show Zander neutral at waist_up_left3 with dissolve
+        "Not wanting to ride in silence, you decide to start a conversation."
+        call zanny_route_day2_convo
+
+        "The car eventually pulls into the parking lot of the supermarket. Zanny exits first, opening the passenger side door as you step out. A light spring breeze hits your face as you walk toward the entrance."
+        MC "You have the list, right? The one you sent me yesterday?"
+        show Zander neutral at waist_up_left3
+        Z "I sure do. Let's get started, shall we?"
+    # [Major Choice 2 End]
+    # [Major Choice End]
+
+    stop music fadeout 1.0
+    scene bg zanny market with fade
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
+
+    "Upon entering the supermarket, you're immediately overwhelmed by the bright lights and loud ambiance from other shoppers."
+    "Noticing this, Zanny hovers close without a word, offering silent comfort. He grabs carts for the two of you to begin your shopping spree."
+
+    show Zander serious pose2 at waist_up_center3 with dissolve
+    Z "Gods, just looking at this long list is making me overwhelmed already. Where should we even start?"
+
+    MC "Hmm... maybe the non-cold stuff?"
+
+    show Zander smug at waist_up_center3 
+    Z "Well then, lead the way, [player_name]. I’m sure you’ll do better at this than I could."
+
+    MC "It’s just shopping, Zanny."
+
+    "You playfully roll your eyes and take charge of the shopping trip, carefully going over the list."
+
+    MC "Let's see here... {w=0.3}we should probably start with the condiments first."
+
+    show Zander neutral at waist_up_center3
+    Z "Looks like these might be split up between two aisles. I can head over to the row with the spreads if you wanna check out the baking aisle. That's probably where the dessert sauces and powdered sugar are."
+
+    MC "Sounds good. The baking aisle is closer to the refrigerated stuff, so meet me there when you're done."
+
+    hide Zander with easeoutleft
+    "He winks at you and saunters off in the opposite direction. With his presence elsewhere, you turn your back and head to your own destination. Next to the registers by the front windows, a large selection of flowers catches your attention."
+    "In bold yellow and pink print, an overhead banner reading \"Floral Spring Sale\" looms over a vast amount of different flower types. From intricate bouquets to singular roses, the selection includes almost everything."
+    "You suddenly think about the upcoming spring festival. The flowers would make for a wonderful gift. They're such a romantic classic and fit the season almost perfectly. Your body drifts over to the flower aisle without much second thought."
+
+    MC "A quick peek won't hurt..."
+
+    "Distracted by the sight, you let your wandering mind guide you over to the flowers instead of the task you're supposed to be doing. There are lilacs and daisies and mixtures of all kinds of types you've never even heard of. It's fascinating."
+    "Then you see a purple potted orchid. It reminds you of Zanny."
+
+    show purple orchid at asset_center with dissolve
+
+    # [[Ending Choice Start]]
+    menu:
+        "Buy him the potted purple orchids.":
+            $ zanny_ending_choice = "end-1"
+        "Pass—you don't want him to get the wrong idea.":
+            $ zanny_ending_choice = "end-0"
+
+    if zanny_ending_choice == "end-1":
+        MC "This is so Zanny coded... I have to get them for him!"
+
+        hide purple orchid with dissolve
+
+        "You ultimately chose to pick up the potted purple orchids. Looking down at your cart, you realize that carrying this around wouldn’t be the best idea."
+        "As if fate heard your pleas, a staff member walks up beside you and looks down at the purple orchid."
+
+        Staff "Do you need help with that?"
+
+        MC "Yes please, could you bag it up and place it by customer service so I can pick it up later? It’s a surprise for someone."
+
+        Staff "Oh, a surprise for someone? That’s actually so cute! I hope nothing but good tidings for you and the recipient!"
+
+        "A blush appeared on your cheeks as the staff member bags your pot."
+
+        Staff "Be sure you come back before closing time, you hear me?"
+
+        MC "I will!"
+        $ zanny_orchid = True
+
+    elif zanny_ending_choice == "end-0":
+        MC "No...{w=0.3} we’re only just friends, it’d be weird to give your friend flowers!"
+
+        hide purple orchid with dissolve
+        "You ignored the flowers and continued on your way"
+
+    # [Ending Choice End]
+
+    "Not wanting to veer too far off track, you try your best to hurry to the baking aisle before Zanny questions your whereabouts. You push your cart a little too fast, not really minding your step as you should have."
+    "Because of your misplaced attention, you fail to notice the bright yellow caution sign right next to the mop bucket that stands right around the corner."
+    "Your foot accidentally slips on leftover residue from whatever spilled on the floor in the aisle, causing your balance to slip and your weight suddenly shift backward."
+    show black at truecenter onlayer zero
+    with vpunch
+
+    MC "What the—"
+    "Before you can tumble to the floor, a firm grasp on your arm steadies your weight and hauls you back to your feet."
+    show Zander shocked at waist_up_center3, pop with dissolve
+    "Zanny's grip lightens as you gain your bearings, but his fingers still linger on your skin. You both enter a tense moment of awkwardness, neither one of you breaking eye contact."
+    
+    Z "Oh my days... that nearly scared the shit out of me. Are you alright, [player_name]?"
+
+    MC "I’m fine..."
+
+    "He inevitably drops his hand as you steady yourself on the cart. His eyes wander around you warily. He glances at the empty cart, your startled face, and back at the empty cart."
+
+    show Zander confused pose2 at waist_up_center3
+    Z "What the hell were you doing, bulldozing through the aisle like that? You could've been hurt. Are the ingredients really that hard to find?"
+
+    MC "What? No, no, I just got distracted for a moment. Don't worry about it."
+
+    "He doesn't seem convinced, but he drops it nonetheless. After awkwardly throwing some flavored dessert sauces in the cart, you follow him to the produce section. The air is awkward. You try not to ruminate on what you just did."
+
+    show Zander neutral at waist_up_center3
+    Z "Let's make sure none of these are expired or gone bad. Do you know how to properly pick out fresh ingredients?"
+    hide Zander with dissolve
+
+    # [Choice Start]
+    menu:
+        "Of course I do!":
+            $ player_choice = "ofcourse"
+        "Not a single clue...":
+            $ player_choice = "noclue"
+
+    show Zander neutral at waist_up_center3 with dissolve
+
+    if player_choice == "ofcourse":
+        Z "Oh, thank god. You can scan all the dry fruits and vegetables for spoilage while I simply glance at the expiration dates on the berries n' shit."
+
+        MC "Really? I always took you for an expert chef."
+
+        show Zander smug at waist_up_center3
+        Z "Please, the only Gordon Ramsay-level dish I'm confident in is my protein pancakes."
+        Z "Sure, I know how to operate an oven and work my way around some pretty solid meals. But I'm hardly a Michelin chef. It's been a while since I've seriously tried my hand at cooking."
+        hide Zander with dissolve
+        "You laugh and begin picking out your portion of the produce. First, you have a go at the vegetables, making sure nothing looks expired or inappropriately colored."
+
+        MC "Spinach, tomatoes, mushrooms, onions... that should be everything."
+
+        "For fruit, you pick up a few bunches of bananas. Nearby, you take a peek at all the different berries in Zanny's cart. Strawberries, blueberries, raspberries, blackberries—that should be all."
+        "He walks up to you as soon as he's done, proud of his \"hard\" work."
+        show Zander neutral at waist_up_center3 with dissolve
+        Z "That's everything, right?"
+
+    elif player_choice == "noclue":
+        Z "Dammit... I'm not an expert, but I can try to pick out the best picks if you want to look through the cold items. I'm sure it can't be too hard."
+
+        MC "I thought you knew how to cook?"
+
+        Z "I do! Just not as prim and proper as Lucien. Knowing how to cook and being a good cook are two completely different things. But don't get me wrong—at least I'm not like Rosco."
+
+        "Somewhere, a certain zombie gamer feels a disturbance in the force..."
+
+        MC "Haha, fair. I'll entrust that task to you then."
+
+        hide Zander with dissolve
+        "As he begins to circle around the vegetables, you walk over to the wall of refrigerated produce and get to work. Carefully surveying the texture and expiration dates, you fill your cart with everything on the list."
+
+        MC "Strawberries, blueberries, raspberries, blackberries... that should be everything."
+
+        "You turn around and watch Zanny finish up his own selection. With his cart filled with more vegetables than you've ever eaten in your entire lifetime, he walks back and checks in to make sure everything is correct."
+
+        show Zander neutral at waist_up_right3 with dissolve
+        Z "Let's see here. I got some spinach, tomatoes, mushrooms, and onions. That's everything, right?"
+    # [Choice End]
+    MC "For this section, I think so. We just need dairy stuff, eggs, and meat."
+
+    Z "Would you like to split up again?"
+
+    MC "Sure! I can get the eggs and dairy if that works for you?"
+
+    Z "That actually works perfectly. I've been meaning to purchase some meat of my own anyway."
+    hide Zander with dissolve
+    "Separated once more, you walk over to the end of the wall with all the dairy products. You pick out the least expensive shredded cheese packs and regular tubs of cream cheese."
+    "You look over your shoulder and spot Zanny across the supermarket, seriously eyeing the packages of beef. He appears to be heavily engrossed in the selection process, making you laugh a little."
+    "You head over to him instead of waiting around. He doesn't notice your approach, causing a slight smirk to emerge almost automatically."
+
+    # [Ending 2 Choice Start]
+    menu:
+        "Announce your presence.":
+            $ zanny_ending_choice2 = "end-0"
+        "Try to scare him.":
+            $ zanny_ending_choice2 = "end-2"
+
+    if zanny_ending_choice2 == "end-0":
+        "You thought about scaring him, but you want to be nice about it, so you gently tap him on the shoulder instead."
+        MC "Hey, I'm done with my part."
+        show Zander neutral at waist_up_center3 with dissolve
+        pause 0.5
+        show Zander shocked at waist_up_center3, pop
+        "Zanny jumps a little in surprise."
+        show Zander neutral at waist_up_center3
+        Z "That’s wonderful!"
+
+    elif zanny_ending_choice2 == "end-2":
+        "You gently raise your hands from the cart and leave it behind as you tiptoe toward the meat section. His unsuspecting back practically screams at you, begging for a jumpscare."
+        "With light feet and shallow breaths, you attack his sides with your hands, yelling right alongside his guttural scream."
+
+        MC "RAAAAAH!"
+
+        show Zander neutral at waist_up_center3 with dissolve
+        show Zander shocked at waist_up_center3, singlejump
+        Z "AAAHHHHHH!!"
+        Z "My days?! [player_name]?! What in the bloody hells is wrong with you?"
+        "You're unable to properly respond, too busy choking on your own laughter. Eventually, his shock and anger dwindle down to a shallow exasperation. Wide eyes question your actions, eyebrows furrowed in sheer disbelief."
+        
+        show Zander neutral at waist_up_center3
+        Z "I can't believe you just did that. You nearly cost me years of my life."
+
+        MC "Please, it couldn't have scared you that badly?"
+
+        Z "Of course it did! You're lucky I didn't accidentally take a swing at you."
+
+        MC "Y'know, I didn't even think about that..."
+
+        "His expression finally softens into one of humor." 
+
+        Z "Don't worry, I wouldn't have actually done it. But you'd better watch your back now. I {i}will{/i} be getting my revenge."
+            
+        MC "Oh? I'd better look out then."
+        $ zanny_scare = True
+    # [Ending 2 Choice End]
+    Z "C'mon, let's go check out."
+    hide Zander with dissolve
+    show screentint with dissolve
+    "You both walk up to the front and watch the faces of the workers drop at the sight of your upcoming large and bulky purchase. Zanny appears to notice the change of air as well, laughing and beginning to walk away once more."
+    show Zander neutral at waist_up_center3 with dissolve
+    Z "How about we take two different registers? Make it easier on these poor minimum wage workers."
+
+    MC "Works for me.”"
+    hide Zander with dissolve
+    "Making sure to be as polite and cooperative as possible, you purchase all the ingredients without issue. Once all of your items are bagged and checked out, you look over to where Zanny is still checking out."
+
+    if zanny_orchid == True:
+        "That’s when you realize he is still entirely preoccupied with something else. This is the chance to retrieve what you bought earlier."
+        "You take this opportunity to go grab your bag from the counter near checkout."
+        "The same worker from earlier hands it to you while wishing you and Zanny good luck on your future together once again. Her jumping the gun makes you internally hide away, but the prospect makes you feel all warm inside."
+        "Thinking about Zanny seems to do that a lot lately."
+        "Once the bag is secured, you wave back at the staff member and swiftly return to see if Zanny is done checking out yet. He isn’t. Whew. You idly wait by the exit doors for him to finish up."
+
+    elif zanny_orchid == False:
+        "With your stuff already checked out, you idly wait by the exit doors for him to finish up."
+    # [End 1EN Choice]
+
+    "It takes another minute or two for him to get everything bagged and walk up to where you are waiting."
+    show Zander neutral at waist_up_right3 with dissolve
+    Z "All set?"
+
+    MC "Should be. Let's head back to the car and hurry and get this stuff settled in the clubroom."
+    hide Zander with dissolve
+
+    # [BACKGROUND—Zanny's Car]
+    stop music fadeout 1.0
+    scene bg zanny car night with fade
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+    "The music from earlier resumes, and you are back to vibing."
+
+    if zanny_orchid == True:
+        "You hold onto your secret bag like it was your child throughout the drive, hoping that Zanny would be too focused on driving to notice. Then you see, for a split second, his eyes looking over to the side."
+        show Zander neutral at waist_up_left3 with dissolve
+        Z "[player_name], you’ve been holding onto that bag for a while now. What’s inside that you’re so protective of?"
+
+        MC "Oh! Uh..."
+        hide Zander with dissolve
+        # [Choice Start]
+        menu:
+            "Just a big plushie.":
+                $ player_choice = "plushie"
+            "Just some eggs.":
+                $ player_choice = "eggs"
+            "Just some flowers.":
+                $ player_choice = "flowers"
+        show Zander neutral at waist_up_left3 with dissolve
+        
+        if player_choice == "plushie":
+            MC "Just a really big plushie I found when we split up! I saw your big plushie in your room, and I really wanted to have one in my room too!"
+
+            Z "Awww, that’s so adorable of you~"
+
+            "You can’t tell if he fully believes what you said or not... but at least he doesn’t seem to be pressing it any further. Now, you really wish you actually bought a large plush alongside the flowers."
+        
+        elif player_choice == "eggs":
+            MC "It’s just some eggs, Zanny! You know, since they’re more prone to breaking than the other groceries!"
+
+            show Zander laughing at waist_up_left3 
+            Z "You’re such a bad liar, you know that? I recall them being put in the trunk with the rest of the groceries."
+
+            "You feel embarrassed for telling such an obvious lie, but in your defense, you didn’t expect to be put in the spotlight like this, nor that he would notice so quickly."
+
+        elif player_choice == "flowers":
+            MC "Oh, it’s just some flowers. I wanted to make the stand have a bit of a flair, you know?"
+
+            Z "You know, I never thought too much about that at the market. Good eye, [player_name]."
+
+            "You breathe a sigh of relief as he returns his attention back to the road."
+
+        # [Choice End]
+        # [Choice 1EN End]
+
+    hide Zander with dissolve
+    show screentint with dissolve
+    "Before you know it, you’re right back on the university campus, and Zanny’s already carrying some of the bags of ingredients upstairs, while you’re still in the front seat and fighting the urge to sleep."
+    "The stress of the trip has you mentally double-checking that you got everything. The produce, condiments, meat... but a subconscious part of yourself makes you feel like something is off."
+    stop music fadeout 1.0
+    "Suddenly, you remember something horrible; a necessary ingredient that you completely forgot until this moment."
+
+    "{i}The powdered sugar.{/i}"
+
+    MC "Damnit!"
+
+    "Quickly unbuckling your seatbelt, you take off sprinting west towards the campus shopping area and completely forget to close the car door. Thankfully, it’s near the dorms and just across one of the main streets."
+    "Running right toward the specific shop, which is luckily still open at this time of day, you swing open the store door and pant from exhaustion."
+
+    scene bg zanny market with fade
+    # music?
+    Cashier "Are you alright...?"
+    MC "I’m fine!"
+
+    "After catching your breath, you head over towards the baking aisle and find some bags of powdered sugar for the crepes to your right."
+    "Sighing in relief that your mad sprint from the dorm was not for nothing, you quickly grab the first bag you see, only to grab it at the exact same time as someone else."
+
+    anon "Oh, [player_name]! I didn’t think we’d meet here! Hahaha, what a funny coincidence, wouldn’t you say?"
+
+    "You recognize this guy; one of your classmates who was... a tad clingy to say the least. You recall blocking their number over their insistence on hanging out after school every day."
+
+    ClassmateA "Now that you’re here, I need you to answer my burning question...{w=0.3} I noticed as I was trying to message you about the festival yesterday, that you blocked me. I know you never respond to me anyway, but... why? What did I do to deserve getting blocked?"
+    ClassmateA "Why did you cut me off?! I thought we were friends, [player_name]! I can’t believe you! All this effort I put in only for you to just brush me away!"
+        
+    "The stranger sounds deeply betrayed, which makes you equally as uncomfortable as the hurt in their voice. Unsure of how to respond to this, you very slowly grab the bag of powdered sugar and take a few steps back."
+        
+    ClassmateA "Are you even listening to me?!"
+
+    "Right behind the stranger, a familiar presence walks up to the commotion. He places a hand on their shoulder, serious expression towering over them. You sigh in relief once you finally recognize who it is. The stranger immediately turns around to see..."
+
+    MC "Zanny!"
+
+    show Zander serious pose2 at waist_up_right3 with dissolve
+    Z "I’d advise you to leave this one alone if you don’t want me to escalate this situation to something... painful."
+
+    ClassmateA "A-And who do you think you are?!"
+
+    Z "Me? I’m just a bystander who, unfortunately, bore witness to your behavior towards an innocent person. It just so happened that you were harassing my [player_romterm]."
+
+    ClassmateA "SINCE WHEN DID [player_name] GET A BOYFRIEND?! This is so unfair!"
+
+    Z "Change up your attitude, and maybe you won’t need to harass people."
+
+    "Zanny leans in, eyes gleaming with something sinister."
+
+    show Zander vSerious pose2 at waist_up_right3
+    Z "Scram."
+
+    "His low tone scares them into running for their life, far away from the shopping area, hopefully to never be seen again. Your shoulders instantly sag, heaviness no longer weighing them down."
+
+    MC "Zanny, when did you..."
+
+    show Zander neutral at waist_up_center3 with move
+    Z "I got worried when the car door was open with you missing inside, so I had to go looking for you. I spotted you frantically sprinting and was thankfully able to catch up to where you were."
+
+    MC "I... thank you. I suddenly remembered I forgot to grab something, and ran into that asshole here."
+
+    Z "You’re very much welcome, darling. And sorry for the whole [player_romterm] spiel."
+    hide Zander with dissolve
+    # [Choice Begin]
+    menu:
+        "It’s fine, you were helping.":
+            $ player_choice = "its-fine"
+        "I don’t mind the title.":
+            $ player_choice = "dont-mind"
+
+    show Zander neutral at waist_up_center3 with dissolve
+
+    if player_choice == "its-fine":
+        MC "It’s fine, you were helping."
+
+        show Zander laughing at waist_up_center3
+        Z "Heh. That’s good."
+    elif player_choice == "dont-mind":
+        MC "Actually... I didn’t mind at all. The title has kind of a nice ring to it, don’t you think?"
+        show Zander flustered at waist_up_center3
+        Z "Oh... you've really gotten bolder, haven’t you?"
+    # [Choice End]
+    show Zander neutral at waist_up_center3
+    "He looks down at your hand holding the bag of powdered sugar, and you blush from sheer embarrassment, knowing the inevitable teasing that was about to happen."
+        
+    show Zander smug at waist_up_center3
+    Z "Powdered sugar? Really? Forgot about the main ingredient for crepes, have you?"
+
+    MC "Hush!"
+    hide Zander with dissolve
+    show screentint with dissolve
+    "You pay for the sugar, and the two of you make haste back to Zanny’s car where all of the bags are still in the trunk."
+        
+    scene black with fade
+    show Zander neutral at waist_up_center3 with dissolve
+    Z "Come help me with these, would you?"
+
+    MC "You just left these all here? What if someone stole something!"
+
+    Z "Oh please, in this area? And there’s no one even here. C’mon, quickly. I’m hungry."
+
+    "You sigh and get straight to work."
+    hide Zander with dissolve
+    scene bg clubroom with fade
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0
+
+    "When Zanny has his back turned, you secure the secret bag as soon as you can. As his attention is occupied with shoving the produce into the small fridge, you hide it in the storage room under something that keeps it completely out of sight."
+    "You pray it doesn’t get squished and make a silent promise to come back and check on it periodically before the festival starts."
+    "You silently close the door. Zanny is still trying to shove all the ingredients into the fridge."
+    "Good."
+
+    show Zander neutral at waist_up_center3 with dissolve
+    Z "I think that’s everything. I hope no one is planning on putting anything in the fridge. It’s fully packed."
+
+    "Wow. We really went all out. I hope people buy lots of our stall’s food..."
+
+    Z "I’m sure they will! Don’t worry your pretty little head about it too much."
+    hide Zander with dissolve
+    "You huff and finish putting the rest of the ingredients away. Once done, you turn and see Zanny waiting for you by the club room door."
+    show Zander neutral at waist_up_left3 with dissolve
+    Z "C’mon, let me walk you to your dorm."
+
+    MC "You don’t have to do that..."
+
+    Z "Oh, please. Darling, I insist. Who knows if that asshole will come back again?"
+    MC "Well, if you insist, then sure."
+
+    hide Zander with dissolve
+
+    scene bg road sunset with fade
+    "Zanny grins at you, and together, you both walk side by side from the club room back to the dormitories. After all that has happened, you walk in silence. It’s a comfortable silence, one where you can let your mind drift and enjoy each other’s presence."
+    "When you get to the entrance, he stops. Your heart pounds as the sun finishes setting on the distant horizon. He leans over and winks at you upon noticing your flustered state."
+    show Zander smug at waist_up_center3
+    Z "Good night, [player_name]."
+
+    MC "Good night, Zanny... Thanks for today. It was a lot of fun."
+    Z "Anytime."
+
+    hide Zander with dissolve
+
+    scene bg mc bedroom zanny with fade
+
+    "When you finally get settled in bed, the day's events refuse to escape your mind, constantly replaying. The drive, the shopping incident, and now this."
+    "Instead of dread, you find yourself smiling. Spending time with Zanny was so much fun that you’re a bit sad it’s over."
+    "Though you don’t wallow in darkness too long. The festival hasn’t even begun yet."
+    "You close your eyes and pray that it comes quickly. You simply can’t wait."
+    stop music fadeout 1.0
+    # [Day 2 End]
+    if "Z" not in collected_routes:
+        $ collected_routes.append("Z")
+
+    if len(collected_routes) == 5:
+        scene black with fade
+        "jump to ending route"
+
+    else:
+        jump choose_route
+
+        
+label zanny_route_day2_convo:
+    if (convo_festival and convo_school) == True:
+        return
+    # [Choice A Start]
+    hide Zander with dissolve
+    menu:
+        "Ask about the festival." if not convo_festival:
+            $ player_choice_a = "festival"
+        "Ask about school." if not convo_school:
+            $ player_choice_a = "school"
+    # [Choice A #1 Start]        
+    show Zander neutral at waist_up_left3 with dissolve
+    if player_choice_a == "festival":
+        
+        MC "Are you excited about the festival? I’m kinda nervous..."
+
+        Z "I’m excited, for sure. Though I understand being nervous. A lot of preparations need to be made for the booth, and knowing the rest of the boys, I wouldn’t be surprised if something goes wrong."
+
+        "You laugh at his answer."
+
+        MC "True. I believe in us, though. We spent a lot of time and effort thinking of the idea. Hopefully, the end result is worth it."
+
+        Z "I’m sure it will be. But honestly speaking, I’m more excited about the other booths. There are quite a few interesting ones this year."
+
+        MC "Oh? Like what?"
+
+        Z "A good friend of mine is running \"Dinorawr Cupcake.\" And let me tell you, his stuff is delightful. I’ll have to take you there for sure."
+
+        MC "I’d love that!"
+
+        "Zanny drives along in silence for a moment before speaking up again with a bit of hesitation."
+                
+        Z "Is there anyone in particular you’re thinking of going with? To the festival, I mean."
+        hide Zander with dissolve
+        # [Choice B Start]
+        menu:
+            "Hmm... Not really, no.":
+                $ player_choice_b = "no"
+            "You, duh!":
+                $ player_choice_b = "duh"
+        show Zander neutral pose2 at waist_up_left3 with dissolve
+        if player_choice_b == "no":
+            "Zanny pouts a bit, but quickly neutralizes his expression."
+
+            Z "I see... Well, there’s not much to do about that, I suppose. I’m sure you’ll still have fun."
+                   
+            MC "Why? Did you wanna go with me?"
+
+            "He widens his eyes at your teasing tone."
+
+            show Zander smug pose2 at waist_up_left3
+            Z "Perhaps I did."
+
+            MC "Well, the festival isn’t here yet, so who knows?"
+
+            show Zander neutral at waist_up_left3
+            Z "Who knows..."
+                
+        elif player_choice_b == "duh":
+            show Zander flustered at waist_up_left3
+            Z "Oh, I’m flattered darling. I’ll make sure it’s a night you’ll never forget."
+
+            "You don’t think you can blush any brighter. The AC in the car suddenly isn’t enough to cool you down. Zanny is driving you insane."
+
+            MC "I’ll hold you to that!"
+
+            show Zander smug at waist_up_left3
+            Z "Trust me. I’m a man of my promises."
+
+            show Zander laughing at waist_up_left3
+            "You laugh at his confidence, unsure how else to handle it all. He laughs alongside you, and the car atmosphere becomes lighthearted and comfortable. It’s nice."
+
+        # [Choice B End]
+        $ convo_festival = True
+    # [Choice A #1 End]
+    # [Choice A #2 Start]
+    elif player_choice_a == "school":
+        MC "How’s school going for you?"
+        show Zander shocked at waist_up_left3, pop
+        "At the question, his face immediately drops. You fight to hold down your reaction. That probably isn’t a good sign."
+
+        Z "..."
+
+        MC "...?"
+
+        Z "{w=0.3}.{w=0.3}.{w=0.3}."
+
+        MC "{w=0.3}.{w=0.3}.{w=0.3}.?!"
+        MC "Zander Netherbrand..."
+
+        show Zander serious at waist_up_left3
+        Z "Listen, alright, it’s not my fault, I promise! My grades aren’t that bad, and I’m gonna graduate, so it’s not a big deal. Seriously."
+
+        MC "So then why did you react like that?!"
+
+        Z "Because...{w=0.3} Ugh, there’s this one professor who has a stick up her ass about this one paper I did, but it’ll be fine. It just irritates me whenever I think about it. My days..."
+        show Zander neutral pose2 at waist_up_left3
+        Z "Enough about me. How have {i}your{/i} classes been going? I forgot to ask you earlier."
+
+        hide Zander with dissolve
+        # [Choice B Start]
+        menu:
+            "Pretty good!":
+                $ player_choice_b = "good"
+            "Honestly? A bit difficult...":
+                $ player_choice_b = "difficult"
+
+        show Zander neutral pose2 at waist_up_left3 with dissolve
+        if player_choice_b == "good":
+            Z "That's wonderful to hear! I'm proud of your hard work. It doesn’t go unnoticed, and I know you’ve put a lot of effort into it."
+
+            "You smile sheepishly at his pride, unsure of how to take such a straightforward compliment."
+
+            MC "Thank you, Zanny. Seriously. I'm proud of you, too."
+
+        elif player_choice_b == "difficult":
+            Z "Yeah? Tell me about it. University isn't for the weak, and you should be damn proud of yourself for even being here. I get it. It's tough, but you're smart, and you'll get through it."
+
+            "You blush at his reassurance, unsure how to take such straightforward advice."
+
+            MC "I...{w=0.3} thank you, Zanny. I appreciate it. I'm proud of you, too."
+ 
+        # [Choice B End]
+        show Zander flustered at waist_up_left3
+        Z "I’m not sure what there is to be proud of, but thank you."
+
+        MC "Don’t sell yourself short! There’s lots to be proud of!"
+
+        Z "You flatter me."
+
+        show Zander neutral at waist_up_left3
+        Z "I have self-confidence in a lot of areas, but these elective classes are not one of them. Enough about school now, before I lose my mind."
+
+        $ convo_school = True
+    # [Choice A #2 End]
+    # [Choice A End]
+    call zanny_route_day2_convo
