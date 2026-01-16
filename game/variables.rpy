@@ -263,6 +263,20 @@ transform waist_up_right3:
     yoffset -80
 #------------------------------------------
 
+#-------specifically for luci-----------
+transform waist_up_center4:
+    xalign 0.5
+    yoffset 75
+
+transform waist_up_left4:
+    xalign -1.1
+    yoffset 75
+
+transform waist_up_right4:
+    xalign 1.85
+    yoffset 75
+#------------------------------------------
+
 # character position for showing assets
 transform waist_up_right_for_asset:
     xalign 1.4
@@ -277,6 +291,11 @@ transform waist_up_right_for_asset2:
 transform waist_up_right_for_asset3:
     xalign 2.15
     yoffset -80
+
+# character position for showing assets / Luci
+transform waist_up_right_for_asset4:
+    xalign 2.1
+    yoffset 75
 
 # ----fullbody versions/zoomed out character positions----
 transform fullbody_center:
@@ -293,6 +312,18 @@ transform fullbody_right:
 
 transform fullbody_left:
     xalign -0.05
+    yoffset 0
+# character position fullbody for showing assets / Luci
+transform fullbody_center4:
+    xalign 0.5
+    yoffset 0
+
+transform fullbody_right4:
+    xalign 1.15
+    yoffset 0
+
+transform fullbody_left4:
+    xalign -0.15
     yoffset 0
 #------------------------------------------------------------
 #----------------asset positioning---------------

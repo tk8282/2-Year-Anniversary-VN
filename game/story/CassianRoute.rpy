@@ -1740,6 +1740,7 @@ label cass_route_day2:
         
         #jump ending_route
         "Onto Ending Routes"
+        return
 
     else:
         scene black with fade

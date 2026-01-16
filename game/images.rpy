@@ -127,13 +127,61 @@ image Gale smug pose2 bandana = im.Scale("images/Gale/Sprites/Gale_Smug_Bandana_
 #----------------------------------------
 
 #---------------------Lucien----------------------
-layeredimage Lucien:
-    always:
-        im.Scale("sprites/Lucien.png", 1215, 2160)
-    attribute apron:
-        im.Scale("images/Lucien/Assets/lucien_apron.png", 830, 1016.28)
-        xoffset 270
-        yoffset 230
+image Lucien = im.Scale("images/Lucien/Sprites/Lucien_Neutral_1_Ann.png", 1576.75, 2230)
+image Lucien neutral = im.Scale("images/Lucien/Sprites/Lucien_Neutral_1_Ann.png", 1576.75, 2230)
+image Lucien neutral pose2 = im.Scale("images/Lucien/Sprites/Lucien_Neutral_2_Ann.png", 1576.75, 2230)
+image Lucien neutral apron = im.Scale("images/Lucien/Sprites/Lucien_Neutral_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien neutral pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Neutral_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien angry = im.Scale("images/Lucien/Sprites/Lucien_Angry_1_Ann.png", 1576.75, 2230)
+image Lucien angry pose2 = im.Scale("images/Lucien/Sprites/Lucien_Angry_2_Ann.png", 1576.75, 2230)
+image Lucien angry apron = im.Scale("images/Lucien/Sprites/Lucien_Angry_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien angry pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Angry_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien annoyed = im.Scale("images/Lucien/Sprites/Lucien_Annoyed_1_Ann.png", 1576.75, 2230)
+image Lucien annoyed pose2 = im.Scale("images/Lucien/Sprites/Lucien_Annoyed_2_Ann.png", 1576.75, 2230)
+image Lucien annoyed apron = im.Scale("images/Lucien/Sprites/Lucien_Annoyed_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien annoyed pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Annoyed_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien blushing = im.Scale("images/Lucien/Sprites/Lucien_Blushing_1_Ann.png", 1576.75, 2230)
+image Lucien blushing pose2 = im.Scale("images/Lucien/Sprites/Lucien_Blushing_2_Ann.png", 1576.75, 2230)
+image Lucien blushing apron = im.Scale("images/Lucien/Sprites/Lucien_Blushing_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien blushing pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Blushing_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien confused = im.Scale("images/Lucien/Sprites/Lucien_Confused_1_Ann.png", 1576.75, 2230)
+image Lucien confused pose2 = im.Scale("images/Lucien/Sprites/Lucien_Confused_2_Ann.png", 1576.75, 2230)
+image Lucien confused apron = im.Scale("images/Lucien/Sprites/Lucien_Confused_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien confused pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Confused_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien crying = im.Scale("images/Lucien/Sprites/Lucien_Crying_1_Ann.png", 1576.75, 2230)
+image Lucien crying pose2 = im.Scale("images/Lucien/Sprites/Lucien_Crying_2_Ann.png", 1576.75, 2230)
+image Lucien crying apron = im.Scale("images/Lucien/Sprites/Lucien_Crying_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien crying pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Crying_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien deadpan = im.Scale("images/Lucien/Sprites/Lucien_Deadpan_1_Ann.png", 1576.75, 2230)
+image Lucien deadpan pose2 = im.Scale("images/Lucien/Sprites/Lucien_Deadpan_2_Ann.png", 1576.75, 2230)
+image Lucien deadpan apron = im.Scale("images/Lucien/Sprites/Lucien_Deadpan_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien deadpan pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Deadpan_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien laughing = im.Scale("images/Lucien/Sprites/Lucien_Laughing_1_Ann.png", 1576.75, 2230)
+image Lucien laughing pose2 = im.Scale("images/Lucien/Sprites/Lucien_Laughing_2_Ann.png", 1576.75, 2230)
+image Lucien laughing apron = im.Scale("images/Lucien/Sprites/Lucien_Laughing_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien laughing pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Laughing_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien neutral smile = im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_1_Ann.png", 1576.75, 2230)
+image Lucien neutral smile pose2 = im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_2_Ann.png", 1576.75, 2230)
+image Lucien neutral smile apron = im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien neutral smile pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien shocked = im.Scale("images/Lucien/Sprites/Lucien_Shock_1_Ann.png", 1576.75, 2230)
+image Lucien shocked pose2 = im.Scale("images/Lucien/Sprites/Lucien_Shock_2_Ann.png", 1576.75, 2230)
+image Lucien shocked apron = im.Scale("images/Lucien/Sprites/Lucien_Shock_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien shocked pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Shock_Apron_2_Ann.png", 1576.75, 2230)
+
+image Lucien smug = im.Scale("images/Lucien/Sprites/Lucien_Smug_1_Ann.png", 1576.75, 2230)
+image Lucien smug pose2 = im.Scale("images/Lucien/Sprites/Lucien_Smug_2_Ann.png", 1576.75, 2230)
+image Lucien smug apron = im.Scale("images/Lucien/Sprites/Lucien_Smug_Apron_1_Ann.png", 1576.75, 2230)
+image Lucien smug pose2 apron = im.Scale("images/Lucien/Sprites/Lucien_Smug_Apron_2_Ann.png", 1576.75, 2230)
 #----------------------------------------
 
 #---------------------Rosco----------------------
@@ -255,7 +303,15 @@ image Cassian fullbody pose2= im.Scale("images/Cassian/Sprites/cassian_Neutral_2
 image Cassian bruh fullbody = im.Scale("images/Cassian/Sprites/cassian_Bruh_1.png", 850.5, 1203.3)
 image Cassian laughing fullbody = im.Scale("images/Cassian/Sprites/cassian_Laughing_1.png", 850.5, 1203.3)
 
-image Lucien fullbody = im.Scale("sprites/Lucien.png", 911.25, 1620)
+image Lucien fullbody = im.Scale("images/Lucien/Sprites/Lucien_Neutral_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody neutral apron = im.Scale("images/Lucien/Sprites/Lucien_Neutral_Apron_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody neutral smile apron = im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_Apron_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody laughing apron = im.Scale("images/Lucien/Sprites/Lucien_Laughing_Apron_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody confused apron = im.Scale("images/Lucien/Sprites/Lucien_Confused_Apron_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody blushing apron = im.Scale("images/Lucien/Sprites/Lucien_Blushing_Apron_1_Ann.png", 1103.2, 1561)
+image Lucien fullbody shocked apron = im.Scale("images/Lucien/Sprites/Lucien_Shocked_Apron_1_Ann.png", 1103.2, 1561)
+
+
 image Zander fullbody = im.Scale("images/Zander/Sprites/Zanny_Default_1.png", 1059.83, 1500)
 image Zander flustered fullbody = im.Scale("images/Zander/Sprites/Zanny_Flustered_1.png", 1059.83, 1500)
 #----------------------------------------
@@ -267,7 +323,7 @@ image Zander flustered fullbody = im.Scale("images/Zander/Sprites/Zanny_Flustere
 image CassianChoice = Transform(im.Scale("images/Cassian/Sprites/cassian_Neutral_1.png", 1342.45, 1900), size=(350,710), crop=(500,10,350,710))
 #image CassianChoice = im.Crop(im.Scale("sprites/Cassian.png", 1215, 2160),250,30,800,1080)
 image GaleChoice = Transform(im.Scale("images/Gale/Sprites/Gale_Neutral_1.png", 740, 2002.18),size=(350,710), crop=(200,10,350,710))
-image LucienChoice = Transform(im.Scale("sprites/Lucien.png", 1215, 2160),size=(350,710), crop=(450,0,350,710))
+image LucienChoice = Transform(im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_1_Ann.png", 1597.96, 2260),size=(350,710), crop=(620,15,350,710))
 image RoscoChoice = Transform(im.Scale("images/Rosco/Sprites/rosco_neutral_1.png", 1215, 1719.62),size=(350,710), crop=(450,0,350,710))
 image ZanderChoice = Transform(im.Scale("images/Zander/Sprites/Zanny_Default_1.png", 1500, 2122.985 ),size=(350,710), crop=(540,170,350,710))
 #----------------------------------------
@@ -284,7 +340,7 @@ image GaleGray :
     matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
 
 image LucienGray : 
-    Transform(im.Scale("sprites/Lucien.png", 1215, 2160),size=(350,710), crop=(450,0,350,710))
+    Transform(im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_1_Ann.png", 1597.96, 2260),size=(350,710), crop=(620,15,350,710))
     matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
 
 image RoscoGray : 

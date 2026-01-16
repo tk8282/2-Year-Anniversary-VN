@@ -1754,6 +1754,7 @@ label zanny_route_day2:
     if len(collected_routes) == 5:
         scene black with fade
         "jump to ending route"
+        return
 
     else:
         jump choose_route
