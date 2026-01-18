@@ -894,6 +894,7 @@ label zanny_route_day1_continued:
     Z "I have no idea! We’ll have to defeat them to find out. As you're hunched over and sort of clenching your side, I walk up within melee range and cast Cure Wounds on you, healing seeping from my fingertips upon touching your arm."
 
     show Zander neutral pose2 at waist_up_left3
+    play sound "audio/sfx/d8-roll.ogg"
     Z "Roll a D8 and add my spell casting modifier...{w=0.3} I heal you for about 6 hit points. I can’t back away without provoking an opportunity attack, so my turn effectively ends."
 
     MC "My body feels stronger, and I stand back up on two feet. I turn and smile graciously, sending a playful wink amidst the chaos. \"Thanks, Zanny.\""
