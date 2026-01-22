@@ -44,7 +44,7 @@ screen choice_menu:
             idle "GaleGray" 
             hover "GaleChoice"
             focus_mask True
-            action NullAction()
+            action Jump("gale_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "G" not in collected_routes
                 
@@ -64,7 +64,7 @@ screen choice_menu:
             idle "RoscoGray" 
             hover "RoscoChoice"
             focus_mask True
-            action NullAction()
+            action Jump("rosco_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "R" not in collected_routes
             

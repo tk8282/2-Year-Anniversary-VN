@@ -208,6 +208,10 @@ image Rosco smug blush = im.Scale("images/Rosco/Sprites/rosco_smug_blush_1.png",
 image Rosco smug pose2 blush = im.Scale("images/Rosco/Sprites/rosco_smug_blush_2.png", 1215, 1719.62)
 image Rosco smug jacket blush = im.Scale("images/Rosco/Sprites/rosco_smug_blush_1_jacket.png", 1215, 1719.62)
 image Rosco smug pose2 jacket blush = im.Scale("images/Rosco/Sprites/rosco_smug_blush_2_jacket.png", 1215, 1719.62)
+
+image Rosco smug jacket catears = im.Scale("images/Rosco/Sprites/rosco_smug_jacket_catears.png", 1215, 1719.62)
+image Rosco annoyed jacket catears = im.Scale("images/Rosco/Sprites/rosco_annoyed_jacket_catears.png", 1215, 1719.62)
+image Rosco neutral jacket catears = im.Scale("images/Rosco/Sprites/rosco_neutral_jacket_catears.png", 1215, 1719.62)
 #----------------------------------------
 
 #---------------------Zander----------------------
@@ -522,6 +526,81 @@ layeredimage phone texting:
 #----------------------------------------
 
 # --------------Rosco--------------
+
+# Choice mascots idle
+#----------------------------------
+image dewdrop_idle :
+    Transform(im.Scale("images/Rosco/Assets/dewdrop.png", 1000, 1000), size=(350,350))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+
+image lunarist_idle :
+    Transform(im.Scale("images/Rosco/Assets/lunarist.png", 1000, 1000), size=(350,350))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+
+image netherling_idle :
+    Transform(im.Scale("images/Rosco/Assets/netherling.png", 1000, 1000), size=(350,350))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+
+image pipsqueak_idle :
+    Transform(im.Scale("images/Rosco/Assets/pipsqueak.png", 1000, 1000), size=(350,350))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+
+image roscal_idle :
+    Transform(im.Scale("images/Rosco/Assets/roscal.png", 1000, 1000), size=(350,350))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+#----------------------------------
+#Choice mascots hover
+#----------------------------------
+image dewdrop_hover = Transform(im.Scale("images/Rosco/Assets/dewdrop.png", 1000, 1000), size=(350,350),)
+image lunarist_hover = Transform(im.Scale("images/Rosco/Assets/lunarist.png", 1000, 1000), size=(350,350))
+image netherling_hover = Transform(im.Scale("images/Rosco/Assets/netherling.png", 1000, 1000), size=(350,350))
+image pipsqueak_hover = Transform(im.Scale("images/Rosco/Assets/pipsqueak.png", 1000, 1000), size=(350,350))
+image roscal_hover = Transform(im.Scale("images/Rosco/Assets/roscal.png", 1000, 1000), size=(350,350))
+#----------------------------------
+
+#Haoris
+#----------------------------------
+image haori_luci = Transform(im.Scale("images/Rosco/Assets/Haori_Luci.png", 1000, 1000), size=(500,500))
+image haori_cass = Transform(im.Scale("images/Rosco/Assets/Haori_Cass.png", 1000, 1000), size=(800,800))
+image haori_gale = Transform(im.Scale("images/Rosco/Assets/Haori_Gale.png", 1000, 1000), size=(500,500))
+image haori_rosco = Transform(im.Scale("images/Rosco/Assets/Haori_Rosco.png", 1000, 1000), size=(800,800))
+image haori_zander = Transform(im.Scale("images/Rosco/Assets/Haori_Zander.png", 1000, 1000), size=(500,500))
+image haori_neutral = Transform(im.Scale("images/Rosco/Assets/Haori_Neutral.png", 1000, 1000), size=(800,800))
+image haori_cool = Transform(im.Scale("images/Rosco/Assets/Haori_Cool.png", 1000, 1000), size=(800,800))
+image haori_warm = Transform(im.Scale("images/Rosco/Assets/Haori_Warm.png", 1000, 1000), size=(800,800))
+#----------------------------------
+
+#Haori choice
+#----------------------------------
+image haori_luci_idle :
+    Transform(im.Scale("images/Rosco/Assets/Haori_Luci.png", 1000, 1000), size=(500,500))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+image haori_zander_idle :
+    Transform(im.Scale("images/Rosco/Assets/Haori_Zander.png", 1000, 1000), size=(500,500))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+image haori_gale_idle :
+    Transform(im.Scale("images/Rosco/Assets/Haori_Gale.png", 1000, 1000), size=(500,500))
+    matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
+#------------------------------------
+image nyanbie_headband = Transform(im.Scale("images/Rosco/Assets/nyanbie_headband.png", 1000, 1000), size=(400,400))
+image roscal_headband = Transform(im.Scale("images/Rosco/Assets/roscal_headband.png", 1000, 1000), size=(400,400))
+
+image haori_badge_rosco_patch1 = Transform(im.Scale("images/Rosco/Assets/haori_badge_rosco_patch1.png", 1000, 1000), size=(1000,1000))
+image haori_badge_rosco_patch2 = Transform(im.Scale("images/Rosco/Assets/haori_badge_rosco_patch2.png", 1000, 1000), size=(1000,1000))
+image haori_badge_rosco_patch3 = Transform(im.Scale("images/Rosco/Assets/haori_badge_rosco_patch3.png", 1000, 1000), size=(1000,1000))
+image haori_badge_cass_teabag = Transform(im.Scale("images/Rosco/Assets/haori_badge_cass_teabag.png", 1000, 1000), size=(1000,1000))
+image haori_badge_cass_cow = Transform(im.Scale("images/Rosco/Assets/haori_badge_cass_cow.png", 1000, 1000), size=(1000,1000))
+image haori_badge_cass_valo = Transform(im.Scale("images/Rosco/Assets/haori_badge_cass_valo.png", 1000, 1000), size=(1000,1000))
+image haori_badge_gale_dog = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_dog.png", 1000, 1000), size=(1000,1000))
+image haori_badge_gale_helm = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_helm.png", 1000, 1000), size=(1000,1000))
+image haori_badge_gale_kerfurr = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_kerfurr.png", 1000, 1000), size=(1000,1000))
+image haori_badge_luci_coffee = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_coffee.png", 1000, 1000), size=(1000,1000))
+image haori_badge_luci_guitar = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_guitar.png", 1000, 1000), size=(1000,1000))
+image haori_badge_luci_crownheart = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_crownheart.png", 1000, 1000), size=(1000,1000))
+image haori_badge_zanny_patch1 = Transform(im.Scale("images/Rosco/Assets/haori_badge_zanny_patch1.png", 1000, 1000), size=(1000,1000))
+image haori_badge_zanny_patch2 = Transform(im.Scale("images/Rosco/Assets/haori_badge_zanny_patch2.png", 1000, 1000), size=(1000,1000))
+image haori_badge_zanny_patch3 = Transform(im.Scale("images/Rosco/Assets/Haori_Luci.png", 1000, 1000), size=(1000,1000))
+
 #----------------------------------------
 
 # --------------Gale--------------
