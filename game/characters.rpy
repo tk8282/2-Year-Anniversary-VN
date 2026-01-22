@@ -17,6 +17,11 @@ define MC = Character(player_name, color="#FFFF00")   # Yellow
 # NPCs
 define Hostess = Character("Hostess")
 define Waiter = Character("Waiter")
+define Staff = Character("Staff Member")
+define Cashier = Character("Cashier")
+define anon = Character("???")
+define ClassmateA = Character("Clingy Classmate")
+
 
 
 # define name for mc for phone

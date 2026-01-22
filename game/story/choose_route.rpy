@@ -37,7 +37,7 @@ screen choice_menu:
                 #xsize 350
             # imagebutton will be enabled if Route wasn't already played
             sensitive "C" not in collected_routes
-                
+            at ib_fade    
 
         imagebutton:
             background galeBG
@@ -47,7 +47,7 @@ screen choice_menu:
             action Jump("gale_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "G" not in collected_routes
-                
+            at ib_fade    
 
         imagebutton:
             background luciBG
@@ -57,7 +57,7 @@ screen choice_menu:
             action Jump("luci_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "L" not in collected_routes
-                
+            at ib_fade
 
         imagebutton:
             background roscoBG
@@ -67,8 +67,8 @@ screen choice_menu:
             action Jump("rosco_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "R" not in collected_routes
+            at ib_fade
             
-
         imagebutton:
             background zannyBG
             idle "ZanderGray" 
@@ -77,10 +77,13 @@ screen choice_menu:
             action Jump("zanny_route")
             # imagebutton will be enabled if Route wasn't already played
             sensitive "Z" not in collected_routes
-    
+            at ib_fade
+            
     add "gui/textbox.png" xalign 0.5 yalign 1.0
-    add Text("Who do you want to help?",xalign=0.5, yalign=0.9, size=50)
-    
+    if len(collected_routes) == 0:
+        add Text("Who do you want to help?",xalign=0.5, yalign=0.9, size=50)
+    else:
+        add Text("Who do you want to help next?",xalign=0.5, yalign=0.9, size=50)
     # New UI Tetsing
     #add im.Scale("gui/testing/story_text box (no flowers)_candy.png",1600, 392.93) xalign 0.5 yalign 0.9
     #add Text("Who do you want to help?",xalign=0.5, yalign=0.82, size=50)
@@ -89,7 +92,7 @@ screen choice_menu:
 
 label choose_route:
 
-    scene bg clubroom   
+    scene bg clubroom with fade  
     call screen choice_menu
     
     

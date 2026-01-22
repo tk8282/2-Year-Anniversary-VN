@@ -22,6 +22,7 @@ label choose_pronouns:
                 $ player_possessive = "his"
                 $ player_possessive_obj = "his"
                 $ player_reflexive = "himself"
+                $ player_romterm = "boyfriend"
                 jump after_pronouns  # Jump to the next section
 
             "She/Her":
@@ -31,6 +32,7 @@ label choose_pronouns:
                 $ player_possessive = "her"
                 $ player_possessive_obj = "hers"
                 $ player_reflexive = "herself"
+                $ player_romterm = "girlfriend"
                 jump after_pronouns  # Jump to the next section
 
             "They/Them":
@@ -40,6 +42,7 @@ label choose_pronouns:
                 $ player_possessive = "their"
                 $ player_possessive_obj = "theirs"
                 $ player_reflexive = "themself"
+                $ player_romterm = "partner"
                 jump after_pronouns  # Jump to the next section
     
     label after_pronouns:

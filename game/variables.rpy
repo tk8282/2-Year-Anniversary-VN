@@ -9,6 +9,7 @@ init -1:
     default player_possessive = "their"
     default player_possessive_obj = "theirs"
     default player_reflexive = "themself"
+    default player_romterm = "partner"
 
     # -- Choices --
     default collected_routes = []
@@ -18,19 +19,23 @@ init -1:
     default phone_acc = 1 # 1=bibble, 2=dingding, 3=gobblycook, 4=paddyraptor
 
     # -- Choices for Lucien Route --
-    default luciRomantic = False
-    default flowerPoppy = False
-    default flowerDaisy = False
+    default luciRomantic = False # affects ending
+    default flowerPoppy = False # affects ending
+    default flowerDaisy = False # affects ending
 
     # -- Choices for Cassian Route --
     default appliance_choice = "normal-appliances"
-    default cassRomantic = False
+    default cassRomantic = False # affects ending
 
     # -- Choices for Zanny Route ---
     default ask_figure = False
     default ask_dice = False
     default ask_box = False
     default ask_plushie = False
+    default convo_festival = False
+    default convo_school = False
+    default zanny_orchid = False # affects ending
+    default zanny_scare = False # affects ending
 
     # -- Progress Flags --
     default chapter1_complete = False  
@@ -41,6 +46,10 @@ init -1:
 define slow_move = MoveTransition(1.5)
 
 define slow_move2 = MoveTransition(2.0)
+
+transform ib_fade:
+    alpha 0.0
+    easein 1.0 alpha 1.0
 
 # asset appears from bottom (used for e.g. phone asset)
 transform move_up:
@@ -188,7 +197,7 @@ transform screenshake2:
     xpos 0.5
     xanchor 0.5
     yanchor 0.5
-
+    
 # used for BG
 transform headshake:
     easein .3 xoffset -20
@@ -203,7 +212,7 @@ transform nod:
     easeout .3 yoffset 0
     easein .3 yoffset 20
     easeout .3 yoffset 0
-    repeat 3
+    repeat 2
 
 transform camerapanright:
     ease .2 xoffset 20
@@ -254,6 +263,20 @@ transform waist_up_right3:
     yoffset -80
 #------------------------------------------
 
+#-------specifically for luci-----------
+transform waist_up_center4:
+    xalign 0.5
+    yoffset 75
+
+transform waist_up_left4:
+    xalign -1.1
+    yoffset 75
+
+transform waist_up_right4:
+    xalign 1.85
+    yoffset 75
+#------------------------------------------
+
 # character position for showing assets
 transform waist_up_right_for_asset:
     xalign 1.4
@@ -268,6 +291,11 @@ transform waist_up_right_for_asset2:
 transform waist_up_right_for_asset3:
     xalign 2.15
     yoffset -80
+
+# character position for showing assets / Luci
+transform waist_up_right_for_asset4:
+    xalign 2.1
+    yoffset 75
 
 # ----fullbody versions/zoomed out character positions----
 transform fullbody_center:
@@ -284,6 +312,18 @@ transform fullbody_right:
 
 transform fullbody_left:
     xalign -0.05
+    yoffset 0
+# character position fullbody for showing assets / Luci
+transform fullbody_center4:
+    xalign 0.5
+    yoffset 0
+
+transform fullbody_right4:
+    xalign 1.15
+    yoffset 0
+
+transform fullbody_left4:
+    xalign -0.15
     yoffset 0
 #------------------------------------------------------------
 #----------------asset positioning---------------
