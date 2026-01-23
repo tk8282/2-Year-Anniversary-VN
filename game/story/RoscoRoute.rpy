@@ -47,7 +47,7 @@ label rosco_route_day1:
 
             MC "Rosco!"
 
-            show Rosco confused jacket at waist_up_center
+            show Rosco confused jacket at waist_up_center with dissolve
             "!"
             "Rosco immediately looks up, searching for the sound of your voice."
 
@@ -64,9 +64,10 @@ label rosco_route_day1:
             "He seems intensely focused on his phone, considering how he doesn't notice you at all. You decide to give him a little surprise as a greeting."
             "Keeping your lips zipped tight, you approach him from the side, just out of view when you strike."
 
-            show Rosco shocked jacket at waist_up_center
             MC "BOO!"
-
+            
+            show Rosco shocked jacket at waist_up_center with dissolve: 
+                shake2
             R "!!!"
 
             "Blissfully unaware, he shrieks when you grab the back of his shoulders tightly, stumbling in place until he turns to face you."
@@ -80,14 +81,14 @@ label rosco_route_day1:
 
             MC "Well… Consider it a lesson to pay attention to your surroundings!"
 
-            show Rosco neutral jacket
+            show Rosco annoyed jacket
             R "Ugh… Whatever, you're so {i}annoying{/i}. "
             extend "I'll get you back one of these days."
 
             MC "Like you could do that."
             MC "Anyway, you're here weirdly early? Why's that?"
         #choice end
-
+    show Rosco neutral jacket
     R "Yeah, well, I wanted to get us some barbecue. Need to charge up for the day, right?"
 
     "He pockets his phone and takes one of the two skewers from his other hand, offering it to you."
@@ -198,7 +199,8 @@ label rosco_route_day1:
 
     "You let out a sigh when you realize that he isn't listening."
 
-    show Rosco neutral jacket    
+    scene bg rosco game shop with fade
+    show Rosco neutral jacket at waist_up_center with dissolve
 
     "By the time you follow him into the store, he's already standing at the register, speaking to the employee and waving to the poster in the window."
 
@@ -530,7 +532,6 @@ label rosco_route_day1:
 
             MC "We couldn't skip straight to the most important part, y'know?"
 
-            #maybe shake
             R "Exactly! Gotta warm ourselves up a bit first."
 
             show Cassian smug
@@ -634,6 +635,8 @@ label rosco_route_day1:
     MC "Still!"
 
     "You pull the door open and shoo Rosco out, following in his wake."
+    scene bg road daylight with fade
+    show Rosco neutral jacket at waist_up_center with dissolve
 
     MC "We don't have any ideas. We need to get inspiration. {i}Real{/i} inspiration."
 
@@ -1068,7 +1071,8 @@ label rosco_route_day2:
     menu:
         "Make fun of him":
 
-            mc_nvl "it's literally lunchtime wdym you just woke up"
+            mc_nvl "it's literally lunchtime" 
+            mc_nvl "wdym you just woke up"
 
             r_nvl "and???"
             r_nvl "what time did you wake up then."
@@ -1157,14 +1161,21 @@ label rosco_route_day2:
 
     "You laugh at his message, shaking your head. You set your phone down, quickly getting ready to go to his place."
 
-    scene bg rosco_dorm with fade
+    scene bg rosco bedroom noon with fade
+    show Rosco laugh at waist_up_center with dissolve
+    R "Right on time! Make yourself comfortable."
 
-    R "Right on time! Make yourself comfortable. Sorry for the, uh, mess…"
+    R  "Sorry for the, uh..."
+    show Rosco embarrassed
+    extend " mess…"
 
     "You glance around the room, laughing to yourself."
 
-    MC "Did you think I was gonna get here late? Looks like you were halfway through cleaning… or an attempt at doing that."
+    show Rosco concerned
+    MC "Did you think I was gonna get here late? Looks like you were halfway through cleaning…"
+    extend " or an attempt at doing that."
 
+    show Rosco pout blush
     R "…"
     R "Let's not talk about it."
 
@@ -1172,6 +1183,7 @@ label rosco_route_day2:
 
     "As you look around for something to poke fun at, you notice his PC is still on, quiet game sounds emitting from the speaker."
 
+    show Rosco neutral
     MC "Wait, is that B.I.T.E Protocol? Have you been working on it?"
 
     R "Oh, yeah. I was working on the combat portion of it. I think I just finished it? But I haven't had it tested yet."
@@ -1189,7 +1201,7 @@ label rosco_route_day2:
             "Your lips curve up in a sly smile."
 
             MC "What if we test it now?"
-
+            show Rosco laugh
             "His gaze lights up at your suggestion, and his smile is soon matching yours."
 
         "Ask when he's going to test it.":
@@ -1200,7 +1212,7 @@ label rosco_route_day2:
             R "It'll be hard to schedule a fixed time for the boys to all come together and test it…"
 
             "His eyes go wide, lips quirking up."
-
+            show Rosco laugh
             R "Why don't we do that now?"
 
 
@@ -1208,6 +1220,7 @@ label rosco_route_day2:
 
     MC "Will we still have time for the outfits, though…"
 
+    show Rosco neutral
     R "Psh, of course we will! It's not gonna take forever to do one run of it."
     R "C'mon, don't doubt it! Let's just do it!"
 
@@ -1225,8 +1238,8 @@ label rosco_route_day2:
             R "Oh, do you play them often? Do you have a favorite?"
 
         "I love Pipmon Connect!":
-
-            R "(R_Smile) That's a fun one!"
+            show Rosco laugh
+            R " That's a fun one!"
 
             MC "You play it too? We should queue up together sometime!"
 
@@ -1237,8 +1250,8 @@ label rosco_route_day2:
             R "Good choice! Let's play when we get some free time."
 
         "Big fan of LOL.":
-
-            R "(R_Annoyed) You're kidding, right?"
+            show Rosco annoyed
+            R "You're kidding, right?"
 
             MC "Goofy, don't start with me. I know you've spent hours on that game."
 
@@ -1253,20 +1266,21 @@ label rosco_route_day2:
         "I don't really play these kinds of games.":
 
             MC "I'm a little nervous… I don't really play these kinds of games."
-
+            
+            show Rosco laugh
             R "It's fine! That'll make testing even better!"
             R "You get to learn about a new game, and your fumbling around will be great at locating glitches or bugs I might've missed!"
 
-            R "(R_Laugh)"
-
             MC "Did you just call my attempt at gaming \"fumbling around\"?!"
 
-            R "(R_Smug) Eh, well, it's true 'til you show me it isn't…"
+            show Rosco smug
+            R "Eh, well, it's true 'til you show me it isn't…"
 
             MC "I hate it here."
 
     "He flicks back to the main screen with a laugh, and the menu boots to life in no time."
 
+    show Rosco neutral 
     MC "Woah! The graphics on this have gotten far better since the last time I saw it!"
 
     R "You think so? I think it could be a bit better, objectively speaking."
@@ -1280,17 +1294,19 @@ label rosco_route_day2:
     R "Alright, alright!"
 
     "He puts his hands up in surrender, looking slightly embarrassed."
-
-    R "(R_Embarrassed) Thanks…"
+    show Rosco embarrassed
+    R "Thanks…"
 
     "You smile but choose not to push the subject any further."
-
-    "You could always save your words of praise for later… When you feel more like a menace."
+    "You could always save your words of praise for later…"
+    extend "When you feel more like a menace."
 
     MC "So… what is it that I have to actually do?"
 
+    show Rosco neutral
     R "Here, let me make this a bit easier."
 
+    scene bg rosco monitor with fade
     "He presses a few buttons on the keyboard and maneuvers the mouse until you find yourself on a new screen, this one looking like an actual battlefield."
 
     R "Okay, before we get to the combat portion, you gotta pick a character."
@@ -1316,6 +1332,8 @@ label rosco_route_day2:
 
     "You freak out as your health bar drops dangerously low, some of the spikes from the opposing Dewdrop hitting you even as you run away."
 
+    scene bg rosco monitor:
+        screenshake
     MC "STUPID SLIME CREATURE—"
 
     R "You're not going to die! Jeezus! Here—"
@@ -1330,45 +1348,52 @@ label rosco_route_day2:
 
     "All thoughts of the game leave your mind at the unexpected proximity."
 
+    show Rosco annoyed at waist_up_center with dissolve
     R "Come on, focus! Use your skills! Ah—whatever."
 
     "He presses down on the keyboard, using your fingers to activate the best skills for the situation."
 
+    show Rosco neutral 
     R "See? And the enemy Dewdrop's ult just ended. This is the perfect time to strike."
 
+    hide Rosco with dissolve
     "His fingers move quickly, tapping different keys and moving the mouse efficiently."
-
     "Despite your efforts to focus, your thoughts keep getting drawn to the way his cooler, larger hand feels against yours."
-
     "The scent of his cologne does nothing to help your focus, drawing your gaze to look up at him instead—you're awed at how determined he looks, eyebrows knit with concentration."
-
     "He doesn't notice your stare, his gaze flitting over the screen as he continues to play for you."
 
+    show Rosco laugh at waist_up_center with dissolve
     R "Annnd we're done. Triumph!"
 
+    show Rosco neutral
     MC "What?"
 
     "Your gaze snaps back to the screen, surprised to find the word TRIUMPH written in golden letters."
 
+    show Rosco smug
     R "So what'd you think? Fun, huh?"
 
+    scene bg rosco bedroom afternoon with fade
+    show Rosco neutral at waist_up_center with dissolve
     "He looks proud of himself as he pulls away, standing properly again with his arm propped on the chair. For a brief moment, you miss the feel of his hand against yours."
-
     "You clear your throat, mentally shaking away your thoughts as you answer him."
 
     MC "Yeah! Yeah, definitely."
 
     "He seems oblivious to your flustered state, giving you a hopeful smile."
 
+    show Rosco concerned
     R "Do you think people will enjoy it at the festival?"
 
     MC "Of course! It'll be a hit for sure."
 
-    # show Rosco laugh
+    show Rosco laugh
     R "Nice! Then I'm all done with this. Should we get started on haori decorating?"
 
+    hide Rosco with dissolve
     "You nod, getting out of the chair and walking to the closet with Rosco. He takes out the haoris and holds them up."
 
+    show Rosco neutral at waist_up_center with dissolve
     R "There's five of them. What order do we wanna go with?"
 
     MC "Let's go with Gale's. What stickers do you have that we can pick from?"
@@ -1381,14 +1406,52 @@ label rosco_route_day2:
 
     R "I thought maybe we could use these as inspo to make the patches for all the haoris."
 
+    show haori_badge_gale_dog with dissolve:
+        pos (200, 350)
+    
+    screen gale_dog:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_gale_dog":
+                    xpos -25
+                    ypos 0
+
+
+    show screen gale_dog with dissolve
+
     "He picks out a dog, handing it to you."
 
     R "Doesn't this one lowkey look like Gale's dog? If we gave it that bandana that Gale puts on Pup, then it'll be a pretty good replica."
 
     "You turn the sticker over in your fingers, humming thoughtfully."
 
+    hide haori_badge_gale_dog with dissolve
+    hide screen gale_dog with dissolve
     MC "Yeah, that sounds good. And then…"
 
+    # no plain tv screen do i just use the straight kerfurr sticker?
+    screen gale_kerfurr:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_gale_kerfurr":
+                    xpos -25
+                    ypos -25
+
+
+    show screen gale_kerfurr with dissolve
+    
     "You pick out a TV screen, turning it to face Rosco."
 
     MC "If we added cat ears and a cat face, doesn't it remind you of Ferkur, that robot unit from the game Gale likes?"
@@ -1401,68 +1464,190 @@ label rosco_route_day2:
 
     "You hold the two stickers in your hand, glancing through the other ones that are scattered over the desktop."
 
+    screen gale_helm:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_gale_helm":
+                    xpos -25
+                    ypos -25
+
+
+    show screen gale_helm with dissolve
+
     "Rosco offers up a ship steering wheel, narrowing his eyes."
 
+    show Rosco confused
     R "Out of everything here, I feel like this one kinda fits Gale. I'm not sure why?"
 
     MC "He does kind of like pirates… I think. He's mentioned it from time to time, and he definitely likes swords. And pirates use swords. And ships! So I think it works."
 
+    show Rosco neutral
     R "Okay, then that's all settled."
 
+    hide screen gale_helm with dissolve
     "Taking the stickers, he piles them together on the side, making sure you don't pick the same ones again."
 
-    R "Let's do C now…"
+    R "Let's do Cass now…"
+
+    screen cass_teabag:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 400 
+            ysize 350
+            background Solid("#00000079")
+            padding(10,10)
+            vbox:
+                add "haori_badge_cass_teabag":
+                    xpos 15
+                    ypos 0
+
+
+    show screen cass_teabag with dissolve
 
     "You grab a tea bag sticker, lifting it up so that he could see."
 
     R "That's perfect! He's always talking about oolong tea."
 
     MC "Hmm… Maybe we can add a little leaf to the end to make it a bit cuter too."
+    hide screen cass_teabag with dissolve
 
     R "Speaking of cute…"
 
     "Rosco's eyes glint with amusement, his lips twitching with the hint of a smirk as he picks up a cow sticker."
 
+    screen cass_cow:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_cass_cow":
+                    xpos -25
+                    ypos 0
+
+
+    show screen cass_cow with dissolve
+
     R "Don't you think this one's also pretty cute?"
 
     MC "I mean, yeah, but what does that have to do with—"
 
+    show Rosco smug
     "You pause as Rosco's smirk widens."
 
     MC "You're evil."
 
     R "I told him I'd never let him live it down, and I meant it."
 
+    hide screen cass_cow with dissolve
+    show Rosco laugh 
     "He laughs as he puts the two stickers together, only laughing harder when you shake your head at him."
+
+    screen cass_valo:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_cass_valo":
+                    xpos -20
+                    ypos 0
+
+
+    show screen cass_valo with dissolve
 
     MC "Oh, hey! Isn't this icon from Catorant?"
 
+    show Rosco neutral 
     "Rosco finally pulls himself back together, looking over at the sticker you hold up."
 
-    R "I think so! That looks like the icon from the one C mains."
+    R "I think so! That looks like the icon from the one Cass mains."
 
+    hide screen cass_valo with dissolve
     MC "Nice. Then that's two down and three to go. Luci next?"
 
-    "He nods in agreement, letting you take C's stickers and set them off to the side."
+    "He nods in agreement, letting you take Cass's stickers and set them off to the side."
 
     R "Immediately, we have got to go with the guitar."
+
+    screen luci_guitar:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_luci_guitar":
+                    xpos -10
+                    ypos 0
+
+
+    show screen luci_guitar with dissolve
 
     "He leans forward and grabs an acoustic guitar sticker, double checking it in his hands."
 
     R "We can make it look a little bit more like Luci's actual guitar, too! Add the little design… Yeah, this is perfect."
 
+    hide screen luci_guitar with dissolve
     MC "Mhm, and this—"
 
+    screen luci_coffee:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_luci_coffee":
+                    xpos 0
+                    ypos 0
+
+
+    show screen luci_coffee with dissolve
     "You grab a sticker with two coffee beans next to each other."
 
     MC "Luci's obsessed with coffee, so this should fit him well."
 
+    hide screen luci_coffee with dissolve
     R "Absolutely!"
 
     R "For this last one, though… hm."
 
     "You spend some time checking over all the stickers, but none of them really draw you in. Hesitantly, you reach for a plain heart."
 
+    screen luci_crownheart:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000065")
+            padding(1,1)
+            vbox:
+                add "haori_badge_luci_crownheart":
+                    xpos -5
+                    ypos 0
+
+
+    show screen luci_crownheart with dissolve
+    
     MC "Hear me out. You know the unique little heart doodles Luci does in his notebooks?"
 
     R "Yeah, that heart with the slit in the middle and a little diamond crown at its base?"
@@ -1471,10 +1656,30 @@ label rosco_route_day2:
 
     R "Works for me!"
 
-    "He sets Luci's three aside, next to C's pile."
+    hide screen luci_crownheart
+    "He sets Luci's three aside, next to Cass's pile."
+
+    screen zanny_dumbbell:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_zanny_patch3":
+                    xpos -5
+                    ypos 0
+
+
+    show screen zanny_dumbbell with dissolve
 
     R "Then Zander… I was thinking about him the second I saw the dumbbell. We've got to include it for this gym rat."
 
+    hide screen zanny_dumbbell with dissolve
+
+    #NOTE: Stopped here
     "He already puts the dumbbell to the side, reserving it."
 
     MC "Then… Ooh, look at this."

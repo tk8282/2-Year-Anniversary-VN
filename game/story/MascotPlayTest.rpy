@@ -54,16 +54,15 @@ label ability_check(correct_key, display_key):
             $ ability_failures += 1
 
             if ability_failures >= 3:
-                show Rosco shocked jacket at waist_up_center
+                show Rosco shocked at waist_up_center
                 R "Wow you really don't game, do you?"
             else:
-                show Rosco neutral jacket at waist_up_center
+                show Rosco neutral at waist_up_center
                 R "Wrong button goofy"
 
 
 # ENTRY POINT
 label mascot_playtest:
-    "entered loop"
     call screen mascot_PlayTest_Screen
     jump mascot_choice
 
@@ -149,17 +148,17 @@ label pipsqueak_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "…"
 
-    show Rosco embarrassed jacket at waist_up_center
+    show Rosco embarrassed at waist_up_center
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -168,7 +167,7 @@ label pipsqueak_route:
 
     MC "If you say so…"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "So Pipsqueak has abilities that are easy to learn, okay?"
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -179,7 +178,7 @@ label pipsqueak_route:
     #wait for q
     call ability_check("q", "Q")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "When you press it, a wave of smaller Pipsqueaks dive down from above, all assaulting the motionless bot standing in the middle of the lane."
 
     MC "Woah! Gale made this cute bird terrifying!"
@@ -189,7 +188,7 @@ label pipsqueak_route:
     #wait for w
     call ability_check("w", "W")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Following Rosco's instructions, you move as you click around, suddenly speeding up as you click."
 
     MC "So this one's a speed buff?"
@@ -203,7 +202,7 @@ label pipsqueak_route:
     #wait for e
     call ability_check("e", "E")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Pipsqueak begins to flap their wings, and a giant whirlwind manifests from it, heading straight for the bot. When it hits the other character, it takes a few points of health off and stuns it."
 
     MC "That's absolutely insane! This little bird can make a tornado!?"
@@ -215,7 +214,7 @@ label pipsqueak_route:
     #wait for r
     call ability_check("r", "R")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "A huge wall of wind rushes forward, reaching beyond where the tornado had stopped. It's also a lot wider, and the hit points of the enemy go down significantly more."
 
     MC "That is so awesome."
@@ -225,7 +224,7 @@ label pipsqueak_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -251,7 +250,7 @@ label pipsqueak_route:
     "Once the last bird is thrown, you leave the encounter victorious."
 
     MC "Holy crap! I did it!"
-
+    #show Rosco laugh
     R "See! It's really a learning game!"
 
     # END OF SUB-ROUTE, JUMP TO MAIN
@@ -267,17 +266,17 @@ label dewdrop_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "…"
 
-    show Rosco embarrassed jacket at waist_up_center
+    show Rosco embarrassed at waist_up_center
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -286,7 +285,7 @@ label dewdrop_route:
 
     MC "If you say so…"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "A-anyway, Dewdrop's abilities are very easy to understand."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -295,7 +294,7 @@ label dewdrop_route:
     R "Look, press Q."
 
     call ability_check("q", "Q")
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "A flurry of leaves, all seemingly spawning from the top of Dewdrop's head, propel towards the bot in the middle."
 
     MC "What on earth? The drop of water can spawn leaves?"
@@ -311,7 +310,7 @@ label dewdrop_route:
     R "Yeah, exactly. Click W!"
 
     call ability_check("w", "W")
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Suddenly, Dewdrop lunges sideways towards Pipsqueak, and Pipsqueak is immediately smothered in Dewdrop's gooey casing."
 
     MC "What the hell?! Did I just attach on to Pipsqueak?"
@@ -333,7 +332,7 @@ label dewdrop_route:
     R "Press E!"
 
     call ability_check("e", "E")
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Dewdrop turns to Pipsqueak, and a squirt of water hits Pipsqueak square in the beak. Despite the weird display, Pipsqueak's health rises again."
 
     MC "Did I just… piss on them?"
@@ -355,7 +354,7 @@ label dewdrop_route:
     R "Okay, last ability: R for the ultimate!"
 
     call ability_check("r", "R")
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Dewdrop turns again and lunges to surround Pipsqueak, and the healing skyrockets."
 
     MC "Wait, isn't this just a better version of the W ability?"
@@ -374,7 +373,7 @@ label dewdrop_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -417,17 +416,17 @@ label lunarist_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "…"
 
-    show Rosco embarrassed jacket at waist_up_center
+    show Rosco embarrassed at waist_up_center
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -436,7 +435,7 @@ label lunarist_route:
 
     MC "If you say so…"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "Okay, Lunarist's abilities are all related to crowd control in some way."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -446,7 +445,7 @@ label lunarist_route:
 
     call ability_check("q", "Q")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Lunarist opens their cloak and a music note floats out. It gravitates towards the bot and absorbs into it forcefully, knocking off some health."
 
     MC "Ooh, so Lunarist has music as the character motif?"
@@ -457,7 +456,7 @@ label lunarist_route:
 
     call ability_check("w", "W")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "A barrage of music notes fly out of Lunarist's cloak, and they encircle the bot as though performing a ritual at its feet. The bot tries to escape, but the music notes bar it from leaving the circle."
 
     MC "Eh? So I just trapped them in a circle?"
@@ -468,7 +467,7 @@ label lunarist_route:
 
     call ability_check("e", "E")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "A music staff with notes on it flows out this time, wrapping the bot in a layer of music. The staff circles the bot and it starts walking towards you, as if trapped under a spell."
 
     MC "Wait, I can just force it to walk towards me?!"
@@ -485,7 +484,7 @@ label lunarist_route:
 
     call ability_check("r", "R")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Suddenly, a blast of music floods out of Lunarist as they float high into the air. The bot, unfortunately in radius, is stunned by the time Lunarist floats back down and is nearly dead."
 
     MC "That almost killed the bot! This is broken!"
@@ -502,7 +501,7 @@ label lunarist_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -544,17 +543,17 @@ label route_netherling:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and its got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "…"
 
-    show Rosco embarrassed jacket at waist_up_center
+    show Rosco embarrassed at waist_up_center
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -563,7 +562,7 @@ label route_netherling:
 
     MC "If you say so…"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "Okay, Netherling's skills aren't too hard to wrap your head around."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -573,7 +572,7 @@ label route_netherling:
 
     call ability_check("q", "Q")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Netherling takes a half step back before jabbing forward with its pointy tail, slashing through the ribs of the bot."
 
     MC "Woah, this one's a fighter! That tail looks really dangerous…"
@@ -584,7 +583,7 @@ label route_netherling:
 
     call ability_check("w", "W")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Nothing seems to happen other than a green aura hovering over Netherling."
 
     "Rosco maneuvers the bot to hit you, and you see it happen. The attack doesn't affect your health negatively—it actually goes up."
@@ -597,7 +596,7 @@ label route_netherling:
 
     call ability_check("e", "E")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Netherling uses their wing to dash in, ramming into the bot with their horns while inducing a slight knockback effect."
 
     "The bot is dazed, stunned in place. Netherling stands upright again as if nothing happened."
@@ -610,7 +609,7 @@ label route_netherling:
 
     call ability_check("r", "R")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Suddenly, Netherling pounces onto the enemy, absorbing them into their jelly-like being. Even encased in the Netherling, the enemy's health ticks down by the second."
 
     "A few moments later, Netherling spits the enemy out, leaving them with half the HP they had when they went in."
@@ -629,7 +628,7 @@ label route_netherling:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -665,27 +664,27 @@ label roscal_route:
 
     MC "I'll go with Roscal. I wanna see just how broken you made your own character…"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "What!? What do you mean!? I'm a fair man! I'd never do that!"
 
-    show Rosco laugh jacket at waist_up_center
+    show Rosco laugh at waist_up_center
     MC "Mhm…"
 
     "When you click the Roscal, the character shows as selected. You load up into a proper game in no time."
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked jacket at waist_up_center
+    show Rosco shocked at waist_up_center
     R "…"
 
-    show Rosco embarrassed jacket at waist_up_center
+    show Rosco embarrassed at waist_up_center
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it! Let's get to the controls."
@@ -694,7 +693,7 @@ label roscal_route:
 
     MC "If you say so…"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "Roscal’s abilities are actually a little difficult, but it shouldn’t be too hard."
 
     "He watches you click around on the practice map, letting you get used to the movement before continuing."
@@ -707,27 +706,27 @@ label roscal_route:
 
     call ability_check("q", "Q")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "Once you click Q, your character leaps straight towards the foxes, biting at one of them."
 
     MC "Oh shoot—Oh lord—Rosco, they're attacking me—"
 
-    show Rosco laugh jacket at waist_up_center
+    show Rosco laugh at waist_up_center
     R "Chill! You won't die from that. Click W."
 
     call ability_check("w", "W")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "The Roscal sticks its sewing needle into the ground, creating a ring of pink around it."
 
     MC "Woah, I'm not taking damage anymore?"
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     R "Yup! It's like a shield. Now try E."
 
     call ability_check("e", "E")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     "The safety pin in Roscal's ear flicks out, flying around and hitting the foxes surrounding you before flying back into place."
 
     R "A boomerang. Pretty cool, huh? When you're around other players, it'll hit every enemy character before coming back to you."
@@ -740,7 +739,7 @@ label roscal_route:
 
     call ability_check("r", "R")
 
-    show Rosco neutral jacket at waist_up_center
+    show Rosco neutral at waist_up_center
     MC "Ohemgee. I'm so big now!"
 
     "You watch Roscal smile on your screen, towering over the foxes."
@@ -783,7 +782,7 @@ label roscal_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug jacket at waist_up_center
+    show Rosco smug at waist_up_center
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
