@@ -522,7 +522,31 @@ image bg rosco monitor = im.Scale("images/Rosco/Backgrounds/monitorscene.png", 1
 
 # --------------Gale--------------
 image bg gale clubroom = im.Scale("images/Gale/Backgrounds/gale_route_club_room.png", 1920, 1080)
+"""
+#Day stall pieces:
+image bg gale bushes = im.Scale("images/Gale/Backgrounds/day_stall_seperated/bushes.png", 1920, 1080)
+image bg gale grass_foreground = im.Scale("images/Gale/Backgrounds/day_stall_seperated/grass_foreground.png", 1920, 1080)
+image bg gale pole_left = im.Scale("images/Gale/Backgrounds/day_stall_seperated/pole_left.png", 1920, 1080)
+image bg gale pole_right = im.Scale("images/Gale/Backgrounds/day_stall_seperated/pole_right.png", 1920, 1080)
+image bg gale sky = im.Scale("images/Gale/Backgrounds/day_stall_seperated/sky.png", 1920, 1080)
+image bg gale sparkles = im.Scale("images/Gale/Backgrounds/day_stall_seperated/sparkles.png", 1920, 1080)
+image bg gale sunlight_glow_overlay = im.Scale("images/Gale/Backgrounds/day_stall_seperated/sunlight_glow_overlay.png", 1920, 1080)
+image bg gale tree_leaves = im.Scale("images/Gale/Backgrounds/day_stall_seperated/tree_leaves.png", 1920, 1080)
+image bg gale grass_background = im.Scale("images/Gale/Backgrounds/day_stall_seperated/grass_background.png", 1920, 1080)
+image bg gale day_stall = im.Scale("images/Gale/Backgrounds/day_stall_seperated/day_stall.png", 1920, 1080)
 
+#Night stall pieces:
+image bg gale night_bushes = im.Scale("images/Gale/Backgrounds/night_stall_seperated/bushes.png", 1920, 1080)
+image bg gale grass_bg = im.Scale("images/Gale/Backgrounds/night_stall_seperated/grass_bg.png", 1920, 1080)
+image bg gale lights = im.Scale("images/Gale/Backgrounds/night_stall_seperated/lights.png", 1920, 1080)
+image bg gale night_glow = im.Scale("images/Gale/Backgrounds/night_stall_seperated/night_glow_set_to_add.png", 1920, 1080)
+image bg gale night_mode = im.Scale("images/Gale/Backgrounds/night_stall_seperated/night_mode_set_to_multiply.png", 1920, 1080)
+image bg gale night_sky_and_stars = im.Scale("images/Gale/Backgrounds/night_stall_seperated/night_sky_and_stars.png", 1920, 1080)
+image bg gale night_stall = im.Scale("images/Gale/Backgrounds/night_stall_seperated/stall.png", 1920, 1080)
+image bg gale tree_leaves = im.Scale("images/Gale/Backgrounds/night_stall_seperated/tree_leaves.png", 1920, 1080)
+image bg gale grass_background = im.Scale("images/Gale/Backgrounds/night_stall_seperated/grass_background.png", 1920, 1080)
+image bg gale day_stall = im.Scale("images/Gale/Backgrounds/night_stall_seperated/day_stall.png", 1920, 1080)
+"""
 #----------------------------------------
 
 # --------------Zander--------------
@@ -660,6 +684,24 @@ image haori_badge_zanny_patch3 = Transform(im.Scale("images/Rosco/Assets/haori_b
 #----------------------------------------
 
 # --------------Gale--------------
+"""
+image crepe_banner_in_between_morning = Transform(im.Scale("images/Gale/Assets/crepe_banner_in_between_morning.png", 1000, 1000), size=(800,800))
+image crepe_banner_in_between_night = Transform(im.Scale("images/Gale/Assets/crepe_banner_in_between_night.png", 1000, 1000), size=(800,800))
+image crepe_banner_messy_morning = Transform(im.Scale("images/Gale/Assets/crepe_banner_messy_morning.png", 1000, 1000), size=(800,800))
+image crepe_banner_messy_night = Transform(im.Scale("images/Gale/Assets/crepe_banner_messy_morning.png", 1000, 1000), size=(800,800))
+image crepe_banner_neat_morning = Transform(im.Scale("images/Gale/Assets/crepe_banner_neat_morning.png", 1000, 1000), size=(800,800))
+image crepe_banner_neat_night = Transform(im.Scale("images/Gale/Assets/crepe_banner_neat_night.png", 1000, 1000), size=(800,800))
+image gale_bandana = Transform(im.Scale("images/Gale/Assets/gale_bandana.png", 1000, 1000), size=(800,800))
+image gale_birdpoop = Transform(im.Scale("images/Gale/Assets/gale_birdpoop.png", 1000, 1000), size=(800,800))
+image gale_boxes = Transform(im.Scale("images/Gale/Assets/gale_boxes.png", 1000, 1000), size=(800,800))
+image gale_fliers_artistic = Transform(im.Scale("images/Gale/Assets/gale_fliers_artistic.png", 1000, 1000), size=(800,800))
+image gale_hotsauce = Transform(im.Scale("images/Gale/Assets/gale_hotsauce.png", 1000, 1000), size=(800,800))
+image gale_pipsqueak = Transform(im.Scale("images/Gale/Assets/gale_pipsqueak.png", 1000, 1000), size=(800,800))
+image gale_in_between_string_lights = Transform(im.Scale("images/Gale/Assets/gale_in_between_string_lights.png", 1000, 1000), size=(800,800))
+image gale_messy_string_lights = Transform(im.Scale("images/Gale/Assets/gale_messy_string_lights.png", 1000, 1000), size=(800,800))
+image gale_neat_string_lights = Transform(im.Scale("images/Gale/Assets/gale_neat_string_lights.png", 1000, 1000), size=(800,800))
+"""
+
 #----------------------------------------
 
 # --------------Zander--------------
