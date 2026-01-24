@@ -543,9 +543,8 @@ image bg gale night_glow = im.Scale("images/Gale/Backgrounds/night_stall_seperat
 image bg gale night_mode = im.Scale("images/Gale/Backgrounds/night_stall_seperated/night_mode_set_to_multiply.png", 1920, 1080)
 image bg gale night_sky_and_stars = im.Scale("images/Gale/Backgrounds/night_stall_seperated/night_sky_and_stars.png", 1920, 1080)
 image bg gale night_stall = im.Scale("images/Gale/Backgrounds/night_stall_seperated/stall.png", 1920, 1080)
-image bg gale tree_leaves = im.Scale("images/Gale/Backgrounds/night_stall_seperated/tree_leaves.png", 1920, 1080)
-image bg gale grass_background = im.Scale("images/Gale/Backgrounds/night_stall_seperated/grass_background.png", 1920, 1080)
-image bg gale day_stall = im.Scale("images/Gale/Backgrounds/night_stall_seperated/day_stall.png", 1920, 1080)
+image bg gale tree_outlines = im.Scale("images/Gale/Backgrounds/night_stall_seperated/tree_outlines_bg.png", 1920, 1080)
+image bg gale trees = im.Scale("images/Gale/Backgrounds/night_stall_seperated/trees.png", 1920, 1080)
 """
 #----------------------------------------
 
