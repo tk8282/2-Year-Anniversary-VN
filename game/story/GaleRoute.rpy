@@ -12,7 +12,8 @@ label gale_route_day1:
     with dissolve
 
     # Day 1
-    scene bg_school_lawn with fade
+    #scene bg_school_lawn with fade
+    #(day stalls with no stall)
 
     "You absently tap your foot against the concrete while you wait, enjoying the fresh spring breeze drifting through the open lawn."
 
@@ -20,7 +21,8 @@ label gale_route_day1:
 
     "It’s a few minutes past the meeting time when you pull out your phone to text Gale, only to hear rushed footsteps coming around the bend."
 
-    G "MC, hi! Sorry I’m late, I wanted to stop and grab us some snacks, but it took longer than expected."
+    show Gale neutral at waist_up_center with dissolve
+    G "[player_name], hi! Sorry I’m late, I wanted to stop and grab us some snacks, but it took longer than expected."
 
     "Gale lifts up a bag from the nearby convenience store that’s bulging with snacks and drinks with a triumphant grin."
 
@@ -30,40 +32,46 @@ label gale_route_day1:
 
     MC "Yep! Should be a few rows in, near the middle."
 
+    show Gale neutral at waist_up_center, singlejump
     G "Lead on!"
 
     "As you lead Gale through the rows of empty stalls, you start pointing out some of the clubs that have already begun decorating."
 
+    show Gale confused 
     G "Is that a fishing stall?"
 
     "He gestures to a stall a few rows down from where you are now, and you see the Marine Biology Club setting up what looks to be a kiddie pool and hanging some paper jellyfish."
 
+    show Gale confused pose2
     G "I wonder what they’re going to use the pool for…"
 
     MC "We should check it out during the festival!"
 
     "The stall next to it catches your eye."
-
     "It’s also bustling with movement, the club decorating and lifting a banner to draw attention."
-
     "Home-Grown Organic Veggies Taste Test"
 
+    show Gale neutral
     MC "Hey, Gale. We should also visit the one next to it."
 
     "You watch as Gale cranes his neck and squints to read the sign between the people moving in front of it, and laugh as his expression twists."
 
+    show Gale shocked
     G "Do you want me dead? Is that it? Absolutely not."
 
     MC "Oh, come on! It’s a blind taste test to see if we can tell the difference between home-grown and store-bought veggies!"
 
-    G "I know how they’ll taste already! Bad!"
+    show Gale shocked
+    G "I know how they’ll taste already!" 
+    show Gale shocked at waist_up_center, singlejump
+    extend " Bad!" 
 
     "You dissolve into laughter as you both move on, still making note of some stalls to visit during the festival."
-
     "After a minute or so more of walking, you stop at a stall bracketed by posts and check the number Nayu sent you in your messaging app, confirming it’s the correct table."
 
     MC "Okay, this is ours!"
 
+    show Gale neutral
     G "Hey, this is pretty nice! It’s close to the end but not so close that people will just walk past us."
 
     MC "Nayu really hooked us up with a great spot!"
@@ -98,12 +106,14 @@ label gale_route_day1:
 
     MC "Last I heard, they were getting a new 3D printer and some fancy fabric printer."
 
+    show Gale shocked
     G "What could any of the clubs possibly need a 3D printer for?!"
 
     "You shrug as you push open the doors to the club room building, holding it open for Gale to slip inside as well."
 
     MC "I heard the Chess Club used it to print a few more boards and sets of pieces since their club has grown so much. I think they got someone in a 3D modeling course to design custom pieces, too."
 
+    show Gale neutral
     G "That’s pretty cool. I wonder if we can find an excuse to use it at some point…"
 
     MC "Probably! Rosco probably has a hundred ideas for tabletop campaigns that could benefit from having some miniatures."
@@ -120,11 +130,13 @@ label gale_route_day1:
 
     "With everything set out on the table, you put your hands on your hips and take a step back, blinking at the gathered supplies."
 
+    show Gale confused
     G "So, uh… How confident are you?"
 
     menu:
         "Pretty confident. I do stuff like this a lot.":
 
+            show Gale neutral
             G "Oh, good. I was a little worried there for a minute."
 
             "You chuckle and move towards the tubs of paint."
@@ -139,16 +151,18 @@ label gale_route_day1:
 
             "You dig out the appropriate colors from the bin, only to turn and grin at Gale where he stands next to the table."
 
-            G "..." # G_Confused
-            " He tilts his head at you, reminiscent of a golden retriever, and yelps when you start tossing the paint tubes at him."
+            show Gale confused
+            G "He tilts his head at you, reminiscent of a golden retriever, and yelps when you start tossing the paint tubes at him."
 
-            G "..." # G_Shocked
-            " He barely manages to catch them all, dumping them on the table while you peacefully walk back over with a larger bottle of black paint and a dish to put the paints on while you’re painting."
+            show Gale shocked
+            G " He barely manages to catch them all, dumping them on the table while you peacefully walk back over with a larger bottle of black paint and a dish to put the paints on while you’re painting."
 
-            G "Warn a guy next time!" # G_Angry
+            show Gale angry at waist_up_center, shake
+            G "Warn a guy next time!"
 
             MC "Where’s the fun in that?"
 
+            #NOTE: Stopped here
             G "..." # G_Laughing
             " His irritation melts away as you both laugh and you pick up one of the pencils before squinting down at the paper."
 
