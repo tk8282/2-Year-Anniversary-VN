@@ -1307,7 +1307,7 @@ label zanny_route_day2:
     elif player_choice == "convo":
         show Zander neutral at waist_up_left3 with dissolve
         "Not wanting to ride in silence, you decide to start a conversation."
-        call zanny_route_day2_convo
+        call zanny_route_day2_convo from _call_zanny_route_day2_convo
 
         "The car eventually pulls into the parking lot of the supermarket. Zanny exits first, opening the passenger side door as you step out. A light spring breeze hits your face as you walk toward the entrance."
         MC "You have the list, right? The one you sent me yesterday?"
@@ -1897,4 +1897,4 @@ label zanny_route_day2_convo:
         $ convo_school = True
     # [Choice A #2 End]
     # [Choice A End]
-    call zanny_route_day2_convo
+    call zanny_route_day2_convo from _call_zanny_route_day2_convo_1

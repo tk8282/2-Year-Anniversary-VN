@@ -5,7 +5,6 @@ default chosen_mascot = None
 
 screen ability_wait(correct_key, ability_name):
 
-    modal True
     zorder 100
 
     frame:
@@ -34,10 +33,6 @@ screen ability_wait(correct_key, ability_name):
     key "v" action Return("fail")
     key "K_SPACE" action Return("fail")
     key "K_RETURN" action Return("fail")
-    key "K_ESCAPE" action Return("fail")
-
-    # block mouse clicking
-    key "mouseup_1" action NullAction()
 
 
 
@@ -54,10 +49,26 @@ label ability_check(correct_key, display_key):
             $ ability_failures += 1
 
             if ability_failures >= 3:
-                show Rosco shocked at waist_up_center
+                show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
                 R "Wow you really don't game, do you?"
             else:
-                show Rosco neutral at waist_up_center
+                show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
                 R "Wrong button goofy"
 
 
@@ -140,7 +151,20 @@ screen mascot_PlayTest_Screen:
 # ROUTES
 label pipsqueak_route:
 
+    show pipsqueak at singlejump:
+        pos (700,200)
+        zoom 0.5
     MC "I'll go with Pipsqueak. I'm really curious about the ranged DPS thing!"
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
 
     R "Good choice! Gale would be happy to hear that you picked his design."
 
@@ -148,26 +172,67 @@ label pipsqueak_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "…"
 
-    show Rosco embarrassed at waist_up_center
+    show screen portrait(
+    "Rosco embarrassed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Thank you…"
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Okay, okay, enough fawning about it. Let's get to the controls."
 
     "You grin at the sight of him, as unable to take a compliment as ever."
 
     MC "If you say so…"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "So Pipsqueak has abilities that are easy to learn, okay?"
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -176,9 +241,20 @@ label pipsqueak_route:
     R "Look, press Q."
 
     #wait for q
-    call ability_check("q", "Q")
+    call ability_check("q", "Q") from _call_ability_check
+    show pipsqueak at ability1:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "When you press it, a wave of smaller Pipsqueaks dive down from above, all assaulting the motionless bot standing in the middle of the lane."
 
     MC "Woah! Gale made this cute bird terrifying!"
@@ -186,9 +262,21 @@ label pipsqueak_route:
     R "Yep… So that's one… Ah, press W and run around!"
 
     #wait for w
-    call ability_check("w", "W")
+    call ability_check("w", "W") from _call_ability_check_1
 
-    show Rosco neutral at waist_up_center
+    show pipsqueak at ability2:
+        pos (700,200)
+        zoom 0.5
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Following Rosco's instructions, you move as you click around, suddenly speeding up as you click."
 
     MC "So this one's a speed buff?"
@@ -200,9 +288,21 @@ label pipsqueak_route:
     R "Now, E!"
 
     #wait for e
-    call ability_check("e", "E")
+    call ability_check("e", "E") from _call_ability_check_2
+    show pipsqueak at ability3:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     "Pipsqueak begins to flap their wings, and a giant whirlwind manifests from it, heading straight for the bot. When it hits the other character, it takes a few points of health off and stuns it."
 
     MC "That's absolutely insane! This little bird can make a tornado!?"
@@ -212,9 +312,21 @@ label pipsqueak_route:
     R "Okay, last ability: press R for the ultimate!"
 
     #wait for r
-    call ability_check("r", "R")
+    call ability_check("r", "R") from _call_ability_check_3
+    show pipsqueak at ability4:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     "A huge wall of wind rushes forward, reaching beyond where the tornado had stopped. It's also a lot wider, and the hit points of the enemy go down significantly more."
 
     MC "That is so awesome."
@@ -224,7 +336,15 @@ label pipsqueak_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -250,13 +370,36 @@ label pipsqueak_route:
     "Once the last bird is thrown, you leave the encounter victorious."
 
     MC "Holy crap! I did it!"
-    #show Rosco laugh
+    
+    show screen portrait(
+    "Rosco laugh jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     R "See! It's really a learning game!"
 
     # END OF SUB-ROUTE, JUMP TO MAIN
     jump mascot_playtest_return
 
 label dewdrop_route:
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+    show dewdrop at singlejump:
+        pos (700,200)
+        zoom 0.5
 
     MC "I'll go with the Dewdrop. I'm more suited for healers. I like this kind of playstyle!"
 
@@ -266,17 +409,43 @@ label dewdrop_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     R "…"
 
-    show Rosco embarrassed at waist_up_center
+    show screen portrait(
+    "Rosco embarrassed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -285,7 +454,16 @@ label dewdrop_route:
 
     MC "If you say so…"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     R "A-anyway, Dewdrop's abilities are very easy to understand."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -293,8 +471,21 @@ label dewdrop_route:
 
     R "Look, press Q."
 
-    call ability_check("q", "Q")
-    show Rosco neutral at waist_up_center
+    call ability_check("q", "Q") from _call_ability_check_4
+    show dewdrop at ability1:
+        pos (700,200)
+        zoom 0.5
+    
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     "A flurry of leaves, all seemingly spawning from the top of Dewdrop's head, propel towards the bot in the middle."
 
     MC "What on earth? The drop of water can spawn leaves?"
@@ -309,8 +500,21 @@ label dewdrop_route:
 
     R "Yeah, exactly. Click W!"
 
-    call ability_check("w", "W")
-    show Rosco neutral at waist_up_center
+    call ability_check("w", "W") from _call_ability_check_5
+    show dewdrop at ability2:
+        pos (700,200)
+        zoom 0.5
+    
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+    
     "Suddenly, Dewdrop lunges sideways towards Pipsqueak, and Pipsqueak is immediately smothered in Dewdrop's gooey casing."
 
     MC "What the hell?! Did I just attach on to Pipsqueak?"
@@ -331,8 +535,20 @@ label dewdrop_route:
 
     R "Press E!"
 
-    call ability_check("e", "E")
-    show Rosco neutral at waist_up_center
+    call ability_check("e", "E") from _call_ability_check_6
+    show dewdrop at ability3:
+        pos (700,200)
+        zoom 0.5
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Dewdrop turns to Pipsqueak, and a squirt of water hits Pipsqueak square in the beak. Despite the weird display, Pipsqueak's health rises again."
 
     MC "Did I just… piss on them?"
@@ -345,6 +561,10 @@ label dewdrop_route:
 
     R "You can also heal yourself, and the animation for that is less… graphic."
 
+    show dewdrop at ability3:
+        pos (700,200)
+        zoom 0.5
+
     "You press E again and Dewdrop jumps, their watery form rebuilding itself and swelling, before dropping back down onto the ground."
 
     MC "That was so much cooler."
@@ -353,13 +573,30 @@ label dewdrop_route:
 
     R "Okay, last ability: R for the ultimate!"
 
-    call ability_check("r", "R")
-    show Rosco neutral at waist_up_center
+    call ability_check("r", "R") from _call_ability_check_7
+    show dewdrop at ability4:
+        pos (700,200)
+        zoom 0.5
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     "Dewdrop turns again and lunges to surround Pipsqueak, and the healing skyrockets."
 
     MC "Wait, isn't this just a better version of the W ability?"
 
     R "Hold on, hold on!"
+
+    show dewdrop at ability4:
+        pos (700,200)
+        zoom 0.5
 
     "Rosco clicks something to draw Pipsqueak closer to the opponent bot. Dewdrop suddenly starts spitting leaves everywhere, damaging the enemy."
 
@@ -373,7 +610,15 @@ label dewdrop_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -408,6 +653,11 @@ label dewdrop_route:
     jump mascot_playtest_return
 
 label lunarist_route:
+
+    show lunarist at singlejump:
+        pos (700,200)
+        zoom 0.5
+
     MC "I'll go with Lunarist. I'm a sucker for some mage action."
 
     R "I had a feeling you'd pick this one… Luci had this one put out a lot of effects, so I'm looking forward to seeing how it holds up!"
@@ -416,17 +666,41 @@ label lunarist_route:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "…"
 
-    show Rosco embarrassed at waist_up_center
+    show screen portrait(
+    "Rosco embarrassed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -435,7 +709,15 @@ label lunarist_route:
 
     MC "If you say so…"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Okay, Lunarist's abilities are all related to crowd control in some way."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -443,9 +725,20 @@ label lunarist_route:
 
     R "Let's start with pressing Q."
 
-    call ability_check("q", "Q")
+    call ability_check("q", "Q") from _call_ability_check_8
+    show lunarist at ability1:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Lunarist opens their cloak and a music note floats out. It gravitates towards the bot and absorbs into it forcefully, knocking off some health."
 
     MC "Ooh, so Lunarist has music as the character motif?"
@@ -454,9 +747,20 @@ label lunarist_route:
 
     R "Now press W!"
 
-    call ability_check("w", "W")
+    call ability_check("w", "W") from _call_ability_check_9
+    show lunarist at ability2:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "A barrage of music notes fly out of Lunarist's cloak, and they encircle the bot as though performing a ritual at its feet. The bot tries to escape, but the music notes bar it from leaving the circle."
 
     MC "Eh? So I just trapped them in a circle?"
@@ -465,9 +769,20 @@ label lunarist_route:
 
     R "Okay, E now!"
 
-    call ability_check("e", "E")
+    call ability_check("e", "E") from _call_ability_check_10
+    show lunarist at ability3:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "A music staff with notes on it flows out this time, wrapping the bot in a layer of music. The staff circles the bot and it starts walking towards you, as if trapped under a spell."
 
     MC "Wait, I can just force it to walk towards me?!"
@@ -482,9 +797,20 @@ label lunarist_route:
 
     R "Okay, last ability: press R for the ultimate!"
 
-    call ability_check("r", "R")
+    call ability_check("r", "R") from _call_ability_check_11
+    show lunarist at ability4:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Suddenly, a blast of music floods out of Lunarist as they float high into the air. The bot, unfortunately in radius, is stunned by the time Lunarist floats back down and is nearly dead."
 
     MC "That almost killed the bot! This is broken!"
@@ -501,7 +827,15 @@ label lunarist_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -533,7 +867,10 @@ label lunarist_route:
     #End of sub-route
     jump mascot_playtest_return
 
-label route_netherling:
+label netherling_route:
+    show netherling at singlejump:
+        pos (700,200)
+        zoom 0.5
 
     MC "I'll go with Netherling. The more health, the less likely it is for me to die, right?"
 
@@ -543,17 +880,41 @@ label route_netherling:
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and its got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "…"
 
-    show Rosco embarrassed at waist_up_center
+    show screen portrait(
+    "Rosco embarrassed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it. Let's get to the controls."
@@ -562,7 +923,15 @@ label route_netherling:
 
     MC "If you say so…"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Okay, Netherling's skills aren't too hard to wrap your head around."
     R "Let's walk up to that bot in the middle so I can show you them in action."
 
@@ -570,9 +939,20 @@ label route_netherling:
 
     R "Here, press Q."
 
-    call ability_check("q", "Q")
+    call ability_check("q", "Q") from _call_ability_check_12
+    show netherling at ability1_2:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Netherling takes a half step back before jabbing forward with its pointy tail, slashing through the ribs of the bot."
 
     MC "Woah, this one's a fighter! That tail looks really dangerous…"
@@ -581,9 +961,20 @@ label route_netherling:
 
     R "This one's a bit different, though—hit W."
 
-    call ability_check("w", "W")
+    call ability_check("w", "W") from _call_ability_check_13
+    show netherling at ability2:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Nothing seems to happen other than a green aura hovering over Netherling."
 
     "Rosco maneuvers the bot to hit you, and you see it happen. The attack doesn't affect your health negatively—it actually goes up."
@@ -594,9 +985,20 @@ label route_netherling:
 
     R "Okay, wait, move back a bit… then E!"
 
-    call ability_check("e", "E")
+    call ability_check("e", "E") from _call_ability_check_14
+    show netherling at ability3:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Netherling uses their wing to dash in, ramming into the bot with their horns while inducing a slight knockback effect."
 
     "The bot is dazed, stunned in place. Netherling stands upright again as if nothing happened."
@@ -607,9 +1009,20 @@ label route_netherling:
 
     R "Okay, last ability: press R for the ultimate!"
 
-    call ability_check("r", "R")
+    call ability_check("r", "R") from _call_ability_check_15
+    show netherling at ability4_1:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Suddenly, Netherling pounces onto the enemy, absorbing them into their jelly-like being. Even encased in the Netherling, the enemy's health ticks down by the second."
 
     "A few moments later, Netherling spits the enemy out, leaving them with half the HP they had when they went in."
@@ -628,7 +1041,15 @@ label route_netherling:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -661,30 +1082,73 @@ label route_netherling:
     jump mascot_playtest_return
 
 label roscal_route:
+    show roscal at singlejump:
+        pos (700,200)
+        zoom 0.5
 
     MC "I'll go with Roscal. I wanna see just how broken you made your own character…"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "What!? What do you mean!? I'm a fair man! I'd never do that!"
 
-    show Rosco laugh at waist_up_center
+    show screen portrait(
+    "Rosco laugh jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     MC "Mhm…"
 
     "When you click the Roscal, the character shows as selected. You load up into a proper game in no time."
 
     MC "Woah. These graphics are insane! Did you do this yourself?"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
     MC "This is so sick… It's a real game!"
     MC "Everything runs so smoothly, and it's got no lag for a demo."
     MC "You really put a lot of time and care into this, huh? It shows!"
 
-    show Rosco shocked at waist_up_center
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "…"
 
-    show Rosco embarrassed at waist_up_center
+    show screen portrait(
+    "Rosco embarrassed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Thank you…"
 
     R "Okay, okay, enough fawning about it! Let's get to the controls."
@@ -693,7 +1157,15 @@ label roscal_route:
 
     MC "If you say so…"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Roscal’s abilities are actually a little difficult, but it shouldn’t be too hard."
 
     "He watches you click around on the practice map, letting you get used to the movement before continuing."
@@ -704,29 +1176,78 @@ label roscal_route:
 
     R "Now, press Q."
 
-    call ability_check("q", "Q")
+    call ability_check("q", "Q") from _call_ability_check_16
+    show roscal at ability1:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "Once you click Q, your character leaps straight towards the foxes, biting at one of them."
 
     MC "Oh shoot—Oh lord—Rosco, they're attacking me—"
 
-    show Rosco laugh at waist_up_center
+    show screen portrait(
+    "Rosco laugh jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Chill! You won't die from that. Click W."
 
-    call ability_check("w", "W")
+    call ability_check("w", "W") from _call_ability_check_17
+    show roscal at ability2:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "The Roscal sticks its sewing needle into the ground, creating a ring of pink around it."
 
     MC "Woah, I'm not taking damage anymore?"
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Yup! It's like a shield. Now try E."
 
-    call ability_check("e", "E")
+    call ability_check("e", "E") from _call_ability_check_18
+    show roscal at ability3:
+        pos (700,200)
+        zoom 0.5
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     "The safety pin in Roscal's ear flicks out, flying around and hitting the foxes surrounding you before flying back into place."
 
     R "A boomerang. Pretty cool, huh? When you're around other players, it'll hit every enemy character before coming back to you."
@@ -737,9 +1258,20 @@ label roscal_route:
 
     R "And lastly, click R! This is your ult."
 
-    call ability_check("r", "R")
+    call ability_check("r", "R") from _call_ability_check_19
+    show roscal at singlejump:
+        pos (650,100)
+        zoom 0.7
 
-    show Rosco neutral at waist_up_center
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     MC "Ohemgee. I'm so big now!"
 
     "You watch Roscal smile on your screen, towering over the foxes."
@@ -747,6 +1279,10 @@ label roscal_route:
     R "You also heal and gain attack damage. Notice your needle is bigger now? Even your basic attack will do decent damage."
 
     "You click around the map, attacking the different creatures you come across in the bushes, growing accustomed to the different moves."
+
+    show roscal at singlejump:
+        pos (700,200)
+        zoom 0.5
 
     MC "How'd you come up with all of this anyways?"
 
@@ -782,7 +1318,15 @@ label roscal_route:
 
     MC "Wh—I haven't gotten the hang of anything yet!"
 
-    show Rosco smug at waist_up_center
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
     R "Ehh… You'll be fine!"
 
     "Without missing a beat, Rosco exits the practice mode and puts you in a proper game, one with five AI opponents and four AI teammates."
@@ -823,11 +1367,28 @@ label roscal_route:
 
     MC "Uuuh… I'm supposed to kill him, right?"
 
+    show roscal at ability3:
+        pos (700,200)
+        zoom 0.5
+
     "You click E before he responds. The safety pin flies out, and you watch the health bar drop even lower. You're trying to decide how to attack next when Rosco speaks up."
 
     R "Q!"
 
-    call ability_check("q", "Q")
+    call ability_check("q", "Q") from _call_ability_check_20
+    show roscal at ability1:
+        pos (700,200)
+        zoom 0.5
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
 
     "You listen to him without thinking, nearly screeching as Roscal dashes in to bite the opposing Lunarist."
 

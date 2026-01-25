@@ -1,6 +1,7 @@
 #Start of Rosco Route
 label rosco_route:
     scene bg clubroom 
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     MC "I'll help Rosco."
 
     show Rosco shocked jacket at waist_up_center with dissolve
@@ -13,6 +14,7 @@ label rosco_route:
     R "You've got good taste, after all…"
     R "In fashion, I mean, {i}obviously{/i}. It's best styling with someone who knows what they're doing, right?"
     R "Anyway, let's head down to the market tomorrow. There's no time to waste!"
+    stop music fadeout 1.0
 
 label rosco_route_day1:
     scene black with fade
@@ -23,14 +25,26 @@ label rosco_route_day1:
     with dissolve
 
     # bg mc bedroom
-    scene bg mc bedroom
+    scene bg mc bedroom rosco at fullyblurred with dissolve
+    pause 0.3
+    scene black with fade
+    scene bg mc bedroom rosco at fullyblurred with dissolve
+    pause 0.2
+    scene black with fade
+    scene bg mc bedroom rosco at partlyblurred with dissolve
+    pause 0.2
+    scene bg mc bedroom rosco at unblur with dissolve
 
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     MC "Eugh, we've got so much to finish before the festival starts."
     MC "So much to cram! We probably should've pre-ordered the outfits and everything…"
     MC "Speaking of outfits, Rosco's probably waiting for me at the market. I shouldn't keep him waiting too long."
-
+    scene black with fade
+    stop music fadeout 1.0
     #bg outdoors
-    scene bg road daylight
+
+    scene bg road daylight with fade
+    play music "audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
 
     "When you arrive at the shopping district, the buzz of conversation and the shuffle of footsteps fill the air."
     "Rows of boutiques and open-air stalls stretch down the street, their displays bursting with color."
@@ -198,9 +212,10 @@ label rosco_route_day1:
     MC "But…!"
 
     "You let out a sigh when you realize that he isn't listening."
-
+    stop music fadeout 1.0
     scene bg rosco game shop with fade
     show Rosco neutral jacket at waist_up_center with dissolve
+    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
 
     "By the time you follow him into the store, he's already standing at the register, speaking to the employee and waving to the poster in the window."
 
@@ -297,143 +312,23 @@ label rosco_route_day1:
     R "Wait, I wasn't ready!"
 
     MC "You snooze, you lose."
+    stop music fadeout 1.0
+    play music "audio/music/G3 - Chaos.wav" fadein 1.0 loop
+    jump MariaKart
 
-    # NOTE:
-    # Consider timer based decision making
-    # currently implementation is no timer
-
-    #start choice
-    menu:
-        "Hold button down at 3":
-            "You groan as the race starts, staring at the way your car wriggles on the screen."
-
-            show Rosco smug jacket
-            R "Hah! Rookie mistake."
-
-        "Hold button down at 2":
-            MC "Hah! Take that!"
-
-            show Rosco smug jacket
-            R "You're too slow!"
-
-
-    # --- Dice choice ---
-    menu:
-        "Go for the double dice":
-            MC "Yes!"
-
-            show Rosco annoyed jacket
-            R "I was about to take that!"
-
-        "Go for the single dice":
-            MC "That stupid NPC took the double dice!"
-
-            show Rosco smug jacket
-            R "Sucks to suck."
-
-    # --- Coin vs Banana ---
-    menu:
-        "Go towards the coin":
-            MC "What do coins do again?"
-
-            show Rosco neutral jacket
-            R "They help you go faster."
-
-            MC "Wait, really?"
-
-        "Go towards the banana":
-            MC "What—?! Who puts a banana THERE?!"
-
-            show Rosco laugh jacket
-            "Rosco laughs at your clear irritation, too focused on the race to say anything."
-
-    # --- Shell choice ---
-    menu:
-        "Throw a green shell":
-            "You launch a shell in front of you, not even glancing at the other screens. When you hear Rosco's laughter, you roll your eyes."
-
-            show Rosco laugh jacket
-            R "Nice try! You missed, goofy."
-
-            MC "Careful, it’s still going~ You might jinx yourself!"
-
-            R "Nope! It just broke."
-
-            MC "Whatever."
-
-        "Throw a red shell":
-            "You launch a shell ahead of you, and Rosco makes a strangled noise as he glares at the side of your head."
-
-            show Rosco angry jacket
-            R "What the fuck, [player_name]?!"
-
-            MC "I didn't mean to."
-
-            R "Nobody believes that!"
-
-    "Now at the last lap, you and Rosco occupy second and first place respectively, but he's too far ahead for you to catch up during this last straight."
-    "You take your eyes off the screen for half a second to see his shit-eating grin, knowing that first place is his if things keep going the way they are…"
-
-    #final decision
-    menu:
-        "Play fair and try to win":
-            #variable for later dialogue
-            $ rosco_won = True
-
-            "You try your best on the final stretch of the game, pulling out all the little tricks you know from playing the game over the years."
-            "Despite your best efforts, the gap between your two cars doesn't shrink."
-            "Skillfully dodging and preserving his place, Rosco's car crosses the chequered line first. He pumps his fist in the air in triumph."
-
-            show Rosco smug jacket
-            R "Hell yeah! Eat dust, [player_name]!"
-
-            MC "What the hell?! It was half a second off!"
-
-            R "You're too slow~"
-
-            "You put the controller down, reaching over to pinch his cheek and giving it a sharp tug."
-
-            MC "Oh, shut up already!"
-
-        "Distract Rosco":
-            #variable for later dialogue
-            $ rosco_won = False
-
-            "Without hesitating, you stand in front of Rosco, blocking his view of the screen."
-
-            show Rosco confused jacket
-            R "Hey, what the heck—!"
-
-            MC "All's fair in love and war!"
-
-            "You smirk as a blue shell flies past you, hitting him just before he reaches the finish line."
-
-            MC "Bless whatever NPC just threw that!"
-
-            show Rosco annoyed jacket
-            R "[player_name], get out of the way—!"
-
-            MC "Nope!"
-
-            "You move with every step he takes, making sure to block his view as you cross the finish line."
-
-            MC "Let's go! First place!"
-
-            "Rosco lets out a huff as you cheer."
-            "He rolls his eyes, not missing the way you stick your tongue out at him."
-
-            R "Yeah, yeah. Congratulations, goofy."
-
+    label MariaKart_return:
+    stop music fadeout 1.0
+    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
     show Rosco neutral jacket
     R "Okay, as fun as that was…"
 
     MC "We definitely need to get to those outfits."
 
-    show Rosco shocked jacket at waist_up_left
+    show Rosco shocked jacket at waist_up_center
     "Rosco’s about to respond but all of a sudden, his eyes go wide. You turn to follow his gaze, just as surprised as he was to see a familiar face."
 
     R "{i}…Cass?!{/i}"
-
+    show Rosco shocked jacket at waist_up_left with dissolve
     show Cassian neutral at waist_up_right with dissolve
     C "Oh, hey guys. What's up?"
 
@@ -635,7 +530,9 @@ label rosco_route_day1:
     MC "Still!"
 
     "You pull the door open and shoo Rosco out, following in his wake."
+    stop music fadeout 1.0
     scene bg road daylight with fade
+    play music "audio/music/G4 - Sad.wav" fadein 5.0 loop
     show Rosco neutral jacket at waist_up_center with dissolve
 
     MC "We don't have any ideas. We need to get inspiration. {i}Real{/i} inspiration."
@@ -665,12 +562,15 @@ label rosco_route_day1:
             R "Woah!"
 
             "Everything is a blur as you reach out for something to hold on to."
+            stop music fadeout 1.0
 
             scene black with fade
 
             "You close your eyes, bracing yourself for the eventual impact with your fall."
 
             "The impact that you're expecting never happens."
+
+            play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
 
             "Instead, you feel an arm wrap around your waist."
 
@@ -736,9 +636,11 @@ label rosco_route_day1:
             R "Oh!"
 
             "Coming to a stop at the next block, Rosco suddenly halts in his tracks. Turning to look at you, he points up ahead."
+            stop music fadeout 3.0
 
         "Regain your balance (fail)":
 
+            play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
             MC "!"
 
             "As the stranger glides past you, not even stopping to apologize, you instinctively search for something to keep you stable."
@@ -800,9 +702,11 @@ label rosco_route_day1:
 
     R "Let's go and grab ourselves some outfits, then!"
 
+    stop music fadeout 1.0
 
-    # BACKGROUND: Generic Clothing Store
-    scene bg rosco clothing shop with dissolve
+    scene black with fade
+    scene bg rosco clothing shop with fade
+    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
 
     "Racks upon racks of clothing items surround you on all fronts, but Rosco navigates the aisles expertly as he makes his way to the center of the store."
 
@@ -958,9 +862,11 @@ label rosco_route_day1:
     show Rosco laugh jacket
     MC "Woo! Let's go!"
 
+    stop music fadeout 1.0
     scene black with fade
-    show bg road daylight with fade
+    show bg road sunset with fade
     show Rosco neutral jacket at waist_up_center with dissolve
+    play music "audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
 
     "You feel a sense of relief as you walk out of the store, grateful that you were able to finish at least one part of the festival task Rosco was assigned to."
     "Instead of saying goodbye like you expect, Rosco insists on walking you home, saying something about night time bringing out the living dead or whatnot."
@@ -1038,13 +944,16 @@ label rosco_route_day1:
 
     #Day 1 end
     hide Rosco with dissolve
-
+    stop music fadeout 1.0
+    scene black with fade
     show bg mc bedroom with fade
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     "You spend the rest of the evening relaxing at home and catching up on schoolwork. After all, you want to be well rested and relatively free for the next day."
 
     "When you head to bed, you feel a bit of excitement."
 
     "You convince yourself it's because you're excited to decorate the haoris—and not because you get to spend another day with a certain someone."
+    stop music fadeout 1.0
 
 label rosco_route_day2:
 
@@ -1055,8 +964,17 @@ label rosco_route_day2:
     hide text
     with dissolve
 
-    show bg mc bedroom with dissolve
+    scene bg mc bedroom rosco at fullyblurred with dissolve
+    pause 0.3
+    scene black with fade
+    scene bg mc bedroom rosco at fullyblurred with dissolve
+    pause 0.2
+    scene black with fade
+    scene bg mc bedroom rosco at partlyblurred with dissolve
+    pause 0.2
+    scene bg mc bedroom rosco at unblur with dissolve
 
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     "Blinking your eyes open, the clock reads noon when you finally get out of bed."
 
     "You're halfway through brushing your teeth when your phone dings with a notification."
@@ -1161,21 +1079,24 @@ label rosco_route_day2:
 
     "You laugh at his message, shaking your head. You set your phone down, quickly getting ready to go to his place."
 
+    stop music fadeout 1.0
+    scene black with fade
     scene bg rosco bedroom noon with fade
-    show Rosco laugh at waist_up_center with dissolve
+    show Rosco laugh jacket at waist_up_center with dissolve
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     R "Right on time! Make yourself comfortable."
 
     R  "Sorry for the, uh..."
-    show Rosco embarrassed
+    show Rosco embarrassed jacket
     extend " mess…"
 
     "You glance around the room, laughing to yourself."
 
-    show Rosco concerned
+    show Rosco concerned jacket
     MC "Did you think I was gonna get here late? Looks like you were halfway through cleaning…"
     extend " or an attempt at doing that."
 
-    show Rosco pout blush
+    show Rosco pout blush jacket
     R "…"
     R "Let's not talk about it."
 
@@ -1183,7 +1104,7 @@ label rosco_route_day2:
 
     "As you look around for something to poke fun at, you notice his PC is still on, quiet game sounds emitting from the speaker."
 
-    show Rosco neutral
+    show Rosco neutral jacket
     MC "Wait, is that B.I.T.E Protocol? Have you been working on it?"
 
     R "Oh, yeah. I was working on the combat portion of it. I think I just finished it? But I haven't had it tested yet."
@@ -1201,7 +1122,7 @@ label rosco_route_day2:
             "Your lips curve up in a sly smile."
 
             MC "What if we test it now?"
-            show Rosco laugh
+            show Rosco laugh jacket
             "His gaze lights up at your suggestion, and his smile is soon matching yours."
 
         "Ask when he's going to test it.":
@@ -1212,7 +1133,7 @@ label rosco_route_day2:
             R "It'll be hard to schedule a fixed time for the boys to all come together and test it…"
 
             "His eyes go wide, lips quirking up."
-            show Rosco laugh
+            show Rosco laugh jacket
             R "Why don't we do that now?"
 
 
@@ -1220,7 +1141,7 @@ label rosco_route_day2:
 
     MC "Will we still have time for the outfits, though…"
 
-    show Rosco neutral
+    show Rosco neutral jacket
     R "Psh, of course we will! It's not gonna take forever to do one run of it."
     R "C'mon, don't doubt it! Let's just do it!"
 
@@ -1238,7 +1159,7 @@ label rosco_route_day2:
             R "Oh, do you play them often? Do you have a favorite?"
 
         "I love Pipmon Connect!":
-            show Rosco laugh
+            show Rosco laugh jacket
             R " That's a fun one!"
 
             MC "You play it too? We should queue up together sometime!"
@@ -1250,7 +1171,7 @@ label rosco_route_day2:
             R "Good choice! Let's play when we get some free time."
 
         "Big fan of LOL.":
-            show Rosco annoyed
+            show Rosco annoyed jacket
             R "You're kidding, right?"
 
             MC "Goofy, don't start with me. I know you've spent hours on that game."
@@ -1267,20 +1188,20 @@ label rosco_route_day2:
 
             MC "I'm a little nervous… I don't really play these kinds of games."
             
-            show Rosco laugh
+            show Rosco laugh jacket
             R "It's fine! That'll make testing even better!"
             R "You get to learn about a new game, and your fumbling around will be great at locating glitches or bugs I might've missed!"
 
             MC "Did you just call my attempt at gaming \"fumbling around\"?!"
 
-            show Rosco smug
+            show Rosco smug jacket
             R "Eh, well, it's true 'til you show me it isn't…"
 
             MC "I hate it here."
 
     "He flicks back to the main screen with a laugh, and the menu boots to life in no time."
 
-    show Rosco neutral 
+    show Rosco neutral jacket
     MC "Woah! The graphics on this have gotten far better since the last time I saw it!"
 
     R "You think so? I think it could be a bit better, objectively speaking."
@@ -1294,7 +1215,7 @@ label rosco_route_day2:
     R "Alright, alright!"
 
     "He puts his hands up in surrender, looking slightly embarrassed."
-    show Rosco embarrassed
+    show Rosco embarrassed jacket
     R "Thanks…"
 
     "You smile but choose not to push the subject any further."
@@ -1303,10 +1224,23 @@ label rosco_route_day2:
 
     MC "So… what is it that I have to actually do?"
 
-    show Rosco neutral
+    show Rosco neutral jacket
     R "Here, let me make this a bit easier."
 
+    stop music fadeout 1.0
     scene bg rosco monitor with fade
+    play music "audio/music/G3 - Chaos.wav" fadein 1.0 loop
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.97,
+    yalign=0.50
+    )
+
     "He presses a few buttons on the keyboard and maneuvers the mouse until you find yourself on a new screen, this one looking like an actual battlefield."
 
     R "Okay, before we get to the combat portion, you gotta pick a character."
@@ -1338,6 +1272,8 @@ label rosco_route_day2:
 
     R "You're not going to die! Jeezus! Here—"
 
+    stop music fadeout 3.0
+    play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
     "He suddenly leans over. Before you can ask any questions, his arm reaches around you and slides past your back."
 
     "His hand is placed tentatively over yours, fingers aligned, and his other hand wraps yours against the mouse."
@@ -1348,12 +1284,12 @@ label rosco_route_day2:
 
     "All thoughts of the game leave your mind at the unexpected proximity."
 
-    show Rosco annoyed at waist_up_center with dissolve
+    show Rosco annoyed jacket at waist_up_center with dissolve
     R "Come on, focus! Use your skills! Ah—whatever."
 
     "He presses down on the keyboard, using your fingers to activate the best skills for the situation."
 
-    show Rosco neutral 
+    show Rosco neutral jacket
     R "See? And the enemy Dewdrop's ult just ended. This is the perfect time to strike."
 
     hide Rosco with dissolve
@@ -1362,19 +1298,22 @@ label rosco_route_day2:
     "The scent of his cologne does nothing to help your focus, drawing your gaze to look up at him instead—you're awed at how determined he looks, eyebrows knit with concentration."
     "He doesn't notice your stare, his gaze flitting over the screen as he continues to play for you."
 
-    show Rosco laugh at waist_up_center with dissolve
+    show Rosco laugh jacket at waist_up_center with dissolve
     R "Annnd we're done. Triumph!"
 
-    show Rosco neutral
+    show Rosco neutral jacket
     MC "What?"
 
     "Your gaze snaps back to the screen, surprised to find the word TRIUMPH written in golden letters."
 
-    show Rosco smug
+    show Rosco smug jacket
     R "So what'd you think? Fun, huh?"
 
-    scene bg rosco bedroom afternoon with fade
-    show Rosco neutral at waist_up_center with dissolve
+    stop music fadeout 3.0
+    scene bg rosco bedroom noon with fade
+    show Rosco neutral jacket at waist_up_center with dissolve
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
     "He looks proud of himself as he pulls away, standing properly again with his arm propped on the chair. For a brief moment, you miss the feel of his hand against yours."
     "You clear your throat, mentally shaking away your thoughts as you answer him."
 
@@ -1382,18 +1321,18 @@ label rosco_route_day2:
 
     "He seems oblivious to your flustered state, giving you a hopeful smile."
 
-    show Rosco concerned
+    show Rosco concerned jacket
     R "Do you think people will enjoy it at the festival?"
 
     MC "Of course! It'll be a hit for sure."
 
-    show Rosco laugh
+    show Rosco laugh jacket
     R "Nice! Then I'm all done with this. Should we get started on haori decorating?"
 
     hide Rosco with dissolve
     "You nod, getting out of the chair and walking to the closet with Rosco. He takes out the haoris and holds them up."
 
-    show Rosco neutral at waist_up_center with dissolve
+    show Rosco neutral jacket at waist_up_center with dissolve
     R "There's five of them. What order do we wanna go with?"
 
     MC "Let's go with Gale's. What stickers do you have that we can pick from?"
@@ -1405,9 +1344,6 @@ label rosco_route_day2:
     "He dumps it out on the desk, tossing the box aside as you start shuffling through them all."
 
     R "I thought maybe we could use these as inspo to make the patches for all the haoris."
-
-    show haori_badge_gale_dog with dissolve:
-        pos (200, 350)
     
     screen gale_dog:
         frame:
@@ -1432,11 +1368,12 @@ label rosco_route_day2:
     "You turn the sticker over in your fingers, humming thoughtfully."
 
     hide haori_badge_gale_dog with dissolve
+
     hide screen gale_dog with dissolve
     MC "Yeah, that sounds good. And then…"
 
-    # no plain tv screen do i just use the straight kerfurr sticker?
-    screen gale_kerfurr:
+    # no plain tv screen do i just use the straight ferkur sticker?
+    screen gale_ferkur:
         frame:
             xpos 1300
             ypos 350
@@ -1445,12 +1382,12 @@ label rosco_route_day2:
             background Solid("#00000079")
             padding(1,1)
             vbox:
-                add "haori_badge_gale_kerfurr":
-                    xpos -25
-                    ypos -25
+                add "haori_badge_gale_ferkur":
+                    xpos -5
+                    ypos 20
 
 
-    show screen gale_kerfurr with dissolve
+    show screen gale_ferkur with dissolve
     
     "You pick out a TV screen, turning it to face Rosco."
 
@@ -1460,6 +1397,7 @@ label rosco_route_day2:
 
     MC "Yeah. He spends hours playing that thing."
 
+    hide screen gale_ferkur with dissolve
     MC "Okay, we need one more."
 
     "You hold the two stickers in your hand, glancing through the other ones that are scattered over the desktop."
@@ -1482,12 +1420,12 @@ label rosco_route_day2:
 
     "Rosco offers up a ship steering wheel, narrowing his eyes."
 
-    show Rosco confused
+    show Rosco confused jacket
     R "Out of everything here, I feel like this one kinda fits Gale. I'm not sure why?"
 
     MC "He does kind of like pirates… I think. He's mentioned it from time to time, and he definitely likes swords. And pirates use swords. And ships! So I think it works."
 
-    show Rosco neutral
+    show Rosco neutral jacket
     R "Okay, then that's all settled."
 
     hide screen gale_helm with dissolve
@@ -1542,7 +1480,7 @@ label rosco_route_day2:
 
     MC "I mean, yeah, but what does that have to do with—"
 
-    show Rosco smug
+    show Rosco smug jacket
     "You pause as Rosco's smirk widens."
 
     MC "You're evil."
@@ -1550,7 +1488,7 @@ label rosco_route_day2:
     R "I told him I'd never let him live it down, and I meant it."
 
     hide screen cass_cow with dissolve
-    show Rosco laugh 
+    show Rosco laugh jacket
     "He laughs as he puts the two stickers together, only laughing harder when you shake your head at him."
 
     screen cass_valo:
@@ -1571,7 +1509,7 @@ label rosco_route_day2:
 
     MC "Oh, hey! Isn't this icon from Catorant?"
 
-    show Rosco neutral 
+    show Rosco neutral jacket
     "Rosco finally pulls himself back together, looking over at the sticker you hold up."
 
     R "I think so! That looks like the icon from the one Cass mains."
@@ -1650,7 +1588,7 @@ label rosco_route_day2:
     
     MC "Hear me out. You know the unique little heart doodles Luci does in his notebooks?"
 
-    R "Yeah, that heart with the slit in the middle and a little diamond crown at its base?"
+    R "Yeah, that heart with the slit in the middle and a crown at its base?"
 
     MC "Yeah! I think that's pretty unique to Luci, and I remember the design pretty well. I think I have a photo of it somewhere on a worksheet he gave me, but it's just a rough doodle."
 
@@ -1669,8 +1607,8 @@ label rosco_route_day2:
             padding(1,1)
             vbox:
                 add "haori_badge_zanny_patch3":
-                    xpos -5
-                    ypos 0
+                    xpos -10
+                    ypos -10
 
 
     show screen zanny_dumbbell with dissolve
@@ -1678,26 +1616,58 @@ label rosco_route_day2:
     R "Then Zander… I was thinking about him the second I saw the dumbbell. We've got to include it for this gym rat."
 
     hide screen zanny_dumbbell with dissolve
-
-    #NOTE: Stopped here
     "He already puts the dumbbell to the side, reserving it."
 
     MC "Then… Ooh, look at this."
+
+    screen zanny_cocktail:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_zanny_patch1":
+                    xpos -10
+                    ypos -30
+
+
+    show screen zanny_cocktail with dissolve
 
     "You pick out a sticker of an unspecified drink in a cocktail glass."
 
     MC "Doesn't he love that one cocktail, the Empress… Emperor… I don't remember what it was."
 
+    hide screen zanny_cocktail with dissolve
     R "Empress Gin! He's mentioned it as his favourite a lot."
 
     MC "Yeah, why don't we make a little sticker of that? With the grapefruit slice and everything."
 
     R "He's definitely gonna get mad at us for having that on his haori, but I love the idea. Let's do it."
 
+    screen zanny_coffeeCup:
+        frame:
+            xpos 1300
+            ypos 350
+            xsize 350 
+            ysize 350
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_zanny_patch2":
+                    xpos -25
+                    ypos -20
+
+
+    show screen zanny_coffeeCup with dissolve
+
     R "And lastly, this coffee cup should work? Distinct enough from Luci, but still enough to demonstrate his love for coffee."
 
     MC "Mhm, works for me!"
 
+    hide screen zanny_coffeeCup with dissolve
     "You look around the table as Rosco sets aside all the stickers."
 
     MC "Now all that's left is ours, right?"
@@ -1714,8 +1684,10 @@ label rosco_route_day2:
 
     MC "Sure."
 
+    show Rosco laugh jacket
     "You spend a minute or so explaining your picks, detailing what you envision on the final haori."
 
+    show Rosco neutral jacket
     R "All very doable. I like it."
 
     MC "And yours?"
@@ -1723,6 +1695,22 @@ label rosco_route_day2:
     R "Right. I actually couldn't settle on three, so I picked four of them out of the pile and thought it might be better for you to pick which ones to go with."
 
     "He slides four small stickers over to the middle of the desk, laying them out in a row. You look over them, your expression growing increasingly confused."
+
+    screen rosco_patch1:
+        frame:
+            xpos 1300
+            ypos 450
+            xsize 350 
+            ysize 200
+            background Solid("#00000079")
+            padding(1,1)
+            vbox:
+                add "haori_badge_rosco_patch1":
+                    xpos -5
+                    ypos -50
+
+
+    show screen rosco_patch1 with dissolve
 
     MC "A crown, a shield, a scroll, and a candle?"
 
@@ -1736,52 +1724,64 @@ label rosco_route_day2:
 
     R "If they had, like, a gaming device or something, then I would've picked that!"
 
+    hide screen rosco_patch1 with dissolve
     MC "True, I didn't see anything video game or internet related… Hm, fair enough. This is gonna be an interesting haori."
 
     "Rosco sighs, gaze roaming over all the stickers the both of you have picked out for yourselves and the rest of the club."
 
     R "Alright, let's get to work. Other than mine, which others do you want to make?"
     
-    #CHOICE (menu) saved as variable since idk if it will be used in the final day
-    menu:
-        "Gale":
-            $ chosen_haori = "Gale"
-        "C":
-            $ chosen_haori = "C"
-        "Luci":
-            $ chosen_haori = "Luci"
-        "Zanny":
-            $ chosen_haori = "Zanny"
+    #CHOICE
+    label choose_two:
+
+        $ _picked = []
+
+        while len(_picked) < 2:
+
+            menu:
+                "Pick any two:"
+
+                "Gale" if "Gale" not in _picked:
+                    $ _picked.append("Gale")
+
+                "Cass" if "Cass" not in _picked:
+                    $ _picked.append("C")
+
+                "Luci" if "Luci" not in _picked:
+                    $ _picked.append("Luci")
+
+                "Zanny" if "Zanny" not in _picked:
+                    $ _picked.append("Zanny")
 
     R "Gotcha. I'll handle the other two, then."
 
     R "Let me get some snacks for us, and then we can get started."
 
+    scene black with fade
     "You turn on some music when he gets back, and you both start working on making the patches for the haoris."
 
-    # show sunset background
+    stop music fadeout 3.0
+    scene bg rosco bedroom afternoon with fade
+    show Rosco neutral jacket at waist_up_center with dissolve
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
     "You don't notice time passing as you focus on making the patches."
-
     "Even as you work, you can't help but feel relaxed by the comfortable quiet of the room."
-
     "Your mind wanders as you get used to the task."
-
     "You think about how easy things feel when you're with Rosco and how much fun you have with him."
-
     "Your thoughts flit back to how close he was when he was helping you with the game."
-
     "For a moment, you remember how it felt to have him practically hugging you from behind."
-
     "You blush involuntarily, shaking your head to distract yourself."
 
-    # show Rosco confused
+    show Rosco confused jacket
     R "You good?"
 
     MC "Mhm."
 
     "He looks at you a moment longer before shrugging and getting back to work."
 
-    # show night background
+    scene black with fade
+    scene bg rosco bedroom night with fade
     "After a while, you notice that Rosco's being quieter than usual."
 
     "You look up, smirking at the realization that he fell asleep."
@@ -1790,16 +1790,17 @@ label rosco_route_day2:
 
     "Without hesitation, you pull out your phone, not noticing that the music had stopped."
 
+    queue sound "audio/sfx/phone-camera-click.ogg"
     "CLICK"
 
     "You freeze in place, the sound of your camera going off louder than expected in the quiet room."
 
-    # show Rosco confused
+    show Rosco confused jacket at waist_up_center with dissolve
     R "Mm… What…?"
 
     "Rosco blinks at you in confusion, taking in the way you were holding your phone with an almost guilty expression."
 
-    # show Rosco annoyed
+    show Rosco annoyed jacket at waist_up_center, shake
     R "Did you just take a picture?"
 
     MC "… No."
@@ -1810,7 +1811,7 @@ label rosco_route_day2:
 
     "You stand up and step out of reach when his arm stretches out, and you clutch your phone to your chest."
 
-    # show Rosco shocked
+    show Rosco shocked jacket
     R "Get back here!"
 
     MC "Stay away from me!"
@@ -1819,25 +1820,30 @@ label rosco_route_day2:
 
     MC "I'm not going to delete it no matter what you do!"
 
+    show Rosco angry jacket
     R "Well, you can't keep it!"
 
     MC "Yes, I can! You look so c—"
 
     "You let out a squeak before you can finish calling him cute, losing your balance as you dodge another one of his swings."
 
-    # show Rosco shocked
+    show Rosco shocked jacket
     R "Woah—Hey!"
 
-    # dark screen transition
+    stop music fadeout 3.0
+    scene black with fade
     "You close your eyes, bracing yourself for the impact."
-
     "Yet instead of falling, you feel Rosco's hands on your waist, yanking you in a different direction."
-
-    # screen shake effect
     "You open your eyes at the soft thump, blinking rapidly as you try to process what happened."
 
-    # show Rosco CG 1
-    show rosco_cg1
+    play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
+
+    window hide
+
+    show CG Rosco 1 with fade
+
+    pause 2
+    window show
 
     R "Are you good???"
 
@@ -1857,15 +1863,17 @@ label rosco_route_day2:
 
     MC "Just… our position is very…"
 
+    window hide
+    show CG Rosco 1 blush with dissolve
+    pause 2
+    window show
+
     "You can't bring yourself to finish your sentence, but he gets your point regardless."
-
     "He starts to blush, his gaze darting away from you."
-
     "Even so, his hands stay on your hips—whether it's to keep you steady or to ground himself, you can't tell."
 
     R "At least you're not hurt."
 
-        # First choice after the straddling situation
     menu:
         "Move to get off him":
             MC "Yeah, thanks. Sorry about that, didn't mean to, um, trip on whatever I just did—"
@@ -1886,14 +1894,16 @@ label rosco_route_day2:
             
             "As if the realization only hit him now, he immediately drops his hands to his sides, face pinching with embarrassment. You chuckle softly and move off him."
             
-            "[CG END]"
-            
+            scene black with fade
+            show bg rosco bedroom night with fade
+            show Rosco blushing jacket at waist_up_center with dissolve
             MC "Thanks again for, um, catching me."
             
             "For Rosco's sake, you don't address the gesture; nor do you address the mixture of emotions and red-hot mortification glowing on his face."
             
+            show Rosco neutral jacket
             R "'S all good."
-            
+            hide Rosco with dissolve
             "He stands up and walks back to where he'd been working, and you follow closely behind when he mutters some kind of acknowledgement to your gratitude."
 
         "Tease him":
@@ -1921,13 +1931,18 @@ label rosco_route_day2:
             
             R "Oh, nevermind. Let's just get back to work."
             
-            "[CG END]"
+            scene black with fade
+            show bg rosco bedroom night with fade
+            show Rosco neutral jacket at waist_up_center with dissolve
             
             "You sit on the bed as he gets up, staring at him as he walks away."
             
             "You can't help but be confused by his behavior, but you decide not to push him about it as you follow after him."
 
-    # Choice ends, continue narration
+    show Rosco neutral jacket at waist_up_center
+    stop music fadeout 1.0
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
     "After the little fiasco, the two of you once again fall into a comfortable silence as you finish off the patches."
 
     "It's well into the night when you finally stretch and push away from the table."
@@ -1936,34 +1951,113 @@ label rosco_route_day2:
 
     R "Just in time. I finished too."
 
+    screen badge_gallery():
+
+        add Solid("#00000080")
+
+        frame:
+            align (0.5, 0.32)
+            padding (10, 20)
+            background Solid("#00000060")
+            xsize 1200
+            ysize 540
+
+            hbox:
+                spacing 35
+                xalign 0.5
+
+                # COLUMN 1
+                vbox:
+                    spacing 20
+                    xalign 0.5
+                    add Transform("haori_badge_gale_dog", zoom=0.42)
+                    add Transform("haori_badge_cass_valo", zoom=0.42)
+
+                # COLUMN 2  (left bottom badge)
+                vbox:
+                    spacing 20
+                    xalign 0.5
+                    add Transform("haori_badge_gale_ferkur", zoom=0.42)
+                    add Transform("haori_badge_luci_guitar", zoom=0.42)
+                    add Transform("haori_badge_zanny_patch1", zoom=0.42)
+
+                # COLUMN 3  (center bottom badge — Rosco)
+                vbox:
+                    spacing 20
+                    xalign 0.5
+                    add Transform("haori_badge_gale_helm", zoom=0.42)
+                    add Transform("haori_badge_luci_coffee", zoom=0.42)
+                    add Transform("haori_badge_rosco_patch1", zoom=0.42)
+
+                # COLUMN 4  (right bottom badge)
+                vbox:
+                    spacing 20
+                    xalign 0.5
+                    add Transform("haori_badge_cass_teabag", zoom=0.42)
+                    add Transform("haori_badge_luci_crownheart", zoom=0.42)
+                    add Transform("haori_badge_zanny_patch2", zoom=0.42)
+
+                # COLUMN 5
+                vbox:
+                    spacing 20
+                    xalign 0.5
+                    add Transform("haori_badge_cass_cow", zoom=0.42)
+                    add Transform("haori_badge_zanny_patch3", zoom=0.42)
+
+
+    show screen badge_gallery with fade
     "You watch as he gathers all the patches together, taking a moment to look over all of them."
 
     MC "Hey! We did a pretty good job, don't you think?"
 
+    hide screen badge_gallery with fade
     R "Yeah, better than I expected honestly."
 
+    show Rosco confused jacket
     R "But what are these for?"
 
-    # Show the gaming device and nyambie patch
+    screen rosco_stickers():
+
+        add Solid("#00000080")
+
+        frame:
+            align (0.5, 0.5)
+            padding (10,10)
+            background Solid("#00000060")
+
+            hbox:
+                spacing 60
+
+                # Left image
+                add Transform("haori_badge_rosco_patch2", zoom=0.85)
+
+                # Right image
+                add Transform("haori_badge_rosco_patch3", zoom=0.85)
+
+    show screen rosco_stickers with fade
     MC "Those are for you, goofy."
 
+    hide screen rosco_stickers with fade
+    show Rosco annoyed jacket
     "You giggle at the half-hearted glare he gives you for calling him goofy."
 
+    show Rosco neutral jacket
     MC "You mentioned that the stickers didn't have anything that really called out to you, so I figured I'd try making some."
 
     "You hesitate, shifting in your seat as you try to assess his reaction."
 
-    # Second choice (reaction to his gift)
     menu:
         "Be normal":
             MC "Do you like them?"
             
+            show Rosco laugh jacket
             R "Of course I do! I can't believe you made these in such a short time."
             
             "You smile, relieved at his reassurance. With a shrug, you try to act like it wasn't a big deal."
             
             MC "The other ones I made were pretty simple, so I had some extra time."
             
+            show Rosco neutral jacket
             R "Either way, I appreciate it. Thanks!"
 
         "Be dramatic":
@@ -1971,14 +2065,14 @@ label rosco_route_day2:
             
             "He blinks at your statement, taking a moment to process your words."
             
-            # show Rosco confused
+            show Rosco confused jacket
             R "What? No, I don't! Where did you get that from?"
             
             MC "You didn't say anything! You clearly hate them!"
             
             R "You didn't even wait ten seconds for me to respond!"
             
-            # show Rosco annoyed
+            show Rosco annoyed jacket
             R "…"
             
             "He pauses, narrowing his eyes at you. You feel your lips twitch. After a moment, you burst out laughing."
@@ -1991,7 +2085,7 @@ label rosco_route_day2:
             
             R "Yeah, yeah. Whatever."
 
-    # Continue narration
+    show Rosco neutral jacket
     R "It's getting late. You should head home."
 
     MC "We still need to put the patches on."
@@ -2004,9 +2098,12 @@ label rosco_route_day2:
 
     MC "I am NOT that clumsy."
 
+    show Rosco laugh jacket
     "He laughs at your immediate protest, guiding you out of his room."
 
-    # Third choice (leaving or staying)
+    show Rosco neutral jacket
+    stop music fadeout 1.0
+    play music "audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
     menu:
         "Go home":
             MC "Alright, I'll see you later then."
@@ -2015,12 +2112,14 @@ label rosco_route_day2:
             
             MC "Nah, I took the bus. But I checked the schedule, and there's another one coming soon."
             
+            show Rosco concerned jacket
             "He makes a face, almost as if he was offended by your statement."
             
             R "I'll drive you, c'mon."
             
             MC "No, it's fine—"
             
+            show Rosco angry jacket
             R "Don't argue."
             
             MC "… Okay."
@@ -2029,8 +2128,11 @@ label rosco_route_day2:
             
             MC "Thanks, Rosco."
             
+            show Rosco neutral jacket
             R "Don't mention it."
             
+            hide Rosco
+            scene black with fade
             "The drive home is peaceful, your conversation bouncing around different topics until he drops you off."
             
             "You wave as he drives away, grateful to be home so quickly. Once his car is gone, you head inside with a yawn."
@@ -2041,26 +2143,27 @@ label rosco_route_day2:
             
             MC "Are you planning on sleeping soon?"
             
+            show Rosco confused jacket
             R "Probably not. Why?"
             
             MC "Wanna watch a movie?"
             
+            show Rosco shocked jacket
             R "Now? Aren't you tired?"
             
             MC "Not really. I woke up late today, remember?"
             
             "He mulls over your suggestion before giving in with a shrug."
             
+            show Rosco neutral jacket
             R "Alright, sure. But don't complain to me if you're tired tomorrow."
             
             MC "No promises."
             
             scene black with fade
             "You accept the blanket he hands you, wrapping it around yourself as he puts a movie on."
-            
             "You settle down on the comfortable sofa, finding it easy to relax with Rosco beside you."
-            
             "Even if you did find yourself tired tomorrow, you knew you wouldn't have any regrets."
     #Choice End
-
-    return
+    stop music fadeout 1.0
+    jump choose_route

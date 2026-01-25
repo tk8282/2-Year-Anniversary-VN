@@ -388,25 +388,89 @@ transform  gacha_pon_spinning:
 #-------------------------------------------------------------
 # shake effect
 transform shake:
-        ease .06 yoffset 24
-        ease .06 yoffset -24
-        ease .05 yoffset 20
-        ease .05 yoffset -20
-        ease .04 yoffset 16
-        ease .04 yoffset -16
-        ease .03 yoffset 12
-        ease .03 yoffset -12
-        ease .02 yoffset 8
-        ease .02 yoffset -8
-        ease .01 yoffset 4
-        ease .01 yoffset -4
-        ease .01 yoffset 0
+    yoffset 0
+    ease .04 yoffset 6
+    ease .04 yoffset -6
+    ease .03 yoffset 3
+    ease .03 yoffset -3
+    ease .02 yoffset 0
 
 transform shake2:
     xanchor 0.5
-    yoffset 0  # Lock the y position
-    linear 0.05 xoffset -10
-    linear 0.05 xoffset 10
-    linear 0.05 xoffset -10
-    linear 0.05 xoffset 10
-    linear 0.05 xoffset 0
+    yoffset 0
+    xoffset 0
+    linear 0.04 xoffset -10
+    linear 0.04 xoffset 10
+    linear 0.04 xoffset -10
+    linear 0.04 xoffset 10
+    linear 0.04 xoffset 0
+
+#------------------------------------------------------------
+# movements for mascots
+transform ability1:
+    xoffset 0
+    yoffset 0
+    ease .10 xoffset -40 yoffset -18
+    ease .12 xoffset 0 yoffset 0
+
+transform ability1_2:
+    xoffset 0
+    yoffset 0
+    ease .10 xoffset 40 yoffset 18
+    ease .12 xoffset 0 yoffset 0    
+
+transform ability2:
+    xoffset 0
+    ease .06 xoffset -12
+    ease .06 xoffset 12
+    ease .05 xoffset -6
+    ease .05 xoffset 6
+    ease .04 xoffset 0
+
+transform ability3:
+    yoffset 0
+    ease .06 yoffset -12
+    ease .06 yoffset 12
+    ease .05 yoffset -6
+    ease .05 yoffset 6
+    ease .04 yoffset 0
+
+transform ability4:
+    xoffset 0
+    yoffset 0
+
+    ease .08 xoffset 14 yoffset 8
+
+    ease .07 xoffset -18
+    ease .07 xoffset 18
+    ease .06 xoffset -12
+    ease .06 xoffset 12
+    ease .05 xoffset -8
+    ease .05 xoffset 8
+
+    ease .12 xoffset -70 yoffset -30
+
+    ease .10 xoffset -40 yoffset 12
+    ease .08 xoffset -20 yoffset 0
+
+    ease .12 xoffset 0 yoffset 0
+
+transform ability4_1:
+    xoffset 0
+    yoffset 0
+
+    ease .08 xoffset -14 yoffset 8
+
+    ease .07 xoffset 18
+    ease .07 xoffset -18
+    ease .06 xoffset 12
+    ease .06 xoffset -12
+    ease .05 xoffset 8
+    ease .05 xoffset -8
+
+    ease .12 xoffset 70 yoffset -30
+
+    ease .10 xoffset 40 yoffset 12
+    ease .08 xoffset 20 yoffset 0
+
+    ease .12 xoffset 0 yoffset 0

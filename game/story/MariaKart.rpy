@@ -81,7 +81,7 @@ label mk_hold_3:
 
     show Rosco smug jacket
     R "Hah! Rookie mistake."
-    jump mk_dice_choice
+    jump mk_chest_choice
 
 
 label mk_hold_2:
@@ -89,24 +89,24 @@ label mk_hold_2:
 
     show Rosco smug jacket
     R "You're too slow!"
-    jump mk_dice_choice
+    jump mk_chest_choice
 
-label mk_dice_choice:
+label mk_chest_choice:
 
-    $ timer_jump = "mk_single_dice"
+    $ timer_jump = "mk_single_chest"
     show screen mk_timer
 
     menu:
-        "Go for the double dice":
+        "Go for the double chest":
             hide screen mk_timer
-            jump mk_double_dice
+            jump mk_double_chest
 
-        "Go for the single dice":
+        "Go for the single chest":
             hide screen mk_timer
-            jump mk_single_dice
+            jump mk_single_chest
 
 
-label mk_double_dice:
+label mk_double_chest:
     MC "Yes!"
 
     show Rosco annoyed jacket
@@ -114,8 +114,8 @@ label mk_double_dice:
     jump mk_coin_choice
 
 
-label mk_single_dice:
-    MC "That stupid NPC took the double dice!"
+label mk_single_chest:
+    MC "That stupid NPC took the double chest!"
 
     show Rosco smug jacket
     R "Sucks to suck."
@@ -155,20 +155,20 @@ label mk_banana:
 
 label mk_shell_choice:
 
-    $ timer_jump = "mk_green_shell"
+    $ timer_jump = "mk_yellow_shell"
     show screen mk_timer
 
     menu:
-        "Throw a green shell":
+        "Throw a yellow shell":
             hide screen mk_timer
-            jump mk_green_shell
+            jump mk_yellow_shell
 
-        "Throw a red shell":
+        "Throw a orange shell":
             hide screen mk_timer
-            jump mk_red_shell
+            jump mk_orange_shell
 
 
-label mk_green_shell:
+label mk_yellow_shell:
     "You launch a shell in front of you, not even glancing at the other screens."
 
     show Rosco laugh jacket
@@ -181,7 +181,7 @@ label mk_green_shell:
     jump mk_final_choice
 
 
-label mk_red_shell:
+label mk_orange_shell:
     "You launch a shell ahead of you, and Rosco makes a strangled noise."
 
     show Rosco angry jacket
@@ -234,7 +234,7 @@ label mk_distract:
 
     MC "All's fair in love and war!"
 
-    "You smirk as a blue shell flies past you, hitting him just before he reaches the finish line."
+    "You smirk as a purple shell flies past you, hitting him just before he reaches the finish line."
 
     MC "Bless whatever NPC just threw that!"
 
