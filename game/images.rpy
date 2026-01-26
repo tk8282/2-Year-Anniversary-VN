@@ -872,3 +872,15 @@ image skip hover = im.Scale("gui/menu_buttons/menu_skip_hover.png", 80, 80 )
 
 image back idle = im.Scale("gui/menu_buttons/menu_arrow_idle.png",70, 70 )
 image back hover = im.Scale("gui/menu_buttons/menu_arrow_hover.png", 70, 70 )
+
+# Main Menu BG
+image starting_screen_full = im.Scale("gui/startingScreen/Full_art.png", 1920, 1080)
+image starting_screen_bg = im.Scale("gui/startingScreen/Starting_Background.png", 1920, 1080)
+image starting_screen_elements = im.Scale("gui/startingScreen/Starting_Elements.png", 1920, 1080)
+image starting_screen_frame = im.Scale("gui/startingScreen/Starting_Frame.png", 1920, 1080)
+
+image starting_screen_cass = im.Scale("gui/startingScreen/Cassian_frame.png", 1920, 1080)
+image starting_screen_gale = im.Scale("gui/startingScreen/Gale_frame.png", 1920, 1080)
+image starting_screen_luci = im.Scale("gui/startingScreen/Lucien_frame.png", 1920, 1080)
+image starting_screen_rosco = im.Scale("gui/startingScreen/Rosco_frame.png", 1920, 1080)
+image starting_screen_zanny = im.Scale("gui/startingScreen/Zander_frame.png", 1920, 1080)

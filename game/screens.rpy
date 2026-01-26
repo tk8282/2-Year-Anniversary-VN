@@ -315,26 +315,24 @@ screen navigation():
 
             spacing gui.navigation_spacing
 
-            imagebutton auto "option new game button %s" focus_mask True action Start()
+            imagebutton auto "option new game button %s" focus_mask True action Start() at ib_fade
             #textbutton _("Load") action ShowMenu("load")
-            imagebutton auto "option load button %s" focus_mask True action ShowMenu("load")
+            imagebutton auto "option load button %s" focus_mask True action ShowMenu("load") at ib_fade
             #textbutton _("Preferences") action ShowMenu("preferences")
-            imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5
+            imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5 at ib_fade
             #textbutton _("About") action ShowMenu("about")
-            imagebutton auto "option gallery button %s" focus_mask True action NullAction()
-            
-            imagebutton auto "option credits button %s" focus_mask True action NullAction()
-            
+            imagebutton auto "option gallery button %s" focus_mask True action NullAction() at ib_fade
+            imagebutton auto "option credits button %s" focus_mask True action NullAction() at ib_fade
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("- Help -") action ShowMenu("help") xalign 0.5
+                textbutton _("- Help -", ) action ShowMenu("help") xalign 0.5 at ib_fade
 
             if renpy.variant("pc"):
 
                 ## The quit button is banned on iOS and unnecessary on Android and
                 ## Web.
-                textbutton _("- Quit -") action Quit(confirm=not main_menu) xalign 0.5
+                textbutton _("- Quit -") action Quit(confirm=not main_menu) xalign 0.5 at ib_fade
 
 
     else:
