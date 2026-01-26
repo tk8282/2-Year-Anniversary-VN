@@ -105,7 +105,7 @@ screen phone_acc_menu:
     modal True
     zorder 1
     hbox:
-        xalign 0.5
+        xalign 0.8
         yalign 0.3
         xoffset 0
         yoffset 0
@@ -139,8 +139,5 @@ screen phone_acc_menu:
                 action [SetVariable("phone_acc", 4), Jump("prologue")]
                 at ib_fade
                 
-    add Image("gui/textbox.png", xalign=0.5, yalign=1.0)
-    add Text("Choose your prize!",xalign=0.5, yalign=0.9, size=50)
-    # New UI Tetsing
-    #add im.Scale("gui/testing/story_text box (no flowers)_candy.png",1600, 392.93) xalign 0.5 yalign 0.9
-    #add Text("Choose your prize!",xalign=0.5, yalign=0.82, size=50)           
+    add "gui/textbox_n.png" xpos 13 yalign 1.0 at ib_fade
+    add Text("Choose your prize!",xalign=0.5, yalign=0.81, size=50, outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")

@@ -5,22 +5,22 @@ init -1:
 
 # --- Character Definitions ----------------------------------------------------
 
-define Z = Character("Zanny", color="#ffc124")        
-define L = Character("Luci", color="#9932cc")         
-define R = Character("Rosco", color="#fa1c9a")        
-define C = Character("Cass", color="#50c878")         
-define G = Character("Gale", color="#bb0f28")         
-define N = Character("Nayu")
-define MC = Character(player_name, color="#1520A6")   
+define Z = Character("Zanny", who_outlines=[(3,"#9932cc",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))        
+define L = Character("Luci", who_outlines=[(3,"#bb0f28",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))         
+define R = Character("Rosco", who_outlines=[(3,"#fa1c9a",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))        
+define C = Character("Cass", who_outlines=[(3,"#50c878",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))         
+define G = Character("Gale", who_outlines=[(3,"#ffc124",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))         
+define N = Character("Nayu", who_outlines=[(3,"#1520A6",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))
+define MC = Character(player_name,who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))   
 
 
 # NPCs
-define Hostess = Character("Hostess")
-define Waiter = Character("Waiter")
-define Staff = Character("Staff Member")
-define Cashier = Character("Cashier")
-define anon = Character("???")
-define ClassmateA = Character("Clingy Classmate")
+define Hostess = Character("Hostess",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
+define Waiter = Character("Waiter",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
+define Staff = Character("Staff Member",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
+define Cashier = Character("Cashier",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
+define anon = Character("???",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
+define ClassmateA = Character("Clingy Classmate",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))
 
 
 

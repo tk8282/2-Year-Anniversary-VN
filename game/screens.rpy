@@ -139,7 +139,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox_n.png", xpos=13, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -245,21 +245,31 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
+        vbox:
+            xalign 0.05
+            yalign 0.86
+            spacing 20
 
+            imagebutton auto "log %s" focus_mask True action ShowMenu('history')
+            imagebutton auto "options %s" focus_mask True action ShowMenu('preferences')
+            
         hbox:
-            style_prefix "quick"
+            xalign 0.15 
+            yalign 0.99 
+            imagebutton auto "back %s" focus_mask True action Rollback()
+            add Text("Back",ypos=12,xpos=8,  outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")
+        
+        vbox:
+            
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.96
+            yalign 0.86
+            spacing 20
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            
+            imagebutton auto "auto %s" focus_mask True action Preference("auto-forward", "toggle")
+            imagebutton auto "skip %s" focus_mask True action Skip() alternate Skip(fast=True, confirm=True)
+        
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -309,7 +319,7 @@ screen navigation():
             #textbutton _("Load") action ShowMenu("load")
             imagebutton auto "option load button %s" focus_mask True action ShowMenu("load")
             #textbutton _("Preferences") action ShowMenu("preferences")
-            imagebutton auto "menu options %s" focus_mask True action ShowMenu("preferences") xalign 0.5
+            imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5
             #textbutton _("About") action ShowMenu("about")
             imagebutton auto "option gallery button %s" focus_mask True action NullAction()
             
@@ -1641,7 +1651,7 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/textbox_n.png"
 
 style radio_button:
     variant "small"

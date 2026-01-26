@@ -85,6 +85,11 @@ define gui.notify_text_size = 24
 ## The size of the game's title.
 define gui.title_text_size = 75
 
+define gui.dialogue_text_outlines = [(3,"#b290ab",0,0)]
+define gui.dialogue_outline_scaling = "linear"
+define gui.characters_text_outlines = [(3,"#b290ab",0,0)]
+define gui.character_outline_scaling = "linear"
+
 
 ## Main and Game Menus #########################################################
 
@@ -99,7 +104,7 @@ define gui.game_menu_background = None
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 278
+define gui.textbox_height = 390
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -108,12 +113,12 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_xpos = 385
+define gui.name_ypos = -45
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
-define gui.name_xalign = 0.0
+define gui.name_xalign = 0.5
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
@@ -132,11 +137,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_xpos = 275
+define gui.dialogue_ypos = 85
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1380
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -447,7 +452,7 @@ init python:
         gui.textbox_height = 360
         gui.name_xpos = 120
         gui.dialogue_xpos = 135
-        gui.dialogue_width = 1650
+        gui.dialogue_width = 1850
 
         ## Change the size and spacing of various things.
         gui.slider_size = 38

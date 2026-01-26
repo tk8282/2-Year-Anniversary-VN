@@ -772,8 +772,8 @@ image option gallery button hover = im.Scale("gui/button/options_gallery_hover.p
 image option credits button idle = im.Scale("gui/button/options_credits_idle.png",250.2, 68.4 )
 image option credits button hover = im.Scale("gui/button/options_credits_hover.png",250.2, 68.4 )
 
-image menu options idle = im.Scale("gui/menu_buttons/menu_options_idle.png", 137.6, 128.8 )
-image menu options hover = im.Scale("gui/menu_buttons/menu_options_hover.png", 137.6, 128.8 )
+image menu_options_idle = im.Scale("gui/menu_buttons/menu_options_idle.png", 137.6, 128.8 )
+image menu_options_hover = im.Scale("gui/menu_buttons/menu_options_hover.png", 137.6, 128.8 )
 image options base = im.Scale("gui/overlay/options_base.png", 1716.8, 1045.6 )
 image screentint2 = Solid("#625977c7")
 
@@ -781,3 +781,17 @@ image arrow idle = im.Scale("gui/menu_buttons/menu_arrow_idle.png", 80, 80 )
 image arrow hover = im.Scale("gui/menu_buttons/menu_arrow_hover.png", 80, 80 )
 image options slider base = im.Scale("gui/options/options_slider base.png", 100, 100)
 
+image auto idle = im.Scale("gui/menu_buttons/menu_auto_idle.png", 80, 80 )
+image auto hover = im.Scale("gui/menu_buttons/menu_auto_hover.png", 80, 80 )
+
+image log idle = im.Scale("gui/menu_buttons/menu_log_idle.png", 80, 80 )
+image log hover = im.Scale("gui/menu_buttons/menu_log_hover.png", 80, 80 )
+
+image options idle = im.Scale("gui/menu_buttons/menu_options_idle.png", 80, 80 )
+image options hover = im.Scale("gui/menu_buttons/menu_options_hover.png", 80, 80 )
+
+image skip idle = im.Scale("gui/menu_buttons/menu_skip_idle.png", 80, 80 )
+image skip hover = im.Scale("gui/menu_buttons/menu_skip_hover.png", 80, 80 )
+
+image back idle = im.Scale("gui/menu_buttons/menu_arrow_idle.png",70, 70 )
+image back hover = im.Scale("gui/menu_buttons/menu_arrow_hover.png", 70, 70 )
