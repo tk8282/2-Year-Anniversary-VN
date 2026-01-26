@@ -522,7 +522,6 @@ image bg rosco monitor = im.Scale("images/Rosco/Backgrounds/monitorscene.png", 1
 
 # --------------Gale--------------
 image bg gale clubroom = im.Scale("images/Gale/Backgrounds/gale_route_club_room.png", 1920, 1080)
-"""
 #Day stall pieces:
 image bg gale bushes = im.Scale("images/Gale/Backgrounds/day_stall_seperated/bushes.png", 1920, 1080)
 image bg gale grass_foreground = im.Scale("images/Gale/Backgrounds/day_stall_seperated/grass_foreground.png", 1920, 1080)
@@ -535,6 +534,59 @@ image bg gale tree_leaves = im.Scale("images/Gale/Backgrounds/day_stall_seperate
 image bg gale grass_background = im.Scale("images/Gale/Backgrounds/day_stall_seperated/grass_background.png", 1920, 1080)
 image bg gale day_stall = im.Scale("images/Gale/Backgrounds/day_stall_seperated/day_stall.png", 1920, 1080)
 
+layeredimage bg_gale_empty_stall:
+
+    # --- FAR BACKGROUND ---
+    always:
+        "bg gale sky"
+
+    # --- MID BACKGROUND ---
+
+    always:
+        "bg gale grass_background"
+
+    # --- FOREGROUND ---
+    always:
+        "bg gale grass_foreground"
+
+    # --- EFFECTS / OVERLAYS ---
+    always:
+        "bg gale sparkles"
+    always:
+        "bg gale sunlight_glow_overlay"
+
+layeredimage bg_gale_day_stall:
+
+    # --- FAR BACKGROUND ---
+    always:
+        "bg gale sky"
+
+    # --- MID BACKGROUND ---
+    always:
+        "bg gale tree_leaves"
+    always:
+        "bg gale pole_left"
+    always:
+        "bg gale pole_right"
+    always:
+        "bg gale bushes"
+    always:
+        "bg gale grass_background"
+
+    # --- STRUCTURE ---
+    always:
+        "bg gale day_stall"
+
+    # --- FOREGROUND ---
+    always:
+        "bg gale grass_foreground"
+
+    # --- EFFECTS / OVERLAYS ---
+    always:
+        "bg gale sparkles"
+    always:
+        "bg gale sunlight_glow_overlay"
+
 #Night stall pieces:
 image bg gale night_bushes = im.Scale("images/Gale/Backgrounds/night_stall_seperated/bushes.png", 1920, 1080)
 image bg gale grass_bg = im.Scale("images/Gale/Backgrounds/night_stall_seperated/grass_bg.png", 1920, 1080)
@@ -545,7 +597,34 @@ image bg gale night_sky_and_stars = im.Scale("images/Gale/Backgrounds/night_stal
 image bg gale night_stall = im.Scale("images/Gale/Backgrounds/night_stall_seperated/stall.png", 1920, 1080)
 image bg gale tree_outlines = im.Scale("images/Gale/Backgrounds/night_stall_seperated/tree_outlines_bg.png", 1920, 1080)
 image bg gale trees = im.Scale("images/Gale/Backgrounds/night_stall_seperated/trees.png", 1920, 1080)
-"""
+
+layeredimage bg_gale_night_stall:
+
+    # --- SKY / FAR BACKGROUND ---
+    always:
+        "bg gale night_sky_and_stars"
+
+    # --- MID BACKGROUND ---
+    always:
+        "bg gale tree_outlines"
+    always:
+        "bg gale trees"
+    always:
+        "bg gale lights"
+    always:
+        "bg gale night_bushes"
+    always:
+        "bg gale grass_bg"
+
+    # --- STRUCTURE / MAIN OBJECTS ---
+    always:
+        "bg gale night_stall"
+
+    # --- EFFECTS / OVERLAYS ---
+    always:
+        "bg gale night_mode"
+    always:
+        "bg gale night_glow"
 #----------------------------------------
 
 # --------------Zander--------------
@@ -683,7 +762,6 @@ image haori_badge_zanny_patch3 = Transform(im.Scale("images/Rosco/Assets/haori_b
 #----------------------------------------
 
 # --------------Gale--------------
-"""
 image crepe_banner_in_between_morning = Transform(im.Scale("images/Gale/Assets/crepe_banner_in_between_morning.png", 1000, 1000), size=(800,800))
 image crepe_banner_in_between_night = Transform(im.Scale("images/Gale/Assets/crepe_banner_in_between_night.png", 1000, 1000), size=(800,800))
 image crepe_banner_messy_morning = Transform(im.Scale("images/Gale/Assets/crepe_banner_messy_morning.png", 1000, 1000), size=(800,800))
@@ -699,7 +777,6 @@ image gale_pipsqueak = Transform(im.Scale("images/Gale/Assets/gale_pipsqueak.png
 image gale_in_between_string_lights = Transform(im.Scale("images/Gale/Assets/gale_in_between_string_lights.png", 1000, 1000), size=(800,800))
 image gale_messy_string_lights = Transform(im.Scale("images/Gale/Assets/gale_messy_string_lights.png", 1000, 1000), size=(800,800))
 image gale_neat_string_lights = Transform(im.Scale("images/Gale/Assets/gale_neat_string_lights.png", 1000, 1000), size=(800,800))
-"""
 
 #----------------------------------------
 

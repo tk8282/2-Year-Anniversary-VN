@@ -1,9 +1,12 @@
 # Start of Gale route
 label gale_route:
-    scene bg clubroom 
+    scene bg clubroom
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
+    show Gale at waist_up_center2 with dissolve
     MC "I'll help Gale."
     
 label gale_route_day1:
+    stop music fadeout 1.0
     scene black with fade
     show text "{size=50}Gale Route: Day 1{/size}" at truecenter
     with dissolve
@@ -12,16 +15,15 @@ label gale_route_day1:
     with dissolve
 
     # Day 1
-    #scene bg_school_lawn with fade
-    #(day stalls with no stall)
-
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+    scene bg_gale_empty_stall with dissolve
     "You absently tap your foot against the concrete while you wait, enjoying the fresh spring breeze drifting through the open lawn."
 
     "You and Gale had agreed to meet where the stalls are being set up to check yours out and make a plan for how to go about decorating."
 
     "It’s a few minutes past the meeting time when you pull out your phone to text Gale, only to hear rushed footsteps coming around the bend."
 
-    show Gale neutral at waist_up_center with dissolve
+    show Gale neutral at waist_up_center2 with dissolve
     G "[player_name], hi! Sorry I’m late, I wanted to stop and grab us some snacks, but it took longer than expected."
 
     "Gale lifts up a bag from the nearby convenience store that’s bulging with snacks and drinks with a triumphant grin."
@@ -32,7 +34,7 @@ label gale_route_day1:
 
     MC "Yep! Should be a few rows in, near the middle."
 
-    show Gale neutral at waist_up_center, singlejump
+    show Gale neutral at waist_up_center2, singlejump
     G "Lead on!"
 
     "As you lead Gale through the rows of empty stalls, you start pointing out some of the clubs that have already begun decorating."
@@ -66,12 +68,15 @@ label gale_route_day1:
     show Gale shocked at waist_up_center, singlejump
     extend " Bad!" 
 
+    show Gale laugh 
     "You dissolve into laughter as you both move on, still making note of some stalls to visit during the festival."
     "After a minute or so more of walking, you stop at a stall bracketed by posts and check the number Nayu sent you in your messaging app, confirming it’s the correct table."
 
+    scene bg_gale_day_stall with dissolve
+    pause 3.0
     MC "Okay, this is ours!"
 
-    show Gale neutral
+    show Gale neutral at waist_up_left2
     G "Hey, this is pretty nice! It’s close to the end but not so close that people will just walk past us."
 
     MC "Nayu really hooked us up with a great spot!"
@@ -98,6 +103,8 @@ label gale_route_day1:
 
     "Gale nods and grabs the bag of snacks from the stall before catching up to you."
 
+    scene bg_gale_empty_stall with dissolve
+    show Gale neutral at waist_up_center2 with dissolve
     G "Which resource room did you book?"
 
     MC "Just the one on the same floor as our club room. It’s pretty well outfitted, even though it doesn’t have the newest gadgets that some of the ones on the first floor do."
@@ -111,9 +118,11 @@ label gale_route_day1:
 
     "You shrug as you push open the doors to the club room building, holding it open for Gale to slip inside as well."
 
+    scene black with fade
+    scene bg gale clubroom with dissolve
     MC "I heard the Chess Club used it to print a few more boards and sets of pieces since their club has grown so much. I think they got someone in a 3D modeling course to design custom pieces, too."
 
-    show Gale neutral
+    show Gale neutral at waist_up_center2 with dissolve
     G "That’s pretty cool. I wonder if we can find an excuse to use it at some point…"
 
     MC "Probably! Rosco probably has a hundred ideas for tabletop campaigns that could benefit from having some miniatures."
@@ -154,7 +163,7 @@ label gale_route_day1:
             show Gale confused
             G "He tilts his head at you, reminiscent of a golden retriever, and yelps when you start tossing the paint tubes at him."
 
-            show Gale shocked
+            show Gale shocked at waist_up_center2, restless
             G " He barely manages to catch them all, dumping them on the table while you peacefully walk back over with a larger bottle of black paint and a dish to put the paints on while you’re painting."
 
             show Gale angry at waist_up_center, shake
@@ -162,16 +171,16 @@ label gale_route_day1:
 
             MC "Where’s the fun in that?"
 
-            #NOTE: Stopped here
-            G "..." # G_Laughing
-            " His irritation melts away as you both laugh and you pick up one of the pencils before squinting down at the paper."
+            show Gale laugh
+            G "His irritation melts away as you both laugh and you pick up one of the pencils before squinting down at the paper."
 
-            G "..." # G_Neutral
-
+            show Gale neutral
             MC "Can you look around in the cabinets for the string lights while I sketch out the banner design?"
 
+            show Gale at waist_up_center2, singlejump
             G "You got it, boss."
 
+            hide Gale with dissolve
             "He gives a mock salute before turning to rummage around in the cabinets, giving you the space to circle the blank canvas of your banner to get your bearings."
 
             "Using long, even strokes, you outline where the banner’s title will go, as well as a few small flourishes along the edges."
@@ -182,14 +191,16 @@ label gale_route_day1:
 
             MC "Nice! Come over here and tell me if you like this. I’m thinking we could do the main lettering in gold or black and have the colors around the outside as little decorations."
 
+            show Gale neutral at waist_up_center2 with dissolve
             G "Sounds good to me!"
 
             MC "Great! Because you’re going to be painting it."
 
-            G "..." # G_Shocked
+            show Gale shocked
+            MC "While you do that, I’ll be making a draft of the flyer... " 
+            extend "unless you want to trade?"
 
-            MC "While you do that, I’ll be making a draft of the flyer, unless you want to trade?"
-
+            show Gale neutral 
             G "Nope, nevermind."
 
             "Gale picks up one of the paintbrushes and squeezes some black paint into the tray."
@@ -200,16 +211,18 @@ label gale_route_day1:
 
             MC "I saw the mess in my mind’s eye. Your mess."
 
-            G "I resent that!" # G_Flustered
+            show Gale shocked at waist_up_center2, singlejump
+            G "I resent that!"
 
             MC "Resent me all you want - I’ve seen what you do to the club room if you’re left unattended. I won’t even mention your dorm room."
 
-            G "Shh… let me work…" # G_Laughing
+            show Gale laugh
+            G "Shh… let me work…"
 
             "You laugh with him and pull your laptop out of your bag, humming as you navigate to the school’s proprietary graphic design software."
 
-            G "..." # G_Neutral
-            "Gale focuses on outlining the typography on the banner while you put together a basic flyer design, adding information about the game from what you remember Rosco telling you."
+            show Gale neutral
+            G "Gale focuses on outlining the typography on the banner while you put together a basic flyer design, adding information about the game from what you remember Rosco telling you."
 
             "It’s only a few minutes of working in silence before Gale groans."
 
@@ -217,6 +230,7 @@ label gale_route_day1:
 
             MC "Go for it."
 
+            show Gale neutral at waist_up_center2, singlejump
             "Gale jumps up and plugs his phone into the speaker system set up near the lounge area of the room, shuffling between songs for a moment before he’s satisfied with his playlist choice."
 
             "He rejoins you at the main working table with a grin and two thumbs up before picking his paintbrush back up, humming along to the songs as they play."
@@ -229,12 +243,14 @@ label gale_route_day1:
 
             MC "Nice! It looks great."
 
+            show Gale smug at waist_up_center2
             G "My artistic abilities know no bounds!"
 
             "You snort and look at a dark stain of paint on his cheek from where he must have accidentally swiped the bristles against his face."
 
             MC "Hey, you have a little bit of…"
 
+            show Gale confused
             "You gesture towards your face, but when Gale reaches up, he only succeeds in smearing it across his cheek even more."
 
             MC "Oh my god, hold on."
@@ -246,24 +262,28 @@ label gale_route_day1:
         
                     "You take hold of Gale’s chin with one hand and carefully wipe the paint off with the paper towel, eyebrows furrowed as you focus on getting every last bit of paint."
 
-                    G "Oh, uh.. Thanks." # G_Flustered
+                    show Gale blush
+                    G "Oh, uh.. Thanks."
 
                     "His cheeks are turning red, and you grin as you step back."
 
+                    show Gale neutral
                     "Gale clears his throat and sets the paintbrush down, coming around the table."
 
                     G "Let’s see that flyer, huh?"
 
                 "Hand him the towel to wipe the paint off himself.":
-
+                    show Gale shocked
                     "You slap the wet paper towel into Gale’s hand and gesture towards his face."
 
+                    show Gale smug
                     G "What, not going to clean it up for me?"
 
                     MC "Not a chance, princess."
-
+                    show Gale laugh
                     "Gale barks out a surprised laugh and uses his phone’s front camera to get the paint off his cheek, smacking you with the cold, damp paper towel on his way to throw it away."
 
+            show Gale neutral
             MC "Alright - I’ll do some of the designs around the edges if you want to start cutting out the pennants from that cardstock we found earlier."
 
             G "Do I have to use scissors?"

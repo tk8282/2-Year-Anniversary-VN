@@ -576,7 +576,9 @@ label rosco_route_day1:
 
             MC "Eh?"
 
-            scene bg road daylight with fade
+            scene bg road daylight at partlyblurred with dissolve
+            pause 0.2
+            scene bg road daylight at unblur with dissolve
             show Rosco concerned jacket at waist_up_center with dissolve
             R "Are you okay?"
 
@@ -705,7 +707,7 @@ label rosco_route_day1:
     stop music fadeout 1.0
 
     scene black with fade
-    scene bg rosco clothing shop with fade
+    scene bg rosco clothing shop with dissolve
     play music "audio/music/C1 - Chill(2).wav" fadein 1.0 loop
 
     "Racks upon racks of clothing items surround you on all fronts, but Rosco navigates the aisles expertly as he makes his way to the center of the store."

@@ -11,7 +11,7 @@ define R = Character("Rosco", who_outlines=[(3,"#fa1c9a",0,0)], window_backgroun
 define C = Character("Cass", who_outlines=[(3,"#50c878",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))         
 define G = Character("Gale", who_outlines=[(3,"#ffc124",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))         
 define N = Character("Nayu", who_outlines=[(3,"#1520A6",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))
-define MC = Character(player_name,who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))   
+define MC = Character(player_name,who_outlines=[(3,"#1520A6",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))   
 
 
 # NPCs

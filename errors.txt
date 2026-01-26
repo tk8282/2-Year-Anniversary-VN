@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/images.rpy", line 775: expected 'image_name_component' not found.
-    image menu options idle = im.Scale("gui/menu_buttons/menu_options_idle.png", 137.6, 128.8 )
-         ^
-
-File "game/images.rpy", line 776: expected 'image_name_component' not found.
-    image menu options hover = im.Scale("gui/menu_buttons/menu_options_hover.png", 137.6, 128.8 )
-         ^
+File "game/story/GaleRoute.rpy", line 9: expected simple expression
+    stop music fadeout
+                      ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Jan 25 23:45:16 2026
+Mon Jan 26 04:18:14 2026
