@@ -62,8 +62,11 @@ style vscrollbar:
 
 style slider:
     ysize gui.slider_size
-    base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    right_gutter 58
+    left_gutter 62
+    base_bar Frame("gui/options/options_slider_base.png", gui.slider_borders, tile=gui.slider_tile)
+    thumb "gui/options/options_slider_thumb.png"
+    thumb_offset 28
 
 style vslider:
     xsize gui.slider_size
@@ -286,49 +289,81 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 screen navigation():
+    if main_menu:
 
-    vbox:
-        style_prefix "navigation"
+        #textbutton _("Start") action Start()
+        #imagebutton auto "title start button %s" focus_mask True action Start() xalign 0.93 yalign 0.3
+            #at ib_fade
+        
+    
+                
+        vbox:
+            style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+            xpos gui.navigation_xpos
+            yalign 0.8
 
-        spacing gui.navigation_spacing
+            spacing gui.navigation_spacing
 
-        if main_menu:
+            imagebutton auto "option new game button %s" focus_mask True action Start()
+            #textbutton _("Load") action ShowMenu("load")
+            imagebutton auto "option load button %s" focus_mask True action ShowMenu("load")
+            #textbutton _("Preferences") action ShowMenu("preferences")
+            imagebutton auto "menu options %s" focus_mask True action ShowMenu("preferences") xalign 0.5
+            #textbutton _("About") action ShowMenu("about")
+            imagebutton auto "option gallery button %s" focus_mask True action NullAction()
+            
+            imagebutton auto "option credits button %s" focus_mask True action NullAction()
+            
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            textbutton _("Start") action Start()
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("- Help -") action ShowMenu("help") xalign 0.5
 
-        else:
+            if renpy.variant("pc"):
 
-            textbutton _("History") action ShowMenu("history")
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("- Quit -") action Quit(confirm=not main_menu) xalign 0.5
 
-            textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+    else:
+        vbox:
+            style_prefix "navigation"
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+            xpos 230
+            yalign 0.5
 
-        if _in_replay:
+            spacing gui.navigation_spacing
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("- History") action ShowMenu("history")
 
-        elif not main_menu:
+            textbutton _("- Save") action ShowMenu("save")
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("- Load") action ShowMenu("load")
+              
 
-        textbutton _("About") action ShowMenu("about")
+            textbutton _("- Preferences") action ShowMenu("preferences")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if _in_replay:
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+                textbutton _("- End Replay") action EndReplay(confirm=True)
 
-        if renpy.variant("pc"):
+            elif not main_menu:
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("- Main Menu") action MainMenu()
+
+
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("- Help") action ShowMenu("help")
+
+            if renpy.variant("pc"):
+
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("- Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -368,11 +403,11 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            #text "[config.name!t]":
+            #    style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+            #text "[config.version]":
+            #    style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -385,7 +420,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background None
 
 style main_menu_vbox:
     xalign 1.0
@@ -422,9 +457,10 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     else:
         add gui.game_menu_background
 
+    
     frame:
         style "game_menu_outer_frame"
-
+        add "options base" xalign 0.5 yalign 1.13
         hbox:
 
             ## Reserve space for the navigation section.
@@ -456,6 +492,11 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                         cols 1
                         yinitial yinitial
 
+                        # Adjust size and position here.
+                        side_ypos 30
+                        xsize 1250
+                        ysize 600
+
                         scrollbars "vertical"
                         mousewheel True
                         draggable True
@@ -471,14 +512,15 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    if not main_menu:
+        use navigation
+    imagebutton auto "arrow %s" focus_mask True action Return() xalign 0.89 yalign 0.88
+    #textbutton _("Return"):
+    #    style "return_button"
+    #    yalign 0.1
+    #    action Return()
 
-    textbutton _("Return"):
-        style "return_button"
-
-        action Return()
-
-    label title
+    #label title
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -497,14 +539,15 @@ style game_menu_label_text is gui_label_text
 style return_button is navigation_button
 style return_button_text is navigation_button_text
 
+
 style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    background "screentint2"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 320
     yfill True
 
 style game_menu_content_frame:
@@ -610,80 +653,136 @@ screen file_slots(title):
             order_reverse True
 
             ## The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
-
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
-
-                input:
-                    style "page_label_text"
-                    value page_name_value
 
             ## The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
+            if main_menu:
+                grid gui.file_slot_cols gui.file_slot_rows:
+                    style_prefix "slot"
+                    xalign -0.10
+                    yalign 0.25
+                        
+                    spacing gui.slot_spacing
 
-                xalign 0.5
-                yalign 0.5
+                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
 
-                spacing gui.slot_spacing
+                        $ slot = i + 1
 
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
+                        button:
+                            action FileAction(slot)
+                            xfill True                        
+                            has vbox
+                            add FileScreenshot(slot)  xpos 13 ypos 12
 
-                    $ slot = i + 1
+                            text FileTime(slot, format=_("{#file_time} %M/%d/%Y, %H:%M"), empty=_("")):
+                                style "slot_time_text"
+                                ypos 40
+                                xpos 180
+                                
+                            text FileSaveName(slot):
+                                style "slot_name_text"
 
-                    button:
-                        action FileAction(slot)
+                            key "save_delete" action FileDelete(slot)
 
-                        has vbox
+                ## Buttons to access other pages.
+                vbox:
+                    style_prefix "page"
 
-                        add FileScreenshot(slot) xalign 0.5
+                    xalign 0.33
+                    yalign 0.93
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
+                    hbox:
+                        xalign 0.5
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
+                        spacing gui.page_spacing
 
-                        key "save_delete" action FileDelete(slot)
+                        textbutton _("<") action FilePagePrevious()
 
-            ## Buttons to access other pages.
-            vbox:
-                style_prefix "page"
+                        if config.has_autosave:
+                            textbutton _("{#auto_page}A") action FilePage("auto")
 
-                xalign 0.5
-                yalign 1.0
+                        if config.has_quicksave:
+                            textbutton _("{#quick_page}Q") action FilePage("quick")
 
-                hbox:
-                    xalign 0.5
+                        ## range(1, 10) gives the numbers from 1 to 9.
+                        for page in range(1, 10):
+                            textbutton "[page]" action FilePage(page)
 
-                    spacing gui.page_spacing
+                        textbutton _(">") action FilePageNext()
 
-                    textbutton _("<") action FilePagePrevious()
+                    if config.has_sync:
+                        if CurrentScreenName() == "save":
+                            textbutton _("Upload Sync"):
+                                action UploadSync()
+                                xalign 0.5
+                        else:
+                            textbutton _("Download Sync"):
+                                action DownloadSync()
+                                xalign 0.5
+            else:
+                grid gui.file_slot_cols gui.file_slot_rows:
+                    style_prefix "slot"
+                    xsize 100
+                    ysize 200
+                    xalign 0.2
+                    yalign 0.25
+                        
+                    spacing gui.slot_spacing
 
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
+                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
 
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
+                        $ slot = i + 1
+                        
+                        button:
+                            action FileAction(slot)
+                            xfill True   
+                            has vbox
+                            add FileScreenshot(slot) xpos 13 ypos 12
 
-                    ## range(1, 10) gives the numbers from 1 to 9.
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
+                            text FileTime(slot, format=_("{#file_time} %M/%d/%Y, %H:%M"), empty=_("")):
+                                style "slot_time_text"
+                                ypos 40
+                                xpos 180
 
-                    textbutton _(">") action FilePageNext()
+                            text FileSaveName(slot):
+                                style "slot_name_text"
 
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Download Sync"):
-                            action DownloadSync()
-                            xalign 0.5
+                            key "save_delete" action FileDelete(slot)
+
+                ## Buttons to access other pages.
+                vbox:
+                    style_prefix "page"
+
+                    xalign 0.33
+                    yalign 0.93
+
+                    hbox:
+                        xalign 0.5
+
+                        spacing gui.page_spacing
+
+                        textbutton _("<") action FilePagePrevious()
+
+                        if config.has_autosave:
+                            textbutton _("{#auto_page}A") action FilePage("auto")
+
+                        if config.has_quicksave:
+                            textbutton _("{#quick_page}Q") action FilePage("quick")
+
+                        ## range(1, 10) gives the numbers from 1 to 9.
+                        for page in range(1, 10):
+                            textbutton "[page]" action FilePage(page)
+
+                        textbutton _(">") action FilePageNext()
+
+                    if config.has_sync:
+                        if CurrentScreenName() == "save":
+                            textbutton _("Upload Sync"):
+                                action UploadSync()
+                                xalign 0.5
+                        else:
+                            textbutton _("Download Sync"):
+                                action DownloadSync()
+                                xalign 0.5
 
 
 style page_label is gui_label
@@ -729,49 +828,51 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
-
+    use game_menu(_(" ")):
         vbox:
-
+            ypos 40
+            if not main_menu:
+                xpos 150
             hbox:
                 box_wrap True
-
+                
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-
+                        label _("Display") text_size 40
+                        textbutton _("- Window -") action Preference("display", "window")
+                        textbutton _("- Fullscreen -") action Preference("display", "fullscreen")
+                        
                 vbox:
+                    if not main_menu:
+                        xpos -100
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-
+                    label _("Skip")  text_size 40
+                    textbutton _("- Unseen Text -") action Preference("skip", "toggle")
+                    textbutton _("- After Choices -") action Preference("after choices", "toggle")
+                    textbutton _("- Transitions -") action InvertSelected(Preference("transitions", "toggle"))
+                    
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
 
             hbox:
+                ypos -50
                 style_prefix "slider"
                 box_wrap True
-
                 vbox:
-
                     label _("Text Speed")
 
                     bar value Preference("text speed")
-
                     label _("Auto-Forward Time")
 
                     bar value Preference("auto-forward time")
-
                 vbox:
-
+                    if not main_menu:
+                        xpos -120
+                    ypos -190
                     if config.has_music:
                         label _("Music Volume")
 
@@ -801,9 +902,11 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("- Mute All -"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+        
 
 
 style pref_label is gui_label
@@ -893,7 +996,6 @@ screen history():
     predict False
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
-
         style_prefix "history"
 
         for h in _history_list:
@@ -987,6 +1089,8 @@ screen help():
             spacing 23
 
             hbox:
+                xpos 100
+                ypos 20
 
                 textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")

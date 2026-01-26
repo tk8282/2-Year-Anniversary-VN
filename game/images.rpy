@@ -760,3 +760,24 @@ image gacha reveal = ConditionSwitch(
 #----------------------------------------
 
 # UI elements
+
+image title start button idle = im.Scale("gui/button/title_start button_idle.png",270.9, 120.4  )
+image title start button hover = im.Scale("gui/button/title_start button_hover.png",270.98, 120.4 )
+image option load button idle = im.Scale("gui/button/options_load_idle.png",250.2, 68.4 )
+image option load button hover = im.Scale("gui/button/options_load_hover.png",250.2, 68.4 )
+image option new game button idle = im.Scale("gui/button/options_new game_idle.png",250.2, 68.4 )
+image option new game button hover = im.Scale("gui/button/options_new game_hover.png",250.2, 68.4 )
+image option gallery button idle = im.Scale("gui/button/options_gallery_idle.png",250.2, 68.4 )
+image option gallery button hover = im.Scale("gui/button/options_gallery_hover.png",250.2, 68.4 )
+image option credits button idle = im.Scale("gui/button/options_credits_idle.png",250.2, 68.4 )
+image option credits button hover = im.Scale("gui/button/options_credits_hover.png",250.2, 68.4 )
+
+image menu options idle = im.Scale("gui/menu_buttons/menu_options_idle.png", 137.6, 128.8 )
+image menu options hover = im.Scale("gui/menu_buttons/menu_options_hover.png", 137.6, 128.8 )
+image options base = im.Scale("gui/overlay/options_base.png", 1716.8, 1045.6 )
+image screentint2 = Solid("#625977c7")
+
+image arrow idle = im.Scale("gui/menu_buttons/menu_arrow_idle.png", 80, 80 )
+image arrow hover = im.Scale("gui/menu_buttons/menu_arrow_hover.png", 80, 80 )
+image options slider base = im.Scale("gui/options/options_slider base.png", 100, 100)
+

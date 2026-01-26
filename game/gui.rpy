@@ -25,10 +25,10 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#ebfaff'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#535353'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -56,14 +56,16 @@ define gui.interface_text_color = '#ffffff'
 
 ## Fonts and Font Sizes ########################################################
 
+define custom_font = "gui/font/linux_biolinum/LinBiolinum_R.ttf"
+
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "gui/font/linux_biolinum/LinBiolinum_R.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "gui/font/linux_biolinum/LinBiolinum_R.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "gui/font/linux_biolinum/LinBiolinum_R.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -87,8 +89,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = im.Scale("gui/startingScreen/Full_art.png", 1920, 1080)
+define gui.game_menu_background = None
 
 
 ## Dialogue ####################################################################
@@ -223,18 +225,20 @@ define gui.choice_button_text_insensitive_color = '#8888887f'
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
-define gui.slot_button_borders = Borders(15, 15, 15, 15)
-define gui.slot_button_text_size = 21
+define gui.slot_button_width = 395
+define gui.slot_button_height = 259
+define gui.slot_button_borders = Borders(13, 13, 13, 13)
+define gui.slot_button_text_size = 25
 define gui.slot_button_text_xalign = 0.5
-define gui.slot_button_text_idle_color = gui.idle_small_color
+define gui.slot_button_text_idle_color = "#fff"
 define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
 
+
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 384
-define config.thumbnail_height = 216
+define config.thumbnail_width = 349
+define config.thumbnail_height = 221
+
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 3
@@ -248,7 +252,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 60
+define gui.navigation_xpos = 1580
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 15
@@ -272,7 +276,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## The spacing between file slots.
-define gui.slot_spacing = 15
+define gui.slot_spacing = 30
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0
@@ -310,7 +314,7 @@ define gui.frame_tile = False
 ## bars, scrollbars, and sliders.
 define gui.bar_size = 38
 define gui.scrollbar_size = 18
-define gui.slider_size = 38
+define gui.slider_size = 130
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
@@ -320,7 +324,7 @@ define gui.slider_tile = False
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
 define gui.scrollbar_borders = Borders(6, 6, 6, 6)
-define gui.slider_borders = Borders(6, 6, 6, 6)
+define gui.slider_borders = Borders(0, 0, 0, 0)
 
 ## Vertical borders.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
@@ -446,7 +450,7 @@ init python:
         gui.dialogue_width = 1650
 
         ## Change the size and spacing of various things.
-        gui.slider_size = 54
+        gui.slider_size = 38
 
         gui.choice_button_width = 1860
         gui.choice_button_text_size = 45
