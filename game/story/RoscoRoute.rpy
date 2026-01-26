@@ -706,7 +706,7 @@ label rosco_route_day1:
 
     scene black with fade
     scene bg rosco clothing shop with fade
-    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
+    play music "audio/music/C1 - Chill(2).wav" fadein 1.0 loop
 
     "Racks upon racks of clothing items surround you on all fronts, but Rosco navigates the aisles expertly as he makes his way to the center of the store."
 
@@ -946,7 +946,7 @@ label rosco_route_day1:
     hide Rosco with dissolve
     stop music fadeout 1.0
     scene black with fade
-    show bg mc bedroom with fade
+    scene bg mc bedroom rosco with fade
     play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     "You spend the rest of the evening relaxing at home and catching up on schoolwork. After all, you want to be well rested and relatively free for the next day."
 
@@ -1237,9 +1237,10 @@ label rosco_route_day2:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=.99
     )
+
 
     "He presses a few buttons on the keyboard and maneuvers the mouse until you find yourself on a new screen, this one looking like an actual battlefield."
 
@@ -1258,6 +1259,15 @@ label rosco_route_day2:
     
     label mascot_playtest_return:
     # Continuing Story
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
     "Time flies as you progress through the game. Your determination to win has never been so strong, and you're this close to winning."
 
     "Out of the blue, you're surrounded on all fronts, locked in an unfamiliar battle setting on your own."
@@ -1284,30 +1294,74 @@ label rosco_route_day2:
 
     "All thoughts of the game leave your mind at the unexpected proximity."
 
-    show Rosco annoyed jacket at waist_up_center with dissolve
+    show screen portrait(
+    "Rosco annoyed jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+
     R "Come on, focus! Use your skills! Ah—whatever."
 
     "He presses down on the keyboard, using your fingers to activate the best skills for the situation."
 
-    show Rosco neutral jacket
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+
     R "See? And the enemy Dewdrop's ult just ended. This is the perfect time to strike."
 
-    hide Rosco with dissolve
+    hide screen portrait with dissolve
     "His fingers move quickly, tapping different keys and moving the mouse efficiently."
     "Despite your efforts to focus, your thoughts keep getting drawn to the way his cooler, larger hand feels against yours."
     "The scent of his cologne does nothing to help your focus, drawing your gaze to look up at him instead—you're awed at how determined he looks, eyebrows knit with concentration."
     "He doesn't notice your stare, his gaze flitting over the screen as he continues to play for you."
 
-    show Rosco laugh jacket at waist_up_center with dissolve
+    show screen portrait(
+    "Rosco laugh jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
     R "Annnd we're done. Triumph!"
 
-    show Rosco neutral jacket
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
     MC "What?"
 
     "Your gaze snaps back to the screen, surprised to find the word TRIUMPH written in golden letters."
 
-    show Rosco smug jacket
+    show screen portrait(
+    "Rosco smug jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+
     R "So what'd you think? Fun, huh?"
+    hide screen portrait with dissolve
 
     stop music fadeout 3.0
     scene bg rosco bedroom noon with fade
@@ -1347,11 +1401,11 @@ label rosco_route_day2:
     
     screen gale_dog:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_gale_dog":
@@ -1375,11 +1429,11 @@ label rosco_route_day2:
     # no plain tv screen do i just use the straight ferkur sticker?
     screen gale_ferkur:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_gale_ferkur":
@@ -1404,11 +1458,11 @@ label rosco_route_day2:
 
     screen gale_helm:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_gale_helm":
@@ -1435,11 +1489,11 @@ label rosco_route_day2:
 
     screen cass_teabag:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 400 
             ysize 350
-            background Solid("#00000079")
             padding(10,10)
             vbox:
                 add "haori_badge_cass_teabag":
@@ -1462,11 +1516,11 @@ label rosco_route_day2:
 
     screen cass_cow:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_cass_cow":
@@ -1493,11 +1547,11 @@ label rosco_route_day2:
 
     screen cass_valo:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_cass_valo":
@@ -1523,11 +1577,11 @@ label rosco_route_day2:
 
     screen luci_guitar:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_luci_guitar":
@@ -1546,11 +1600,11 @@ label rosco_route_day2:
 
     screen luci_coffee:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_luci_coffee":
@@ -1572,11 +1626,11 @@ label rosco_route_day2:
 
     screen luci_crownheart:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000065")
             padding(1,1)
             vbox:
                 add "haori_badge_luci_crownheart":
@@ -1599,11 +1653,11 @@ label rosco_route_day2:
 
     screen zanny_dumbbell:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_zanny_patch3":
@@ -1622,11 +1676,11 @@ label rosco_route_day2:
 
     screen zanny_cocktail:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_zanny_patch1":
@@ -1649,11 +1703,11 @@ label rosco_route_day2:
 
     screen zanny_coffeeCup:
         frame:
+            background None
             xpos 1300
             ypos 350
             xsize 350 
             ysize 350
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_zanny_patch2":
@@ -1698,11 +1752,11 @@ label rosco_route_day2:
 
     screen rosco_patch1:
         frame:
+            background None
             xpos 1300
             ypos 450
             xsize 350 
             ysize 200
-            background Solid("#00000079")
             padding(1,1)
             vbox:
                 add "haori_badge_rosco_patch1":
@@ -1939,8 +1993,8 @@ label rosco_route_day2:
             
             "You can't help but be confused by his behavior, but you decide not to push him about it as you follow after him."
 
-    show Rosco neutral jacket at waist_up_center
     stop music fadeout 1.0
+    show Rosco neutral jacket at waist_up_center
     play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
 
     "After the little fiasco, the two of you once again fall into a comfortable silence as you finish off the patches."
@@ -1950,15 +2004,13 @@ label rosco_route_day2:
     MC "There! I'm done."
 
     R "Just in time. I finished too."
+    hide Rosco with dissolve
 
     screen badge_gallery():
-
-        add Solid("#00000080")
-
         frame:
+            background None
             align (0.5, 0.32)
             padding (10, 20)
-            background Solid("#00000060")
             xsize 1200
             ysize 540
 
@@ -2010,7 +2062,8 @@ label rosco_route_day2:
 
     MC "Hey! We did a pretty good job, don't you think?"
 
-    hide screen badge_gallery with fade
+    hide screen badge_gallery with dissolve
+    show Rosco neutral jacket at waist_up_center with dissolve
     R "Yeah, better than I expected honestly."
 
     show Rosco confused jacket
@@ -2023,7 +2076,7 @@ label rosco_route_day2:
         frame:
             align (0.5, 0.5)
             padding (10,10)
-            background Solid("#00000060")
+            background None
 
             hbox:
                 spacing 60
@@ -2165,5 +2218,17 @@ label rosco_route_day2:
             "You settle down on the comfortable sofa, finding it easy to relax with Rosco beside you."
             "Even if you did find yourself tired tomorrow, you knew you wouldn't have any regrets."
     #Choice End
+    #End of Day 2
     stop music fadeout 1.0
-    jump choose_route
+
+    if "R" not in collected_routes:
+        $ collected_routes.append("R")
+
+    if len(collected_routes) == 5:
+        scene black with fade
+        "jump to ending route"
+        return
+
+    else:
+        jump choose_route
+

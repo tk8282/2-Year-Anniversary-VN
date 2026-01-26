@@ -5,13 +5,13 @@ init -1:
 
 # --- Character Definitions ----------------------------------------------------
 
-define Z = Character("Zanny", color="#e67e22")        # Orange
-define L = Character("Luci", color="#9b59b6")         # Purple
-define R = Character("Rosco", color="#3498db")        # Blue
-define C = Character("Cass", color="#2ecc71")         # Green
-define G = Character("Gale", color="#e74c3c")         # Red
+define Z = Character("Zanny", color="#ffc124")        
+define L = Character("Luci", color="#9932cc")         
+define R = Character("Rosco", color="#fa1c9a")        
+define C = Character("Cass", color="#50c878")         
+define G = Character("Gale", color="#bb0f28")         
 define N = Character("Nayu")
-define MC = Character(player_name, color="#FFFF00")   # Yellow
+define MC = Character(player_name, color="#1520A6")   
 
 
 # NPCs

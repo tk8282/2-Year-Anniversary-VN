@@ -55,8 +55,8 @@ label ability_check(correct_key, display_key):
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
                 R "Wow you really don't game, do you?"
             else:
@@ -66,8 +66,8 @@ label ability_check(correct_key, display_key):
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
                 R "Wrong button goofy"
 
@@ -162,8 +162,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "Good choice! Gale would be happy to hear that you picked his design."
@@ -178,8 +178,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -193,8 +193,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "…"
 
@@ -204,8 +204,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Thank you…"
 
@@ -215,8 +215,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Okay, okay, enough fawning about it. Let's get to the controls."
 
@@ -230,8 +230,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "So Pipsqueak has abilities that are easy to learn, okay?"
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -252,8 +252,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "When you press it, a wave of smaller Pipsqueaks dive down from above, all assaulting the motionless bot standing in the middle of the lane."
 
@@ -274,8 +274,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Following Rosco's instructions, you move as you click around, suddenly speeding up as you click."
 
@@ -299,8 +299,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     "Pipsqueak begins to flap their wings, and a giant whirlwind manifests from it, heading straight for the bot. When it hits the other character, it takes a few points of health off and stuns it."
@@ -323,8 +323,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     "A huge wall of wind rushes forward, reaching beyond where the tornado had stopped. It's also a lot wider, and the hit points of the enemy go down significantly more."
@@ -342,8 +342,8 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Ehh… You'll be fine!"
 
@@ -361,6 +361,16 @@ label pipsqueak_route:
 
     MC "There's two of us here?"
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+
     R "That Dewdrop will give you support since your health's at risk."
 
     MC "Ah, gotcha."
@@ -377,13 +387,14 @@ label pipsqueak_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "See! It's really a learning game!"
 
     # END OF SUB-ROUTE, JUMP TO MAIN
+    hide pipsqueak with dissolve
     jump mascot_playtest_return
 
 label dewdrop_route:
@@ -394,8 +405,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     show dewdrop at singlejump:
         pos (700,200)
@@ -415,8 +426,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -430,8 +441,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "…"
@@ -442,8 +453,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "Thank you…"
@@ -460,8 +471,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "A-anyway, Dewdrop's abilities are very easy to understand."
@@ -482,8 +493,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     "A flurry of leaves, all seemingly spawning from the top of Dewdrop's head, propel towards the bot in the middle."
@@ -511,8 +522,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     
     "Suddenly, Dewdrop lunges sideways towards Pipsqueak, and Pipsqueak is immediately smothered in Dewdrop's gooey casing."
@@ -546,8 +557,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Dewdrop turns to Pipsqueak, and a squirt of water hits Pipsqueak square in the beak. Despite the weird display, Pipsqueak's health rises again."
 
@@ -584,8 +595,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     "Dewdrop turns again and lunges to surround Pipsqueak, and the healing skyrockets."
@@ -616,8 +627,8 @@ label dewdrop_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Ehh… You'll be fine!"
 
@@ -635,6 +646,15 @@ label dewdrop_route:
 
     MC "There's two of us here? It's just like training."
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
     R "Since you're a support, it's better for you to go with the ADC and keep them from instantly dying."
 
     R "Especially Pipsqueak, since that health… leaves things to be desired."
@@ -650,6 +670,7 @@ label dewdrop_route:
     R "See! It's really a learning game!"
 
     # END OF SUB-ROUTE, JUMP TO MAIN
+    hide dewdrop with dissolve
     jump mascot_playtest_return
 
 label lunarist_route:
@@ -672,8 +693,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -687,8 +708,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "…"
 
@@ -698,8 +719,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Thank you…"
 
@@ -715,8 +736,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Okay, Lunarist's abilities are all related to crowd control in some way."
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -736,8 +757,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Lunarist opens their cloak and a music note floats out. It gravitates towards the bot and absorbs into it forcefully, knocking off some health."
 
@@ -758,8 +779,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "A barrage of music notes fly out of Lunarist's cloak, and they encircle the bot as though performing a ritual at its feet. The bot tries to escape, but the music notes bar it from leaving the circle."
 
@@ -780,8 +801,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "A music staff with notes on it flows out this time, wrapping the bot in a layer of music. The staff circles the bot and it starts walking towards you, as if trapped under a spell."
 
@@ -808,8 +829,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Suddenly, a blast of music floods out of Lunarist as they float high into the air. The bot, unfortunately in radius, is stunned by the time Lunarist floats back down and is nearly dead."
 
@@ -833,8 +854,8 @@ label lunarist_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Ehh… You'll be fine!"
 
@@ -852,6 +873,16 @@ label lunarist_route:
 
     MC "Wait, there's just another Lunarist here! Is it a one-on-one duel?"
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+
     R "Yep, unless the jungling Roscal comes and helps either side."
 
     MC "Got it…"
@@ -865,6 +896,7 @@ label lunarist_route:
     R "See! It's really a learning game!"
 
     #End of sub-route
+    hide lunarist with dissolve
     jump mascot_playtest_return
 
 label netherling_route:
@@ -886,8 +918,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -901,8 +933,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "…"
 
@@ -912,8 +944,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Thank you…"
 
@@ -929,8 +961,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Okay, Netherling's skills aren't too hard to wrap your head around."
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -950,8 +982,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Netherling takes a half step back before jabbing forward with its pointy tail, slashing through the ribs of the bot."
 
@@ -972,8 +1004,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Nothing seems to happen other than a green aura hovering over Netherling."
 
@@ -996,8 +1028,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Netherling uses their wing to dash in, ramming into the bot with their horns while inducing a slight knockback effect."
 
@@ -1020,8 +1052,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Suddenly, Netherling pounces onto the enemy, absorbing them into their jelly-like being. Even encased in the Netherling, the enemy's health ticks down by the second."
 
@@ -1047,8 +1079,8 @@ label netherling_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Ehh… You'll be fine!"
 
@@ -1066,6 +1098,16 @@ label netherling_route:
 
     MC "Wait, there's just another Netherling here! Is it a one-on-one duel?"
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=.99
+    )
+    
     R "Yep, unless the jungling Roscal comes and helps either side."
 
     MC "Got it…"
@@ -1079,6 +1121,7 @@ label netherling_route:
     R "See! It's really a learning game!"
 
     #end of sub-route
+    hide netherling with dissolve
     jump mascot_playtest_return
 
 label roscal_route:
@@ -1094,8 +1137,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "What!? What do you mean!? I'm a fair man! I'd never do that!"
 
@@ -1105,8 +1148,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     MC "Mhm…"
 
@@ -1120,8 +1163,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -1135,8 +1178,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "…"
 
@@ -1146,8 +1189,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Thank you…"
 
@@ -1163,8 +1206,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Roscal’s abilities are actually a little difficult, but it shouldn’t be too hard."
 
@@ -1187,8 +1230,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "Once you click Q, your character leaps straight towards the foxes, biting at one of them."
 
@@ -1200,8 +1243,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Chill! You won't die from that. Click W."
 
@@ -1216,8 +1259,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "The Roscal sticks its sewing needle into the ground, creating a ring of pink around it."
 
@@ -1229,8 +1272,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Yup! It's like a shield. Now try E."
 
@@ -1245,8 +1288,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     "The safety pin in Roscal's ear flicks out, flying around and hitting the foxes surrounding you before flying back into place."
 
@@ -1269,8 +1312,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     MC "Ohemgee. I'm so big now!"
 
@@ -1324,8 +1367,8 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Ehh… You'll be fine!"
 
@@ -1343,6 +1386,16 @@ label roscal_route:
 
     MC "Wait, why are there two mascots in the top lane?"
 
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=0.95
+    )
+
     R "Because we're going against bots. They won't have a real roamer, so you're technically safe!"
 
     MC "So I just keep killing these creatures?"
@@ -1351,11 +1404,31 @@ label roscal_route:
 
     MC "WHAT THE HECK DO YOU MEAN SAFE? THIS ISN'T SAFE AT ALL!"
 
+    show screen portrait(
+    "Rosco shocked jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=0.95
+    )
+
     R "Chill, chill! Just use your skills!"
 
     "You try to do as he said, torn between running away and trying to do damage."
 
     MC "Oh, it started walking away…"
+
+    show screen portrait(
+    "Rosco neutral jacket",
+    crop_x=450,
+    crop_y=0,
+    crop_w=360,
+    crop_h=360,
+    xalign=0.95,
+    yalign=0.95
+    )
 
     R "Then that means you took too long. You can try attacking it again later. Look, just go to the middle and kill the bot there. The character has low HP."
 
@@ -1386,9 +1459,9 @@ label roscal_route:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
-    )
+    xalign=0.95,
+    yalign=0.95
+    ) 
 
     "You listen to him without thinking, nearly screeching as Roscal dashes in to bite the opposing Lunarist."
 
@@ -1397,6 +1470,6 @@ label roscal_route:
     "Your panic subsides as you realize that the fight was already won. You walk back into the forest, a bit stunned."
 
     R "See! It's not too hard to get the hang of, right?"
-
+    hide roscal with dissolve
     #End of sub-route
     jump mascot_playtest_return

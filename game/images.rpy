@@ -672,7 +672,7 @@ image haori_badge_cass_cow = Transform(im.Scale("images/Rosco/Assets/haori_badge
 image haori_badge_cass_valo = Transform(im.Scale("images/Rosco/Assets/haori_badge_cass_valo.png", 2479, 2270), size=(400,350))
 image haori_badge_gale_dog = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_dog.png", 2552, 2295), size=(400,400))
 image haori_badge_gale_helm = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_helm.png", 2544, 2355), size=(450,400))
-image haori_badge_gale_kerfurr = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_kerfurr.png", 1950, 1904), size=(350,300))
+image haori_badge_gale_ferkur = Transform(im.Scale("images/Rosco/Assets/haori_badge_gale_ferkur.png", 1950, 1904), size=(350,300))
 image haori_badge_luci_coffee = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_coffee.png", 2079, 1963), size=(350,350))
 image haori_badge_luci_guitar = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_guitar.png", 2280, 2378), size=(350,350))
 image haori_badge_luci_crownheart = Transform(im.Scale("images/Rosco/Assets/haori_badge_luci_crownheart.png", 2231, 1987), size=(350,350))

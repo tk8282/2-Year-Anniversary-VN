@@ -1,3 +1,7 @@
+init python:
+    def show_portrait(*args, **kwargs):
+        renpy.show_screen("portrait", *args, _layer="overlay", **kwargs)
+        
 # Plays ONLY when the portrait first appears
 transform portrait_enter:
     alpha 0.0
@@ -28,12 +32,14 @@ screen portrait(
     xalign=0.9,
     yalign=0.85
 ):
+    zorder 999
 
     frame:
         xalign xalign
-        yalign yalign
-        padding (6, 6)
-        background Solid("#00000080")
+        ypos 1.0
+        yanchor 1.0
+        padding (0,0)
+        background None
 
         # The frame animates ONLY on first show
         at portrait_enter

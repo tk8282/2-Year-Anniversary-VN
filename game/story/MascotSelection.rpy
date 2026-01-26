@@ -61,8 +61,8 @@ label mascot_pipsqueak:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     MC "Is that a… pirate bird…?"
@@ -81,8 +81,8 @@ label mascot_dewdrop:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     MC "Is this one made of water?"
@@ -92,8 +92,8 @@ label mascot_dewdrop:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "Yep, that's how Cass designed it!"
     show screen portrait(
@@ -102,8 +102,8 @@ label mascot_dewdrop:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "This is a Dewdrop! They're more of a support character than the others, so their kit is focused around healing."
     R "Dewdrops are kind of squishy, though, but they have some self-healing effects that can be used to prevent getting instantly cooked."
@@ -121,8 +121,8 @@ label mascot_lunarist:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
 
     R "Honestly, I don't really know either, but Luci said that the concept is meant to be a soul?"
@@ -133,8 +133,8 @@ label mascot_lunarist:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     
     R "This is a Lunarist! They're pretty strong, but they have a longer cooldown for skills and run out of MP kind of quickly early game."
@@ -151,8 +151,8 @@ label mascot_netherling:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "How'd you get that on your first try? That's exactly what Zander wanted it to be."
     show screen portrait(
@@ -161,8 +161,8 @@ label mascot_netherling:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "This is a Netherling! Their role is to be a tank."
     R "They absorb attacks and turn it into health."
@@ -180,8 +180,8 @@ label mascot_roscal:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "That's a Roscal! I came up with this one."
     MC "It has such a cute smile and a color combination I never would have imagined."
@@ -191,8 +191,8 @@ label mascot_roscal:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "We actually took inspiration from a jacket I wear pretty often."
     MC "Inspiration really can come from anywhere, huh?"
@@ -217,8 +217,8 @@ label mascot_end:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "It's not like you'll be stuck with one for life!"
     show screen portrait(
@@ -227,8 +227,8 @@ label mascot_end:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.97,
-    yalign=0.50
+    xalign=0.95,
+    yalign=0.95
     )
     R "After release, you can play as many characters as you want. This is just for testing!"
 
