@@ -1,5 +1,15 @@
 # Here's the code for the phone!
 
+style phone_sender_name:
+    size 30
+    color "#FFFFFF"
+    outlines [(2, "#444444", 0, 0)]
+
+style phone_message_text:
+    size 28
+    color "#000000"
+    outlines[(2, "#444444", 0, 0)]
+
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "MC" ##The name of the main character, used to place them on the screen
 
@@ -20,6 +30,8 @@ init -1 python:
 transform phone_transform(pXalign=0.5, pYalign=0.5):
     xcenter pXalign
     yalign pYalign
+    zoom 0.80
+    yoffset -50
 
 transform phone_appear(pXalign=0.5, pYalign=0.5): #Used only when the dialogue have one element
     xcenter pXalign
@@ -115,7 +127,7 @@ screen nvl_phonetext(dialogue):
                 vbox:
                     yalign 1.0
                     if d.who != MC_Name and previous_d_who != d.who:
-                        text d.who
+                        text d.who style "phone_sender_name"
 
                     frame:
                         padding (20,20)
@@ -134,15 +146,10 @@ screen nvl_phonetext(dialogue):
                             pos (0,0)
                             xsize 350
                             slow_cps False
-                            
+                            text_align 0.0
 
                             if d.who == MC_Name :
-                                color "#FFF"
-                                text_align 1.0
-                                xpos -580
-                            else:
-                                color "#000"
-
+                                color "#FFFFFF"
                                 
                             id d.what_id
         $ previous_d_who = d.who
@@ -150,9 +157,9 @@ screen nvl_phonetext(dialogue):
 style phoneFrame is default
 
 style phoneFrame_frame:
-    background Transform("extra/phone_background.png", xcenter=0.5,yalign=0.5)
-    foreground Transform("extra/phone_foreground.png", xcenter=0.5,yalign=0.5)
-    
+    background Transform("extra/phone_background.png", xcenter=0.5, yalign=0.5)
+    foreground Transform("phone_frame_rosco", xcenter=0.5, yalign=0.5, xoffset=20, yoffset=140)
+
     ysize 815
     xsize 495
 

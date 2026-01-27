@@ -85,9 +85,9 @@ define gui.notify_text_size = 24
 ## The size of the game's title.
 define gui.title_text_size = 75
 
-define gui.dialogue_text_outlines = [(3,"#b290ab",0,0)]
+define gui.dialogue_text_outlines = [(1,"#444444",0,0)]
 define gui.dialogue_outline_scaling = "linear"
-define gui.characters_text_outlines = [(3,"#b290ab",0,0)]
+define gui.characters_text_outlines = [(1,"#444444",0,0)]
 define gui.character_outline_scaling = "linear"
 
 

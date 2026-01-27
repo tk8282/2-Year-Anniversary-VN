@@ -1,4 +1,4 @@
-define MK_TIME = 5.0
+define MK_TIME = 4.0
 define MK_BAR_WIDTH = 600
 define MK_BAR_HEIGHT = 22
 define MK_BAR_Y = 0.58

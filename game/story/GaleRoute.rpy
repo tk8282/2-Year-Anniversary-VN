@@ -4,6 +4,11 @@ label gale_route:
     play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     show Gale at waist_up_center2 with dissolve
     MC "I'll help Gale."
+
+    show Gale laugh 
+    "Hell yeah! We're going to make the best decorations ever!"
+
+
     
 label gale_route_day1:
     stop music fadeout 1.0

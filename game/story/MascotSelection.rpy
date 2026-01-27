@@ -57,12 +57,12 @@ label mascot_loop:
 label mascot_pipsqueak:
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     MC "Is that a… pirate bird…?"
@@ -77,33 +77,33 @@ label mascot_pipsqueak:
 label mascot_dewdrop:
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     MC "Is this one made of water?"
     show screen portrait(
     "Rosco laugh jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Yep, that's how Cass designed it!"
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "This is a Dewdrop! They're more of a support character than the others, so their kit is focused around healing."
     R "Dewdrops are kind of squishy, though, but they have some self-healing effects that can be used to prevent getting instantly cooked."
@@ -117,24 +117,24 @@ label mascot_lunarist:
 
     show screen portrait(
     "Rosco confused jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Honestly, I don't really know either, but Luci said that the concept is meant to be a soul?"
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     
     R "This is a Lunarist! They're pretty strong, but they have a longer cooldown for skills and run out of MP kind of quickly early game."
@@ -147,22 +147,22 @@ label mascot_netherling:
     MC "Is this a one-winged demon… jelly… thing?"
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "How'd you get that on your first try? That's exactly what Zander wanted it to be."
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "This is a Netherling! Their role is to be a tank."
     R "They absorb attacks and turn it into health."
@@ -176,23 +176,23 @@ label mascot_roscal:
     MC "Is that… a rat?"
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign= 1.05,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "That's a Roscal! I came up with this one."
     MC "It has such a cute smile and a color combination I never would have imagined."
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign= 1.05,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "We actually took inspiration from a jacket I wear pretty often."
     MC "Inspiration really can come from anywhere, huh?"
@@ -213,28 +213,28 @@ label mascot_end:
     
     show screen portrait(
     "Rosco annoyed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "It's not like you'll be stuck with one for life!"
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "After release, you can play as many characters as you want. This is just for testing!"
 
     MC "Uuuugh. Okay, fine…"
 
-
+    hide screen portrait with dissolve
     jump mascot_info_return
 
 
@@ -249,7 +249,8 @@ screen mascot_select_screen:
         
         vbox:
             spacing 20
-            text "Choose a character to learn about:" align (0.5, 0.5)
+            text "Choose a character to learn about:" align (0.35, 0.5) size 40:
+                outlines [(2, "#000000", 0, 0)]
 
             # Top row
             hbox:

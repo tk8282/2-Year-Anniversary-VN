@@ -684,6 +684,12 @@ layeredimage phone texting:
 #----------------------------------------
 
 # --------------Rosco--------------
+image phone_frame_rosco = ConditionSwitch(
+    "phone_acc == 1", "images/extra/phone_bibble.png",
+    "phone_acc == 2", "images/extra/phone_dingding.png",
+    "phone_acc == 3", "images/extra/phone_gobblycook.png",
+    "phone_acc == 4", "images/extra/phone_paddyraptor.png"
+)
 
 # Choice mascots idle
 #----------------------------------

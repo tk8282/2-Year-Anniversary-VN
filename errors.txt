@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 117: 'wrap' is not a keyword argument or valid child of the text statement.
-    wrap True
+File "game/PhoneTexting.rpy", line 148: keyword argument 'xpos' is incompatible with 'pos'.
+    xpos 0 
         ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Mon Jan 26 17:28:17 2026
+Tue Jan 27 00:49:41 2026

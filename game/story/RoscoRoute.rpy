@@ -460,7 +460,7 @@ label rosco_route_day1:
             show Rosco blushing jacket
             "!"
             
-            duo "We are NOT bickering like a married couple!"
+            both "We are NOT bickering like a married couple!"
 
             C "Okay, whatever you say!"
 
@@ -1227,12 +1227,12 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
 
 
@@ -1258,12 +1258,12 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
     "Time flies as you progress through the game. Your determination to win has never been so strong, and you're this close to winning."
 
@@ -1293,12 +1293,12 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco annoyed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Come on, focus! Use your skills! Ah—whatever."
@@ -1307,12 +1307,12 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "See? And the enemy Dewdrop's ult just ended. This is the perfect time to strike."
@@ -1325,23 +1325,23 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco laugh jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Annnd we're done. Triumph!"
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
     MC "What?"
 
@@ -1349,12 +1349,12 @@ label rosco_route_day2:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=.99
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "So what'd you think? Fun, huh?"

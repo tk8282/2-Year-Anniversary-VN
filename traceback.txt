@@ -1,82 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {outline=3,#fa1c9a} in '{outline=3,#fa1c9a}{b}Rosco{/b}{/outline} & {outline=3,#1520A6}{b}troy{/b}{/outline}'.:
-  File "game/story/RoscoRoute.rpy", line 463, in script
-    duo "We are NOT bickering like a married couple!"
-Exception: Unknown text tag 'outline=3,#fa1c9a'
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "game/PhoneTexting.rpy", line 161, in <module>
+    foreground Transform([phone_frame_rosco], xcenter=0.5, yalign=0.5, xoffset=20, yoffset=140)
+NameError: name 'phone_frame_rosco' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/RoscoRoute.rpy", line 463, in script
-    duo "We are NOT bickering like a married couple!"
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\exports.py", line 1494, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 1394, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 1045, in do_display
-    display_say(who,
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 741, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 2819, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 1353, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\screen.py", line 754, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 2276, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 640, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 1394, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag 'outline=3,#fa1c9a'
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
+    run(restart)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\main.py", line 75, in run
+    renpy.translation.init_translation()
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\translation\__init__.py", line 664, in init_translation
+    renpy.store._init_language() # type: ignore
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\translation\__init__.py", line 758, in change_language
+    new_change_language(tl, language)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\translation\__init__.py", line 710, in new_change_language
+    i.apply()
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 2787, in apply
+    value = renpy.python.py_eval(expr)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/PhoneTexting.rpy", line 161, in <module>
+    foreground Transform([phone_frame_rosco], xcenter=0.5, yalign=0.5, xoffset=20, yoffset=140)
+NameError: name 'phone_frame_rosco' is not defined
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.2.3.24061702
 Avallum 2 Year Anniversary VN 1.0
-Mon Jan 26 18:26:38 2026
+Tue Jan 27 02:15:12 2026

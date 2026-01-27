@@ -51,23 +51,23 @@ label ability_check(correct_key, display_key):
             if ability_failures >= 3:
                 show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
                 R "Wow you really don't game, do you?"
             else:
                 show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
                 R "Wrong button, goofy!"
 
@@ -105,7 +105,8 @@ screen mascot_PlayTest_Screen:
 
         vbox:
             spacing 30
-            text "Pick your final character:" xalign 0.5 size 32
+            text "Pick your character:" xalign 0.5 size 45:
+                outlines [(2, "#000000", 0, 0)]
 
             # Top row
             hbox:
@@ -158,12 +159,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Good choice! Gale would be happy to hear that you picked his design."
@@ -174,12 +175,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -189,34 +190,34 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "…"
 
     show screen portrait(
     "Rosco embarrassed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Thank you…"
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Okay, okay, enough fawning about it. Let's get to the controls."
 
@@ -226,12 +227,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "So Pipsqueak has abilities that are easy to learn, okay?"
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -248,12 +249,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "When you press it, a wave of smaller Pipsqueaks dive down from above, all assaulting the motionless bot standing in the middle of the lane."
 
@@ -270,12 +271,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Following Rosco's instructions, you move as you click around, suddenly speeding up as you click."
 
@@ -295,12 +296,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     "Pipsqueak begins to flap their wings, and a giant whirlwind manifests from it, heading straight for the bot. When it hits the other character, it takes a few points of health off and stuns it."
@@ -319,12 +320,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     "A huge wall of wind rushes forward, reaching beyond where the tornado had stopped. It's also a lot wider, and the hit points of the enemy go down significantly more."
@@ -338,12 +339,12 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Ehh… You'll be fine!"
 
@@ -363,11 +364,11 @@ label pipsqueak_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
+    xalign=0.85,
     yalign=.99
     )
 
@@ -383,12 +384,12 @@ label pipsqueak_route:
     
     show screen portrait(
     "Rosco laugh jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "See! It's really a learning game!"
@@ -401,12 +402,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     show dewdrop at singlejump:
         pos (700,200)
@@ -422,12 +423,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -437,24 +438,24 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "…"
 
     show screen portrait(
     "Rosco embarrassed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Thank you…"
@@ -467,12 +468,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "A-anyway, Dewdrop's abilities are very easy to understand."
@@ -489,12 +490,12 @@ label dewdrop_route:
     
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     "A flurry of leaves, all seemingly spawning from the top of Dewdrop's head, propel towards the bot in the middle."
@@ -518,12 +519,12 @@ label dewdrop_route:
     
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     
     "Suddenly, Dewdrop lunges sideways towards Pipsqueak, and Pipsqueak is immediately smothered in Dewdrop's gooey casing."
@@ -553,12 +554,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Dewdrop turns to Pipsqueak, and a squirt of water hits Pipsqueak square in the beak. Despite the weird display, Pipsqueak's health rises again."
 
@@ -591,12 +592,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     "Dewdrop turns again and lunges to surround Pipsqueak, and the healing skyrockets."
@@ -623,12 +624,12 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Ehh… You'll be fine!"
 
@@ -648,11 +649,11 @@ label dewdrop_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
+    xalign=0.85,
     yalign=.99
     )
     R "Since you're a support, it's better for you to go with the ADC and keep them from instantly dying."
@@ -689,12 +690,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -704,23 +705,23 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "…"
 
     show screen portrait(
     "Rosco embarrassed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Thank you…"
 
@@ -732,12 +733,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Okay, Lunarist's abilities are all related to crowd control in some way."
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -753,12 +754,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Lunarist opens their cloak and a music note floats out. It gravitates towards the bot and absorbs into it forcefully, knocking off some health."
 
@@ -775,12 +776,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "A barrage of music notes fly out of Lunarist's cloak, and they encircle the bot as though performing a ritual at its feet. The bot tries to escape, but the music notes bar it from leaving the circle."
 
@@ -797,12 +798,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "A music staff with notes on it flows out this time, wrapping the bot in a layer of music. The staff circles the bot and it starts walking towards you, as if trapped under a spell."
 
@@ -825,12 +826,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Suddenly, a blast of music floods out of Lunarist as they float high into the air. The bot, unfortunately in radius, is stunned by the time Lunarist floats back down and is nearly dead."
 
@@ -850,12 +851,12 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Ehh… You'll be fine!"
 
@@ -875,11 +876,11 @@ label lunarist_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
+    xalign=0.85,
     yalign=.99
     )
 
@@ -914,12 +915,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -929,23 +930,23 @@ label netherling_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "…"
 
     show screen portrait(
     "Rosco embarrassed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Thank you…"
 
@@ -957,12 +958,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Okay, Netherling's skills aren't too hard to wrap your head around."
     R "Let's walk up to that bot in the middle so I can show you them in action."
@@ -978,12 +979,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Netherling takes a half step back before jabbing forward with its pointy tail, slashing through the ribs of the bot."
 
@@ -1000,12 +1001,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Nothing seems to happen other than a green aura hovering over Netherling."
 
@@ -1024,12 +1025,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Netherling uses their wing to dash in, ramming into the bot with their horns while inducing a slight knockback effect."
 
@@ -1048,12 +1049,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Suddenly, Netherling pounces onto the enemy, absorbing them into their jelly-like being. Even encased in the Netherling, the enemy's health ticks down by the second."
 
@@ -1075,12 +1076,12 @@ label netherling_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Ehh… You'll be fine!"
 
@@ -1100,11 +1101,11 @@ label netherling_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
+    xalign=0.85,
     yalign=.99
     )
     
@@ -1133,23 +1134,23 @@ label roscal_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "What!? What do you mean!? I'm a fair man! I'd never do that!"
 
     show screen portrait(
     "Rosco laugh jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     MC "Mhm…"
 
@@ -1159,12 +1160,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Hell yeah! We all planned the design together, but I modelled the actual thing on my own."
 
@@ -1174,23 +1175,23 @@ label roscal_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "…"
 
     show screen portrait(
     "Rosco embarrassed jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Thank you…"
 
@@ -1202,12 +1203,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Roscal’s abilities are actually a little difficult, but it shouldn’t be too hard."
 
@@ -1226,12 +1227,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "Once you click Q, your character leaps straight towards the foxes, biting at one of them."
 
@@ -1239,12 +1240,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco laugh jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Chill! You won't die from that. Click W."
 
@@ -1255,12 +1256,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "The Roscal sticks its sewing needle into the ground, creating a ring of pink around it."
 
@@ -1268,12 +1269,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Yup! It's like a shield. Now try E."
 
@@ -1284,12 +1285,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     "The safety pin in Roscal's ear flicks out, flying around and hitting the foxes surrounding you before flying back into place."
 
@@ -1308,12 +1309,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     MC "Ohemgee. I'm so big now!"
 
@@ -1363,12 +1364,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco smug jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
     R "Ehh… You'll be fine!"
 
@@ -1388,12 +1389,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Because we're going against bots. They won't have a real roamer, so you're technically safe!"
@@ -1406,12 +1407,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco shocked jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Chill, chill! Just use your skills!"
@@ -1422,12 +1423,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     )
 
     R "Then that means you took too long. You can try attacking it again later. Look, just go to the middle and kill the bot there. The character has low HP."
@@ -1455,12 +1456,12 @@ label roscal_route:
 
     show screen portrait(
     "Rosco neutral jacket",
-    crop_x=450,
+    crop_x=0,
     crop_y=0,
-    crop_w=360,
+    crop_w=890,
     crop_h=360,
-    xalign=0.95,
-    yalign=0.95
+    xalign=0.85,
+    yalign= 0.525
     ) 
 
     "You listen to him without thinking, nearly screeching as Roscal dashes in to bite the opposing Lunarist."

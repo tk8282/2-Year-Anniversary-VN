@@ -1226,7 +1226,7 @@ label luci_route_day2:
 
     L "Ah, that’s{w=0.3}.{w=0.3}.{w=0.3}.{w=0.3} a lot..."
 
-    "{b}You understand his reluctance–cleaning up the mayhem won’t be easy.{/b}"
+    "You understand his reluctance–cleaning up the mayhem won’t be easy."
     "Snapping out of your thoughts, you realize that Luci has already started on the disordered kitchen island, putting items back in their respective places."
     "You want to help, but you’re unsure of where to start."
 
@@ -1346,7 +1346,7 @@ label luci_route_day2:
 
     # Change Luci Expression to L_neutral
     show Lucien neutral smile pose2 at waist_up_center4 with dissolve
-    L "It’s almost time for dinner,we should probably wrap up soon. I agreed to make you something, right?"
+    L "It’s almost time for dinner, we should probably wrap up soon. I agreed to make you something, right?"
 
     MC "Uh-huh. And whoever loses the next round is doing the dishes!"
 
