@@ -81,9 +81,9 @@ screen choice_menu:
             
     add "gui/textbox_n.png" xpos 13 yalign 1.0 at ib_fade
     if len(collected_routes) == 0:
-        add Text("Who do you want to help?",xalign=0.5, yalign=0.81, size=50, outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")
+        add Text("Who do you want to help?",xalign=0.5, yalign=0.81, size=50 , color='ffff',outlines = [(3,"#8d7187",0,0)], outline_scaling = "linear")
     else:
-        add Text("Who do you want to help next?",xalign=0.5, yalign=0.81, size=50, outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")
+        add Text("Who do you want to help next?",xalign=0.5, yalign=0.81, size=50,color='ffff',outlines = [(3,"#8d7187",0,0)], outline_scaling = "linear")
 
 
 

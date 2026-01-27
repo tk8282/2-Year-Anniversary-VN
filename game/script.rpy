@@ -5,6 +5,8 @@
 
 
 label splashscreen:
+        
+    $ _preferences.volumes['music'] *= .75
     scene black
     with Pause(0.3)
     play music "audio/music/G1 - Cheerful (1).wav"

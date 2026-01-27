@@ -257,7 +257,7 @@ screen quick_menu():
             xalign 0.15 
             yalign 0.99 
             imagebutton auto "back %s" focus_mask True action Rollback()
-            add Text("Back",ypos=12,xpos=8,  outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")
+            add Text("Back",ypos=12,xpos=8,  outlines = [(3,"#b290ab",0,0)], color='#ffffffff', outline_scaling = "linear")
         
         vbox:
             
@@ -642,7 +642,7 @@ screen save():
     vbox:
         xalign 0.5
         yalign 0.13
-        add Text("SAVE", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
+        add Text("SAVE", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
 
 
 screen load():
@@ -653,7 +653,7 @@ screen load():
     vbox:
         xalign 0.5
         yalign 0.13
-        add Text("LOAD", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
+        add Text("LOAD", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
 
 
 screen file_slots(title):
@@ -809,7 +809,8 @@ style slot_time_text:
     ypos -145
     size 40
     textalign 0.5
-    outlines [(2,"#854797",0,0)]
+    outlines [(1,"#ffffff",0,0)]
+    color '#000000ff'
 style slot_name_text is slot_button_text
 
 style page_label:
@@ -925,7 +926,7 @@ screen preferences():
     vbox:
         xalign 0.5
         yalign 0.13
-        add Text("PREFERENCES", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
+        add Text("PREFERENCES", size=60, outlines = [(3,"#d5a3c8",0,0)], color = '#ffff', outline_scaling = "linear")
 
         
 
@@ -1048,7 +1049,7 @@ screen history():
     vbox:
         xalign 0.5
         yalign 0.13
-        add Text("HISTORY", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
+        add Text("HISTORY", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
 
 
 ## This determines what tags are allowed to be displayed on the history screen.
@@ -1133,7 +1134,7 @@ screen help():
     vbox:
         xalign 0.5
         yalign 0.13
-        add Text("HELP", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
+        add Text("HELP", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
 
 screen keyboard_help():
     hbox:

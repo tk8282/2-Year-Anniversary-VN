@@ -50,7 +50,7 @@ define gui.muted_color = '#003d51'
 define gui.hover_muted_color = '#005b7a'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
+define gui.text_color = '#312f2f'
 define gui.interface_text_color = '#ffffff'
 
 
@@ -85,8 +85,8 @@ define gui.notify_text_size = 24
 ## The size of the game's title.
 define gui.title_text_size = 75
 
-define gui.dialogue_text_outlines = [(1,"#444444",0,0)]
-define gui.dialogue_outline_scaling = "linear"
+#define gui.dialogue_text_outlines = [(1,"#444444",0,0)]
+#define gui.dialogue_outline_scaling = "linear"
 define gui.characters_text_outlines = [(1,"#444444",0,0)]
 define gui.character_outline_scaling = "linear"
 

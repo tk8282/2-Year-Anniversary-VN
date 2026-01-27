@@ -21,7 +21,7 @@ label cass_route_day1:
     # [Start of Cass Day 1]
     #Fade out into next Scene
     scene black with fade
-    show text "{size=50}Cassian Route: Day 1{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Cassian Route: Day 1{/size}{/color} " at truecenter
     with dissolve
     pause 1
     hide text
@@ -36,7 +36,7 @@ label cass_route_day1:
     # Change scene with Garden without flower
     scene bg cass garden without flowers with fade
     hide black
-    play music "audio/music/G2 - Chill.wav" loop
+    play music "audio/music/G2 - Chill.wav" loop fadein 1.0
     "In front of you lies a garden, green covering every inch of the place. The shrubs are trimmed to perfection, highlighting the stone fountain sitting beautifully in the center."
     "The water rushes with vigour. It almost seems like it sensed a new visitor and got excited."
     "The garden is far enough away from everything else to appear peacefully silent, free of the chatter of people or rushing footsteps."
@@ -64,7 +64,7 @@ label cass_route_day1:
 
     
 
-    play sound "audio/sfx/running.ogg" volume 0.5
+    play sound "audio/sfx/running.ogg"
     show Cassian bruh fullbody at fullbody_center, zoomin2
     show black at truecenter onlayer zero
     show bg cass garden without flowers at screenshake
@@ -220,13 +220,13 @@ label cass_route_day1:
     show Cassian soft at waist_up_center
     C "Right...{w=0.5} Anyway, since we're setting up a {i}crepe{/i} stand—"
     #change Expression to C_Neutral
-    show Cassian neutral pose2 at waist_up_center
+    show Cassian neutral pose2 at waist_up_center, pop
     C "Here's everything that needs to be bought. We'll be heading to the appliance store later today to make sure we have everything we don't already have. On that note, mind double-checking the list?"
 
 
     MC "Sure! Let me see that..."
 
-    show Cassian neutral at waist_up_center
+    show Cassian neutral pose2 at waist_up_center
     "He turns the paper over to you and you start reading off the top of the list."
 
     MC "Hm... round griddle greaser... wooden spreader..."
@@ -234,16 +234,16 @@ label cass_route_day1:
     # Wind blows
     play sound "audio/sfx/wind-gust.ogg" volume 0.6
     pause 0.3
-    show Cassian neutral at waist_up_center, trembling
-    pause 0.5
+    show Cassian neutral pose2 at waist_up_center, trembling
+    pause 1.0
     show Cassian panic pose2 at waist_up_center, pop
     "As you reach out to grab the paper—your fingertips barely grazing the side—the breeze gets stronger and blows the paper out of his hands."
-    
+    play music "audio/music/G3 - Chaos.wav" fadein 1.0 loop
     #change Expression to C_Panic
     show Cassian panic pose2 at waist_up_center, shake2
     C "NO!"
     
-
+    
     "You both watch with horror as the piece of paper flies away. With the most miserable stroke of luck ever, it lands straight into the fountain and they lose sight of it the moment it sinks deeper into the water."
 
     MC "That did not just happen."
@@ -255,7 +255,7 @@ label cass_route_day1:
     pause 0.5
     show Cassian panic at waist_up_center
     pause 0.3
-    play sound "audio/sfx/watersplash.ogg" volume 0.05
+    play sound "audio/sfx/watersplash.ogg" volume 0.2
 
     
     "He dips his arms into the water and tries to find where the paper could have traveled to. His efforts spark you to move as well, doing the same on the other side of the fountain."
@@ -316,11 +316,12 @@ label cass_route_day1:
     # Change Cass Expression to C_Neutral
     show Cassian neutral at waist_up_center
     C "Sure. Let's do our best, then."
-
+    stop music fadeout 1.0
     # fade out to Background Appliance Store
     scene bg cass appliance store with fade
     # Start music C1 (2)
-    play music "audio/music/C1 - Chill (2).wav"
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0
+    pause 0.5
 
     MC "...{w=0.5} I should go shopping more."
 
@@ -599,9 +600,9 @@ label cass_route_day1:
     show Cassian at waist_up_center with dissolve
     # Change Cass expression to C_Upset
     show Cassian upset at waist_up_center
-    C "...{w=0.5} We bought an electric crepe maker."
+    C ".{w=0.3}.{w=0.3}.{w=0.3} We bought an electric crepe maker."
 
-    MC "...{w=0.5} Oh?"
+    MC ".{w=0.3}.{w=0.3}.{w=0.3} Oh?"
 
     "You make a noise of confusion, not quite getting the gist of what he's saying."
     "So? It's a crepe machine. You don't quite understand what the problem is here."
@@ -794,7 +795,7 @@ label cass_route_day1:
     stop music fadeout 1.0
     "The door slowly closes, but before it could fully shut, you hear a small whisper from him."
 
-    C "...{w=0.5} Do I have to be more straightforward?"
+    C ".{w=0.3}.{w=0.3}.{w=0.3} Do I have to be more straightforward?"
 
     "The clubroom door shuts. You can't go back in to ask."
     "What was that about...?"
@@ -811,7 +812,7 @@ label cass_route_day2:
     # [Start of Cass Day 2]
     scene black with fade
     show screentint
-    show text "{size=50}Day 2{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Day 2{/size}{/color}" at truecenter
     with dissolve
     pause 1
     hide text
@@ -1163,9 +1164,10 @@ label cass_route_day2:
         show black at truecenter onlayer zero
         play sound "audio/sfx/body-fall.ogg" volume 0.1
         with vpunch
-
+        pause 0.5
         # Change Cassian Expression to C_Panic
         show Cassian panic at waist_up_center, pop
+        
         C "Woah, I got you."
         play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
         "You let the warm embrace of death take you...{w=0.3} Waitwaitwait, warm?"
@@ -1300,8 +1302,10 @@ label cass_route_day2:
     "Cass tilts his head to the side, causing loose hair to fall down his shoulder and his earring to slightly shimmer."
     play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
     # Show CG 1
+    $ quick_menu = False
     scene CG Cass 1 with fade
-    pause 1.0
+    pause 2.0
+    $ quick_menu = True
     "There is only so much light in the storage room, but what is there highlights Cass' face, reflecting off eyes that only stare at you and his ivory fly-aways."
     "Shadows settle over his face, accentuating his slender nose and long lashes as their silhouettes lay on his skin."
     
@@ -1364,7 +1368,7 @@ label cass_route_day2:
     # Change Cassian Expression to C_Panic
     show Cassian panic at waist_up_center, pop
     C "Oh, uh, nothing. Don't worry about it."
-
+    play music "audio/music/G4 - Sad.wav" fadein 1.0 loop
     "You catch the weird twinge to Cass' words. The vulnerable and tender expression he wore doesn't leave your mind."
     "Whatever Cass was about to say seemed important to him, but if you learned anything from being around all the boys, it's that all men do is LIE."
     "In your current situation, Cass' strange reaction should be the last of your worries—but like, where's the fun in that? To poke or not to poke, that is the question. Oughh, the curiosity is eating away at you."
@@ -1493,6 +1497,7 @@ label cass_route_day2:
         C "Oh! You found one, what is it?"
 
         "You wave the phone in Cass' direction as the call rings out."
+    stop music fadeout 1.0
     play sound "audio/sfx/cell-phone-dial.ogg"
     # [End of Choice]
     MC "I'm calling Rosco."
@@ -1507,6 +1512,7 @@ label cass_route_day2:
     "Just as you start getting impatient, Rosco picks up the call, sounding slightly annoyed and almost like he just crawled out of bed."
     stop sound
     # Add music comedic?
+    play music "audio/music/G6_C2 - Cheerful_Comedic.wav"
     R "{i}Yo? What's up.{/i}"
 
     "You put the phone on speaker as Cass physically whips his head over to the new voice."
@@ -1553,6 +1559,8 @@ label cass_route_day2:
     MC "If you can hear it, then hurry {i}the fuck{/i} up and help us."
 
     R "{i}Sure. Let me go get food first.{/i}"
+    stop music fadeout 1.0
+    pause 1.0
     play sound "audio/sfx/mobile_phone_hanging_up.ogg" volume 0.1
     "You could say nothing more as he hangs up on you, leaving you stunned as if you just got stood up on your first date."
     "Which...{w=0.3} kind of doesn't feel far off with the guy you're currently locked in a room with."

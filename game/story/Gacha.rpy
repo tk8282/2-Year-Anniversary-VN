@@ -96,7 +96,7 @@ label gacha_open:
                 jump gacha_selection
 
 label gacha_selection:
-    scene bg clubroom at fullyblurred with fade
+    scene bg clubroom at fullyblurred with dissolve
     call screen phone_acc_menu
     
     
@@ -140,4 +140,4 @@ screen phone_acc_menu:
                 at ib_fade
                 
     add "gui/textbox_n.png" xpos 13 yalign 1.0 at ib_fade
-    add Text("Choose your prize!",xalign=0.5, yalign=0.81, size=50, outlines = [(3,"#b290ab",0,0)], outline_scaling = "linear")
+    add Text("Choose your prize!",xalign=0.5, yalign=0.81, size=50, color='ffff',outlines = [(3,"#8d7187",0,0)], outline_scaling = "linear")
