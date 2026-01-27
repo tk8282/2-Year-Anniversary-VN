@@ -171,7 +171,7 @@ label gale_route_day1:
             show Gale shocked at waist_up_center2, restless
             G " He barely manages to catch them all, dumping them on the table while you peacefully walk back over with a larger bottle of black paint and a dish to put the paints on while you’re painting."
 
-            show Gale angry at waist_up_center, shake
+            show Gale angry at waist_up_center2
             G "Warn a guy next time!"
 
             MC "Where’s the fun in that?"
@@ -301,14 +301,17 @@ label gale_route_day1:
 
             G "You know, the things you cut paper on with the big blade that you bring down?"
 
+            show Gale neutral at waist_up_center2, singlejump
             "He mimes the gesture, looking innocent as can be."
 
             MC "I… Yes, that’s a paper trimmer."
 
+            hide Gale with dissolve
             "Gale nods and goes off to search in the cupboards while you shake your head and move to dispense the colored paints onto the makeshift palette."
 
             "You settle into a peaceful rhythm working next to each other again, Gale carefully measuring and cutting the cardstock into triangles while you add some flair to the otherwise-plain banner."
 
+            show Gale neutral at waist_up_center2
             G "Okay, I’ve gone through all the paper."
 
             "He holds up a stack of multicolored triangles that are remarkably even, and you give a thumbs up."
@@ -317,10 +320,12 @@ label gale_route_day1:
 
             G "Oh, great idea! But before we do that…"
 
+            hide Gale neutral with dissolve
             "You watch as he stands up, stretching briefly before going over to where you both dumped your bags."
 
             "He lifts the convenience store bag with a grin."
 
+            show Gale neutral at waist_up_center2 with dissolve
             G "Snacks."
 
             "You immediately put your paintbrush down, done with the banner, and go to sit in the lounge area, leaning forward as he unpacks the bag."
@@ -354,6 +359,7 @@ label gale_route_day1:
 
             "You eat your snacks while chatting back and forth for a few minutes, talking about upcoming club events and a game you’re both playing, easily bantering between bites."
             "After collecting and disposing of your trash, Gale swipes the remaining snacks into his bag."
+            
             G "I’ll probably leave this in the club room for whoever wants it."
             "Energized once more, you both return to your respective tasks, humming along to Gale’s playlist as you work through the finishing touches on the banner while Gale punches holes into the pennants and strings them together."
 

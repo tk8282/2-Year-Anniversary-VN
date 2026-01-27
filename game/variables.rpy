@@ -388,12 +388,13 @@ transform  gacha_pon_spinning:
 #-------------------------------------------------------------
 # shake effect
 transform shake:
-    yoffset 0
-    ease .04 yoffset 6
-    ease .04 yoffset -6
-    ease .03 yoffset 3
-    ease .03 yoffset -3
-    ease .02 yoffset 0
+    on show:
+        yoffset 0
+        ease .04 yoffset 12
+        ease .04 yoffset -12
+        ease .03 yoffset 8
+        ease .03 yoffset -8
+        ease .02 yoffset 0
 
 transform shake2:
     xanchor 0.5

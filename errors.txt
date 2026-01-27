@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/PhoneTexting.rpy", line 148: keyword argument 'xpos' is incompatible with 'pos'.
-    xpos 0 
-        ^
+File "game/variables.rpy", line 393: expected 'comma or end of line' not found.
+    $ base = yoffset
+    ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jan 27 00:49:41 2026
+Tue Jan 27 02:35:37 2026
