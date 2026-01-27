@@ -1733,14 +1733,13 @@ label cass_route_day2:
         $ collected_routes.append("C")
 
     if len(collected_routes) == 5:
+        $ renpy.save("chapter1_end")
         scene black with fade
         stop music fadeout 1.0
         "Thinking back, you realize you helped out all the boys with their parts of the stall. Must mean the festival is soon, huh. How time flies."
         "Laying down in bed, you can't help but feel excited as you think about the event. What kind of fun awaits you at this spring festival!"
         
-        #jump ending_route
-        "Onto Ending Routes"
-        return
+        jump general_ending
 
     else:
         scene black with fade

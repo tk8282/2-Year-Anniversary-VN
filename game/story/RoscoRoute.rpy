@@ -2222,9 +2222,9 @@ label rosco_route_day2:
         $ collected_routes.append("R")
 
     if len(collected_routes) == 5:
+        $ renpy.save("chapter1_end")
         scene black with fade
-        "jump to ending route"
-        return
+        jump general_ending
 
     else:
         jump choose_route

@@ -22,6 +22,7 @@ label splashscreen:
     return
 
 label start:
+    stop music fadeout 1.0
     scene black with fade
 
     # Ask for player name at the start of the game
@@ -89,16 +90,23 @@ label credits:
     show screentint
     with dissolve
     show tbc:
-        yanchor 0.5 ypos 0.5
+        yanchor 0.5 ypos 0.45
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(5)
-    hide tbc
+    with Pause(3)
+    hide tbc with dissolve
+    pause(1.0)
+    show part2:
+        yanchor 0.5 ypos 0.45
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide part2 with dissolve
     pause(1.0)
     show cred at Move((0.5, 7.5), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom") with dissolve
     with Pause(credits_speed)
     show thanks:
-        yanchor 0.5 ypos 0.5
+        yanchor 0.5 ypos 0.45
         xanchor 0.5 xpos 0.5
     with dissolve
     with Pause(3)
@@ -127,5 +135,6 @@ init python:
 init:
 #    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
     image cred = Text(credits_s, text_align=0.5)
-    image tbc = Text("{size=80}End of Part 1\nPart 2 Coming soon!", text_align=0.5)
+    image tbc = Text("{size=80}To be continued...", text_align=0.5)
+    image part2 = Text("{size=80}Part 2 Coming soon!", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)

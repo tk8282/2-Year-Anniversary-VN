@@ -301,11 +301,12 @@ style quick_button_text:
 screen navigation():
     if main_menu:
 
+
         #textbutton _("Start") action Start()
         #imagebutton auto "title start button %s" focus_mask True action Start() xalign 0.93 yalign 0.3
             #at ib_fade
         
-    
+        add im.Scale("gui/window_icon.png", 300, 300) xalign 0.96 yalign 0.15 at ib_fade
                 
         vbox:
             style_prefix "navigation"
@@ -637,8 +638,11 @@ style about_label_text:
 screen save():
 
     tag menu
-
     use file_slots(_("Save"))
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("SAVE", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
 
 
 screen load():
@@ -646,6 +650,10 @@ screen load():
     tag menu
 
     use file_slots(_("Load"))
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("LOAD", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
 
 
 screen file_slots(title):
@@ -681,10 +689,8 @@ screen file_slots(title):
                             has vbox
                             add FileScreenshot(slot)  xpos 13 ypos 12
 
-                            text FileTime(slot, format=_("{#file_time} %M/%d/%Y, %H:%M"), empty=_("")):
+                            text FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_("")):
                                 style "slot_time_text"
-                                ypos 40
-                                xpos 180
                                 
                             text FileSaveName(slot):
                                 style "slot_name_text"
@@ -746,10 +752,8 @@ screen file_slots(title):
                             has vbox
                             add FileScreenshot(slot) xpos 13 ypos 12
 
-                            text FileTime(slot, format=_("{#file_time} %M/%d/%Y, %H:%M"), empty=_("")):
+                            text FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_("")):
                                 style "slot_time_text"
-                                ypos 40
-                                xpos 180
 
                             text FileSaveName(slot):
                                 style "slot_name_text"
@@ -800,7 +804,12 @@ style page_button_text is gui_button_text
 
 style slot_button is gui_button
 style slot_button_text is gui_button_text
-style slot_time_text is slot_button_text
+style slot_time_text:
+    xpos 90
+    ypos -145
+    size 40
+    textalign 0.5
+    outlines [(2,"#854797",0,0)]
 style slot_name_text is slot_button_text
 
 style page_label:
@@ -913,6 +922,10 @@ screen preferences():
                         textbutton _("- Mute All -"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("PREFERENCES", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
 
         
 
@@ -999,13 +1012,13 @@ style slider_vbox:
 screen history():
 
     tag menu
-
+    
     ## Avoid predicting this screen, as it can be very large.
     predict False
+    
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
         style_prefix "history"
-
         for h in _history_list:
 
             window:
@@ -1031,6 +1044,11 @@ screen history():
 
         if not _history_list:
             label _("The dialogue history is empty.")
+
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("HISTORY", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
 
 
 ## This determines what tags are allowed to be displayed on the history screen.
@@ -1094,7 +1112,7 @@ screen help():
         style_prefix "help"
 
         vbox:
-            spacing 23
+            spacing 10
 
             hbox:
                 xpos 100
@@ -1112,10 +1130,14 @@ screen help():
                 use mouse_help
             elif device == "gamepad":
                 use gamepad_help
-
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("HELP", size=60, outlines = [(3,"#d5a3c8",0,0)], outline_scaling = "linear")
 
 screen keyboard_help():
-
+    hbox:
+        label _("")
     hbox:
         label _("Enter")
         text _("Advances dialogue and activates the interface.")
@@ -1168,53 +1190,71 @@ screen keyboard_help():
 screen mouse_help():
 
     hbox:
+        label _("")
+
+    hbox:
+        xpos 50
         label _("Left Click")
         text _("Advances dialogue and activates the interface.")
 
     hbox:
+        xpos 50
         label _("Middle Click")
         text _("Hides the user interface.")
 
     hbox:
+        xpos 50
         label _("Right Click")
         text _("Accesses the game menu.")
 
     hbox:
+        xpos 50
         label _("Mouse Wheel Up")
         text _("Rolls back to earlier dialogue.")
 
     hbox:
+        xpos 50
         label _("Mouse Wheel Down")
         text _("Rolls forward to later dialogue.")
 
 
 screen gamepad_help():
-
     hbox:
+        label _("")
+    hbox:
+        xpos 50
         label _("Right Trigger\nA/Bottom Button")
         text _("Advances dialogue and activates the interface.")
 
     hbox:
+        xpos 50
         label _("Left Trigger\nLeft Shoulder")
         text _("Rolls back to earlier dialogue.")
 
     hbox:
+        xpos 50
         label _("Right Shoulder")
         text _("Rolls forward to later dialogue.")
 
     hbox:
+        xpos 50
         label _("D-Pad, Sticks")
         text _("Navigate the interface.")
 
     hbox:
+        xpos 50
         label _("Start, Guide, B/Right Button")
         text _("Accesses the game menu.")
 
     hbox:
+        xpos 50
         label _("Y/Top Button")
         text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+    hbox:
+        label _("")
+
+    textbutton _("Calibrate") action GamepadCalibrate() xpos 900
 
 
 style help_button is gui_button
