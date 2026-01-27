@@ -17,12 +17,15 @@ label zanny_route:
     jump zanny_route_day1
 
 label zanny_route_day1:
+    window hide
+    $ quick_menu = False
     scene black with fade 
-    show text "{size=50}Zander Route: Day 1{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Zander Route: Day 1{/size}{/color}" at truecenter
     with dissolve
     pause 1
     hide text
     with dissolve
+    $ quick_menu = True
 
     # Change BG to MC's Bedroom
     scene bg mc bedroom zanny with fade
@@ -116,7 +119,7 @@ label zanny_route_day1_roomcheck:
     # [Major Choice Start]
     if (ask_figure and ask_box and ask_dice and ask_plushie) == True:
         jump zanny_route_day1_continued
-
+    hide Zander with dissolve
     menu:
         "Ask about figure." if not ask_figure:
             $ major_choice = "ask-figure"
@@ -695,8 +698,11 @@ label zanny_route_day1_continued:
     # [Choice End]
 
     "You continue finalizing your choices until you're satisfied. Zanny helps you out with all the numbers and logistics of your character and is very enthusiastic about the whole ordeal. The two of you work together until you get to the final parts."
-
+    window hide
+    $ quick_menu = False
     scene CG Zanny 1 BG with fade
+    pause 1.0
+    $ quick_menu = True
     show Zander excited at waist_up_left3, pop with dissolve
 
     Z "Now the fun part—your lore! This is your background and the meat of the role-playing experience, essentially. Who would you like to be?"
@@ -824,7 +830,6 @@ label zanny_route_day1_continued:
         Z "A group of bandits suddenly breaks through the door and charges through with daggers in hand! Since you two are alert, you’ve already prepared your weapons—there is no need to use an action to equip them."
 
         # [Choice End]
-    stop music fadeout 1.0
     # [Fantasy Battle Track Start]/suspicious sneaking?
     #play music "audio/music/??.wav" fadein 1.0 loop
     show Zander neutral at waist_up_left3
@@ -981,7 +986,6 @@ label zanny_route_day1_continued:
     # [End Fantasy Battle Track]
     # stop music fadeout 1.0
     # [Fantasy Ambiance Track Start]
-    play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     show Zander neutral pose2 at waist_up_left3
     Z "Your final attack depletes their HP, and they fall to the ground. One of the attackers is still conscious off to the side, groaning on the floor with their hand clutching their shoulder. What would you like to do?"
 
@@ -1135,14 +1139,16 @@ label zanny_route_day1_continued:
 label zanny_route_day2:
 
     # [Start of Zanny Day 2]
-    
+    window hide
+    $ quick_menu = False
     scene black with fade
     show screentint
-    show text "{size=50}Day 2{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Day 2{/size}{/color}" at truecenter
     with dissolve
-    pause 1
+    pause 1.0
     hide text
     with dissolve
+    $ quick_menu = True
     hide screentint
     play audio "audio/sfx/bedside-clock-alarm.ogg"
     scene bg mc bedroom zanny with fade
@@ -1625,8 +1631,9 @@ label zanny_route_day2:
     anon "Oh, [player_name]! I didn’t think we’d meet here! Hahaha, what a funny coincidence, wouldn’t you say?"
 
     "You recognize this guy; one of your classmates who was... a tad clingy to say the least. You recall blocking their number over their insistence on hanging out after school every day."
-
-    ClassmateA "Now that you’re here, I need you to answer my burning question...{w=0.3} I noticed as I was trying to message you about the festival yesterday, that you blocked me. I know you never respond to me anyway, but... why? What did I do to deserve getting blocked?"
+    play music "audio/music/C3-SuspiciousSneaking.wav" fadein 1.0 loop
+    ClassmateA "Now that you’re here, I need you to answer my burning question...{w=0.3} I noticed as I was trying to message you about the festival yesterday, that you blocked me."
+    ClassmateA "I know you never respond to me anyway, but... why? What did I do to deserve getting blocked?"
     ClassmateA "Why did you cut me off?! I thought we were friends, [player_name]! I can’t believe you! All this effort I put in only for you to just brush me away!"
         
     "The stranger sounds deeply betrayed, which makes you equally as uncomfortable as the hurt in their voice. Unsure of how to respond to this, you very slowly grab the bag of powdered sugar and take a few steps back."
@@ -1647,16 +1654,16 @@ label zanny_route_day2:
     ClassmateA "SINCE WHEN DID [player_name] GET A BOYFRIEND?! This is so unfair!"
 
     Z "Change up your attitude, and maybe you won’t need to harass people."
-
+    stop music fadeout 1.0
     "Zanny leans in, eyes gleaming with something sinister."
-
+    
     show Zander vSerious pose2 at waist_up_right3
     Z "Scram."
 
     "His low tone scares them into running for their life, far away from the shopping area, hopefully to never be seen again. Your shoulders instantly sag, heaviness no longer weighing them down."
 
     MC "Zanny, when did you..."
-
+    play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
     show Zander neutral at waist_up_center3 with move
     Z "I got worried when the car door was open with you missing inside, so I had to go looking for you. I spotted you frantically sprinting and was thankfully able to catch up to where you were."
 
@@ -1703,6 +1710,7 @@ label zanny_route_day2:
     Z "Oh please, in this area? And there’s no one even here. C’mon, quickly. I’m hungry."
 
     "You sigh and get straight to work."
+    stop music fadeout 1.0
     hide Zander with dissolve
     scene bg clubroom with fade
     play music "audio/music/C1 - Chill (1).wav" fadein 1.0
