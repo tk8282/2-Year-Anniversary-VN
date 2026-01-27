@@ -20,12 +20,15 @@ label cass_route:
 label cass_route_day1:
     # [Start of Cass Day 1]
     #Fade out into next Scene
+    window hide
+    $ quick_menu = False
     scene black with fade
     show text "{color=#ffff}{size=50}Cassian Route: Day 1{/size}{/color} " at truecenter
     with dissolve
-    pause 1
+    pause 1.0
     hide text
     with dissolve
+    $ quick_menu = True
     
     "Despite having been a student at the university for quite a while already, you’re still constantly amazed by just how vast the entire campus is."   
     "You're helping Cass today, and he gave you exact directions towards a place you’ve never even thought to visit before."
@@ -810,6 +813,8 @@ label cass_route_day1:
 
 label cass_route_day2:
     # [Start of Cass Day 2]
+    window hide
+    $ quick_menu = False
     scene black with fade
     show screentint
     show text "{color=#ffff}{size=50}Day 2{/size}{/color}" at truecenter
@@ -817,6 +822,7 @@ label cass_route_day2:
     pause 1
     hide text
     with dissolve
+    $ quick_menu = True
     hide screentint
     scene bg clubroom with fade
     # start of music c1 (2)

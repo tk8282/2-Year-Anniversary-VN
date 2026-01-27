@@ -16,14 +16,15 @@ label luci_route:
     jump luci_route_day1
 
 label luci_route_day1:
-
+    window hide
+    $ quick_menu = False
     scene black with fade 
-    show text "{size=50}Lucien Route: Day 1{/size}" at truecenter
+    show text "{size=50}{color=#ffff}Lucien Route: Day 1{/size}{/color}" at truecenter
     with dissolve
-    pause 1
+    pause 1.0
     hide text
     with dissolve
-    
+    $ quick_menu = True
     # Change Background to MC's Home
     scene bg mc bedroom luci at fullyblurred with dissolve
     pause 0.3
@@ -630,13 +631,16 @@ label luci_route_day1:
 
 label luci_route_day2:
     # [Start of Luci Day 2]
+    window hide
+    $ quick_menu = False
     scene black with fade
     show screentint
-    show text "{size=50}Day 2{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Day 2{/size}{/color}" at truecenter
     with dissolve
-    pause 1
+    pause 1.0
     hide text
     with dissolve
+    $ quick_menu = True
     hide screentint
     # MC wakes up in her room
     play audio "audio/sfx/bedside-clock-alarm.ogg"
@@ -673,9 +677,11 @@ label luci_route_day2:
     MC "And those too."
 
     "With that, you hop out of bed to get changed."
-
+    stop music fadeout 1.0
     # Change to Zanny Supermarket BG
     scene bg zanny market with fade
+    pause 1.0
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
 
     "Unfortunately your local supermarket is in the exact opposite direction of Luci's house, so you make a stop at a Ballmart a few blocks away."
     "It's your typical Ballmart, all things considered." 
@@ -1004,9 +1010,11 @@ label luci_route_day2:
     
     hide Lucien with dissolve
     window hide
+    $ quick_menu = False
     scene CG Luci 1 with fade
     
     pause 2.0
+    $ quick_menu = True
     "After a few more attempts..."
     "You both take turns at the stove and after a few more messy and hilariously-shaped failures, you start to get the hang of it."
     "The blobs slowly start taking more recognizable shapes, looking smoother. Finally, you manage to make a perfect crepe."

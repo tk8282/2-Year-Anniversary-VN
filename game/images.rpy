@@ -678,9 +678,9 @@ layeredimage phone texting:
         pos(175, 363)
         im.Scale("images/Lucien/Assets/lucien_phonetextbubbles_bottom.png",330,152)
     attribute luci1:
-        Text("The only thing I'm missing from our list is whipped cream because the store I went to yesterday was completely out for some reason.\nI think one can should be enough?", size=15, xsize=200, xpos=237,ypos=211)
+        Text("The only thing I'm missing from our list is whipped cream because the store I went to yesterday was completely out for some reason.\nI think one can should be enough?",font = 'DejaVuSans.ttf', size=15, xsize=200, xpos=237,ypos=211)
     attribute luci2:
-        Text("Also, if you can find a small bag of flour, that would be great. \nI have less than I thought, and I don't want to run out in the middle of our recipe testing.", size=15, xsize=200, xpos=237,ypos=374)
+        Text("Also, if you can find a small bag of flour, that would be great. \nI have less than I thought, and I don't want to run out in the middle of our recipe testing.",font = 'DejaVuSans.ttf', size=15, xsize=200, xpos=237,ypos=374)
 #----------------------------------------
 
 # --------------Rosco--------------
