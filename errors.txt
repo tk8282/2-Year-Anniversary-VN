@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/GaleRoute.rpy", line 9: expected simple expression
-    stop music fadeout
-                      ^
+File "game/screens.rpy", line 117: 'wrap' is not a keyword argument or valid child of the text statement.
+    wrap True
+        ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Mon Jan 26 04:18:14 2026
+Mon Jan 26 17:28:17 2026

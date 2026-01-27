@@ -37,7 +37,7 @@ screen portrait(
     frame:
         xalign xalign
         ypos 1.0
-        yanchor 1.0
+        yanchor 1.28
         padding (0,0)
         background None
 

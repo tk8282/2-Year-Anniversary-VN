@@ -13,6 +13,11 @@ define G = Character("Gale", who_outlines=[(3,"#ffc124",0,0)], window_background
 define N = Character("Nayu", who_outlines=[(3,"#1520A6",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))
 define MC = Character(player_name,who_outlines=[(3,"#1520A6",0,0)], window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0))   
 
+define duo = Character(
+    "{size=26}{color=#fa1c9a}{b}Rosco{/b}{/color} & "
+    "{color=#1520A6}{b}[player_name]{/b}{/color}{/size}",
+    window_background=Image("gui/textbox_f.png", xpos=13, yalign=1.0)
+)
 
 # NPCs
 define Hostess = Character("Hostess",who_outlines=[(3,"#b290ab",0,0)], window_background=Image("gui/textbox_r.png", xpos=13, yalign=1.0))

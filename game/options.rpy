@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("VN early_version")
+define config.name = _("Avallum 2 Year Anniversary VN")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -160,6 +160,13 @@ define config.window_icon = "gui/window_icon.png"
 
 # Custom layer config (added extra layers)
 define config.layers = ['zero', 'master', 'transient', 'layer0', 'layer1', 'layer2',  'layer3', 'layer4', 'layer5','screens', 'overlay']
+
+# ---------------------------------------------------------
+# Custom UI overrides
+# ---------------------------------------------------------
+
+style say_dialogue:
+    size 40
 
 init python:
 

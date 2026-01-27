@@ -180,7 +180,7 @@ label mascot_roscal:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.95,
+    xalign= 1.05,
     yalign=0.95
     )
     R "That's a Roscal! I came up with this one."
@@ -191,7 +191,7 @@ label mascot_roscal:
     crop_y=0,
     crop_w=360,
     crop_h=360,
-    xalign=0.95,
+    xalign= 1.05,
     yalign=0.95
     )
     R "We actually took inspiration from a jacket I wear pretty often."

@@ -69,7 +69,7 @@ label ability_check(correct_key, display_key):
     xalign=0.95,
     yalign=0.95
     )
-                R "Wrong button goofy"
+                R "Wrong button, goofy!"
 
 
 # ENTRY POINT

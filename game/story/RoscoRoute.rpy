@@ -1,7 +1,7 @@
 #Start of Rosco Route
 label rosco_route:
     scene bg clubroom 
-    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
+    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
     MC "I'll help Rosco."
 
     show Rosco shocked jacket at waist_up_center with dissolve
@@ -25,15 +25,7 @@ label rosco_route_day1:
     with dissolve
 
     # bg mc bedroom
-    scene bg mc bedroom rosco at fullyblurred with dissolve
-    pause 0.3
-    scene black with fade
-    scene bg mc bedroom rosco at fullyblurred with dissolve
-    pause 0.2
-    scene black with fade
-    scene bg mc bedroom rosco at partlyblurred with dissolve
-    pause 0.2
-    scene bg mc bedroom rosco at unblur with dissolve
+    scene bg mc bedroom rosco with dissolve
 
     play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     MC "Eugh, we've got so much to finish before the festival starts."
@@ -282,9 +274,9 @@ label rosco_route_day1:
         ##CHOICE END
 
     show Rosco neutral jacket
-    MC "Hey, look! They have Maria Kart. I actually don't have a hard copy of this."
+    MC "Hey, look! They have Maria Racing. I actually don't have a hard copy of this."
 
-    "You approach the display computer on the start screen of Maria Kart, picking up a controller from the desk."
+    "You approach the display computer on the start screen of Maria Racing, picking up a controller from the desk."
 
     MC "Look, we can play! Come here, let's do it!"
 
@@ -334,11 +326,11 @@ label rosco_route_day1:
 
     MC "Hey Cass! We were just looking around."
 
-    #conditional depending on maria kart result
+    #conditional depending on maria Racing result
     if rosco_won:
 
         show Rosco smug jacket
-        R "And I just destroyed [player_object] at Maria Kart!"
+        R "And I just destroyed [player_object] at Maria Racing!"
 
         MC "\"Destroyed\" is a stretch! The difference was literally half a second!"
 
@@ -367,13 +359,13 @@ label rosco_route_day1:
 
     else:
 
-        MC "And guess who just won at Maria Kart?"
+        MC "And guess who just won at Maria Racing?"
 
         show Rosco angry jacket
         R "Dishonestly! You totally cheated!"
 
         show Cassian confused
-        C "Cheated in a game shop's Maria Kart…?"
+        C "Cheated in a game shop's Maria Racing…?"
 
         R "{i}Yes!{/i}"
 
@@ -468,7 +460,7 @@ label rosco_route_day1:
             show Rosco blushing jacket
             "!"
             
-            "Rosco & [player_name]" "We are NOT bickering like a married couple!"
+            duo "We are NOT bickering like a married couple!"
 
             C "Okay, whatever you say!"
 
@@ -792,7 +784,7 @@ label rosco_route_day1:
         frame:
             xpos 1300
             ypos 300
-            background Solid("#000000c0")
+            background None
             padding(5,5)
             vbox:
                 add "nyanbie_headband"
@@ -801,7 +793,7 @@ label rosco_route_day1:
         frame:
             xpos 1300
             ypos 300
-            background Solid("#000000c0")
+            background None
             padding(5,5)
             vbox:
                 add "roscal_headband"
@@ -1231,7 +1223,7 @@ label rosco_route_day2:
 
     stop music fadeout 1.0
     scene bg rosco monitor with fade
-    play music "audio/music/G3 - Chaos.wav" fadein 1.0 loop
+    play music "audio/music/G6_C2 - Cheerful_Comedic.wav" fadein 1.0 loop
 
     show screen portrait(
     "Rosco neutral jacket",
@@ -1261,6 +1253,9 @@ label rosco_route_day2:
     
     label mascot_playtest_return:
     # Continuing Story
+    stop music fadeout 1.0
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
     show screen portrait(
     "Rosco neutral jacket",
     crop_x=450,
