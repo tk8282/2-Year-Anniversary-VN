@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/variables.rpy", line 393: expected 'comma or end of line' not found.
-    $ base = yoffset
-    ^
+File "game/story/GaleRoute.rpy", line 1217: end of line expected.
+    scene black with fadeout 1.0
+                             ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jan 27 02:35:37 2026
+Tue Jan 27 04:15:55 2026

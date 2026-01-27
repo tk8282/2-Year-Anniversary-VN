@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/GaleRoute.rpy", line 400, in script
-    show gale confused
-Exception: Image 'gale' does not accept attributes 'confused'.
+  File "game/story/GaleRoute.rpy", line 465, in script
+    show Gale laughing
+Exception: Image 'Gale' does not accept attributes 'laughing'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/GaleRoute.rpy", line 400, in script
-    show gale confused
+  File "game/story/GaleRoute.rpy", line 465, in script
+    show Gale laughing
   File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 1076, in show_imspec
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'gale' does not accept attributes 'confused'.
+Exception: Image 'Gale' does not accept attributes 'laughing'.
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.2.3.24061702
 Avallum 2 Year Anniversary VN 1.0
-Tue Jan 27 02:31:45 2026
+Tue Jan 27 02:50:30 2026
