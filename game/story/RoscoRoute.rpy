@@ -17,12 +17,15 @@ label rosco_route:
     stop music fadeout 1.0
 
 label rosco_route_day1:
+    window hide
+    $ quick_menu = False
     scene black with fade
-    show text "{size=50}Rosco Route: Day 1{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Rosco Route: Day 1{/size}{/color}" at truecenter
     with dissolve
     pause 1
     hide text
     with dissolve
+    $ quick_menu = True
 
     # bg mc bedroom
     scene bg mc bedroom rosco with dissolve
@@ -950,13 +953,15 @@ label rosco_route_day1:
     stop music fadeout 1.0
 
 label rosco_route_day2:
-
+    window hide
+    $ quick_menu = False
     scene black with fade
-    show text "{size=50}Rosco Route: Day 2{/size}" at truecenter
+    show text "{color=#ffff}{size=50}Rosco Route: Day 2{/size}{/color}" at truecenter
     with dissolve
     pause 1
     hide text
     with dissolve
+    $ quick_menu = True
 
     scene bg mc bedroom rosco at fullyblurred with dissolve
     pause 0.3
@@ -1851,7 +1856,7 @@ label rosco_route_day2:
 
     "Rosco blinks at you in confusion, taking in the way you were holding your phone with an almost guilty expression."
 
-    show Rosco annoyed jacket at waist_up_center, shake
+    show Rosco annoyed jacket at waist_up_center, shake2
     R "Did you just take a picture?"
 
     MC "… No."
@@ -1862,7 +1867,7 @@ label rosco_route_day2:
 
     "You stand up and step out of reach when his arm stretches out, and you clutch your phone to your chest."
 
-    show Rosco shocked jacket
+    show Rosco shocked jacket at waist_up_center
     R "Get back here!"
 
     MC "Stay away from me!"
@@ -1871,7 +1876,7 @@ label rosco_route_day2:
 
     MC "I'm not going to delete it no matter what you do!"
 
-    show Rosco angry jacket
+    show Rosco angry jacket at waist_up_center
     R "Well, you can't keep it!"
 
     MC "Yes, I can! You look so c—"
@@ -1890,12 +1895,12 @@ label rosco_route_day2:
     play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
 
     window hide
-
+    $ quick_menu = False
     show CG Rosco 1 with fade
 
     pause 2
     window show
-
+    $ quick_menu = True
     R "Are you good???"
 
     MC "Y-yeah."

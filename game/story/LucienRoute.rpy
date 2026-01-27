@@ -635,7 +635,7 @@ label luci_route_day2:
     $ quick_menu = False
     scene black with fade
     show screentint
-    show text "{color=#ffff}{size=50}Day 2{/size}{/color}" at truecenter
+    show text "{color=#ffff}{size=50}Lucien Route: Day 2{/size}{/color}" at truecenter
     with dissolve
     pause 1.0
     hide text
