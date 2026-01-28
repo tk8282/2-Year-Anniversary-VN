@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/RoscoRoute.rpy", line 958: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/story/RoscoRoute.rpy", line 963: expected statement.
-    =======
-          ^
-
-File "game/story/RoscoRoute.rpy", line 968: expected statement.
-    >>>>>>> b937c82 (updates to prologue, some bug fixes)
-                                                         ^
+File "game/story/GaleRoute.rpy", line 1134: play requires a channel
+    play "wind-gust.ogg"
+         ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jan 27 18:23:01 2026
+Tue Jan 27 21:26:00 2026

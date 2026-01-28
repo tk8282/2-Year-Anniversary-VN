@@ -36,7 +36,7 @@ define ClassmateA = Character(
 # define name for mc for phone
 define mc_nvl = Character("MC", kind=nvl, callback=Phone_SendSound)
 define r_nvl = Character("Rosco", kind=nvl, callback=Phone_ReceiveSound)
-
+define c_nvl = Character("Cass", kind=nvl, callback=Phone_SendSound)
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)

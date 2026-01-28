@@ -778,8 +778,990 @@ label gale_route_day2:
     pause 1
     hide text
     with dissolve
+
+    scene bg gale clubroom with dissolve
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
     $ quick_menu = True
 
+    show Gale shocked at walk_left_to_center, waist_up_center2
+    "You are sitting down on the sofa, scrolling on your phone, when Gale runs into the club room where you agreed to meet yesterday, fifteen minutes late."
+
+    "His shirt is partially unbuttoned and his bag is half opened, his hastily shoved lunch box sticking out from between the zippers."
+
+    "His wallet’s shoved into his pocket while he's still attempting to tie a messy ponytail with his hair, a few rubber bands wrapped around his wrist."
+
+    show Gale neutral at waist_up_center2, restless
+    G "[player_name]! I’m really sorry for being late! I overslept, which caused me to miss my usual bus and-"
+
+    MC "It’s fine Gale, chill. Here, take a croissant."
+
+    G "Ugh! I could kiss you right now! I haven’t eaten breakfast, and... "
+    extend "you got me a croissant, from my favourite bakery no less!"
+
+    MC "Less talking, more eating, Gale~"
+
+    show Gale neutral at waist_up_center2, singlejump
+    G "Right away boss!"
+
+    #boxes go where
+    "While Gale is eating, you look for the cart to help move the boxes later on."
+
+    "When you can’t find it, you frown."
+
+    MC "Hey, Gale, do you remember where the cart is?"
+
+    MC "I can’t seem to find it."
+
+    G "It should be in the corner back there."
+
+    MC "That’s the problem, it isn’t."
+
+    G "I guess someone else must be using it, then."
+
+    G "Just wait for me to finish the croissant, and I’ll come to help you."
+
+    "Once he finishes, he comes over to help you, picking up a good few boxes to stack onto the cart and glances at you in concern."
+
+    G "[player_name], let me help you transfer those boxes onto the cart."
+
+    G "They’re stacked so high they cover your face. How do you even see like that?"
+
+    MC "It’s fine, I can handle this on my own."
+
+    MC "If I need help, I'll ask you."
+
+    G "You sure?"
+
+    MC "Yeah, promise."
+
+    G "Alright, I guess."
+
+    "You and Gale spend the next five minutes bringing the boxes over to the cart and stacking them neatly, ensuring that none will fall off."
+
+    stop music fadeout 1.0
+    scene black with fade
+    scene bg_gale_day_stall with dissolve
+    play music "game/audio/music/G6_C2 - Cheerful_Comedic.wav" fadein 1.0 loop
+
+    show Gale neutral bandana at waist_up_center2 zorder 3.0 with dissolve
+
+    MC "Phew, we finally finished moving the decorations outside."
+
+    MC "What should we start with?"
+
+    show Gale confused pose2 bandana
+    G "Maybe the pennants and the string lights first. They seem the most simple to do, I guess."
+
+    MC "Okay, lemme get them out of the box."
+
+    # rummage sound?
+    "You rummage through the box and pull out a bundle of string lights."
+
+    MC "Eh? Why are the string lights so badly tangled up?? I swear I made sure they were untangled before I put them away...."
+
+    show Gale laugh bandana
+    G "Maybe it's just your bad luck."
+
+    MC "Gale, you just had to jinx it. Alright, you’re gonna untangle the string lights while I put up the main banner."
+
+    show Gale confused bandana 
+    G "Huh? What? Hey, you can’t just do that!"
+
+    MC "Yes, I can and will do that. Now bring the ladder over here before I kick your ass for real."
+
+    show Gale neutral bandana at waist_up_center2, singlejump
+    G "Right away, boss!"
+
+    "Gale brings the ladder over for you and then starts work on detangling the string lights while you unfold the banner, balancing precariously on the ladder as you reach for the hooks where the banner is supposed to hang from."
+
+    "Just as Gale’s almost done detangling the string lights– he spent the last 10 minutes detangling a last particularly annoying knot in the cord and actually cheered when it was done, and you’re about finished with hanging the main banner, disaster strikes."
+
+    transform parrot_fly:
+        pos (None, None)
+        anchor (0.5, 0.5)
+
+        alpha 0.0
+        xalign -0.2
+        yalign 0.05
+        zoom 0.50
+        easein 0.3 alpha 1.0
+        ease 1.2 xalign 0.75
+        easeout 0.3 alpha 0.0
+
+    transform poop_fall:
+        alpha 0.0
+        xalign 0.68
+        yalign 0.17
+        zoom 0.15
+        pause 0.6
+        alpha 1.0
+        ease 0.4 yalign 0.30
+
+    show gale_pipsqueak at parrot_fly zorder 1 with dissolve
+
+    $ renpy.pause(0.5)
+    #poop sound
+    #play sound "poop.ogg"
+
+    show gale_birdpoop at poop_fall zorder 1 with dissolve
+    
+
+    # Wait for animation to finish
+    $ renpy.pause(1.0)
+
+    hide gale_pipsqueak
+    #NOTE should still be first?
+
+    stop music fadeout 1.0
+    play music "game/audio/music/G3 - Chaos.wav" fadein 1.0 loop
+    "First, a pipsqueak flying by decides that the banner (your masterpiece) would make a great toilet."
+
+    show Gale angry bandana at waist_up_center2, singlejump
+    G "Oi! What d’you think you’re doing, defacing our masterpiece!"
+
+    "The pipsqueak simply chirps at him before flying away."
+
+    show Gale annoyed bandana
+    G "{i}sigh{/i} "
+    extend "I must have done something bad in my past life to get this kind of bad luck"
+
+    MC "Maybe you were a bird who pooped on someone else's artwork, Gale."
+
+    show Gale neutral pose2 bandana
+    G "Yeah, that does make sense."
+
+    show Gale neutral bandana
+    "He takes a wet wipe from the packet in his pocket and walks over to the ladder, easily climbing up and quickly wiping it off."
+
+    MC "Nice going! Crisis averted."
+
+    #wind sfx
+    play sound "sfx/wind-gust.ogg"
+    "Just as you finish speaking, the wind starts to pick up, prompting you and Gale to look at each other."
+
+    show Gale shocked bandana
+    G "I think you just jinxed it."
+
+    MC "Definitely."
+
+    G "We should make sure the decorations don’t fly off before the wind becomes worse."
+
+    MC "Yeah, let’s do it now."
+
+    "As you hurry to secure the decorations, the wind suddenly picks up, causing the already hung decorations to flap around wildly."
+
+
+    transform bandana_fly:
+        pos (None, None)
+        anchor (0.5, 0.5)
+
+        alpha 0.0
+        xalign 0.68
+        yalign 0.10
+        zoom 0.45
+
+        # quicker fade in
+        easein 0.20 alpha 1.0
+
+        # smooth upward drift
+        ease 0.30 xalign 0.78 yalign 0.075
+
+        # soft crest
+        ease 0.35 xalign 0.90 yalign 0.055
+
+        # tiny blend step to smooth the curve
+        ease 0.25 xalign 1.00 yalign 0.065
+
+        # exit glide
+        ease 0.40 xalign 1.20 yalign 0.12
+
+        # quicker fade out
+        easeout 0.30 alpha 0.0
+
+    show gale_bandana at bandana_fly zorder 3
+    show Gale shocked
+    with dissolve
+
+    play sound "sfx/wind-gust.ogg"
+    "As if nature’s mocking you two, the next gust of wind causes Gale’s bandana to fly off."
+
+    show Gale angry
+    G "Hey, I was using that! Come back here!"
+
+    hide Gale with dissolve
+    "Gale hops off the ladder and runs off after his bandana. In the blink of an eye, the wind dies down."
+
+    MC "Well, he’s gonna take a while. I guess I’ll start with the string lights first."
+
+    G "Oh, come on! Are you kidding me? God of the wind or whoever, why do you hate me so much? Why does the wind only stop now?"
+
+    "Once Gale comes back, thankfully with his bandana wrapped safely around his hair this time, he insists on helping you with the second set of fairy lights, complaining that you didn’t wait for him to help with the first set."
+
+    G "Reaping the merits of my hard work while I’m gone… Untangling that took me over half an hour!"
+
+    MC "Eh, at least you can help me with the next set of lights."
+
+    G "I guess. Come on, we gotta hurry or the boys are gonna be on our asses for not finishing on time."
+
+    "You carefully climb onto the ladder with one end of the fairy lights in hand, securing it around the top of the pole with a tight knot."
+
+    stop music fadeout 3.0
+    play sound "sfx/wind-gust.ogg"
+    "You’re starting to carefully climb down the ladder when another freak gust of wind hits, and you see your life flash before your eyes."
+
+    menu:
+        "Scream loudly":
+            MC "AHHHH!! GALE!!!!"
+            MC "SAVE ME!!! I'M GONNA DIE!!! I'M TOO YOUNG FOR THIS!!!"
+
+        "Softly whimper":
+            MC "G.. Gale! Help!!"
+            MC "Please… I don't want to die… I'm too young for this…"
+
+    play music "audio/music/G5 - Romantic.wav" fadein 1.0 loop
+
+    hide window
+    $ quick_menu = False
+    scene black with fade
+    show CG Gale 1 with dissolve
+    pause 3.0
+    $ quick_menu = True
+    G "Don’t worry, I’ve got you."
+
+    MC "Thank you so much, Gale, you saved my life!"
+
+    G "No worries! Like I said, I've got your back!"
+
+    MC "I guess I owe you one now."
+
+    G "You know… there's that one Maria Racing game I've been eyeing recently, [player_name]."
+
+    "Gale slings his arm over your shoulders as he says this, eyeing you suggestively. Not like you don't already know what he means."
+
+    MC "{i}snorts{/i}"
+    MC "All right, Gale. I do."
+
+    stop music fadeout 1.0
+    scene black with fade
+    scene bg_gale_day_stall with dissolve
+    play music "game/audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
+
+    show Gale neutral with dissolve
+    MC "Hey, Gale, is there anything else that’s missing?"
+
+    show Gale confused pose2
+    G "Uh…"
+
+    "Gale looks the entire stall setup up and down once, then again, scrutinizing every detail."
+
+    show Gale shocked 
+    G "Oh crap! We forgot one of the most important parts of the entire stall!"
+
+    MC "What is it?"
+
+    show Gale neutral at waist_up_center2, singlejump
+    G "The fasteners!"
+
+    G "We can't put up the flyers or make sure the decorations won't fall off without the fasteners!"
+
+    MC "You’re right."
+
+    MC "Do you remember seeing any boxes of fasteners inside the storage room?"
+
+    G "No, I don’t think so."
+
+    MC "How about we go back and check?"
+
+    G "Okay!"
+
+    scene black with fade
+    scene bg gale clubroom with dissolve
+
+    MC "Gale, you take that side of the room, I’ll take this side."
+
+    G "On it!"
+
+    "The two of you spend five minutes in a comfortable silence, the only sound that of boxes being moved here and there in the search for the fasteners."
+
+    MC "*Sigh*"
+
+    MC "I think there’s really no more fasteners left in here…"
+
+    G "[player_name]! There’s a store selling these types of party essentials just off campus, and that street stall you like to buy from is also nearby."
+
+    MC "Oh yeah!"
+
+    MC "Why didn’t I think of that earlier?"
+
+    G "Heh! I’m a genius, right?"
+
+    MC "Hmph! I would have thought of it sooner or later!"
+
+    MC "Let’s go"
+
+    "You fake-storm out of the clubroom, Gale following closely behind you."
+
+    scene black with fade
+    scene bg road daylight with dissolve
+
+    MC "Oooh, Gale, look!"
+
+    MC "There’s so many different things!"
+
+    G "They do look interesting."
+
+    G "Okay, wait, [player_name], stay focused!"
+
+    G "Remember our mission?"
+
+    MC "Right. Pendants."
+    MC "Hmm, where should we start?"
+
+    G "Maybe the decorations section?"
+
+    G "That seems like the most likely place to have what we need."
+
+    MC "Okay!"
+
+    "You and Gale slowly walk over to the decoration section, oohing and aahing at all the different types of decorations and materials on display."
+
+    MC "Wait!! Those heart shaped fairy lights are so cute!!"
+
+    MC "And there's rainbow coloured ones too!"
+
+    G "Oh, there’s snowflake shaped ones too."
+
+    MC "Oh my god, there’s even ones in the shape of books!"
+
+    G "[player_name], we need to stay focused."
+
+    G "Remember what we came here for."
+
+    MC "Yeah, I know, I know."
+
+    MC "Now, where are the pennants?"
+
+    G "ooh! I think I see a bunch over there."
+
+    "Gale points to a shelf in the far corner, where there's a bunch of things that are hopefully pennants folded up in bags and stacked neatly on the shelves."
+
+    MC "Okay! Let's go over and see."
+
+    "You and Gale brisk walk over, both letting out sighs of relief when yes, it is pennants after all, and that there's still enough for the stall."
+
+    MC "Thank god there's still pennants left."
+
+    G "You're right."
+
+    G "I think I'd go mad if we came all the way here only for them to be sold out of the only thing we need."
+
+    MC "Agreed."
+
+    MC "Anyways, Gale, which colour would be nicer?"
+
+    MC "The pink ones or the white ones?"
+
+    G "Hmm…"
+
+    "Gale's looking between the two different colours that you're pointing at."
+
+    G "What about the rainbow one instead?"
+
+    G "The colours do look pretty interesting."
+
+    MC "Hm? What rainbow one?"
+
+    G "Hold on a sec."
+
+    "Gale pulls out a few packets of rainbow coloured pennants from underneath a packet of gaudy and aggressively yellow ones, waving them around like a trophy."
+
+    G "See? Look, this is perfect!"
+
+    G "It matches our stall’s theme perfectly, doesn’t it?"
+
+    MC "Yeah, you're right, actually."
+
+    MC "Rainbow it is!"
+
+    "Gale’s grin practically radiates smugness as you walk to the cashier together."
+
+    "Gale is in the process of taking his wallet out when you pull your own card out and tap on the terminal."
+
+    show Gale annoyed 
+    G "Hey!"
+
+    G "What was that for?"
+
+    G "I was gonna pay!"
+
+    MC "Heh."
+
+    MC "You can pay me back by buying the onigiri from the street stall later."
+
+    G "*sigh* Okay."
+
+    stop music fadeout 1.0
+    scene black with fade
+    scene bg road sunset with dissolve
+    play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
+
+    MC "How I love nice, fresh air."
+
+    MC "That store was kinda stuffy, wasn't it, Gale?"
+
+    show Gale neutral at waist_up_center2 with dissolve
+    G "That's probably just cuz you were squeezing so close to me."
+
+    MC "Excuse me?"
+
+    MC "It was you who was squeezing close to me, not the other way ‘round!"
+
+    G "Yeah, yeah, whatever you say~"
+
+    G "We still need to get lunch."
+
+    G "Is there anywhere you wanna get lunch?"
+
+    MC "I don't have a specific restaurant in mind, but I do feel like eating onigiri."
+
+    G "Oh yeah remember the street stall you brought me to last time?"
+
+    MC "That's not a bad idea."
+
+    G "Do you know where the obaa-san selling onigiri might be at this time of the day?"
+
+    MC "I'm guessing pretty sure she’s at her usual afternoon spot ‘round the corner from the convenience store."
+
+    G "Woah, you know her usual spots?"
+
+    MC "Yeah? Why wouldn’t I, as a regular?"
+
+    G "That’s pretty cool. What’s her usual morning spot then?"
+
+    G "Sometimes I really wanna get some of her onigiri before classes start but I can never seem to find her."
+
+    MC "She’s near the campus gates, the main ones, about a five minute walk."
+
+    G "Oh, that’s actually pretty close."
+
+    MC "Yep!"
+
+    MC "Oh! I see her cart now! Obaa-san!"
+
+    "You wave enthusiastically at Obaa-san, who has spotted the two of you and is waving back."
+
+    MC "Obaa-san! It’s nice to see you again!"
+
+    MC "Gale, what do you want?"
+
+    G "Hmm, I’ll take the tuna onigiri."
+
+    MC "And I’ll take the umeboshi!"
+
+    "Obaa-san picks up the onigiri of your requested flavours, putting them into a bag and passing it to you to carry."
+
+    "This time, Gale already has his wallet out, passing the Obaa-san the money for the onigiri in exact change."
+
+    G "Thank you, obaa-san!"
+    MC "Thank you, obaa-san!"
+
+    "She smiles at the both of you and wave you off as you head back towards the direction of the campus."
+
+    G "Can't wait to eat my tuna onigiri!"
+
+    G "I remember it was absolutely heavenly the last time!"
+
+    G "[player_name], what abou-"
+
+    "Gale was turning his head towards you to ask you a question, but stops mid sentence when he sees you've already bitten into your onigiri."
+
+    G "It's really good, huh?"
+
+    MC "Yesh, et iz"
+
+    MC "Wut dar oo witin four? Ech orz doo."
+
+    G "Haha, yeah, I was just about to."
+
+    "Gale eagerly unwraps his onigiri, tossing the wrapper onto the section of the bench next to him without a second thought, and takes what you think might be the biggest bite you've ever seen a human being taken."
+
+    G "Mphh! Mm hh ph!"
+
+    "You raise an eyebrow because #1, you can't tell what he's trying to say, and #2 he just sounds stupid"
+
+    MC "Gale, how about you chew and swallow finish your food before trying to talk?"
+
+    "Gale nods frantically, and you can see his jaw working double time as he attempts to quickly chew the gigantic bite of onigiri."
+
+    "Finally, after a long time, he manages to get it all down."
+
+    G "Man, my jaw feels busted now."
+
+    G "But that tasted so good. Absolutely zero regrets."
+
+    MC "Really? Zero?"
+
+    G "Zero."
+
+    MC "Anyways, what were you gonna say just now?"
+
+    G "Eh, just that it was really really good and that you should try it."
+
+    MC "We each have about half our onigiri left, right?"
+
+    G "Yeah, I think so? I think mine might be a little less than half, since I took such a big bite."
+
+    MC "How ‘bout trading?"
+
+    G "I mean, sure, if you don't mind?"
+
+    MC "Okay. Let's trade."
+
+    "You and Gale pass each other your onigiri, being very careful such that neither of you would accidentally drop it."
+
+    G "I can smell the umeboshi from here."
+
+    MC "Do you not like umeboshi?"
+
+    G "I would say I'm okay with it, but I don't particularly love it."
+
+    MC "You sure? Tell me if you wanna swap back."
+
+    G "‘Kay."
+
+    "The two of you spend the next few minutes taking the time to eat in silence, savouring every bite."
+
+    "Gale makes certain… interesting expressions while eating the umeboshi, but is otherwise fine."
+
+    MC "Gale, you done?"
+
+    G "Yeah"
+
+    G "Wanna head back now?"
+
+    MC "Sure. Do you wanna pass me your wrapper? I’ll throw it away later."
+
+    G "Alright, thanks!"
+
+    MC "No worries!"
+
+    MC "What time is it?"
+
+    G "It’s…"
+
+    "Gale looks down to check his watch."
+
+    G "A few minutes to two."
+
+    MC "That’s earlier than I expected."
+
+    G "Right?"
+
+    MC "Anyway, we should get back soon if we want to have time to walk around after we're done."
+
+    G "‘Kay"
+
+    "Gale stands up, pulling you up along with him."
+
+    MC "Hey, give a person some warning next time!"
+
+    G "Yeah, yeah, got it"
+
+    "Both of you spend the next few minutes in the walk back to campus enjoying each other’s company in silence."
+
+    stop music fadeout 1.0
+    scene black with fade
+    scene bg_gale_night_stall with dissolve
+    play music "game/audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
+
+    "Once you've reached the stall, you pull the pennants out of your bag and triumphantly hold them aloft like a trophy."
+
+    MC "The finishing touch!"
+
+    G "It'll look so good after we're done, trust"
+
+    MC "Yepp!!"
+
+    MC "Now, how are we supposed to do this?"
+
+    "You frown at the ‘pennants’ in your hands."
+
+    MC "Gale, we have to restring these before we can put them up. It looks like they fell off the twine overnight."
+
+    MC "Grab a pack and let's start working on it."
+
+    G "Yes boss!"
+
+    "Gale does a mock salute before he grabs the packet of pennants and starts working on them."
+
+    G "MC, how do you do this? I can't make sense of it."
+
+    MC "Man, I don't know either. I'm just winging it"
+
+    G "‘Kay. But- don't blame me if it doesn't turn out too well."
+
+    MC "Nah, it can't be that bad."
+
+    G "Clearly you underestimate my talent for messing things up"
+
+    MC "Eh. We'll see, we'll see"
+
+    "Once the both of you are done, you stand up, comparing your pennants to Gale's."
+
+    # $ pennant_quality = "artistic"   # or "neutral" or "unartistic"
+
+    default pennant_quality = None
+    if pennant_quality == "artistic":
+        MC "Hey, I'd say we're pretty good at this!"
+        MC "It doesn't look half bad!"
+        G "Damn right you are."
+
+    elif pennant_quality == "neutral":
+        MC "Eh-"
+        MC "It's fine, I guess."
+        G "That looks better than I was expecting, not gonna lie"
+        MC "Right?"
+
+    elif pennant_quality == "unartistic":
+        MC "Ermm"
+        G "It's… passable?"
+        G "I hope?"
+        MC "You know what? We tried our best and that's what matters."
+
+    "Gale nods in agreement."
+
+    MC "Okay, now we gotta hang this up."
+
+    MC "Can you bring the ladd-"
+
+    G "Done and dusted~"
+
+    "You look over to see that, indeed, Gale has already put the ladder exactly where you want it."
+
+    MC "Thanks man"
+
+    G "No problemo!"
+
+    MC "Gale, here, hold these for me while I climb up first."
+
+    "You pass the pennants to Gale, who's standing next to the ladder to make sure you don't fall off."
+
+    "Quickly, you climb up to the top, signalling for Gale to pass the pennants back to you."
+
+    G "Here you go!"
+
+    "Gale's tiptoeing to ensure you don't have to bend too low, lest you fall off the ladder again."
+
+    MC "Thanks"
+
+    "You slowly start to hang up the pennants, hooking the ends into the little hooks at the top corners of the stall."
+
+    "Once you're done, you give everything a once over to make sure everything is properly secured and climb down."
+
+    G "Hey, careful!"
+
+    MC "Ai shit, I almost slipped there. Thanks for the warning."
+
+    G "Are you alright?"
+
+    MC "Yep! Thanks to you"
+
+    "Gale smiles in relief, then cranes his neck to look back up at the stall that the both of you have worked so hard to decorate over the past two days."
+
+    G "It looks so different from before we first started, doesn't it?"
+
+    MC "It sure does"
+
+    G "Do we need to do anything else?"
+
+    MC "Uh, lemme see."
+
+    MC "Banner, pennants, lights…"
+
+    MC "We should be done, but I'll check with the boys if we need to add anything."
+
+    "You pull out your phone, unlocking your messages to check for anything."
+
+    #NOTE idk what goes here
+    #
+    #
+    #              [avallum member]
+    MC "Oh! *An avallum member* left us some flyers in the common room we could use."
+
+    G "I’ll go get them."
+
+    MC "We should go get them together"
+
+    G "Fineee"
+
+    "The two of you rush over to the common room so fast you might as well have teleported, Gale dramatically slamming open the door like an MC in a BL novel who’s finally confessing after slowburning for 20 chapters."
+
+    scene black with fade
+    scene bg gale clubroom with dissolve
+
+    G "Where are the FLYERS?"
+
+    MC "Uh, the mock-up should be on the coffee table."
+
+    MC "I printed them out while waiting for you this morning."
+
+    G "Hey, didn’t we agree that we’d do the printing together in the afternoon?"
+
+    MC "Yeah, but then you were late, and I got bored playing Pipmon GO on my phone, so I just ended up printing the whole lot of ‘em."
+
+    G "You sure make good use of your time."
+
+    G "Could you hold the door for me while I grab them?"
+
+    MC "Sure, just make sure to grab them all.."
+
+    "While you hold the door open, Gale quickly hops over to grab the stack of flyers, then dashes out the door to be next to you once he’s done."
+
+    G "MC, hey, they’re pretty cute, see?"
+
+    "You look at the chibis that Gale’s pointing at and you can’t help but agree."
+
+    MC "They are adorable…"
+
+    MC "I’m lowkey kinda proud of my handiwork."
+
+    MC "Okay let’s not get distracted and head back first, then we can admire the posters later."
+
+    G "Okay~"
+
+    "Once you’re back at the booth, Gale passes you some of the stack of flyers, and you quickly get down to business."
+
+    "After a short five minutes, you guys are finally done."
+
+    "Flyers hang from various places around the stall, put on display where others can see."
+
+    "The remaining stack of flyers is placed neatly on the countertop of the stall, ready to be handed out the unsuspecting victims (read: passerby) on the day of the festival."
+
+    G "And that is a wrap!"
+
+    MC "Im so beat! But we did it…"
+
+    "You lift your hand, and Gale quickly slaps it in a high five."
+
+    G "Look at it [player_name]..."
+
+    # BG: OUTSIDE - DECORATED STALLS
+    # BG
+
+    if pennant_quality == "artistic":
+
+        G "Well, we did a pretty good job overall, I guess?"
+
+        MC "I think we make a pretty good team, if I say so myself."
+
+        G "Yeah, we do! We could be professionals or something! The decorations are set perfectly, and the banner looks amazing!"
+
+        MC "Yepp. I love the way I placed the flyers. Very artistic. And the table bunting is a nice touch to complement the big banner we made."
+
+        G "I’m glad you took the lead, honestly. With my horrendous art skills, it would have ended up looking like a tornado had swept through after we were done with it."
+
+        MC "Well then, mister, you better be thanking me for saving your ass."
+
+        G "Of course! Have I ever mentioned how much I love you before?"
+
+        MC "Gale, flattery won't get you anywhere."
+
+
+    elif pennant_quality == "unartistic":
+
+        MC "Well... it certainly has… character? It’s sure to attract people here."
+
+        # Gale annoyed
+        G "Why were we put in charge of this, again?"
+
+        MC "I’d like to remind you that you volunteered for it."
+
+        G "In hindsight, that was kinda dumb of me. But at least we managed to complete it…"
+
+        MC "Pffft… Look at how crooked the banner and pennants are! It looks like the stall just survived a hurricane."
+
+        MC "The fairy lights and the flyers are a mess too…"
+
+        # Gale neutral smile
+        G "[player_name], look at the bright side! It's unique and has a human touch to it!"
+
+        MC "That's one way to put it…"
+
+
+    elif pennant_quality == "neutral":
+
+        G "Hey, it doesn't look too bad, I guess?"
+
+        MC "It looks like every generic stall you always see at school fairs."
+
+        G "That’s quite impressive for us. I had no idea how it would turn out"
+
+        MC "I totally agree."
+
+        MC "And you know what? Considering neither of us have art backgrounds, I'm not going to complain."
+
+        MC "It’s done, and it doesn’t look like it will fall apart… that’s enough for me!"
+
+        G "The guys won’t be able to complain. I’m sure they expected a total disaster."
+
+    # ROUTES CONVERGE
+
+    MC "Should we go take a look at the other stalls? See how they're doing."
+
+    G "Yeah! We need to get a good look at our competition!"
+
+    MC "Is there any stall in particular that you wanna check out?"
+
+    G "Oh-oh-oh, remember that ocean fishing stand we saw yesterday?"
+
+    MC "Oh yeah, that one. I think it's just around the corner."
+
+    G "What do you think they're gonna do? They sure can't bring the ocean to our school."
+
+    MC "Maybe a fishing game or something? Is it the closest to what their club does, after all."
+
+    G "Oooh, wait like those carnival games where you catch the fish with a paper scoop to bring home! I love those games!"
+
+    MC "My childhood was filled with those catching fish games, and I still remember the scoop was partially made out of thin paper that would break if you moved it through the water too hard or too quickly."
+
+    MC "But I did get lots of pet fish, although they all died pretty quickly."
+
+    G "Oh? [player_name] bad at something? That's something I didn't think I'd see."
+
+    MC "Gale, shut up. Anyways, we're here already."
+
+    G "Hmmm, you're right! It really is one of those carnival fishing games! You should get a degree in fortune telling."
+
+    MC "Nah, lucky guess."
+
+    G "Maybe it is, maybe it isn’t."
+
+    G "Actually, I forgot to mention just now, but a classmate mentioned that her club was going to be selling some crochet stuff as well."
+
+    G "She showed me a tiny frog she made, it was really cute!"
+
+    MC "That's really interesting!"
+
+    G "Lemme show you the way!"
+
+    G "I think their stall should be over there!"
+
+    "Gale points at a stall far in the distance."
+
+    MC "Why is it so far away…"
+
+    # Gale shocked
+    G "You wouldn't be so cruel as to make me go alone, right?"
+
+    MC "*sigh* Alright, let's go."
+
+    "Gale lets out a loud whoop of joy, then promptly grabs your hand and drags you towards the booth."
+
+    MC "Oh, is no one around? I guess they've already finished preparations for the booth."
+
+    G "[player_name], look at that crochet rabbit! It's so adorable!"
+
+    MC "Yeah, it is."
+
+    MC "I wanna see what other interesting stalls there are around here…"
+
+    MC "Are you alright if we walk around a little more?"
+
+    G "Sure, why not?"
+
+    "You start to walk in a random direction and come across a stall selling onigiri."
+
+    MC "Oh! My friend from another class is in the club running that stall, if I remember correctly."
+
+    G "An onigiri stall?! Let’s go check it out!"
+
+    "You walk closer to the stall, which has a picture menu that looks delectable."
+
+    G "Woah, it looks so cool! And those picture of onigiri looks so delicious…"
+
+    MC "I’ve tried my friend’s food before–and let me tell you, it is absolutely delicious!"
+
+    G "I’ll be sure to try it during the festival!"
+
+    MC "You’re definitely not gonna regret it!"
+
+    MC "What time is it, anyway?"
+
+    "As if right on cue, your phone chimes loudly with a text message from Cassian."
+
+    # TEXT MESSAGE: Cass
+    # Use sound effect for now
+    play sound "sfx/ReceiveText.ogg"
+    C "{i}Hurry up and come back! It’s already fifteen minutes past our original meeting time!{/i}"
+
+    MC "I guess we should hurry and get back. Come on, let’s run."
+
+    "You and Gale both break into a sprint, running as if both your lives depend on it."
+
+    # BG: CLUB ROOM
+
+    G "HEY GUYS! WE’RE BACK!"
+
+    # Lucien neutral smiling
+    L "Gale, how are you still so energetic?"
+
+    # Rosco neutral smiling
+    R "Bro, I can hear you over my headphones. Might wanna tone it down a little, thanks."
+
+    G "Sorry, dude. I’ll try to be MORE loud next time."
+
+    # Zanny neutral smiling
+    Z "Soooo, how did it go? Anything happen while we weren’t there?"
+
+    "Rosco takes off his headphones, eager to listen to any tea. From his spot on the beanbag where he was watching something on his phone, Cass perks up, eager to listen to that day's gossip."
+
+    MC "The wind blew his bandana off, and a pipsqueak shat on the banner we made."
+
+    # Zanny laugh
+    Z "Holy shit, what did you do, Gale?"
+
+    G "I don’t know? It just happened."
+
+    # Rosco laugh
+    R "You might have offended a god somewhere, and this is your karma."
+
+    G "You know what? Knowing me, you’re probably right."
+
+    L "I’m feeling a little bad for Gale right now."
+
+    "Laughter breaks out around the table. Cassian hides his smile as he tries to focus everyone’s attention back on the matters at hand."
+
+    C "Okay, everyone, listen up!"
+
+    C "We gotta lock in for this."
+
+    C "Like seriously lock in, got it? If we wanna keep the Ichi tournaments."
+
+    "You and the boys nod seriously. Ichi tournaments are a big thing."
+
+    "As the day of the festival slowly approaches, everyone gives out updates on their progress, having worked really hard in order to pull this last-minute stall off and keep our *true* club activities a secret from the outside world."
+
+    "Everyone seems pleased with how they’ve progressed so far, and Cass claps once everyone’s gotten a chance to speak."
+
+    C "Alright! Good progress everyone!!"
+
+    C "It’s getting quite late, so we should be heading home already."
+
+    MC "You’re right. Goodbye guys! See y’all tomorrow!"
+
+    G "Ah, my muscles are aching after all the hard work today. I’m going to go now, bye guys!"
+
+    Z "Bye"
+
+    R "Bye-bye"
+
+    L "Goodbye"
+
+    C "Goodbye and stay safe, everyone!"
+
+    "Everyone takes turns to leave, and one by one, the club room slowly empties."
+
+    stop music fadeout 1.0
 
     if "G" not in collected_routes:
         $ collected_routes.append("G")

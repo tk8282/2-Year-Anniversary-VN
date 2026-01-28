@@ -783,7 +783,12 @@ image gale_pipsqueak = Transform(im.Scale("images/Gale/Assets/gale_pipsqueak.png
 image gale_in_between_string_lights = Transform(im.Scale("images/Gale/Assets/gale_in_between_string_lights.png", 1000, 1000), size=(800,800))
 image gale_messy_string_lights = Transform(im.Scale("images/Gale/Assets/gale_messy_string_lights.png", 1000, 1000), size=(800,800))
 image gale_neat_string_lights = Transform(im.Scale("images/Gale/Assets/gale_neat_string_lights.png", 1000, 1000), size=(800,800))
-
+image gale_loopsided_day_penn = Transform(im.Scale("images/Gale/Assets/gale_loopsided_day_penn.png", 1000, 1000), size=(800,800))
+image gale_loopsided_night_penn = Transform(im.Scale("images/Gale/Assets/gale_loopsided_night_penn.png", 1000, 1000), size=(800,800))
+image gale_rect_day_penn = Transform(im.Scale("images/Gale/Assets/gale_rect_day_penn.png", 1000, 1000), size=(800,800))
+image gale_rect_night_penn = Transform(im.Scale("images/Gale/Assets/gale_rect_night_penn.png", 1000, 1000), size=(800,800))
+image gale_tri_day_penn = Transform(im.Scale("images/Gale/Assets/gale_tri_day_penn.png", 1000, 1000), size=(800,800))
+image gale_tri_night_penn = Transform(im.Scale("images/Gale/Assets/gale_tri_night_penn.png", 1000, 1000), size=(800,800))
 #----------------------------------------
 
 # --------------Zander--------------
