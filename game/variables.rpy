@@ -38,7 +38,7 @@ init -1:
     default zanny_scare = False # affects ending
 
     # -- Choices for Gale Route ---
-    default gale_choice1 = "artistic" #"non-artistic" "neutral"
+    default stall_style = "artistic" #"non-artistic" "neutral"
 
     # -- Progress Flags --
     default chapter1_complete = False  

@@ -1,3 +1,3 @@
 label general_ending:
-    call credits
+    call credits from _call_credits
     return

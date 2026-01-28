@@ -534,6 +534,13 @@ image bg gale tree_leaves = im.Scale("images/Gale/Backgrounds/day_stall_seperate
 image bg gale grass_background = im.Scale("images/Gale/Backgrounds/day_stall_seperated/grass_background.png", 1920, 1080)
 image bg gale day_stall = im.Scale("images/Gale/Backgrounds/day_stall_seperated/day_stall.png", 1920, 1080)
 
+image bg non_artistic_stall_day = im.Scale("images/Gale/Backgrounds/Messy_Morning.png", 1920, 1080)
+image bg non_artistic_stall_night = im.Scale("images/Gale/Backgrounds/Messy_Night.png", 1920, 1080)
+image bg neutral_stall_day = im.Scale("images/Gale/Backgrounds/In_Between_Morning.png", 1920, 1080)
+image bg neutral_stall_night = im.Scale("images/Gale/Backgrounds/In_Between_Night.png", 1920, 1080)
+image bg artistic_stall_day = im.Scale("images/Gale/Backgrounds/Neat_Morning.png", 1920, 1080)
+image bg artistic_stall_night = im.Scale("images/Gale/Backgrounds/Neat_Night.png", 1920, 1080)
+
 layeredimage bg_gale_empty_stall:
 
     # --- FAR BACKGROUND ---
@@ -776,7 +783,7 @@ image crepe_banner_neat_morning = Transform(im.Scale("images/Gale/Assets/crepe_b
 image crepe_banner_neat_night = Transform(im.Scale("images/Gale/Assets/crepe_banner_neat_night.png", 1000, 1000), size=(800,800))
 image gale_bandana = Transform(im.Scale("images/Gale/Assets/gale_bandana.png", 1000, 1000), size=(800,800))
 image gale_birdpoop = Transform(im.Scale("images/Gale/Assets/gale_birdpoop.png", 1000, 1000), size=(800,800))
-image gale_boxes = Transform(im.Scale("images/Gale/Assets/gale_boxes.png", 1000, 1000), size=(800,800))
+image gale_boxes = Transform(im.Scale("images/Gale/Assets/gale_boxes.png", 1530, 1000), size=(1530, 1000))
 image gale_fliers_artistic = Transform(im.Scale("images/Gale/Assets/gale_fliers_artistic.png", 1000, 1000), size=(800,800))
 image gale_hotsauce = Transform(im.Scale("images/Gale/Assets/gale_hotsauce.png", 1000, 1000), size=(800,800))
 image gale_pipsqueak = Transform(im.Scale("images/Gale/Assets/gale_pipsqueak.png", 1000, 1000), size=(800,800))

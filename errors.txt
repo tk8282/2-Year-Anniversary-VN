@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/GaleRoute.rpy", line 1134: play requires a channel
-    play "wind-gust.ogg"
-         ^
+File "game/story/GaleRoute.rpy", line 1911: expected 'simple_expression' not found.
+    show Zander neutral at
+                          ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jan 27 21:26:00 2026
+Wed Jan 28 00:20:15 2026

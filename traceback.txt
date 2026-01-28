@@ -1,49 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/GaleRoute.rpy", line 1142, in script
-    "As if nature’s mocking you two, the next gust of wind causes Gale’s bandana to fly off."
-OSError: Couldn't find file 'game/audio/sfx/wind-gust.ogg'.
+  File "game/story/GaleRoute.rpy", line 1512, in script
+    if stall_style == "artistic":
+  File "game/story/GaleRoute.rpy", line 1512, in <module>
+    if stall_style == "artistic":
+NameError: name 'stall_style' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/GaleRoute.rpy", line 1142, in script
-    "As if nature’s mocking you two, the next gust of wind causes Gale’s bandana to fly off."
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\exports.py", line 1494, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 1394, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 1045, in do_display
-    display_say(who,
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\character.py", line 741, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 3026, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1199, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1177, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1119, in periodic_pass
-    c.periodic()
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\audio\audio.py", line 528, in periodic
-    topf = load(filename)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\audio\audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'game/audio/sfx/wind-gust.ogg'.
+  File "game/story/GaleRoute.rpy", line 1512, in script
+    if stall_style == "artistic":
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/story/GaleRoute.rpy", line 1512, in <module>
+    if stall_style == "artistic":
+NameError: name 'stall_style' is not defined
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.2.3.24061702
 Matsuri Fever 1.0
-Tue Jan 27 21:29:43 2026
+Tue Jan 27 23:22:34 2026
