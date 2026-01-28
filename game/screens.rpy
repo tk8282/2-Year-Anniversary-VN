@@ -306,13 +306,13 @@ screen navigation():
         #imagebutton auto "title start button %s" focus_mask True action Start() xalign 0.93 yalign 0.3
             #at ib_fade
         
-        add im.Scale("gui/window_icon.png", 300, 300) xalign 0.96 yalign 0.15 at ib_fade
+        add im.Scale("gui/window_icon.png", 350, 350) xalign 0.97 yalign 0.15 at ib_fade
                 
         vbox:
             style_prefix "navigation"
 
             xpos gui.navigation_xpos
-            yalign 0.8
+            yalign 0.9
 
             spacing gui.navigation_spacing
             imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5 at ib_fade
