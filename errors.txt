@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/story/Prologue.rpy", line 511: end of line expected.
-    show Gale neutral pose2 at waist_up_center2 with dissolve zorder 2.0
-                                                              ^
+File "game/story/RoscoRoute.rpy", line 958: expected statement.
+    <<<<<<< HEAD
+                ^
 
-Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jan 27 15:12:42 2026
+File "game/story/RoscoRoute.rpy", line 963: expected statement.
+    =======
+          ^
+
+File "game/story/RoscoRoute.rpy", line 968: expected statement.
+    >>>>>>> b937c82 (updates to prologue, some bug fixes)
+                                                         ^
+
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Tue Jan 27 18:23:01 2026

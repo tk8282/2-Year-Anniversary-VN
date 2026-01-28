@@ -247,6 +247,12 @@ transform waist_up_left2:
 transform waist_up_right2:
     xalign 0.95
     yoffset 80
+
+transform walk_right_to_center:
+    xpos 1.3
+    alpha 0.0
+
+    ease 0.8 xpos 0.5 alpha 1.0
 #----------------------------------------
 
 #-------specifically for zanny-----------

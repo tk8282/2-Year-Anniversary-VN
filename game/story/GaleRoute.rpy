@@ -923,10 +923,13 @@ label gale_route_day1:
     "You and Gale part in the hallway, going your separate ways for the evening with the promise of meeting the following day."
 
 
+#Day 2
 label gale_route_day2:
 
+    window hide
+    $ quick_menu = False
     scene black with fade
-    show text "{size=50}Gale Route: Day 2{/size}" at truecenter
+    show text "{color=#FFFFFF}{size=50}Gale Route: Day 2{/size}{/color}" at truecenter
     with dissolve
     pause 1
     hide text
@@ -935,7 +938,8 @@ label gale_route_day2:
     label day2:
 
     scene bg gale clubroom with dissolve
-    show Gale shocked pose2 at waist_up_center2 with dissolve
+    $ quick_menu = True
+    show Gale shocked at walkin_right_to_center, waist_up_center2
     "Gale runs into the club room where you agreed to meet yesterday, fifteen minutes late."
 
     "His shirt is partially unbuttoned and his bag is half opened, his hastily shoved lunch box sticking out from between the zippers."
@@ -1522,9 +1526,9 @@ label gale_route_day2:
         $ collected_routes.append("G")
 
     if len(collected_routes) == 5:
-        $ renpy.save("chapter1_end")
         scene black with fade
-        jump general_ending
+        "jump to ending route"
+        return
 
     else:
         jump choose_route

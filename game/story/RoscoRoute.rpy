@@ -955,23 +955,16 @@ label rosco_route_day1:
     stop music fadeout 1.0
 
 label rosco_route_day2:
-<<<<<<< HEAD
     window hide
     $ quick_menu = False
     scene black with fade
     show text "{color=#ffff}{size=50}Rosco Route: Day 2{/size}{/color}" at truecenter
-=======
-
-    $ quick_menu = False
-    scene black with fade
-    show text "{color=#FFFFFF}{size=50}Rosco Route: Day 2{/size}{/color}" at truecenter
->>>>>>> b937c82 (updates to prologue, some bug fixes)
     with dissolve
     pause 1
     hide text
     with dissolve
     $ quick_menu = True
-
+    
     scene bg mc bedroom rosco at fullyblurred with dissolve
     pause 0.3
     scene black with fade
@@ -982,7 +975,6 @@ label rosco_route_day2:
     pause 0.2
     scene bg mc bedroom rosco at unblur with dissolve
 
-    $ quick_menu = True
     play music "audio/music/C1 - Chill (1).wav" fadein 1.0 loop
     "Blinking your eyes open, the clock reads noon when you finally get out of bed."
 
