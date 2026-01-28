@@ -323,7 +323,7 @@ screen navigation():
             imagebutton auto "option load button %s" focus_mask True action ShowMenu("load") at ib_fade
             #textbutton _("Preferences") action ShowMenu("preferences")
            
-            imagebutton auto "option credits button %s" focus_mask True action NullAction() at ib_fade
+            imagebutton auto "option credits button %s" focus_mask True action ShowMenu("credit_screen") at ib_fade
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
@@ -1135,6 +1135,324 @@ screen help():
         xalign 0.5
         yalign 0.13
         add Text("HELP", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
+
+screen credit_screen():
+
+    tag menu
+
+    default device = "mods"
+
+    use game_menu(_("Credits"), scroll="viewport"):
+
+        style_prefix "help"
+
+        vbox:
+            spacing 10
+
+            hbox:
+                xpos -20
+                ypos 20
+
+                textbutton _("Mods") action SetScreenVariable("device", "mods")
+                textbutton _("Gale Route") action SetScreenVariable("device", "gale")
+                textbutton _("Cassian Route") action SetScreenVariable("device", "cass")
+                textbutton _("Lucien Route") action SetScreenVariable("device", "luci")
+                textbutton _("Zander Route") action SetScreenVariable("device", "zanny")
+                textbutton _("Rosco Route") action SetScreenVariable("device", "rosco")
+                textbutton _("General") action SetScreenVariable("device", "general")
+
+            
+            if device == "mods":
+                use mods_credit
+            elif device == "gale":
+                use gale_credit
+            elif device == "cass":
+                use cass_credit
+            elif device == "luci":
+                use luci_credit
+            elif device == "zanny":
+                use zanny_credit
+            elif device == "rosco":
+                use rosco_credit
+            elif device == "general":
+                use general_credit
+    vbox:
+        xalign 0.5
+        yalign 0.13
+        add Text("CREDITS", size=60, outlines = [(3,"#d5a3c8",0,0)], color='#ffff', outline_scaling = "linear")
+
+
+screen mods_credit():
+    hbox:
+        label _("")
+    hbox:
+        label _("Arin")
+        text _("@light_arin ")
+
+    hbox:
+        label _("Eve")
+        text _("@Ebaelynn ")
+
+    hbox:
+        label _("Aly")
+        text _("@_Alycarus")
+
+    hbox:
+        label _("Angie")
+        text _("@_kaokaos")
+
+    hbox:
+        label _("Ann")
+        text _("@ann_teasocial")
+
+    hbox:
+        label _("TK")
+        text _("TkFlash2")
+
+screen gale_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos 140
+        text _("Writers:")
+    hbox:
+        text _("")
+        label _("Shelby")
+        text _("@shoobilled")
+        
+    hbox:
+        text _("")
+        label _("Chia")
+        text _("@chiaseed_lol")
+    hbox:
+        xpos 140
+        text _("Sprite:")
+    hbox:
+        text _("")
+        label _("Zoo")
+        text _("@Mawfische")
+    hbox:
+        xpos 140
+        text _("CG:")
+    hbox:
+        text _("")
+        label _("Cas")
+        text _("@casterseer")
+    hbox:
+        xpos 140
+        text _("Backgrounds:")
+    hbox:
+        text _("")
+        label _("Jae")
+        text _("@chromaticdawn")
+        
+    
+screen cass_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos 140
+        text _("Writers:")
+    hbox:
+        text _("")
+        label _("Lala")
+        text _("@oopsiesloops ")
+        
+    hbox:
+        text _("")
+        label _("Sel")
+        text _("@moiselvie ")
+    hbox:
+        xpos 140
+        text _("Sprite:")
+    hbox:
+        text _("")
+        label _("Jeanne")
+        text _("@smolmouche")
+    hbox:
+        xpos 140
+        text _("CG:")
+    hbox:
+        text _("")
+        label _("Lafiska")
+        text _("@Lafa_or_Life")
+    hbox:
+        xpos 140
+        text _("Backgrounds:")
+    hbox:
+        text _("")
+        label _("Karasu")
+        text _("@karasu_draws")
+
+screen luci_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos 140
+        text _("Writers:")
+    hbox:
+        text _("")
+        label _("Lykos")
+        text _("@Moonlit_Lykos")
+        
+    hbox:
+        text _("")
+        label _("Focks")
+        text _("starfocks_ ")
+
+    hbox:
+        text _("")
+        label _("Anon")
+        text _(" ")
+    hbox:
+        xpos 140
+        text _("Sprite:")
+    hbox:
+        text _("")
+        label _("Ann")
+        text _("@ann_teasocial")
+    hbox:
+        xpos 140
+        text _("CG:")
+    hbox:
+        text _("")
+        label _("Ken")
+        text _("@kenwnyan")
+    hbox:
+        xpos 140
+        text _("Backgrounds:")
+    hbox:
+        text _("")
+        label _("Angie")
+        text _("@_kaokaos")
+
+screen zanny_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos 140
+        text _("Writers:")
+    hbox:
+        text _("")
+        label _("Samatokiiis")
+        text _("@samatokiiis ")
+        
+    hbox:
+        text _("")
+        label _("Axel")
+        text _("@CheesyGabite")
+
+    hbox:
+        xpos 140
+        text _("Sprite:")
+    hbox:
+        text _("")
+        label _("Moka")
+        text _("@mocha2ru")
+    hbox:
+        xpos 140
+        text _("CG:")
+    hbox:
+        text _("")
+        label _("Miky San")
+        text _("@MikySan29")
+    hbox:
+        xpos 140
+        text _("Backgrounds:")
+    hbox:
+        text _("")
+        label _("Rain")
+        text _("@rain__ghost")
+
+screen rosco_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos 140
+        text _("Writers:")
+    hbox:
+        text _("")
+        label _("Arin")
+        text _("@light_arin")
+        
+    hbox:
+        text _("")
+        label _("Bayqu")
+        text _("@bayquswrites")
+
+    hbox:
+        xpos 140
+        text _("Sprite:")
+    hbox:
+        text _("")
+        label _("Chowwy")
+        text _("@DogChow101")
+    hbox:
+        xpos 140
+        text _("CG:")
+    hbox:
+        text _("")
+        label _("Hoshka")
+        text _("@lohoska")
+    hbox:
+        xpos 140
+        text _("Backgrounds:")
+    hbox:
+        text _("")
+        label _("Cris")
+        text _("@crisosstomo_")
+
+screen general_credit():
+    hbox:
+        label _("")
+    hbox:
+        xpos -100
+        label _("Homescreen:")
+        text _("Zivvi @zivvikal")
+    
+
+    hbox:
+        xpos -100
+        label _("UI/UX:")
+        text _("Candy @_amurta")
+    hbox:
+        xpos -100
+        label _("Coding:")
+        text _("TK @TkFlash2        ")
+        text _("Hanxi @Hanxiowo")
+    hbox:
+        xpos -100
+        label _("Editing:")
+        text _("Hannah B @Beenana0_0        ")
+        text _("Nyx @chamanthus        ")
+        text _("Eve @Ebaelynn")
+    
+    hbox:
+        xpos -100
+        label _("Music:")
+        text _("Yena @sheepshxt        ")
+        text _("Han Hyo Mi @Han_Hyomi_")
+    
+    hbox:
+        xpos -100
+        label _("Assets:")
+        text _("Aly @_Alycarus        ")
+        text _("Zomboba @Zomboba / @zomboblab")
+    hbox:
+        xpos -100
+        label _(" ")
+        text _("Destinie @Dezk_is_crying        ")
+        text _("Anon")
+    
+    hbox:
+        xpos -100
+        label _("Backgrounds:")
+        text _("Ikin @akiramonsta        ")
+        text _("Aly @_Alycarus")
+    
+       
+
+
 
 screen keyboard_help():
     hbox:
