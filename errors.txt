@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/GaleRoute.rpy", line 1217: end of line expected.
-    scene black with fadeout 1.0
-                             ^
+File "game/story/Prologue.rpy", line 511: end of line expected.
+    show Gale neutral pose2 at waist_up_center2 with dissolve zorder 2.0
+                                                              ^
 
-Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jan 27 04:15:55 2026
+Ren'Py Version: Ren'Py 8.5.2.26010301
+Tue Jan 27 15:12:42 2026
