@@ -315,14 +315,14 @@ screen navigation():
             yalign 0.8
 
             spacing gui.navigation_spacing
-
+            imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5 at ib_fade
+                        #textbutton _("About") action ShowMenu("about")
+                        
             imagebutton auto "option new game button %s" focus_mask True action Start() at ib_fade
             #textbutton _("Load") action ShowMenu("load")
             imagebutton auto "option load button %s" focus_mask True action ShowMenu("load") at ib_fade
             #textbutton _("Preferences") action ShowMenu("preferences")
-            imagebutton auto "menu_options_%s" focus_mask True action ShowMenu("preferences") xalign 0.5 at ib_fade
-            #textbutton _("About") action ShowMenu("about")
-            imagebutton auto "option gallery button %s" focus_mask True action NullAction() at ib_fade
+           
             imagebutton auto "option credits button %s" focus_mask True action NullAction() at ib_fade
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 

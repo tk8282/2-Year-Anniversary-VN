@@ -136,7 +136,7 @@ init python:
     
 init:
 #    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
-    image cred = Text(credits_s, text_align=0.5)
-    image tbc = Text("{size=80}To be continued...", text_align=0.5)
-    image part2 = Text("{size=80}Part 2 Coming soon!", text_align=0.5)
-    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
+    image cred = Text(credits_s, text_align=0.5, color = "#ffff")
+    image tbc = Text("{size=80}To be continued...", text_align=0.5, color = "#ffff")
+    image part2 = Text("{size=80}Part 2 Coming soon!", text_align=0.5, color = "#ffff")
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5, color = "#ffff")
