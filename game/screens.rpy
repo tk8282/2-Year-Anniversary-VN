@@ -1207,7 +1207,7 @@ screen mods_credit():
 
     hbox:
         label _("TK")
-        text _("TkFlash2")
+        text _("@TkFlash2")
 
 screen gale_credit():
     hbox:

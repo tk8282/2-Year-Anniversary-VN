@@ -705,7 +705,7 @@ label rosco_route_day1:
 
     scene black with fade
     scene bg rosco clothing shop with dissolve
-    play music "audio/music/C1 - Chill(2).wav" fadein 1.0 loop
+    play music "audio/music/C1 - Chill (2).wav" fadein 1.0 loop
 
     "Racks upon racks of clothing items surround you on all fronts, but Rosco navigates the aisles expertly as he makes his way to the center of the store."
 
@@ -1848,7 +1848,7 @@ label rosco_route_day2:
 
     "Without hesitation, you pull out your phone, not noticing that the music had stopped."
 
-    queue sound "audio/sfx/phone-camera-click.ogg"
+    queue sound "audio/sfx/phone-camera-click.ogg" volume .6
     "CLICK"
 
     "You freeze in place, the sound of your camera going off louder than expected in the quiet room."
@@ -2061,7 +2061,7 @@ label rosco_route_day2:
                     add Transform("haori_badge_zanny_patch3", zoom=0.42)
 
 
-    show screen badge_gallery with fade
+    show screen badge_gallery with dissolve
     "You watch as he gathers all the patches together, taking a moment to look over all of them."
 
     MC "Hey! We did a pretty good job, don't you think?"
@@ -2074,8 +2074,6 @@ label rosco_route_day2:
     R "But what are these for?"
 
     screen rosco_stickers():
-
-        add Solid("#00000080")
 
         frame:
             align (0.5, 0.5)
@@ -2091,10 +2089,10 @@ label rosco_route_day2:
                 # Right image
                 add Transform("haori_badge_rosco_patch3", zoom=0.85)
 
-    show screen rosco_stickers with fade
+    show screen rosco_stickers with dissolve
     MC "Those are for you, goofy."
 
-    hide screen rosco_stickers with fade
+    hide screen rosco_stickers with dissolve
     show Rosco annoyed jacket
     "You giggle at the half-hearted glare he gives you for calling him goofy."
 

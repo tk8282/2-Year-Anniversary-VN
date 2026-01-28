@@ -36,10 +36,12 @@ transform phone_transform(pXalign=0.5, pYalign=0.5):
 transform phone_appear(pXalign=0.5, pYalign=0.5): #Used only when the dialogue have one element
     xcenter pXalign
     yalign pYalign
+    zoom 0.80
+    yoffset -50
 
     on show:
         yoffset 1080
-        easein_back 1.0 yoffset 0
+        easein_back 1.0 yoffset -50
 
     
 transform message_appear(pDirection):

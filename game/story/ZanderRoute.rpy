@@ -1150,7 +1150,7 @@ label zanny_route_day2:
     with dissolve
     $ quick_menu = True
     hide screentint
-    play audio "audio/sfx/bedside-clock-alarm.ogg"
+    play audio "audio/sfx/bedside-clock-alarm.ogg" volume .7
     scene bg mc bedroom zanny with fade
     pause 1.0
     "The sound of a blaring alarm startles you awake from your intense dream."

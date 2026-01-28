@@ -328,7 +328,7 @@ image CassianChoice = Transform(im.Scale("images/Cassian/Sprites/cassian_Neutral
 #image CassianChoice = im.Crop(im.Scale("sprites/Cassian.png", 1215, 2160),250,30,800,1080)
 image GaleChoice = Transform(im.Scale("images/Gale/Sprites/Gale_Neutral_1.png", 740, 2002.18),size=(350,710), crop=(200,10,350,710))
 image LucienChoice = Transform(im.Scale("images/Lucien/Sprites/Lucien_NeutralSmile_1_Ann.png", 1597.96, 2260),size=(350,710), crop=(620,15,350,710))
-image RoscoChoice = Transform(im.Scale("images/Rosco/Sprites/rosco_neutral_1.png", 1215, 1719.62),size=(350,710), crop=(450,0,350,710))
+image RoscoChoice = Transform(im.Scale("images/Rosco/Sprites/rosco_neutral_1_jacket.png", 1215, 1719.62),size=(350,710), crop=(450,0,350,710))
 image ZanderChoice = Transform(im.Scale("images/Zander/Sprites/Zanny_Default_1.png", 1500, 2122.985 ),size=(350,710), crop=(540,170,350,710))
 #----------------------------------------
 
@@ -348,7 +348,7 @@ image LucienGray :
     matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
 
 image RoscoGray : 
-    Transform(im.Scale("images/Rosco/Sprites/rosco_neutral_1.png", 1215, 1719.62),size=(350,710), crop=(450,0,350,710))
+    Transform(im.Scale("images/Rosco/Sprites/rosco_neutral_1_jacket.png", 1215, 1719.62),size=(350,710), crop=(450,0,350,710))
     matrixcolor TintMatrix('#4b4b4b')* SaturationMatrix(1.0)
 
 image ZanderGray : 
@@ -792,8 +792,8 @@ image gale_messy_string_lights = Transform(im.Scale("images/Gale/Assets/gale_mes
 image gale_neat_string_lights = Transform(im.Scale("images/Gale/Assets/gale_neat_string_lights.png", 1000, 1000), size=(800,800))
 image gale_loopsided_day_penn = Transform(im.Scale("images/Gale/Assets/gale_loopsided_day_penn.png", 1000, 1000), size=(800,800))
 image gale_loopsided_night_penn = Transform(im.Scale("images/Gale/Assets/gale_loopsided_night_penn.png", 1000, 1000), size=(800,800))
-image gale_rect_day_penn = Transform(im.Scale("images/Gale/Assets/gale_rect_day_penn.png", 1000, 1000), size=(800,800))
-image gale_rect_night_penn = Transform(im.Scale("images/Gale/Assets/gale_rect_night_penn.png", 1000, 1000), size=(800,800))
+image gale_neutral_day_penn = Transform(im.Scale("images/Gale/Assets/gale_neutral_day_penn.png", 1000, 1000), size=(800,800))
+image gale_neutral_night_penn = Transform(im.Scale("images/Gale/Assets/gale_rect_night_penn.png", 1000, 1000), size=(800,800))
 image gale_tri_day_penn = Transform(im.Scale("images/Gale/Assets/gale_tri_day_penn.png", 1000, 1000), size=(800,800))
 image gale_tri_night_penn = Transform(im.Scale("images/Gale/Assets/gale_tri_night_penn.png", 1000, 1000), size=(800,800))
 #----------------------------------------

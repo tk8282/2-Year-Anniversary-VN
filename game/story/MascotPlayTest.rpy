@@ -13,8 +13,8 @@ screen ability_wait(correct_key, ability_name):
 
         vbox:
             spacing 15
-            text "Press" size 38 xalign 0.5
-            text correct_key.upper() size 48 bold True xalign 0.5
+            text "{color=#FFFFFF}Press{/color}" size 38 xalign 0.5
+            text "{color=#FFFFFF}[correct_key.upper()]{/color}" size 48 bold True xalign 0.5 font "DejaVuSans.ttf"
 
     # handle for all keys
     key "q" action Return("success" if correct_key == "q" else "fail")
@@ -105,7 +105,7 @@ screen mascot_PlayTest_Screen:
 
         vbox:
             spacing 30
-            text "Pick your character:" xalign 0.5 size 45:
+            text "{color=#FFFFFF}Pick your character:{/color}" xalign 0.5 size 45:
                 outlines [(2, "#000000", 0, 0)]
 
             # Top row

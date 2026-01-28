@@ -33,7 +33,7 @@ screen haori_choice():
                         xalign 0.5
                         background Solid("#000000c0")
                         padding (6,4)
-                        text "Take the haori on the left" 
+                        text "{color=#FFFFFF}Take the haori on the left{/color}" 
 
                 vbox:
                     spacing 10
@@ -51,7 +51,7 @@ screen haori_choice():
                         xalign 0.5
                         background Solid("#000000c0")
                         padding (6,4)
-                        text "Take the haori in the middle"
+                        text "{color=#FFFFFF}Take the haori in the middle{/color}"
 
                 vbox:
                     spacing 10
@@ -69,7 +69,7 @@ screen haori_choice():
                         xalign 0.5
                         background Solid("#000000c0")
                         padding (6,4)
-                        text "Take the haori on the right"
+                        text "{color=#FFFFFF}Take the haori on the right{/color}"
 
 
 

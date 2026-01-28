@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/GaleRoute.rpy", line 1911: expected 'simple_expression' not found.
-    show Zander neutral at
-                          ^
+File "game/story/MascotPlayTest.rpy", line 21: 'xzoom' is not a keyword argument or valid child of the text statement.
+    xzoom 1.1
+         ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Jan 28 00:20:15 2026
+Wed Jan 28 02:45:22 2026

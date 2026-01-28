@@ -731,10 +731,11 @@ label gale_route_day1:
 
     "As you enter the club room, you can see Rosco is there, fiddling with one of the computers.  He looks up at your greeting, stretching back from the screen with a yawn and a lazy wave."
 
-    show Rosco confused jacket at waist_up_left with dissolve
+    show Rosco confused jacket at waist_up_left
+    show Gale neutral at waist_up_right2
+    with dissolve
     R "Those the decorations?"
 
-    show Gale neutral at waist_up_right2 with dissolve
     G "Yeah! Most everything is done— [player_name] is just going to finish up the flyer at home and [player_subject]’ll print it in the morning."
 
     show Rosco neutral jacket
@@ -743,8 +744,9 @@ label gale_route_day1:
     MC "We hope you’ll like it!"
 
     "Rosco nods, already half-absorbed back into whatever’s on the monitor, while you and Gale tuck the cart and boxes away."
-    hide Rosco with dissolve
-    hide Gale with dissolve
+    hide Rosco
+    hide Gale
+    with dissolve
     "Once you finish, you pick up your things and get ready to head out. Gale, however, lingers by the sofa while checking his phone."
 
     MC "I’m heading out!~"
@@ -845,7 +847,7 @@ label gale_route_day2:
         xoffset 150
         yoffset 620
         zoom .50
-    show Gale neutral at waist_up_center2
+    show Gale neutral bandana at waist_up_center2
     with dissolve
 
     play music "music/G6_C2 - Cheerful_Comedic.wav" fadein 1.0 loop
@@ -908,12 +910,12 @@ label gale_route_day2:
     stop music fadeout 1.0
     play music "music/G3 - Chaos.wav" fadein 1.0 loop
 
-    play sound "sfx/pip.ogg"
+    play sound "sfx/pip.ogg" volume .6
     show gale_pipsqueak at parrot_fly zorder 1 with dissolve
 
     $ renpy.pause(0.5)
     #poop sound
-    play sound "sfx/splat.ogg"
+    play sound "sfx/splat.ogg" volume .5
 
     show gale_birdpoop at poop_fall zorder 1 with dissolve
     
@@ -929,7 +931,7 @@ label gale_route_day2:
     show Gale angry bandana at waist_up_center2, singlejump
     G "Oi! What d’you think you’re doing, defacing our masterpiece!"
 
-    play sound "sfx/pip.ogg"
+    play sound "sfx/pip.ogg" volume .6
     "The pipsqueak simply chirps at him before flying away."
 
     show Gale annoyed bandana
@@ -1134,7 +1136,7 @@ label gale_route_day2:
 
     MC "Why didn’t I think of that earlier?"
 
-    show Gale smug bandana
+    show Gale smug
     G "Heh! I’m a genius, right?"
 
     MC "Hmph! I would have thought of it sooner or later!"
@@ -1520,13 +1522,13 @@ label gale_route_day2:
         hide gale_tri_day_penn with dissolve
 
     elif stall_style == "neutral":
-        show gale_rect_day_penn with dissolve
+        show gale_neutral_day_penn with dissolve
         MC "Eh-"
         MC "It's fine, I guess."
         show Gale laugh
         G "That looks better than I was expecting, not gonna lie"
         MC "Right?"
-        hide gale_rect_day_penn with dissolve
+        hide gale_neutral_day_penn with dissolve
 
     elif stall_style == "non-artistic":
         show gale_loopsided_day_penn with dissolve
@@ -1613,7 +1615,7 @@ label gale_route_day2:
 
     "You pull out your phone, unlocking your messages to check for anything."
 
-    play sound "audio/sfx/phone-ping.ogg" volume 1.0
+    play sound "audio/sfx/phone-ping.ogg" volume .7
     MC "Oh! Rosco left us some flyers in the common room we could use."
 
     G "I’ll go get them."
@@ -1736,7 +1738,7 @@ label gale_route_day2:
 
         show Gale neutral at waist_up_left2 with dissolve
 
-
+        $ quick_menu = True
         MC "Well... it certainly has… character? It’s sure to attract people here."
 
         show Gale annoyed

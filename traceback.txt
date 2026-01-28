@@ -1,28 +1,80 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/GaleRoute.rpy", line 1512, in script
-    if stall_style == "artistic":
-  File "game/story/GaleRoute.rpy", line 1512, in <module>
-    if stall_style == "artistic":
-NameError: name 'stall_style' is not defined
+  File "game/story/MascotPlayTest.rpy", line 486, in script call
+    call ability_check("q", "Q") from _call_ability_check_4
+  File "game/story/MascotPlayTest.rpy", line 44, in script
+    $ result = renpy.call_screen("ability_wait", correct_key, display_key)
+  File "game/story/MascotPlayTest.rpy", line 44, in <module>
+    $ result = renpy.call_screen("ability_wait", correct_key, display_key)
+Exception: Could not find font 'gui/fonts/Montserrat-Bold.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/GaleRoute.rpy", line 1512, in script
-    if stall_style == "artistic":
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 1845, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/story/GaleRoute.rpy", line 1512, in <module>
-    if stall_style == "artistic":
-NameError: name 'stall_style' is not defined
+  File "game/story/MascotPlayTest.rpy", line 486, in script call
+    call ability_check("q", "Q") from _call_ability_check_4
+  File "game/story/MascotPlayTest.rpy", line 44, in script
+    $ result = renpy.call_screen("ability_wait", correct_key, display_key)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/story/MascotPlayTest.rpy", line 44, in <module>
+    $ result = renpy.call_screen("ability_wait", correct_key, display_key)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\exports.py", line 3420, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 2819, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\core.py", line 1353, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\display\layout.py", line 1121, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 2276, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 676, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\text.py", line 268, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample, self.shaper, self.instance, self.axis)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\font.py", line 745, in get_font
+    face = load_face(fn, shaper)
+  File "C:\Users\Troy\renpy-8.2.3-sdk\renpy\text\font.py", line 673, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/fonts/Montserrat-Bold.ttf'.
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.2.3.24061702
 Matsuri Fever 1.0
-Tue Jan 27 23:22:34 2026
+Wed Jan 28 02:48:29 2026

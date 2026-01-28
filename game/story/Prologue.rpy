@@ -11,6 +11,7 @@ label prologue:
     with dissolve
 
     scene black with fade
+    play music "audio/music/G1 - Cheerful (1).wav" fadein 1.0 loop
     scene bg clubroom
     with fade
     $ quick_menu = True

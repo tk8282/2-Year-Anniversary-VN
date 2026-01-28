@@ -249,7 +249,7 @@ screen mascot_select_screen:
         
         vbox:
             spacing 20
-            text "Choose a character to learn about:" align (0.35, 0.5) size 40:
+            text "{color=#FFFFFF}Choose a character to learn about:{/color}" align (0.35, 0.5) size 40:
                 outlines [(2, "#000000", 0, 0)]
 
             # Top row

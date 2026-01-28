@@ -643,7 +643,7 @@ label luci_route_day2:
     $ quick_menu = True
     hide screentint
     # MC wakes up in her room
-    play audio "audio/sfx/bedside-clock-alarm.ogg"
+    play audio "audio/sfx/bedside-clock-alarm.ogg" volume .7
     scene black with fade
     scene bg mc bedroom luci at partlyblurred with dissolve
     pause 0.2

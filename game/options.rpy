@@ -13,7 +13,7 @@
 ## The _() surrounding the string marks it as eligible for translation.
 
 define config.name = _("Matsuri Fever")
-
+define config.default_text_cps = 30
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
@@ -37,8 +37,8 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "VNearly_version"
-
+define build.name = "MatsuriFever"
+define build.executable_name = "Matsuri Fever"
 
 ## Sounds and music ############################################################
 
