@@ -606,10 +606,12 @@ label zanny_route_day1_continued:
     hide Zander with dissolve
     stop music fadeout 1.0
     # [CG 1 Start]
+    $ quick_menu = False
     scene CG Zanny 1 with fade
     # [Fantasy Ambiance Track Start]
     play music "audio/music/G2 - Chill.wav" fadein 1.0 loop
     pause 1.0
+    $ quick_menu = True
     Z "First order of business is character creation. Here is a printed sheet to get you started. You can either base the character on you or go crazy with it! It's all about the roleplay."
 
     MC "Sweet!"

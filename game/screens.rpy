@@ -111,7 +111,10 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        if persistent.easy_mode == True:
+            text what id "what" color '#312f2f' outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
+        else:
+            text what id "what"
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -841,7 +844,9 @@ style slot_button_text:
 ## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
-
+define persistent.easy_mode = "False"
+        
+define persistent.easy_read_toggle = "False"
 screen preferences():
 
     tag menu
@@ -887,6 +892,11 @@ screen preferences():
                     label _("Auto-Forward Time")
 
                     bar value Preference("auto-forward time")
+                    
+                    textbutton _("- Easy Read Mode -"):
+                            action [SetField(persistent, "easy_mode", True if persistent.easy_mode == False else False), ToggleVariable("persistent.easy_read_toggle", False, True)]
+                            style "mute_all_button"
+
                 vbox:
                     if not main_menu:
                         xpos -120
