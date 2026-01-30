@@ -1403,7 +1403,7 @@ screen rosco_credit():
     hbox:
         text _("")
         label _("Hoshka")
-        text _("@lohoska")
+        text _("@lohoshka")
     hbox:
         xpos 140
         text _("Backgrounds:")
