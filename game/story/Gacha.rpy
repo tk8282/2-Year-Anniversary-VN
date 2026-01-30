@@ -8,6 +8,7 @@ label gachapon_animation:
     $ phone_acc = renpy.random.randint(1, 4)
     scene bg clubroom at fullyblurred with fade
     if pull_counter == 0:
+        $ renpy.notify("Easy-Read Mode available in Options!")
         play sound "audio/sfx/success-bell.ogg" volume 0.2
         "You got a gift!"
     else:
