@@ -95,14 +95,17 @@ label prologue:
     G "Zanny, I could KISS you right now!"
 
     show Gale neutral at waist_up_left2
+    show Cassian neutral at waist_up_center with dissolve
     "Gale slams down a plus five, pointing at Cass."
 
     show Gale laugh at waist_up_left2, singlejump
+    show Zander laughing
+    show Cassian bruh
     G "Blue!"
 
-    show Zander shocked 
     "Everyone turns to look at Cass and watch as his lips purse in annoyance. Gale and Zanny cheer as he reaches forward to collect his cards."
 
+    hide Cassian with dissolve
     "You look down at your own cards."
 
     "…No blue."

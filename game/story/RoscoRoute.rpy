@@ -1152,6 +1152,10 @@ label rosco_route_day2:
 
     R "Okay, ooone sec, just gotta maneuver back to the title screen…"
 
+    MC "What kind of game are you making anyways?"
+    
+    R "B.I.T.E Protocol is a MOBA game! A multiplayer online battle arena. Have you played one before?"
+
     menu:
         "I love MOBA games!":
 

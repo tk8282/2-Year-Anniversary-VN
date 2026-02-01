@@ -1010,24 +1010,13 @@ label gale_route_day2:
 
     G "Oh, come on! Are you kidding me? God of the wind or whoever, why do you hate me so much? Why does the wind only stop now?"
 
-    show Gale annoyed bandana at waist_up_center2 with dissolve
-    "Once Gale comes back, thankfully with his bandana wrapped safely around his hair this time, he insists on helping you with the second set of fairy lights, complaining that you didn’t wait for him to help with the first set."
-
-    G "Reaping the merits of my hard work while I’m gone… Untangling that took me over half an hour!"
-
-    MC "Eh, at least you can help me with the next set of lights."
-
-    G "I guess. Come on, we gotta hurry or the boys are gonna be on our asses for not finishing on time."
-
-    show Gale neutral bandana
     "You carefully climb onto the ladder with one end of the fairy lights in hand, securing it around the top of the pole with a tight knot."
 
-    scene bg_gale_day_stall with dissolve
+    "Before you're able to finish up, another freak gust of wind hits, and you see your life flash before your eyes."
 
     stop music fadeout 3.0
     play sound "sfx/wind-gust.ogg" volume 15.0
     scene bg_gale_day_stall at screenshake
-    "You’re starting to carefully climb down the ladder when another freak gust of wind hits, and you see your life flash before your eyes."
 
     menu:
         "Scream loudly":
@@ -1057,18 +1046,33 @@ label gale_route_day2:
     $ quick_menu = True
     G "Don’t worry, I’ve got you."
 
-    MC "Thank you so much, Gale, you saved my life!"
+    MC "Gale! You saved my life!"
+
+    "You look down at him, feeling a rush of gratitude as the ladder stabilizes."
+
+    "Gale grins up at you, his runaway bandana in his hand."
 
     G "No worries! Like I said, I've got your back!"
 
-    MC "I guess I owe you one now."
+    G "I'll keep holding the ladder, so don't worry about a thing and get those string lights on, yeah?"
 
-    G "You know… there's that one Maria Racing game I've been eyeing recently, [player_name]."
+    MC "Wow, you actually sounded pretty reliable there!"
 
-    "Gale slings his arm over your shoulders as he says this, eyeing you suggestively. Not like you don't already know what he means."
+    G "Yeah, I mean- wait… You make it sound like I'm not usually reliable!"
 
-    MC "{i}snorts{/i}"
-    MC "All right, Gale. I do."
+    MC "Your words, not mine~"
+
+    "Gale gives you a half-hearted glare before nodding at the fairy lights."
+
+    G "{i}Anyways{/i}. What I was trying to say is untangling that took me over half an hour, so we have to make my efforts worth it!"
+
+    MC "Right! We can't let all your hard work go to waste, now can we?"
+
+    G "Exactly!"
+
+    "He gives you a wink, and you laugh as you turn your attention back to tying the string lights into place."
+
+    "His presence offers reassurance, the ladder staying firmly grounded until you're done."
 
     stop music fadeout 1.0
     scene black with fade
@@ -1082,6 +1086,15 @@ label gale_route_day2:
 
     play music "audio/music/G1 - Cheerful (2).wav" fadein 1.0 loop
 
+    "You climb down, taking a moment to admire your handiwork with the lights."
+
+    MC "I guess I owe you one now."
+
+    G "You know… there's that one Maria Racing game I've been eyeing recently"
+
+    "Gale slings his arm over your shoulders as he says this, eyeing you suggestively. You laugh at his not-so-subtle hint."
+
+    MC "All right, Gale. I'll definitely keep that in mind"
 
     MC "Hey, Gale, is there anything else that’s missing?"
 
@@ -1146,22 +1159,30 @@ label gale_route_day2:
     "You fake-storm out of the clubroom, Gale following closely behind you."
 
     scene black with fade
-    scene bg road daylight 
+    scene bg rosco clothing shop
     show Gale neutral at waist_up_center2
     with dissolve
 
+    "You step into the store, taking a moment to look around the crowded space."
+
+    "It was clear that the store had stocked up on certain items just for the festival."
+
+    "You can't help but wonder if they may have stocked up on too many items as you walk around with Gale, the crowded space forcing you to walk closer to Gale as you look at what the store was offering."
+
     MC "Oooh, Gale, look!"
+
+    "You grab his hand in excitement, tugging on it as some of the newer items catch your eyes."
 
     MC "There’s so many different things!"
 
     show Gale neutral  
     G "They do look interesting."
 
-    G "Okay, wait, [player_name], stay focused!"
+    G "They even have some swords– Wait, [player_name], we gotta stay focused!"
 
     G "Remember our mission?"
 
-    MC "Right. Pendants."
+    MC "Right. Fasteners."
     MC "Hmm, where should we start?"
 
     show Gale neutral pose2 
@@ -1182,64 +1203,46 @@ label gale_route_day2:
 
     MC "Oh my god, there’s even ones in the shape of books!"
 
+    "You start heading closer to the fairy lights without thinking."
+
+    "Your eyes are bright as you look over the decorations, only drawing your attention back to the task at hand when you feel Gale's touch on your shoulder."
+
     G "[player_name], we need to stay focused."
 
     G "Remember what we came here for."
 
     MC "Yeah, I know, I know."
 
-    MC "Now, where are the pennants?"
+    "You whine as he places his hand on your arm, tugging you away from the cute decorations."
+
+    "With a small sigh, you refocus, your gaze looking around the room."
+
+    MC "Now, where are the fasteners?"
 
     show Gale neutral at waist_up_center2, singlejump
-    G "ooh! I think I see a bunch over there."
+    G "Ooh! I think I see a bunch over there."
 
-    "Gale points to a shelf in the far corner, where there's a bunch of things that are hopefully pennants folded up in bags and stacked neatly on the shelves."
+    "Gale points to the far corner. You look at the shelves, noticing that it seems to have various tools and materials."
 
-    MC "Okay! Let's go over and see."
+    "Following his lead, you walk over the shelves."
 
-    "You and Gale briskly walk over, both letting out sighs of relief when yes, it is pennants after all, and that there's still enough for the stall."
+    "Without a word, you both move in sync to search through the shelves together."
 
-    MC "Thank god there's still pennants left."
+    "It takes a few moments, but finally, Gale speaks triumphantly."
 
-    G "You're right."
+    show Gale laugh
+    G "Found it!"
+    
+    "You turn towards him, seeing him hold up the fasteners with a smug smile."
 
-    G "I think I'd go mad if we came all the way here only for them to be sold out of the only thing we need."
+    show Gale neutral
+    G "And now the festival is saved!"
 
-    MC "Agreed."
+    "You roll your eyes in amusement at his dramatics."
 
-    MC "Anyways, Gale, which colour would be nicer?"
+    MC "Yes, yes, and it's all thanks to you. C'mon, let's go check out."
 
-    MC "The pink ones or the white ones?"
-
-    show Gale confused pose2 
-    G "Hmm…"
-
-    "Gale's looking between the two different colours that you're pointing at."
-
-    show Gale neutral pose2 
-    G "What about the rainbow one instead?"
-
-    show Gale neutral 
-    G "The colours do look pretty interesting."
-
-    MC "Hm? What rainbow one?"
-
-    G "Hold on a sec."
-
-    "Gale pulls out a few packets of rainbow coloured pennants from underneath a packet of gaudy and aggressively yellow ones, waving them around like a trophy."
-
-    show Gale laugh 
-    G "See? Look, this is perfect!"
-
-    show Gale neutral 
-    G "It matches our stall’s theme perfectly, doesn’t it?"
-
-    show Gale smug 
-    MC "Yeah, you're right, actually."
-
-    MC "Rainbow it is!"
-
-    "Gale’s grin practically radiates smugness as you walk to the cashier together."
+    "This time, Gale follows your lead to the cashier. Thankfully the store was relatively empty considering how many people were likely preparing for the festival."
 
     "Gale is in the process of taking his wallet out when you pull your own card out and tap on the terminal."
 
@@ -1337,7 +1340,7 @@ label gale_route_day2:
     MC "Thank you, obaa-san!"
 
     show Gale neutral 
-    "She smiles at the both of you and wave you off as you head back towards the direction of the campus."
+    "She smiles at the both of you and waves you off as you head back towards the direction of the campus."
 
     show Gale neutral at waist_up_center2, singlejump 
     G "Can't wait to eat my tuna onigiri!"
@@ -1349,24 +1352,27 @@ label gale_route_day2:
 
     "Gale was turning his head towards you to ask you a question, but stops mid sentence when he sees you've already bitten into your onigiri."
 
-    show Gale laugh 
-    G "It's really good, huh?"
+    show Gale neutral
+    G "Really? You couldn't wait? Is it that good?"
 
     MC "Yesh, et iz"
+
+    "Gale bites back a laugh, nudging you to sit down on a bench as he watches you take another bite."
 
     MC "Wut dar oo witin four? Ech orz doo."
 
     G "Haha, yeah, I was just about to."
 
-    show Gale neutral
-    "Gale eagerly unwraps his onigiri, tossing the wrapper onto the section of the bench next to him without a second thought, and takes what you think might be the biggest bite you've ever seen a human being taken."
+    "Gale eagerly unwraps his onigiri, tossing the wrapper onto the section of the bench next to him without a second thought."
+
+    "He takes what you think might be the biggest bite you've ever seen a human being taken."
 
     show Gale neutral at waist_up_center2, singlejump
     G "Mphh! Mm hh ph!"
 
     "You raise an eyebrow because #1, you can't tell what he's trying to say, and #2 he just sounds stupid"
 
-    MC "Gale, how about you chew and swallow finish your food before trying to talk?"
+    MC "Gale, how about you chew and swallow and finish your food before trying to talk"
 
     show Gale neutral at waist_up_center2, singlejump
     "Gale nods frantically, and you can see his jaw working double time as he attempts to quickly chew the gigantic bite of onigiri."
@@ -1391,7 +1397,9 @@ label gale_route_day2:
 
     MC "We each have about half our onigiri left, right?"
 
-    G "Yeah, I think so? I think mine might be a little less than half, since I took such a big bite."
+    G "Yeah, I think so?"
+
+    "He lifts his onigiri, tilting his head as he tries to measure how much is left."
 
     MC "How ‘bout trading?"
 
@@ -1424,12 +1432,14 @@ label gale_route_day2:
 
     "Gale makes certain… interesting expressions while eating the umeboshi, but is otherwise fine."
 
-    MC "Gale, you done?"
+    MC "All done!"
 
     show Gale neutral
-    G "Yeah"
+    G "Same! That was a pretty good snack."
 
-    G "Wanna head back now?"
+    "You nod in agreement, gathering your trash together."
+
+    G "Ready to head back?"
 
     MC "Sure. Do you wanna pass me your wrapper? I’ll throw it away later."
 
@@ -1482,6 +1492,8 @@ label gale_route_day2:
     G "It'll look so good after we're done, trust"
 
     MC "Yepp!!"
+
+    "You set the fasteners down, reaching for the boxes to look for the pennants that you made the day before."
 
     MC "Now, how are we supposed to do this?"
 
@@ -1662,7 +1674,7 @@ label gale_route_day2:
     "While you hold the door open, Gale quickly hops over to grab the stack of flyers, then dashes out the door to be next to you once he’s done."
 
     show Gale neutral at waist_up_center2 with dissolve
-    G "MC, hey, they’re pretty cute, see?"
+    G "[player_name], hey, they’re pretty cute, see?"
 
     "You look at the chibis that Gale’s pointing at and you can’t help but agree."
 
