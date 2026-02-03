@@ -691,6 +691,8 @@ screen file_slots(title):
                             xfill True                        
                             has vbox
                             add FileScreenshot(slot)  xpos 13 ypos 12
+                            if FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_(""))!= "":
+                                add im.Scale("gui/save/save_stamps.png",329.51,210) ypos -204 xpos 25
 
                             text FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_("")):
                                 style "slot_time_text"
@@ -754,6 +756,8 @@ screen file_slots(title):
                             xfill True   
                             has vbox
                             add FileScreenshot(slot) xpos 13 ypos 12
+                            if FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_(""))!= "":
+                                add im.Scale("gui/save/save_stamps.png",329.51,210) ypos -204 xpos 25
 
                             text FileTime(slot, format=_("{#file_time} %m/%d/%Y\n%H:%M"), empty=_("")):
                                 style "slot_time_text"
@@ -809,7 +813,7 @@ style slot_button is gui_button
 style slot_button_text is gui_button_text
 style slot_time_text:
     xpos 90
-    ypos -145
+    ypos -355
     size 40
     textalign 0.5
     outlines [(1,"#ffffff",0,0)]
@@ -894,7 +898,7 @@ screen preferences():
                     bar value Preference("auto-forward time")
                     
                     textbutton _("- Easy Read Mode -"):
-                            action [SetField(persistent, "easy_mode", True if persistent.easy_mode == False else False), ToggleVariable("persistent.easy_read_toggle", False, True)]
+                            action ToggleVariable("persistent.easy_mode", True, False)
                             style "mute_all_button"
 
                 vbox:

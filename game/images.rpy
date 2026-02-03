@@ -306,6 +306,12 @@ image Cassian fullbody = im.Scale("images/Cassian/Sprites/cassian_Neutral_1.png"
 image Cassian fullbody pose2= im.Scale("images/Cassian/Sprites/cassian_Neutral_2.png", 850.5, 1203.3)
 image Cassian bruh fullbody = im.Scale("images/Cassian/Sprites/cassian_Bruh_1.png", 850.5, 1203.3)
 image Cassian laughing fullbody = im.Scale("images/Cassian/Sprites/cassian_Laughing_1.png", 850.5, 1203.3)
+image Cassian relieved fullbody = im.Scale("images/Cassian/Sprites/cassian_Relieved_1.png", 850.5, 1203.3)
+image Cassian extreme blush fullbody= im.Scale("images/Cassian/Sprites/cassian_ExtremeBlush_1.png", 850.5, 1203.3)
+image Cassian soft fullbody = im.Scale("images/Cassian/Sprites/cassian_Soft_1.png", 850.5, 1203.3)
+image Cassian smug fullbody = im.Scale("images/Cassian/Sprites/cassian_Smug_1.png", 850.5, 1203.3)
+image Cassian confused fullbody = im.Scale("images/Cassian/Sprites/cassian_Confused_1.png", 850.5, 1203.3)
+image Cassian panic fullbody = im.Scale("images/Cassian/Sprites/cassian_Panic_1.png", 850.5, 1203.3)
 
 image Lucien fullbody = im.Scale("images/Lucien/Sprites/Lucien_Neutral_1_Ann.png", 1103.2, 1561)
 image Lucien fullbody neutral apron = im.Scale("images/Lucien/Sprites/Lucien_Neutral_Apron_1_Ann.png", 1103.2, 1561)

@@ -95,9 +95,20 @@ transform zoomin3:
     ease 0.5 yoffset 0
     linear 1 zoom 1.3 yoffset 0
 
+transform zoomin4:
+    linear 1 zoom 1.43 yoffset 100
+
+transform slightzoominnout:
+    linear 0.5 zoom 1.2
+    linear 0.5 zoom 1.0 
+
+
 #zoom out for both zoomin 2 + 3
 transform zoomout2:
     linear 1 zoom 1.0 yoffset 0
+
+transform zoomout3:
+    linear 0.5 zoom 1.0 yoffset 0
 
 #zoom out for zoomin 2+3 with jump
 transform zoomout_jump:
